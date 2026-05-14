@@ -1,0 +1,26 @@
+<header class="site-nav">
+  <div class="container">
+    <a href="/" class="site-nav__logo">Dundir</a>
+    <nav class="site-nav__links">
+      <a href="/het-probleem/">Het probleem</a>
+      <a href="/hoe-het-werkt/">Hoe het werkt</a>
+      <a href="/over-ons/">Over ons</a>
+    </nav>
+    <a href="/scan/" class="btn btn--primary site-nav__cta">Doe de scan</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<script>
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var header = document.querySelector('.site-nav');
+  if (!toggle || !header) return;
+  toggle.addEventListener('click', function () {
+    var isOpen = header.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+})();
+</script>

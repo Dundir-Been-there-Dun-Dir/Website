@@ -1,0 +1,98 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero__headline">De mensen achter Dundir</h1>
+    <p class="page-hero__subheading">Inkoopoptimalisatie in de bouw is geen softwareprobleem dat je oplost door slimme generalisten in te huren. Het vereist iemand die weet hoe Nederlandse bouwcertificeringsstructuren daadwerkelijk werken. Iemand die productie-optimalisatiesystemen heeft gebouwd die in de praktijk draaien. Iemand die al twintig jaar enterprise software verkoopt aan Nederlandse gemeenten. Wij hebben alle drie.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="team-grid">
+
+      <div class="team-card">
+        <p class="team-card__name">Christiaan Verhoef</p>
+        <p class="team-card__role">CEO</p>
+        <div class="team-card__bio">
+          <p>Projectmanager Supply Chain Finance aan de Hogeschool Windesheim. Oprichter van het Value Chain Hackers AI Lab. Medeoprichter van Tonomy Foundation.</p>
+          <p>Heeft bijgedragen aan 2 miljoen euro aan fondsenwerving voor eerdere ondernemingen. De Windesheim-verankering verbindt Dundir met het onderzoeksfinancieringstraject (RAAK-PRO, KIEM, Horizon Europa) en met de academische geloofwaardigheid die het universiteitspartnerschap vereist.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <p class="team-card__name">Dr. Milan Jelisavčić</p>
+        <p class="team-card__role">CTO</p>
+        <div class="team-card__bio">
+          <p>PhD Evolutionaire Robotica, VU Amsterdam. Hoofd AI bij Salesteq. Productie-ML bij Stedin (energiemarktoptimalisatie), bliq (arbitrageoptimalisatie) en ABN AMRO. MSc Universiteit van Belgrado.</p>
+          <p>Hij leerde de optimalisatietheorie niet voor dit product. Hij heeft al jaren productie-optimalisatiesystemen gebouwd. Dit is zijn vakgebied, toegepast op een nieuw probleem.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <p class="team-card__name">Kirsten Coppoolse</p>
+        <p class="team-card__role">COO</p>
+        <div class="team-card__bio">
+          <p>COO bij Open Food Chain van 2018 tot 2024. Opgeschaald van eerste medewerker naar meer dan 20 mensen, met elk jaar een verdubbeling van de omzet.</p>
+          <p>Heeft eerder de juridische structuur, het financieel model, de compliance-laag en het HR-kader voor een groeiend bedrijf opgebouwd.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <p class="team-card__name">Dr. Nina Gluhovic</p>
+        <p class="team-card__role">Bouwkunde Expert</p>
+        <div class="team-card__bio">
+          <p>Universitair hoofddocent Civiele Techniek, Universiteit van Belgrado. Twaalf jaar expertise in Nederlandse en Europese bouwspecificatienormen: CROW RAW, UAV, CPR 2024/3110, KOMO en SKG-IKOB certificeringsstructuren.</p>
+          <p>Zonder haar is de doelfunctie van de optimalisatie-engine een gok. Met haar weerspiegelt die hoe Nederlandse bouwinkoop daadwerkelijk werkt.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <p class="team-card__name">Gerard Tunteler</p>
+        <p class="team-card__role">Hoofd Overheidsverkoop</p>
+        <div class="team-card__bio">
+          <p>Local Government Lead Nederland bij HPE (19 jaar). Oprichter van de HPE Ronde Tafel voor Gemeenten, een vertrouwd peernetwerk dat alle 342 Nederlandse gemeenten beslaat.</p>
+          <p>Hij hoeft Dundir niet te introduceren aan gemeenten. Hij heeft de relaties, de geloofwaardigheid en 19 jaar context over hoe openbare aanbestedingsbeslissingen daadwerkelijk worden genomen.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Onderzoekspartners</h2>
+    <div class="institutional-anchors">
+      <div class="institutional-anchors__item">
+        <p class="institutional-anchors__name">Hogeschool Windesheim</p>
+        <p class="institutional-anchors__desc">Academische verankering, validatie en toegang tot onderzoeksfinanciering via RAAK-PRO, KIEM en Horizon Europa.</p>
+      </div>
+      <div class="institutional-anchors__item">
+        <p class="institutional-anchors__name">Universiteit van Belgrado, Faculteit Bouwkunde</p>
+        <p class="institutional-anchors__desc">R&D, domeinexpertise bouwspecificaties en toegang tot Europese onderzoeksnetwerken.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Gesprek aanvragen</h2>
+    <p>Wilt u spreken met iemand in het team? Stuur een bericht.</p>
+    <div class="mt-4">
+      <a href="mailto:{{ .Site.Params.email }}" class="btn-primary">Stuur een bericht</a>
+    </div>
+    <p class="text-small text-muted mt-2">Geen verkooppraatje. Geen voorbereide presentatie. Gewoon een gesprek over uw situatie.</p>
+  </div>
+</section>
+
+<section class="scan-cta">
+  <div class="container">
+    <p class="scan-cta__lead">Nog niet klaar voor een gesprek? Doe de scan eerst.</p>
+    <a href="/scan/" class="btn--primary">Doe de scan</a>
+    <p class="scan-cta__sub">Vijf vragen. Specifiek voor jouw teamgrootte en volume. Geen e-mail vereist voor je het resultaat ziet.</p>
+  </div>
+</section>
+
+{{ end }}

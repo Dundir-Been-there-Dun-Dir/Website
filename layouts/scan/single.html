@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero__headline">Wat kost handmatige inkoop jouw organisatie?</h1>
+    <p class="page-hero__subheading">Vijf vragen. Uw cijfers. Een gepersonaliseerde schatting van de tijd en het geld die uw team verliest aan handmatig leveranciersvergelijkingswerk.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <p>De gemiddelde inkoper in de bouwsector besteedt 11 uur per week aan vergelijkingswerk. Maar uw getal is niet het gemiddelde. Het hangt af van hoeveel inkopers u heeft, hoeveel vergelijkingen u per maand maakt en hoe ver uw huidige proces verwijderd is van een gedocumenteerde, audit-klare werkwijze.</p>
+    <p>Geen e-mail vereist voor u het resultaat ziet. De scan verzamelt geen gegevens over uw leveranciers, uw prijzen of uw commerciële relaties.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    {{ partial "formbricks.html" . }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <p>Na het resultaat kunt u kiezen: een gesprek van 30 minuten met ons team om de cijfers te bespreken, of gewoon de schatting meenemen. Geen verkooppraatje. Geen voorbereide presentatie.</p>
+    <div class="mt-3">
+      <a href="mailto:{{ .Site.Params.email }}" class="btn-primary">Plan een gesprek</a>
+    </div>
+  </div>
+</section>
+
+{{ end }}
