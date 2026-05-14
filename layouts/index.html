@@ -1,0 +1,103 @@
+{{ define "main" }}
+
+  {{/* SECTION 1: HERO */}}
+  <section class="hero">
+    <div class="container container--narrow">
+      <h1 class="hero__hl">Elf uur per week. Per inkoper. Elke week.</h1>
+      <p class="hero__sub">Dat is 49.500 euro per jaar aan inkoopadministratie, per persoon. Zonder de kosten van een verkeerde beslissing.</p>
+      <div class="hero__actions">
+        <a href="/scan/" class="btn btn--primary">Bereken mijn inkoopkosten</a>
+      </div>
+      <p>Vijf vragen. Specifiek voor jouw team. Geen e-mailadres vereist voor je het resultaat ziet.</p>
+    </div>
+  </section>
+
+  {{/* SECTION 2: STATS STRIP */}}
+  <section class="stats-strip section--alt">
+    <div class="container">
+      <div class="stat">
+        <span class="stat__number">11 uur</span>
+        <span class="stat__label">per week per inkoper aan vergelijkingswerk</span>
+        <span class="stat__source">Remarcable / BuildMate 2025</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number">88%</span>
+        <span class="stat__label">van aannemers beheert inkoop nog in spreadsheets</span>
+        <span class="stat__source">Remarcable 2025</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number">70%</span>
+        <span class="stat__label">van de projectkosten zit in materiaal. Inkoop is geen backoffice-functie.</span>
+        <span class="stat__source">Donyavi et al. 2024, geciteerd in Hamppi 2025</span>
+      </div>
+    </div>
+  </section>
+
+  {{/* SECTION 3: WHAT DUNDIR DOES */}}
+  <section class="section">
+    <div class="container container--narrow">
+      <h2 class="section__title">Wat Dundir doet</h2>
+      <div class="section__body">
+        <p>Dundir is een lokaal geïmplementeerd inkoopbeslissingssysteem. Voor elk inkoopdossier berekent het de wiskundig optimale leverancierscombinatie op basis van prijs, levertijd en kwaliteitscriteria. Het systeem genereert automatisch een auditklaar rapport. Uw data verlaat nooit uw server. De inkoper beoordeelt en beslist. Dundir verzorgt de berekening en de documentatie.</p>
+      </div>
+    </div>
+  </section>
+
+  {{/* SECTION 4: WHO IT'S FOR */}}
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Voor wie</h2>
+      <div class="two-col">
+        <div class="segment-card">
+          <h3>Middelgrote aannemers</h3>
+          <p>50 tot 500 medewerkers. De inkoopadministratie kost tijd die beter besteed kan worden. ROI is direct meetbaar in teruggewonnen uren. CPR 2024 stelt nieuwe eisen aan inkoopdocumentatie. Dundir levert die documentatie automatisch mee.</p>
+          <a href="/het-probleem/">Lees meer over het probleem</a>
+        </div>
+        <div class="segment-card">
+          <h3>Nederlandse gemeenten</h3>
+          <p>Elke inkoopbeslissing moet aantoonbaar verdedigbaar zijn. De Aanbestedingswet vereist gedocumenteerde evaluatie van leveranciersselectie. Er zijn 342 gemeenten met vrijwel identieke inkoopprocessen. Dundir produceert bij elke beslissing het benodigde auditspoor.</p>
+          <a href="/het-probleem/">Lees meer over het probleem</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{/* SECTION 5: SCAN CTA */}}
+  {{ partial "scan-cta.html" . }}
+
+  {{/* SECTION 6: TEAM STRIP */}}
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Het team</h2>
+      <div class="team-strip">
+        <div class="team-card">
+          <span class="team-card__name">Christiaan Verhoef</span>
+          <span class="team-card__role">CEO</span>
+          <span class="team-card__cred">Hogeschool Windesheim, Value Chain Hackers AI lab</span>
+        </div>
+        <div class="team-card">
+          <span class="team-card__name">Dr. Milan Jelisavčić</span>
+          <span class="team-card__role">CTO</span>
+          <span class="team-card__cred">PhD Evolutionaire Robotica, VU Amsterdam. Productie-AI bij Stedin, ABN AMRO.</span>
+        </div>
+        <div class="team-card">
+          <span class="team-card__name">Kirsten Coppoolse</span>
+          <span class="team-card__role">COO</span>
+          <span class="team-card__cred">Open Food Chain opgeschaald van 1 naar 20 medewerkers. Zes jaar omzet verdubbeld.</span>
+        </div>
+        <div class="team-card">
+          <span class="team-card__name">Dr. Nina Gluhovic</span>
+          <span class="team-card__role">Domeinexpert</span>
+          <span class="team-card__cred">Universitair hoofddocent Civiele Techniek, Universiteit van Belgrado. 12 jaar bouwspecificatienormen.</span>
+        </div>
+        <div class="team-card">
+          <span class="team-card__name">Gerard Tunteler</span>
+          <span class="team-card__role">Head of Government Sales</span>
+          <span class="team-card__cred">HPE Local Government Lead Nederland, 19 jaar. Directe relaties met alle 342 gemeenten.</span>
+        </div>
+      </div>
+      <p><a href="/over-ons/">Leer het team kennen</a></p>
+    </div>
+  </section>
+
+{{ end }}

@@ -1,0 +1,43 @@
+baseURL = "https://dundir.nl"
+languageCode = "nl"
+defaultContentLanguage = "nl"
+title = "Dundir"
+
+enableRobotsTXT = true
+enableGitInfo = false
+disableKinds = ["taxonomy", "term"]
+pluralizeListTitles = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "AI-gedreven inkoopbeslissingen voor de bouw. Lokaal geïmplementeerd. Wiskundig onderbouwd. Audit-klaar."
+  email = "chris@tonomy.foundation"
+  linkedIn = "https://www.linkedin.com/company/dundir"
+
+  [params.formbricks]
+    serverUrl = "https://your-formbricks-server.com"
+    environmentId = "your-environment-id"
+    surveyId = "your-survey-id"
+
+[menu]
+  [[menu.main]]
+    name = "Het probleem"
+    url = "/het-probleem/"
+    weight = 1
+  [[menu.main]]
+    name = "Hoe het werkt"
+    url = "/hoe-het-werkt/"
+    weight = 2
+  [[menu.main]]
+    name = "Over ons"
+    url = "/over-ons/"
+    weight = 3
+
+[outputs]
+  home = ["HTML"]
+  page = ["HTML"]
+  section = ["HTML"]

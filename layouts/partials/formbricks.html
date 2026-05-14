@@ -1,0 +1,30 @@
+{{ with .Site.Params.formbricks }}
+{{ if ne .serverUrl "https://your-formbricks-server.com" }}
+<div id="fb-survey-container">
+  <div id="fb-survey-target"></div>
+</div>
+<script>
+(function() {
+  var cfg = {
+    environmentId: "{{ .environmentId }}",
+    apiHost: "{{ .serverUrl }}"
+  };
+  var s = document.createElement("script");
+  s.type = "text/javascript";
+  s.async = true;
+  s.src = "{{ .serverUrl }}/js/formbricks.umd.cjs";
+  s.onload = function() {
+    if (window.formbricks) {
+      window.formbricks.init(cfg);
+    }
+  };
+  document.head.appendChild(s);
+})();
+</script>
+{{ else }}
+<div class="fb-placeholder">
+  <p>De inkoopscan is hier beschikbaar zodra Formbricks is geconfigureerd.</p>
+  <p><small>Configureer <code>params.formbricks</code> in hugo.toml met uw server-URL en environment ID.</small></p>
+</div>
+{{ end }}
+{{ end }}
