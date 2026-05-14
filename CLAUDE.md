@@ -28,7 +28,8 @@ Dundir builds an AI-powered procurement decision tool for construction companies
 
 **Primary CTA:** A procurement pain scan — a short interactive questionnaire (5-7 questions) that asks about their current process, outputs a personalised estimate of time and money lost to manual procurement, and converts to a follow-up conversation. This is the digital equivalent of the simulation workshop: it makes the cost of bad procurement visible, qualifies the lead, and collects customer discovery data simultaneously.
 
-**Platform:** GitHub Pages. No backend. Static site only for now. Custom domain exists but launching on github.io first.
+**Platform:** GitHub Pages. No backend. Static site only for now.
+**Domains:** `dundir.nl` (primary, owned) and `dundir.com` (secondary, redirect to .nl). Hugo base URL: `https://dundir.nl`. DNS via Cloudflare.
 
 **Deployment:** Simple, fast, maintainable by non-developers. No complex build pipelines at launch.
 
