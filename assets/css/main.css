@@ -1434,3 +1434,81 @@ header.site-nav.nav-open .site-nav__links {
     display: none;
   }
 }
+
+/* ============================================================
+   24. Design — dark hero, full-blue scan CTA, heading accents
+   ============================================================ */
+
+/* Sticky nav: subtle shadow to lift it off the page */
+header.site-nav {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark navy homepage hero */
+.hero {
+  background-color: #0d2b7a;
+}
+
+.hero__hl,
+.hero__headline {
+  color: #ffffff;
+}
+
+.hero__sub,
+.hero__subheading {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9375rem;
+}
+
+/* Full-blue scan CTA sections */
+.scan-cta,
+.scan-cta-block,
+.scan-cta-block--compact {
+  background-color: var(--color-accent);
+}
+
+.scan-cta__lead,
+.scan-cta-block__headline {
+  color: #ffffff;
+}
+
+.scan-cta__sub,
+.scan-cta-block__body,
+.scan-cta-block__note {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* White button with blue text when inside a blue CTA section */
+.scan-cta .btn--primary,
+.scan-cta .btn-primary,
+.scan-cta-block .btn-primary,
+.scan-cta-block .btn--primary {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: var(--color-accent);
+}
+
+.scan-cta .btn--primary:hover,
+.scan-cta .btn-primary:hover,
+.scan-cta-block .btn-primary:hover,
+.scan-cta-block .btn--primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-accent);
+}
+
+/* Accent left-border on all section headings */
+.section-heading,
+.section__title {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1rem;
+}
+
+/* Light blue tint on inner page heroes */
+.page-hero {
+  background-color: #f0f4fc;
+}
