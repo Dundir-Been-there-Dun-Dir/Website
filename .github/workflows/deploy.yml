@@ -127,11 +127,14 @@ jobs:
       - name: TEST — All pages have a meta description
         run: |
           echo "Checking meta descriptions..."
+          # --minify removes quotes from simple attribute values:
+          # name="description" becomes name=description in the output.
+          # Match both forms.
           failed=0
           for page in public/index.html public/het-probleem/index.html \
                       public/hoe-het-werkt/index.html public/over-ons/index.html \
                       public/scan/index.html; do
-            if grep -q 'name="description"' "$page"; then
+            if grep -qiE 'name="?description"?' "$page"; then
               echo "  OK  $page"
             else
               echo "  FAIL  $page — missing meta description"
