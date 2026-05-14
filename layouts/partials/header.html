@@ -2,11 +2,24 @@
   <div class="container">
     <a href="{{ "/" | relURL }}" class="site-nav__logo">Dundir</a>
     <nav class="site-nav__links">
+      {{ if eq .Lang "sr" }}
+      <a href="{{ "sr/problem/" | relURL }}">Problem</a>
+      <a href="{{ "sr/kako-radi/" | relURL }}">Kako radi</a>
+      <a href="{{ "sr/o-nama/" | relURL }}">O nama</a>
+      {{ else }}
       <a href="{{ "het-probleem/" | relURL }}">Het probleem</a>
       <a href="{{ "hoe-het-werkt/" | relURL }}">Hoe het werkt</a>
       <a href="{{ "over-ons/" | relURL }}">Over ons</a>
+      {{ end }}
     </nav>
+    {{ range .Translations }}
+    <a href="{{ .RelPermalink }}" class="btn btn--lang" lang="{{ .Lang }}" title="{{ .Language.LanguageName }}">{{ .Lang | upper }}</a>
+    {{ end }}
+    {{ if eq .Lang "sr" }}
+    <a href="{{ "sr/skeniranje/" | relURL }}" class="btn btn--primary site-nav__cta">Skeniranje</a>
+    {{ else }}
     <a href="{{ "scan/" | relURL }}" class="btn btn--primary site-nav__cta">Doe de scan</a>
+    {{ end }}
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>

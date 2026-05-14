@@ -1,6 +1,6 @@
 baseURL = "https://dundir-been-there-dun-dir.github.io/Website/"
-languageCode = "nl"
 defaultContentLanguage = "nl"
+defaultContentLanguageInSubdir = false
 title = "Dundir"
 
 enableRobotsTXT = true
@@ -14,7 +14,6 @@ pluralizeListTitles = false
       unsafe = true
 
 [params]
-  description = "AI-gedreven inkoopbeslissingen voor de bouw. Lokaal geïmplementeerd. Wiskundig onderbouwd. Audit-klaar."
   email = "chris@tonomy.foundation"
   linkedIn = "https://www.linkedin.com/company/dundir"
 
@@ -23,19 +22,22 @@ pluralizeListTitles = false
     environmentId = "your-environment-id"
     surveyId = "your-survey-id"
 
-[menu]
-  [[menu.main]]
-    name = "Het probleem"
-    url = "/het-probleem/"
+[languages]
+  [languages.nl]
+    languageName = "NL"
+    languageCode = "nl"
     weight = 1
-  [[menu.main]]
-    name = "Hoe het werkt"
-    url = "/hoe-het-werkt/"
+    title = "Dundir"
+    [languages.nl.params]
+      description = "AI-gedreven inkoopbeslissingen voor de bouw. Lokaal geïmplementeerd. Wiskundig onderbouwd. Audit-klaar."
+
+  [languages.sr]
+    languageName = "SR"
+    languageCode = "sr"
     weight = 2
-  [[menu.main]]
-    name = "Over ons"
-    url = "/over-ons/"
-    weight = 3
+    title = "Dundir"
+    [languages.sr.params]
+      description = "AI sistem za optimizaciju nabavke u građevinarstvu. Lokalna implementacija. Matematički utemeljen. Spreman za reviziju."
 
 [outputs]
   home = ["HTML"]

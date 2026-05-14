@@ -1,7 +1,13 @@
 <section class="scan-cta">
   <div class="container">
+    {{ if eq .Lang "sr" }}
+    <p class="scan-cta__lead">Zanima vas koliko vaša organizacija troši na ručnu nabavku?</p>
+    <a href="{{ "sr/skeniranje/" | relURL }}" class="btn btn--primary">Uradite skeniranje</a>
+    <p class="scan-cta__sub">Pet pitanja. Prilagođeno veličini vašeg tima i obimu. Rezultat vidite odmah, bez e-mail adrese.</p>
+    {{ else }}
     <p class="scan-cta__lead">Benieuwd wat handmatige inkoop jouw organisatie kost?</p>
     <a href="{{ "scan/" | relURL }}" class="btn btn--primary">Doe de scan</a>
     <p class="scan-cta__sub">Vijf vragen. Specifiek voor jouw teamgrootte en volume. Geen e-mail vereist voor je het resultaat ziet.</p>
+    {{ end }}
   </div>
 </section>
