@@ -88,22 +88,31 @@ See: [05-seo-and-tech.md](05-seo-and-tech.md)
 
 ---
 
+## Domains
+
+- **Primary:** `dundir.nl` — confirmed, already owned. Dutch ccTLD is the right primary domain for Dutch search rankings and municipality credibility. Hugo base URL: `https://dundir.nl`
+- **Secondary:** `dundir.com` — for international/investor-facing use and to prevent squatting. Redirect `dundir.com` → `dundir.nl` via Cloudflare (301 redirect at DNS level, no separate site needed).
+- **GitHub Pages interim:** runs on `dundir-been-there-dun-dir.github.io` until DNS is pointed. Configure the custom domain in GitHub Pages settings before launch — GitHub will provision the HTTPS certificate automatically via Let's Encrypt.
+- **Cloudflare:** set `dundir.nl` nameservers to Cloudflare. Amsterdam PoP gives Dutch visitors sub-100ms DNS resolution. Enable proxying (orange cloud) for performance and DDoS protection.
+
+---
+
 ## Build sequence (recommended order)
 
-1. Set up Hugo project with Decap CMS and GitHub Actions deploy workflow
+1. Set up Hugo project with Decap CMS and GitHub Actions deploy workflow — configure `baseURL = "https://dundir.nl"`
 2. Build the homepage and Het probleem page (these validate the core message before anything else)
 3. Build and test the Inkoopscan (custom JS, Formspree integration, live calculation, WCAG testing)
 4. Build Hoe het werkt and Over ons
 5. Write and publish the first Inzichten article (Skanska/Hamppi Dutch summary) before launching the blog page
-6. Configure Cloudflare DNS, Plausible analytics, schema markup
+6. Configure Cloudflare DNS, Plausible analytics, schema markup — point dundir.nl to GitHub Pages, set dundir.com redirect
 7. WCAG 2.1 AA audit before any municipality outreach
-8. Switch to custom domain
+8. Go live on dundir.nl
 
 ---
 
 ## Open questions for the team before build starts
 
-- **Domain name confirmed?** What is the exact domain? This affects Hugo base URL config and Cloudflare setup.
+- ~~**Domain name confirmed?**~~ ✅ dundir.nl (owned), dundir.com (acquire)
 - **Formspree or alternative?** Formspree free tier is 50 submissions/month — sufficient for MVP but confirm before launch.
 - **Dutch copy review by a native speaker?** Christiaan is near-native but a native Dutch procurement professional should review the scan questions and core page copy before launch. Nina cannot do this (Serbian); Gerard can.
 - **Photography?** The Over ons page needs real team photos. Stock photos of construction sites are explicitly ruled out by the copy strategy. Prioritise this early — it has a long lead time.
