@@ -2,10 +2,23 @@
   <div class="container">
     <div class="footer-col">
       <strong>Dundir</strong>
+      {{ if eq .Lang "sr" }}
+      <p>Optimizacija nabavke za građevinarstvo</p>
+      {{ else }}
       <p>Inkoopoptimalisatie voor de bouw</p>
+      {{ end }}
       <a href="mailto:chris@tonomy.foundation">chris@tonomy.foundation</a>
     </div>
     <div class="footer-col">
+      {{ if eq .Lang "sr" }}
+      <strong>Navigacija</strong>
+      <nav>
+        <a href="{{ "sr/problem/" | relURL }}">Problem</a>
+        <a href="{{ "sr/kako-radi/" | relURL }}">Kako radi</a>
+        <a href="{{ "sr/o-nama/" | relURL }}">O nama</a>
+        <a href="{{ "sr/skeniranje/" | relURL }}">Skeniranje</a>
+      </nav>
+      {{ else }}
       <strong>Navigatie</strong>
       <nav>
         <a href="{{ "het-probleem/" | relURL }}">Het probleem</a>
@@ -13,17 +26,18 @@
         <a href="{{ "over-ons/" | relURL }}">Over ons</a>
         <a href="{{ "scan/" | relURL }}">Inkoopscan</a>
       </nav>
+      {{ end }}
     </div>
     <div class="footer-col">
-      <strong>Onderzoekspartners</strong>
-      <p>Hogeschool Windesheim<br>Academisch anker voor AI-onderzoek en subsidietrajecten</p>
-      <p>Universiteit van Belgrado<br>Faculteit Bouwkunde, domeinexpertise civiele techniek</p>
+      <strong>{{ if eq .Lang "sr" }}Istraživački partneri{{ else }}Onderzoekspartners{{ end }}</strong>
+      <p>Hogeschool Windesheim<br>{{ if eq .Lang "sr" }}Akademsko sidro za AI istraživanje i grantove{{ else }}Academisch anker voor AI-onderzoek en subsidietrajecten{{ end }}</p>
+      <p>{{ if eq .Lang "sr" }}Univerzitet Beograd<br>Arhitektonski fakultet, domenski ekspertiza za građevinarstvo{{ else }}Universiteit van Belgrado<br>Faculteit Bouwkunde, domeinexpertise civiele techniek{{ end }}</p>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="container">
       <span>&copy; 2026 Dundir</span>
-      <a href="/privacy/">Privacybeleid</a>
+      <a href="/privacy/">{{ if eq .Lang "sr" }}Politika privatnosti{{ else }}Privacybeleid{{ end }}</a>
     </div>
   </div>
 </footer>

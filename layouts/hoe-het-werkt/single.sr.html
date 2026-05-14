@@ -1,0 +1,124 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero__headline">Od specifikacije do odobrenog izveštaja poređenja. Bez ručnog rada.</h1>
+    <p class="page-hero__subheading">Dundir uklanja administrativni ručni rad pre odluke i dokumentuje proces razmišljanja posle. Nabavljač ocenjuje i odlučuje. Sistem računa i beleži.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Kako radi</h2>
+    <ol class="step-list">
+      <li>
+        <div>
+          <p class="step-list__title">Unosite specifikaciju materijala</p>
+          <p class="step-list__body">Na svakodnevnom jeziku, na isti način na koji biste je opisali sada.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">AI sloj prevodi specifikaciju</p>
+          <p class="step-list__body">Sistem prevodi specifikaciju u strukturirane zahteve nabavke: tražene sertifikacije, rokovi isporuke, budžetska ograničenja i ponderisani ciljevi.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Optimizacioni motor izračunava optimalne kombinacije dobavljača</p>
+          <p class="step-list__body">Sistem radi na vašoj bazi dobavljača i pronalazi matematički dokazivo optimalne kombinacije na osnovu vaših tvrdih zahteva i ponderisanih ciljeva. Nije sugestija. Izračunat odgovor sa potpunim obrazloženjem.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Ocenjujete rezultat i odlučujete</p>
+          <p class="step-list__body">Vidite rangirano poređenje sa izvornim podacima, statusom sertifikacije i potpunim obrazloženjem. Vi odlučujete. Sistem beleži vašu odluku i razlog.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Revizorski spreman izveštaj se automatski generiše</p>
+          <p class="step-list__body">Spreman za internu saglasnost, eksternu reviziju ili procenu javnog tendera. Bez dodatnog rada posle.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Zašto lokalna implementacija</h2>
+    <p>Tri posledice lokalne implementacije koje su direktno relevantne za opštine i građevinske kompanije:</p>
+    <ul>
+      <li>Vaši nabavni podaci nikada ne napuštaju vaš sopstveni server.</li>
+      <li>Nema zavisnosti od eksternih API-ja ili provajdera u oblaku.</li>
+      <li>Sistem je usklađen sa GDPR i IT politikom opština.</li>
+    </ul>
+    <p>Osetljive nabavne informacije, dogovori o cenama s dobavljačima i ugovorni podaci ostaju gde trebaju: kod vas.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Svaki izlaz pokazuje obrazloženje</h2>
+    <p>Koji izvori podataka su korišćeni, kako je svaki dobavljač ocenjen, zašto jedan dobavljač stoji više od drugog. Sistem to eksplicitno beleži.</p>
+    <p>Za opštine, ovo je zakonski uslov. Za građevinske kompanije, to je razlika između izveštaja koji menadžer potpisuje i izveštaja koji odbacuje.</p>
+    <div class="proof-block">
+      <p class="proof-block__label">Zašto ovo ne funkcioniše sa generativnim AI</p>
+      <p class="proof-block__body">U internom Skanska eksperimentu, generički enterprise AI sistem je za iste ulaze davao različite numeričke rezultate, sa greškama do 8.354 evra na jednoj stavci tendera. Generativni AI generiše odgovor. Ne može da reprodukuje proračun. Dundrov optimizacioni motor je deterministički: isti rezultat za iste ulaze, uvek.</p>
+      <p class="proof-block__source">Hamppi 2025, Aalto Univerzitet.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Sistem je treniran na vašoj sopstvenoj istoriji nabavke</h2>
+    <p>Dundir se trenira na sopstvenoj istoriji nabavke vaše organizacije, ne na generičkom modelu. Rezultat: sistem poznaje vaše preferirane dobavljače, vaše zahteve sertifikacije i vaše prethodne odluke. Svako treniranje posle novog ciklusa nabavke dalje usavršava ciljnu funkciju na osnovu vaših sopstvenih podataka.</p>
+    <p>Ako senior nabavljač ode, to znanje ostaje dostupno celom timu.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Šta sistem ne radi</h2>
+    <p>Dundir ne donosi nabavne odluke. Nabavljač ocenjuje rezultat i odlučuje. Sistem ne zamenjuje nabavljača.</p>
+    <p>Uklanja administrativni ručni rad kako bi nabavljač mogao da obavlja pravi posao: procenu, negovanje odnosa i eskalaciju. Odluka i odgovornost ostaju kod vas.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Kako implementacija izgleda</h2>
+    <ol class="step-list">
+      <li>
+        <div>
+          <p class="step-list__title">Uvodna procena i mapiranje procesa</p>
+          <p class="step-list__body">Mapiramo vaš trenutni proces nabavke: koji sistemi, koji dobavljači, koji kriterijumi odlučivanja.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Unos podataka i fino podešavanje</p>
+          <p class="step-list__body">Sistem se trenira na istoriji nabavke iz vašeg ERP-a i podacima o dobavljačima. Ovo je ono što čini rezultat specifičnim za vašu organizaciju.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Implementacija na vašoj infrastrukturi</p>
+          <p class="step-list__body">Lokalno, na vašim sopstvenim serverima. Nije potrebna veza sa oblakom.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Predaja: vi u potpunosti posedujete sistem</p>
+          <p class="step-list__body">Nakon predaje, nije potrebna pretplata za rad. Održavanje i treniranje se preuzimaju kad su korisni, ne zato što bi sistem inače prestao da radi.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}

@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero__headline">Problem nije tabela. To su troškovi koji su u njoj skriveni.</h1>
+    <p class="page-hero__subheading">Niderlanske građevinske kompanije troše prosečno 11 sati nedeljno po nabavljaču na ručno poređenje ponuda. Ovo je šta to znači.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Šta košta u vremenu</h2>
+    <div class="proof-block">
+      <p class="proof-block__stat">11 sati</p>
+      <p class="proof-block__label">nedeljno po nabavljaču za poređenje ponuda</p>
+      <p class="proof-block__source">Remarcable / BuildMate 2025</p>
+    </div>
+    <p>Tri nabavljača. 46 radnih nedelja. 65 evra po satu. To je 148.500 evra godišnje za neproduktivno vreme, samo za poređenje dobavljača. Bez troškova pogrešne odluke.</p>
+    <p>Ta odluka takođe košta. U internom Skanska eksperimentu, generički enterprise AI sistem je napravio greške od 8.354 evra na jednoj stavci tendera. Ručno poređenje u Excelu ne daje garanciju. Ni sistem koji generiše odgovore.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Šta se dešava kad nabavljač ode</h2>
+    <p>Većina znanja o nabavci nije u sistemu. Nalazi se u glavi nabavljača koji već dvadeset godina zna koji dobavljač je pouzdan, koje sertifikacije važe i koja ponuda izgleda dobro ali nije.</p>
+    <p>Osam od deset niderlanskih izvođača se već suočava sa nedostatkom osoblja. Kad taj nabavljač ode, znanje ide s njim. Ne postoji sistem koji to beleži.</p>
+    <p class="text-small text-muted">NL Times / Euroconstruct 2025</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Propisi čine situaciju urgentnijom</h2>
+    <p>Obaveza dokumentacije je već postojala. Ali tri razvoja je sada čine konkretnom i primenjivom:</p>
+    <ul>
+      <li><strong>Zakon o javnim nabavkama:</strong> svaka odluka o dobavljaču opštine mora biti dokumentovana, dosledna i odbranljiva pred regulatorima.</li>
+      <li><strong>CPR 2024/3110:</strong> od januara 2026. važe novi zahtevi sertifikacije za građevinske proizvode. Obaveza postoji. Alat za praćenje nedostaje kod većine organizacija.</li>
+      <li><strong>CSRD Scope 3:</strong> rastuće obaveze izveštavanja o emisijama u lancu snabdevanja zahtevaju strukturirane podatke o dobavljačima.</li>
+    </ul>
+    <p>Tabela više nije pravni odgovor.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Generički AI to ne rešava</h2>
+    <div class="proof-block">
+      <p class="proof-block__stat">8.354 evra</p>
+      <p class="proof-block__label">greška na jednoj stavci tendera pri korišćenju generičkog enterprise AI alata</p>
+      <p class="proof-block__body">U internom Skanska eksperimentu, generički enterprise AI sistem je za iste tenturske ulaze produkovao različite numeričke rezultate. To nije granični slučaj. To je trenutno stanje generativnog AI u nabavci: sistem generiše odgovor, ali ne može da reprodukuje proračun.</p>
+      <p class="proof-block__source">Hamppi 2025, Aalto Univerzitet. Studija slučaja zasnovana na internom Skanska eksperimentu.</p>
+    </div>
+    <p>Sistem koji generiše odgovore je nešto drugo od sistema koji ih izračunava. Dundir koristi matematički optimizacioni motor. Svaka preporuka je deterministička, reproducibilna i sa potpunim obrazloženjem.</p>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+<section class="section section--blue">
+  <div class="container container--narrow">
+    <p><strong>Zanima vas koliko ovo košta vašu organizaciju?</strong> Skeniranje daje personalizovanu procenu u pet pitanja.</p>
+    <div class="mt-4">
+      <a href="{{ "sr/skeniranje/" | relURL }}" class="btn-primary">Uradite skeniranje</a>
+    </div>
+    <p class="text-small text-muted mt-2">Nema e-mail adrese pre nego što vidite rezultat.</p>
+  </div>
+</section>
+
+{{ end }}
