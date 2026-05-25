@@ -1,0 +1,6 @@
+{{/* Dundr AI chat widget — loader injects a floating bubble on every page. */}}
+{{ with .Site.Params.dundrWidget }}
+{{ if and .enabled .src .widgetId }}
+<script src="{{ .src }}" data-widget-id="{{ .widgetId }}" async></script>
+{{ end }}
+{{ end }}

@@ -22,6 +22,11 @@ pluralizeListTitles = false
     environmentId = "your-environment-id"
     surveyId = "your-survey-id"
 
+  [params.dundrWidget]
+    enabled = true
+    src = "http://46.224.30.151:8082/v1/loader.js"
+    widgetId = "demo"
+
 [languages]
   [languages.nl]
     languageName = "NL"
