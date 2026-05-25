@@ -24,7 +24,7 @@ pluralizeListTitles = false
 
   [params.dundrWidget]
     enabled = true
-    src = "http://46.224.30.151:8082/v1/loader.js"
+    src = "https://46-224-30-151.sslip.io/v1/loader.js"
     widgetId = "demo"
 
 [languages]
