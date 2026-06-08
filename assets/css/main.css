@@ -1605,3 +1605,10 @@ header.site-nav {
 .contact-form__status--err {
   color: #b91c1c;
 }
+
+/* Logo image in nav */
+.site-nav__logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
