@@ -36,10 +36,18 @@ pluralizeListTitles = false
     [languages.nl.params]
       description = "AI-gedreven inkoopbeslissingen voor de bouw. Lokaal geïmplementeerd. Wiskundig onderbouwd. Audit-klaar."
 
+  [languages.en]
+    languageName = "EN"
+    languageCode = "en"
+    weight = 2
+    title = "Dundir"
+    [languages.en.params]
+      description = "AI-driven procurement decisions for construction. Locally deployed. Mathematically grounded. Audit-ready."
+
   [languages.sr]
     languageName = "SR"
     languageCode = "sr"
-    weight = 2
+    weight = 3
     title = "Dundir"
     [languages.sr.params]
       description = "AI sistem za optimizaciju nabavke u građevinarstvu. Lokalna implementacija. Matematički utemeljen. Spreman za reviziju."

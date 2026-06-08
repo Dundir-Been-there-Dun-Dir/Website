@@ -1,0 +1,124 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero__headline">From specification to approved comparison report. Without the manual work.</h1>
+    <p class="page-hero__subheading">Dundir removes the administrative work before the decision and documents the reasoning process after it. The procurement officer reviews and decides. The system calculates and records.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">How it works</h2>
+    <ol class="step-list">
+      <li>
+        <div>
+          <p class="step-list__title">You enter a material specification</p>
+          <p class="step-list__body">In plain language, the same way you would describe it now.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">The AI layer translates the specification</p>
+          <p class="step-list__body">The system converts the specification into structured procurement requirements: required certifications, delivery windows, budget limits and weighted objectives.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">The optimisation engine calculates the best supplier combination</p>
+          <p class="step-list__body">The system runs against your supplier database and finds the mathematically demonstrable best combination based on your hard requirements and weighted objectives. Not a suggestion. A calculated answer with full reasoning trail.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">You review the output and decide</p>
+          <p class="step-list__body">You see a ranked comparison with source data, certification status and full reasoning trail. You decide. The system records your decision and the reason.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">The audit-ready report is generated automatically</p>
+          <p class="step-list__body">Ready for internal approval, external audit or public procurement review. No extra work afterwards.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Why local deployment</h2>
+    <p>Three consequences of local deployment that are directly relevant for municipalities and construction companies:</p>
+    <ul>
+      <li>Your procurement data never leaves your own server.</li>
+      <li>There is no dependency on external APIs or cloud providers.</li>
+      <li>The system complies with GDPR and municipal IT policy.</li>
+    </ul>
+    <p>Sensitive procurement information, supplier pricing agreements and contract data stay where they belong: with you.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Every output shows the reasoning process</h2>
+    <p>Which data sources were used, how each supplier was assessed, why one supplier ranks higher than another. The system records it explicitly.</p>
+    <p>For municipalities this is a legal requirement. For construction companies it is the difference between a report a manager signs and one they send back.</p>
+    <div class="proof-block">
+      <p class="proof-block__label">Why this doesn't work with generative AI</p>
+      <p class="proof-block__body">In an internal Skanska experiment, a generic enterprise AI system gave different numerical outputs for identical inputs, with errors up to €8,354 on a single tender line. Generative AI generates an answer. It cannot reproduce the calculation. Dundir's optimisation engine is deterministic: the same result for the same input, every time.</p>
+      <p class="proof-block__source">Hamppi 2025, Aalto University.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">The system is trained on your own procurement history</h2>
+    <p>Dundir is trained on your organisation's own procurement history, not a generic model. The result: the system knows your preferred suppliers, your certification requirements and your previous decisions. Every retraining after a new procurement cycle refines the objective function further based on your own data.</p>
+    <p>When a senior procurement officer leaves, that knowledge remains available to the whole team.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">What the system doesn't do</h2>
+    <p>Dundir does not make procurement decisions. The procurement officer reviews the output and decides. The system does not replace the procurement officer.</p>
+    <p>It removes the administrative work so the procurement officer can do the actual work: judge, maintain relationships and escalate. The decision and the responsibility remain with you.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">What an implementation looks like</h2>
+    <ol class="step-list">
+      <li>
+        <div>
+          <p class="step-list__title">Intake and process mapping</p>
+          <p class="step-list__body">We map your current procurement process: which systems, which suppliers, which decision criteria.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Data ingestion and fine-tuning</p>
+          <p class="step-list__body">The system is trained on your ERP procurement history and supplier data. This is what makes the output specific to your organisation.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Deployment on your infrastructure</p>
+          <p class="step-list__body">Locally, on your own servers. No cloud connection required.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Handover: you own the system outright</p>
+          <p class="step-list__body">After handover, no subscription is required for the system to function. Maintenance and retraining are taken on when useful, not because the system would otherwise stop.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}
