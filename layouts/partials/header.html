@@ -1,6 +1,8 @@
 <header class="site-nav">
   <div class="container">
-    <a href="{{ "/" | relURL }}" class="site-nav__logo">Dundir</a>
+    <a href="{{ "/" | relURL }}" class="site-nav__logo">
+      <img src="/logo.png" alt="Dundir" class="site-nav__logo-img">
+    </a>
     <nav class="site-nav__links">
       {{ if eq .Lang "en" }}
       <a href="{{ "en/the-problem/" | relURL }}">The problem</a>
