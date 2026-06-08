@@ -23,9 +23,7 @@
 <section class="section">
   <div class="container container--narrow">
     <p>Na het resultaat kunt u kiezen: een gesprek van 30 minuten met ons team om de cijfers te bespreken, of gewoon de schatting meenemen. Geen verkooppraatje. Geen voorbereide presentatie.</p>
-    <div class="mt-3">
-      <a href="mailto:{{ .Site.Params.email }}" class="btn-primary">Plan een gesprek</a>
-    </div>
+    {{ partial "contact-form.html" . }}
   </div>
 </section>
 

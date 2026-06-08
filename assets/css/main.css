@@ -1540,3 +1540,68 @@ header.site-nav {
     display: none;
   }
 }
+
+/* ============================================================
+   Contact form
+   ============================================================ */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 560px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.01em;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: var(--font-stack);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  width: 100%;
+  transition: border-color 0.15s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form__submit {
+  align-self: flex-start;
+}
+
+.contact-form__status {
+  font-size: 0.95rem;
+  min-height: 1.5rem;
+}
+
+.contact-form__status--ok {
+  color: #1a6b3a;
+}
+
+.contact-form__status--err {
+  color: #b91c1c;
+}

@@ -80,10 +80,8 @@
   <div class="container container--narrow">
     <h2 class="section-heading">Zahtev za razgovor</h2>
     <p>Želite da razgovarate sa nekim iz tima? Pošaljite poruku.</p>
-    <div class="mt-4">
-      <a href="mailto:{{ .Site.Params.email }}" class="btn-primary">Pošaljite poruku</a>
-    </div>
-    <p class="text-small text-muted mt-2">Nema prodajnog govora. Nema pripremljene prezentacije. Samo razgovor o vašoj situaciji.</p>
+    <p class="text-small text-muted">Nema prodajnog govora. Nema pripremljene prezentacije. Samo razgovor o vašoj situaciji.</p>
+    {{ partial "contact-form.html" . }}
   </div>
 </section>
 
