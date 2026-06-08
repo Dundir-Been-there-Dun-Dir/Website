@@ -14,7 +14,7 @@ pluralizeListTitles = false
       unsafe = true
 
 [params]
-  email = "chris@tonomy.foundation"
+  email = "christiaan.verhoef@dundir.com,milan.jelisavcic@dundir.com"
   linkedIn = "https://www.linkedin.com/company/dundir"
 
   [params.formbricks]
