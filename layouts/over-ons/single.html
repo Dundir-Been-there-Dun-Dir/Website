@@ -80,10 +80,8 @@
   <div class="container container--narrow">
     <h2 class="section-heading">Gesprek aanvragen</h2>
     <p>Wilt u spreken met iemand in het team? Stuur een bericht.</p>
-    <div class="mt-4">
-      <a href="mailto:{{ .Site.Params.email }}" class="btn-primary">Stuur een bericht</a>
-    </div>
-    <p class="text-small text-muted mt-2">Geen verkooppraatje. Geen voorbereide presentatie. Gewoon een gesprek over uw situatie.</p>
+    <p class="text-small text-muted">Geen verkooppraatje. Geen voorbereide presentatie. Gewoon een gesprek over uw situatie.</p>
+    {{ partial "contact-form.html" . }}
   </div>
 </section>
 

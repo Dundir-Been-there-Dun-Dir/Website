@@ -80,10 +80,8 @@
   <div class="container container--narrow">
     <h2 class="section-heading">Request a conversation</h2>
     <p>Want to speak with someone on the team? Send a message.</p>
-    <div class="mt-4">
-      <a href="mailto:{{ .Site.Params.email }}" class="btn-primary">Send a message</a>
-    </div>
-    <p class="text-small text-muted mt-2">No sales pitch. No prepared presentation. Just a conversation about your situation.</p>
+    <p class="text-small text-muted">No sales pitch. No prepared presentation. Just a conversation about your situation.</p>
+    {{ partial "contact-form.html" . }}
   </div>
 </section>
 
