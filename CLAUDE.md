@@ -121,6 +121,12 @@ When working on this project, load and apply the following skills as relevant to
 
 ---
 
+## Credentials
+
+Website-related passwords are stored in `credentials/dundir.kdbx` (KeePass vault, committed to repo). Master password held by Christiaan Verhoef — do not store it here or anywhere in the repo.
+
+---
+
 ## Source documents
 
 The following documents from the Company repo are the authoritative source of truth. Any copy, data, or claims on the website must be consistent with these:
