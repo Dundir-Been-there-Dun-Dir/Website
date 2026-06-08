@@ -136,6 +136,33 @@ Website-related passwords are stored in `credentials/dundir.kdbx` (KeePass vault
 
 ---
 
+## Dundr AI chat widget
+
+Embedded on every page via `layouts/partials/dundr-widget.html`. Backend at `46-224-30-151.sslip.io` (Milan's server, Salesteq/Dundr product). Widget ID: `demo`. All LLM routing, system prompts, and docs are configured server-side — SSH to that server or Dundr admin panel required to change them.
+
+---
+
+## Domains & deployment
+
+- `dundir.com` — primary, DNS via Cloudflare, GitHub Pages custom domain (`static/CNAME`)
+- `dundir.nl` — registered at STRATO (account 1 78429677), DNS issues, parked for now
+- `dundir.com` registrar: Namecheap (username: kamitor077), DNS managed by Cloudflare
+
+## Email
+
+- Provider: Zoho Mail EU
+- Addresses: christiaan.verhoef@, milan.jelisavcic@, nina.jelisavcic@, kirsten.coppoolse@, info@ dundir.com
+- Note: Nina's surname is Jelisavčić (married to Milan), bios still show Gluhovic — update when ready
+
+## Contact form
+
+- FormSubmit.co (no signup needed, regular POST, no CORS issues)
+- Sends to christiaan.verhoef@dundir.com, CC milan.jelisavcic@dundir.com
+- First submission requires email verification click from Christiaan
+- Success page: `/success.html`
+
+---
+
 ## Source documents
 
 The following documents from the Company repo are the authoritative source of truth. Any copy, data, or claims on the website must be consistent with these:
