@@ -125,6 +125,15 @@ When working on this project, load and apply the following skills as relevant to
 
 Website-related passwords are stored in `credentials/dundir.kdbx` (KeePass vault, committed to repo). Master password held by Christiaan Verhoef — do not store it here or anywhere in the repo.
 
+### Zoho Mail server config (dundir.com)
+
+| Protocol | Server | Port | Encryption |
+|----------|--------|------|------------|
+| IMAP | imappro.zoho.eu | 993 | SSL |
+| POP3 | poppro.zoho.eu | 995 | SSL |
+| SMTP | smtppro.zoho.eu | 465 | SSL |
+| SMTP | smtppro.zoho.eu | 587 | TLS |
+
 ---
 
 ## Source documents
