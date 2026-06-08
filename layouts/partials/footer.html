@@ -2,7 +2,9 @@
   <div class="container">
     <div class="footer-col">
       <strong>Dundir</strong>
-      {{ if eq .Lang "sr" }}
+      {{ if eq .Lang "en" }}
+      <p>Procurement optimisation for construction</p>
+      {{ else if eq .Lang "sr" }}
       <p>Optimizacija nabavke za građevinarstvo</p>
       {{ else }}
       <p>Inkoopoptimalisatie voor de bouw</p>
@@ -10,7 +12,15 @@
       <a href="mailto:chris@tonomy.foundation">chris@tonomy.foundation</a>
     </div>
     <div class="footer-col">
-      {{ if eq .Lang "sr" }}
+      {{ if eq .Lang "en" }}
+      <strong>Navigation</strong>
+      <nav>
+        <a href="{{ "en/the-problem/" | relURL }}">The problem</a>
+        <a href="{{ "en/how-it-works/" | relURL }}">How it works</a>
+        <a href="{{ "en/about/" | relURL }}">About</a>
+        <a href="{{ "en/scan/" | relURL }}">Procurement scan</a>
+      </nav>
+      {{ else if eq .Lang "sr" }}
       <strong>Navigacija</strong>
       <nav>
         <a href="{{ "sr/problem/" | relURL }}">Problem</a>
@@ -29,15 +39,25 @@
       {{ end }}
     </div>
     <div class="footer-col">
-      <strong>{{ if eq .Lang "sr" }}Istraživački partneri{{ else }}Onderzoekspartners{{ end }}</strong>
-      <p>Hogeschool Windesheim<br>{{ if eq .Lang "sr" }}Akademsko sidro za AI istraživanje i grantove{{ else }}Academisch anker voor AI-onderzoek en subsidietrajecten{{ end }}</p>
-      <p>{{ if eq .Lang "sr" }}Univerzitet Beograd<br>Arhitektonski fakultet, domenski ekspertiza za građevinarstvo{{ else }}Universiteit van Belgrado<br>Faculteit Bouwkunde, domeinexpertise civiele techniek{{ end }}</p>
+      {{ if eq .Lang "en" }}
+      <strong>Research partners</strong>
+      <p>Windesheim University<br>Academic anchor for AI research and grant tracks</p>
+      <p>University of Belgrade<br>Faculty of Civil Engineering, construction domain expertise</p>
+      {{ else if eq .Lang "sr" }}
+      <strong>Istraživački partneri</strong>
+      <p>Hogeschool Windesheim<br>Akademsko sidro za AI istraživanje i grantove</p>
+      <p>Univerzitet Beograd<br>Arhitektonski fakultet, domenski ekspertiza za građevinarstvo</p>
+      {{ else }}
+      <strong>Onderzoekspartners</strong>
+      <p>Hogeschool Windesheim<br>Academisch anker voor AI-onderzoek en subsidietrajecten</p>
+      <p>Universiteit van Belgrado<br>Faculteit Bouwkunde, domeinexpertise civiele techniek</p>
+      {{ end }}
     </div>
   </div>
   <div class="footer-bottom">
     <div class="container">
       <span>&copy; 2026 Dundir</span>
-      <a href="/privacy/">{{ if eq .Lang "sr" }}Politika privatnosti{{ else }}Privacybeleid{{ end }}</a>
+      <a href="/privacy/">{{ if eq .Lang "en" }}Privacy policy{{ else if eq .Lang "sr" }}Politika privatnosti{{ else }}Privacybeleid{{ end }}</a>
     </div>
   </div>
 </footer>

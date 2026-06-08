@@ -2,7 +2,11 @@
   <div class="container">
     <a href="{{ "/" | relURL }}" class="site-nav__logo">Dundir</a>
     <nav class="site-nav__links">
-      {{ if eq .Lang "sr" }}
+      {{ if eq .Lang "en" }}
+      <a href="{{ "en/the-problem/" | relURL }}">The problem</a>
+      <a href="{{ "en/how-it-works/" | relURL }}">How it works</a>
+      <a href="{{ "en/about/" | relURL }}">About</a>
+      {{ else if eq .Lang "sr" }}
       <a href="{{ "sr/problem/" | relURL }}">Problem</a>
       <a href="{{ "sr/kako-radi/" | relURL }}">Kako radi</a>
       <a href="{{ "sr/o-nama/" | relURL }}">O nama</a>
@@ -15,7 +19,9 @@
     {{ range .Translations }}
     <a href="{{ .RelPermalink }}" class="btn btn--lang" lang="{{ .Lang }}" title="{{ .Language.LanguageName }}">{{ .Lang | upper }}</a>
     {{ end }}
-    {{ if eq .Lang "sr" }}
+    {{ if eq .Lang "en" }}
+    <a href="{{ "en/scan/" | relURL }}" class="btn btn--primary site-nav__cta">Take the scan</a>
+    {{ else if eq .Lang "sr" }}
     <a href="{{ "sr/skeniranje/" | relURL }}" class="btn btn--primary site-nav__cta">Skeniranje</a>
     {{ else }}
     <a href="{{ "scan/" | relURL }}" class="btn btn--primary site-nav__cta">Doe de scan</a>
