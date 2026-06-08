@@ -1,7 +1,8 @@
-<form class="contact-form" id="contact-form-{{ .Lang }}" novalidate>
+<form class="contact-form" action="https://formsubmit.co/christiaan.verhoef@dundir.com" method="POST">
   <input type="hidden" name="_cc" value="milan.jelisavcic@dundir.com">
   <input type="hidden" name="_subject" value="Contact via dundir.com">
   <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://dundir.com/success.html">
 
   <div class="form-group">
     <label for="cf-name-{{ .Lang }}">
@@ -31,49 +32,7 @@
     <textarea id="cf-message-{{ .Lang }}" name="message" rows="5" required></textarea>
   </div>
 
-  <button type="submit" class="btn-primary contact-form__submit">
+  <button type="submit" class="btn-primary">
     {{ if eq .Lang "en" }}Send message{{ else if eq .Lang "sr" }}Pošaljite poruku{{ else }}Stuur bericht{{ end }}
   </button>
-
-  <p class="contact-form__status" id="cf-status-{{ .Lang }}" aria-live="polite"></p>
 </form>
-
-<script>
-(function () {
-  var form = document.getElementById('contact-form-{{ .Lang }}');
-  var status = document.getElementById('cf-status-{{ .Lang }}');
-  if (!form || !status) return;
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn = form.querySelector('.contact-form__submit');
-    btn.disabled = true;
-
-    var data = {};
-    form.querySelectorAll('input[name], textarea[name]').forEach(function (f) {
-      data[f.name] = f.value;
-    });
-
-    fetch('https://formsubmit.co/ajax/christiaan.verhoef@dundir.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data)
-    })
-    .then(function (r) { return r.json(); })
-    .then(function (r) {
-      if (r.success === 'true' || r.success === true) {
-        status.textContent = '{{ if eq .Lang "en" }}Message sent. We will be in touch.{{ else if eq .Lang "sr" }}Poruka poslata. Javimo se uskoro.{{ else }}Bericht verzonden. We nemen snel contact op.{{ end }}';
-        status.className = 'contact-form__status contact-form__status--ok';
-        form.reset();
-      } else {
-        throw new Error('failed');
-      }
-    })
-    .catch(function () {
-      status.textContent = '{{ if eq .Lang "en" }}Something went wrong. Email us directly: christiaan.verhoef@dundir.com{{ else if eq .Lang "sr" }}Nešto nije uspelo. Pišite nam: christiaan.verhoef@dundir.com{{ else }}Er ging iets mis. Mail ons direct: christiaan.verhoef@dundir.com{{ end }}';
-      status.className = 'contact-form__status contact-form__status--err';
-      btn.disabled = false;
-    });
-  });
-})();
-</script>
