@@ -30,7 +30,7 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: recursive
 
@@ -42,7 +42,7 @@ jobs:
 
       - name: Configure Pages (sets correct baseURL for this deployment target)
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Build with Hugo
         env:
@@ -218,7 +218,7 @@ jobs:
       # This artifact is exactly what was tested — no second build.
 
       - name: Upload Pages artifact (tested build only)
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
 
@@ -237,4 +237,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
