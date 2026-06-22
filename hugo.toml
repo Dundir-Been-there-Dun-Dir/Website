@@ -17,10 +17,14 @@ pluralizeListTitles = false
   email = "christiaan.verhoef@dundir.com,milan.jelisavcic@dundir.com"
   linkedIn = "https://www.linkedin.com/company/dundir"
 
+  # SUS survey webhook — n8n on CT104
+  # Set RESEND_API_KEY env var on CT104 to enable email delivery
+  n8nWebhook = "https://n8n.research-ready.nl/webhook/sus-scan"
+
   [params.formbricks]
-    serverUrl = "https://your-formbricks-server.com"
+    serverUrl = "https://formbricks.research-ready.nl"
     environmentId = "your-environment-id"
-    surveyId = "your-survey-id"
+    surveyId = "cmoq18ad70000v4m0k0932bmh"
 
   [params.dundrWidget]
     enabled = true
