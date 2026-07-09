@@ -23,8 +23,8 @@ pluralizeListTitles = false
 
   [params.formbricks]
     serverUrl = "https://formbricks.research-ready.nl"
-    environmentId = "your-environment-id"
-    surveyId = "cmoq18ad70000v4m0k0932bmh"
+    environmentId = "k0anlmjh40noxil6gt7iq0m1"
+    surveyId = "cmrcgiujf0003v4wuky9ijlhp"
 
   [params.dundrWidget]
     enabled = true

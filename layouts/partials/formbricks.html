@@ -1,26 +1,13 @@
 {{ with .Site.Params.formbricks }}
-{{ if ne .serverUrl "https://your-formbricks-server.com" }}
-<div id="fb-survey-container">
-  <div id="fb-survey-target"></div>
+{{ if and .serverUrl .surveyId (ne .environmentId "your-environment-id") }}
+<div id="fb-survey-container" style="width:100%;">
+  <iframe
+    src="{{ .serverUrl }}/s/{{ .surveyId }}"
+    style="width:100%;height:700px;border:none;border-radius:8px;"
+    allow="clipboard-write"
+    title="Inkoopscan">
+  </iframe>
 </div>
-<script>
-(function() {
-  var cfg = {
-    environmentId: "{{ .environmentId }}",
-    apiHost: "{{ .serverUrl }}"
-  };
-  var s = document.createElement("script");
-  s.type = "text/javascript";
-  s.async = true;
-  s.src = "{{ .serverUrl }}/js/formbricks.umd.cjs";
-  s.onload = function() {
-    if (window.formbricks) {
-      window.formbricks.init(cfg);
-    }
-  };
-  document.head.appendChild(s);
-})();
-</script>
 {{ else }}
 <div class="fb-placeholder">
   <p>De inkoopscan is hier beschikbaar zodra Formbricks is geconfigureerd.</p>
