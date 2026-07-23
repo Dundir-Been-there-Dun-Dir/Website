@@ -1,0 +1,105 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero__headline">Presentations</h1>
+    <p class="page-hero__subheading">Pitch and briefing presentations, by audience.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="deck-group">
+      <p class="deck-group__label">General</p>
+      <div class="deck-grid">
+        <div class="deck-card">
+          <p class="deck-card__title">Investors &amp; grants</p>
+          <p class="deck-card__body">The full story: problem, product, market and team.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/dundir-investor-pitch/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">View presentation</a>
+            <a href="{{ "presentaties/decks/dundir-investor-pitch/dundir-pitch.pdf" | relURL }}" class="btn btn-secondary">Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck-group">
+      <p class="deck-group__label">For customers</p>
+      <div class="deck-grid">
+        <div class="deck-card">
+          <p class="deck-card__title">Construction companies</p>
+          <p class="deck-card__body">For procurement leads at mid-size construction companies.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/segment-a-construction-company/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">View presentation</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Municipalities</p>
+          <p class="deck-card__body">For procurement and contract managers at Dutch municipalities.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/segment-b-municipality/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">View presentation</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Large infrastructure organisations</p>
+          <p class="deck-card__body">For Rijkswaterstaat, water authorities and comparable organisations.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/segment-c-infrastructure-org/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">View presentation</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Project developers</p>
+          <p class="deck-card__body">For developers coordinating material procurement across multiple projects.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/segment-d-project-developer/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">View presentation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck-group">
+      <p class="deck-group__label">For partners</p>
+      <div class="deck-grid">
+        <div class="deck-card">
+          <p class="deck-card__title">Material suppliers</p>
+          <p class="deck-card__body">For suppliers looking to optimise their own procurement.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/segment-e-material-supplier/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">View presentation</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Auditors &amp; certification bodies</p>
+          <p class="deck-card__body">For parties who verify and manage certification data.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/auditors-certification-bodies/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">View presentation</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Trucking &amp; logistics</p>
+          <p class="deck-card__body">For transport and logistics partners in the construction chain.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/trucking-logistics/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">View presentation</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Material manufacturers</p>
+          <p class="deck-card__body">For manufacturers looking to apply the same procurement discipline internally.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/material-manufacturers/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">View presentation</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">CO&#8322; &amp; sustainability bodies</p>
+          <p class="deck-card__body">For parties managing emissions reporting across the supply chain.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/co2-sustainability-bodies/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">View presentation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}

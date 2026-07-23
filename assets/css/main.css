@@ -1612,3 +1612,87 @@ header.site-nav {
   width: auto;
   display: block;
 }
+
+/* ============================================================
+   25. Deck grid -- presentation cards (presentaties page)
+   ============================================================ */
+
+.deck-group + .deck-group {
+  margin-top: 2.5rem;
+}
+
+.deck-group__label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.deck-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 1.375rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  border-radius: 2px;
+}
+
+.deck-card__title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.deck-card__body {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-top: 0.625rem;
+  flex-grow: 1;
+}
+
+.deck-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.deck-card__actions .btn-secondary,
+.deck-card__actions .btn--secondary {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* ============================================================
+   26. Event list -- trade fairs / industry events
+   ============================================================ */
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.event-list li {
+  margin-bottom: 0;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--color-bg-alt);
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  color: var(--color-text);
+}

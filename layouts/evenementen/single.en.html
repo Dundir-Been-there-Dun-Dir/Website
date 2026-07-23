@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero__headline">Trade fairs and events</h1>
+    <p class="page-hero__subheading">Construction and building-services trade fairs and events on our radar.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <div class="prose">
+      <p>Dates and booth numbers are not all confirmed yet. This list will be updated once they are.</p>
+    </div>
+    <ul class="event-list">
+      <li>Bouwbeurs</li>
+      <li>VSK</li>
+      <li>Future Facade</li>
+      <li>DigiBouw</li>
+      <li>ESCE</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Meet us there</h2>
+    <p>Attending one of these events, or know a trade fair we shouldn't miss? Send a message.</p>
+    {{ partial "contact-form.html" . }}
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}

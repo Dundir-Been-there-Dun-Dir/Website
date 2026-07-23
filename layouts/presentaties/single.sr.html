@@ -1,0 +1,105 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero__headline">Prezentacije</h1>
+    <p class="page-hero__subheading">Prezentacije po ciljnoj grupi. Same prezentacije su na engleskom jeziku.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="deck-group">
+      <p class="deck-group__label">Opšte</p>
+      <div class="deck-grid">
+        <div class="deck-card">
+          <p class="deck-card__title">Investitori i grantovi</p>
+          <p class="deck-card__body">Cela priča: problem, proizvod, tržište i tim.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/dundir-investor-pitch/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">Pogledajte prezentaciju</a>
+            <a href="{{ "presentaties/decks/dundir-investor-pitch/dundir-pitch.pdf" | relURL }}" class="btn btn-secondary">Preuzmite PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck-group">
+      <p class="deck-group__label">Za klijente</p>
+      <div class="deck-grid">
+        <div class="deck-card">
+          <p class="deck-card__title">Građevinske kompanije</p>
+          <p class="deck-card__body">Za nabavljače u srednjim građevinskim kompanijama.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/segment-a-construction-company/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">Pogledajte prezentaciju</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Opštine</p>
+          <p class="deck-card__body">Za nabavljače i kontrakt-menadžere u niderlandskim opštinama.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/segment-b-municipality/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">Pogledajte prezentaciju</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Velike infrastrukturne organizacije</p>
+          <p class="deck-card__body">Za Rijkswaterstaat, vodne uprave i slične organizacije.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/segment-c-infrastructure-org/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">Pogledajte prezentaciju</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Investitori projekata</p>
+          <p class="deck-card__body">Za investitore koji koordinišu nabavku materijala kroz više projekata.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/segment-d-project-developer/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">Pogledajte prezentaciju</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck-group">
+      <p class="deck-group__label">Za partnere</p>
+      <div class="deck-grid">
+        <div class="deck-card">
+          <p class="deck-card__title">Dobavljači materijala</p>
+          <p class="deck-card__body">Za dobavljače koji žele da optimizuju sopstvenu nabavku.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/segment-e-material-supplier/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">Pogledajte prezentaciju</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Revizori i sertifikaciona tela</p>
+          <p class="deck-card__body">Za strane koje proveravaju i upravljaju podacima o sertifikaciji.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/auditors-certification-bodies/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">Pogledajte prezentaciju</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Transport i logistika</p>
+          <p class="deck-card__body">Za transportne i logističke partnere u građevinskom lancu.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/trucking-logistics/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">Pogledajte prezentaciju</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">Proizvođači materijala</p>
+          <p class="deck-card__body">Za proizvođače koji žele da primene istu nabavnu disciplinu interno.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/material-manufacturers/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">Pogledajte prezentaciju</a>
+          </div>
+        </div>
+        <div class="deck-card">
+          <p class="deck-card__title">CO&#8322; i tela za održivost</p>
+          <p class="deck-card__body">Za strane koje upravljaju izveštavanjem o emisijama kroz lanac snabdevanja.</p>
+          <div class="deck-card__actions">
+            <a href="{{ "presentaties/decks/co2-sustainability-bodies/" | relURL }}" class="btn btn-secondary" target="_blank" rel="noopener">Pogledajte prezentaciju</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}
