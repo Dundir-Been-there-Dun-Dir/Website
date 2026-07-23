@@ -1,17 +1,17 @@
 <section class="scan-cta">
   <div class="container">
     {{ if eq .Lang "en" }}
-    <p class="scan-cta__lead">Curious what manual procurement costs your organisation?</p>
+    <p class="scan-cta__lead">Curious how your procurement process holds up?</p>
     <a href="{{ "en/scan/" | relURL }}" class="btn btn--primary">Take the scan</a>
-    <p class="scan-cta__sub">Five questions. Specific to your team size and volume. No email required to see the result.</p>
+    <p class="scan-cta__sub">Ten questions about your current process. A personalised report, visible immediately. No email required to see the result.</p>
     {{ else if eq .Lang "sr" }}
-    <p class="scan-cta__lead">Zanima vas koliko vaša organizacija troši na ručnu nabavku?</p>
+    <p class="scan-cta__lead">Zanima vas koliko dobro funkcioniše vaš proces nabavke?</p>
     <a href="{{ "sr/skeniranje/" | relURL }}" class="btn btn--primary">Uradite skeniranje</a>
-    <p class="scan-cta__sub">Pet pitanja. Prilagođeno veličini vašeg tima i obimu. Rezultat vidite odmah, bez e-mail adrese.</p>
+    <p class="scan-cta__sub">Deset pitanja o vašem trenutnom procesu. Personalizovan izveštaj, odmah vidljiv. Bez e-mail adrese pre nego što vidite rezultat.</p>
     {{ else }}
-    <p class="scan-cta__lead">Benieuwd wat handmatige inkoop jouw organisatie kost?</p>
+    <p class="scan-cta__lead">Benieuwd hoe uw inkoopproces ervoor staat?</p>
     <a href="{{ "scan/" | relURL }}" class="btn btn--primary">Doe de scan</a>
-    <p class="scan-cta__sub">Vijf vragen. Specifiek voor jouw teamgrootte en volume. Geen e-mail vereist voor je het resultaat ziet.</p>
+    <p class="scan-cta__sub">Tien vragen over uw huidige proces. Een persoonlijk rapport, direct zichtbaar. Geen e-mail vereist voor u het resultaat ziet.</p>
     {{ end }}
   </div>
 </section>
