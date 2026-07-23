@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero__headline">Beurzen en evenementen</h1>
+    <p class="page-hero__subheading">Vakbeurzen en evenementen in de bouw- en installatiesector die we op de radar hebben staan.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <div class="prose">
+      <p>Data en standnummers zijn nog niet overal definitief. Deze lijst wordt bijgewerkt zodra dat wel zo is.</p>
+    </div>
+    <ul class="event-list">
+      <li>Bouwbeurs</li>
+      <li>VSK</li>
+      <li>Future Facade</li>
+      <li>DigiBouw</li>
+      <li>ESCE</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Ontmoet ons daar</h2>
+    <p>Bent u op een van deze evenementen, of weet u een beurs die we niet mogen missen? Stuur een bericht.</p>
+    {{ partial "contact-form.html" . }}
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}
