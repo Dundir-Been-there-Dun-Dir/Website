@@ -16,6 +16,9 @@ pluralizeListTitles = false
 [params]
   email = "christiaan.verhoef@dundir.com,milan.jelisavcic@dundir.com"
   linkedIn = "https://www.linkedin.com/company/dundir"
+  # Chat widget API key — set via HUGO_PARAMS_CHATAPIKEY env var (GitHub Actions secret).
+  # Never commit a real key here.
+  chatApiKey = ""
 
   # SUS survey webhook — n8n on CT104
   # Set RESEND_API_KEY env var on CT104 to enable email delivery
