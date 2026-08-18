@@ -11,7 +11,7 @@
     {{ partial "dundr-widget.html" . }}
     {{- $site := resources.Get "js/site.js" | minify | fingerprint -}}
     <script src="{{ $site.RelPermalink }}" integrity="{{ $site.Data.Integrity }}" crossorigin="anonymous" defer></script>
-    {{ if .IsHome }}
+    {{ if or .IsHome .Params.herojs }}
       {{- $hero := resources.Get "js/hero-optimizer.js" | minify | fingerprint -}}
       <script src="{{ $hero.RelPermalink }}" integrity="{{ $hero.Data.Integrity }}" crossorigin="anonymous" defer></script>
     {{ end }}
