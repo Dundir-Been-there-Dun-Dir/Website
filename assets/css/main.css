@@ -158,11 +158,20 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent-paper); }
   counter-increment: band;
 }
 
-/* The measure stays at 1180px at every size. A longer line does not make a page
-   feel larger, it makes it feel stretched; on a wide monitor the margins are the
-   design. Only the body size lifts a step, because the reading distance grows. */
+/* The measure grows with the viewport rather than stranding the page in a fixed
+   column on a large monitor. The prose measure grows with it, and the body size
+   lifts a step where the reading distance genuinely grows. */
+@media (min-width: 1500px) {
+  :root { --wrap: 1300px; }
+}
+
 @media (min-width: 1800px) {
+  :root { --wrap: 1440px; --wrap-narrow: 820px; --band-y: clamp(5rem, 6.5vh, 9rem); }
   body { font-size: 1.1875rem; }
+}
+
+@media (min-width: 2200px) {
+  :root { --wrap: 1560px; }
 }
 
 /* Hairline between consecutive bands of the same colour. With the rhythm opened
@@ -531,9 +540,12 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent-paper); }
      address bar collapsing does not resize it mid scroll. */
   display: grid;
   align-items: stretch;
-  /* Capped, so a very tall window does not stretch the hero into a void. */
+  /* Exactly one screen, at any height. The band below starts where the viewport
+     ends, so no strip of paper shows under the fold. The statement centres in the
+     space and the spec strip holds the bottom edge, so a tall window reads as
+     deliberate rather than empty. */
   min-height: calc(100vh - var(--nav-h));
-  min-height: min(calc(100svh - var(--nav-h)), 58rem);
+  min-height: calc(100svh - var(--nav-h));
 }
 
 /* The statement takes the middle of whatever height is left, the spec strip is
@@ -675,6 +687,11 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent-paper); }
 
 @media (min-width: 900px) {
   .hero__main { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); }
+}
+
+@media (min-width: 1500px) {
+  .hero__main { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .hero__copy { max-width: 38rem; }
 }
 
 
