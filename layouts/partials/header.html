@@ -1,9 +1,10 @@
 <header class="site-nav">
   <div class="container">
-    <a href="{{ "/" | relURL }}" class="site-nav__logo">
-      <img src="/logo.png" alt="Dundir" class="site-nav__logo-img">
+    <a href="{{ "/" | relURL }}" class="site-nav__logo" aria-label="Dundir">
+      {{ partial "mark.html" . }}
+      <span class="site-nav__word">Dundir</span>
     </a>
-    <nav class="site-nav__links">
+    <nav class="site-nav__links" aria-label="{{ if eq .Lang "en" }}Main{{ else if eq .Lang "sr" }}Glavna{{ else }}Hoofd{{ end }}">
       {{ if eq .Lang "en" }}
       <a href="{{ "en/the-problem/" | relURL }}">The problem</a>
       <a href="{{ "en/how-it-works/" | relURL }}">How it works</a>
@@ -17,31 +18,21 @@
       <a href="{{ "hoe-het-werkt/" | relURL }}">Hoe het werkt</a>
       <a href="{{ "over-ons/" | relURL }}">Over ons</a>
       {{ end }}
+      {{ if eq .Lang "en" }}
+      <a href="{{ "en/scan/" | relURL }}" class="btn btn--primary site-nav__cta">Take the scan</a>
+      {{ else if eq .Lang "sr" }}
+      <a href="{{ "sr/skeniranje/" | relURL }}" class="btn btn--primary site-nav__cta">Skeniranje</a>
+      {{ else }}
+      <a href="{{ "scan/" | relURL }}" class="btn btn--primary site-nav__cta">Doe de scan</a>
+      {{ end }}
     </nav>
-    {{ range .Translations }}
-    <a href="{{ .RelPermalink }}" class="btn btn--lang" lang="{{ .Lang }}" title="{{ .Language.LanguageName }}">{{ .Lang | upper }}</a>
-    {{ end }}
-    {{ if eq .Lang "en" }}
-    <a href="{{ "en/scan/" | relURL }}" class="btn btn--primary site-nav__cta">Take the scan</a>
-    {{ else if eq .Lang "sr" }}
-    <a href="{{ "sr/skeniranje/" | relURL }}" class="btn btn--primary site-nav__cta">Skeniranje</a>
-    {{ else }}
-    <a href="{{ "scan/" | relURL }}" class="btn btn--primary site-nav__cta">Doe de scan</a>
-    {{ end }}
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <div class="site-nav__langs">
+      {{ range .Translations }}
+      <a href="{{ .RelPermalink }}" class="btn btn--lang" lang="{{ .Lang }}" title="{{ .Language.LanguageName }}">{{ .Lang | upper }}</a>
+      {{ end }}
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
-
-<script>
-(function () {
-  var toggle = document.querySelector('.nav-toggle');
-  var header = document.querySelector('.site-nav');
-  if (!toggle || !header) return;
-  toggle.addEventListener('click', function () {
-    var isOpen = header.classList.toggle('nav-open');
-    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-})();
-</script>

@@ -1,0 +1,194 @@
+/* ============================================================
+   Dundir deck theme
+   Layered on top of the exported Quarto revealjs decks so the
+   presentations carry the same tokens as the site. See DESIGN.md.
+   Loaded last, so it wins over the generated theme.
+   ============================================================ */
+
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 800;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url('/fonts/archivo-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 800;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url('/fonts/archivo-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/sourceserif-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/sourceserif-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/jbmono-latin.woff2') format('woff2');
+}
+
+:root {
+  --pour: #191817;
+  --paper: #F1EDE4;
+  --ink: #16181A;
+  --ink-soft: #4A4844;
+  --hivis: #FFC400;
+  --blueprint-ink: #26647F;
+  --rule: #DAD4C7;
+
+  --r-background-color: #F1EDE4;
+  --r-main-font: 'Source Serif 4', Georgia, serif;
+  --r-main-color: #16181A;
+  --r-main-font-size: 34px;
+  --r-heading-font: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --r-heading-color: #16181A;
+  --r-heading-font-weight: 700;
+  --r-heading-line-height: 1.08;
+  --r-heading-letter-spacing: -0.02em;
+  --r-heading-text-transform: none;
+  --r-heading1-size: 2.1em;
+  --r-heading2-size: 1.5em;
+  --r-heading3-size: 1.15em;
+  --r-code-font: 'JetBrains Mono', ui-monospace, monospace;
+  --r-link-color: #26647F;
+  --r-link-color-hover: #191817;
+  --r-selection-background-color: #FFC400;
+  --r-selection-color: #191817;
+}
+
+.reveal-viewport { background: var(--paper); }
+.reveal { font-family: var(--r-main-font); color: var(--ink); }
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: var(--r-heading-font);
+  font-stretch: 108%;
+  text-wrap: balance;
+}
+
+/* The slide title carries the one hivis rule. One accent, one job. */
+.reveal .slides section > h2:first-child,
+.reveal .slides section > h1:first-child {
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+  border-bottom: 3px solid var(--hivis);
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* Dark slides: the title block and any section divider */
+.reveal section[data-background-color] h1,
+.reveal section[data-background-color] h2,
+.reveal section[data-background-color] h3,
+.reveal section[data-background-color] p,
+.reveal section[data-background-color] li { color: #FBF9F4; }
+
+.reveal #title-slide .title {
+  font-family: var(--r-heading-font);
+  font-weight: 800;
+  font-stretch: 112%;
+  letter-spacing: -0.025em;
+  color: #FBF9F4;
+}
+
+.reveal #title-slide .subtitle,
+.reveal #title-slide .quarto-title-authors,
+.reveal #title-slide .date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62em;
+  letter-spacing: 0.06em;
+  color: #A9A49B;
+}
+
+/* Numbers and metadata read as measurements, not prose */
+.reveal strong { font-weight: 700; }
+.reveal code, .reveal pre { font-family: var(--r-code-font); }
+.reveal blockquote {
+  background: none;
+  box-shadow: none;
+  border-left: 3px solid var(--hivis);
+  padding: 0.5em 0 0.5em 1em;
+  font-style: normal;
+}
+
+.reveal table { font-size: 0.8em; }
+.reveal table th {
+  font-family: var(--r-heading-font);
+  font-weight: 700;
+  border-bottom: 2px solid var(--ink);
+}
+.reveal table td { border-color: var(--rule); }
+
+.reveal ul, .reveal ol { margin-left: 1em; }
+.reveal li { margin-bottom: 0.35em; }
+
+.reveal .progress { color: var(--hivis); }
+.reveal .controls { color: var(--blueprint-ink); }
+.reveal .slide-number {
+  font-family: var(--r-code-font);
+  background: transparent;
+  color: var(--ink-soft);
+}
+
+.reveal .footer, .reveal .footer p {
+  font-family: var(--r-code-font);
+  font-size: 0.5em;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
+
+@media print {
+  .reveal-viewport { background: #fff; }
+}
+
+/* Callout boxes: the deck equivalent of the site proof block */
+.reveal .callout-box {
+  background: rgba(255, 196, 0, 0.10);
+  border-left: 3px solid var(--hivis);
+  border-radius: 0;
+  padding: 0.7em 1em;
+}
+
+.reveal section[data-background-color] .callout-box {
+  background: rgba(255, 196, 0, 0.14);
+  color: #FBF9F4;
+}
+
+/* The mark, not the white boxed logo export */
+.reveal .slide-logo {
+  height: 40px !important;
+  width: auto !important;
+  max-height: 40px !important;
+  bottom: 12px !important;
+  right: 16px !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.reveal .slide-menu-button,
+.reveal .slide-menu-button a,
+.reveal .slide-menu-button .fas,
+.reveal .menu-button { color: var(--blueprint-ink); }
