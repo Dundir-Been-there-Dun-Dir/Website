@@ -1,20 +1,39 @@
 {{ define "main" }}
 
-  {{/* SECTION 1: HERO */}}
+  {{/* 01 HERO: the claim, and the optimizer that backs it */}}
   <section class="hero">
-    <div class="container container--narrow">
-      <h1 class="hero__hl">Elf uur per week. Per inkoper. Elke week.</h1>
-      <p class="hero__sub">Dat is 49.500 euro per jaar aan inkoopadministratie, per persoon. Zonder de kosten van een verkeerde beslissing.</p>
-      <div class="hero__actions">
-        <a href="{{ "scan/" | relURL }}" class="btn btn--primary">Doe de scan</a>
+    <div class="container">
+      <div class="hero__copy">
+        <span class="kicker">Inkoopbeslissing, berekend</span>
+        <h1 class="hero__hl">Elf uur per week. Per inkoper. <em>Elke week.</em></h1>
+        <p class="hero__sub">Dat is 49.500 euro per jaar aan inkoopadministratie, per persoon. Zonder de kosten van een verkeerde beslissing.</p>
+        <div class="hero__actions">
+          <a href="{{ "scan/" | relURL }}" class="btn btn--primary">Doe de scan</a>
+          <a href="{{ "hoe-het-werkt/" | relURL }}" class="btn btn--secondary">Hoe het werkt</a>
+        </div>
+        <p class="hero__note">Tien vragen over uw huidige proces. Direct een persoonlijk rapport. Geen e-mailadres vereist voor u het resultaat ziet.</p>
       </div>
-      <p>Tien vragen over uw huidige proces. Direct een persoonlijk rapport. Geen e-mailadres vereist voor u het resultaat ziet.</p>
+
+      <figure class="hero__figure" data-optimizer
+              data-xlabel="prijs" data-ylabel="levertijd"
+              data-c1="certificering" data-c2="max levertijd" data-c3="kwaliteit" data-c4="budget"
+              data-optimum="optimum">
+        <canvas class="hero__canvas" width="640" height="480" role="img"
+                aria-label="Kandidaat-leverancierscombinaties uitgezet tegen prijs en levertijd. Randvoorwaarden snijden de onhaalbare combinaties weg. De optimale combinatie ligt op een hoekpunt van het overgebleven gebied."></canvas>
+        <figcaption class="hero__readout">
+          <span>run <b data-readout-run>01</b></span>
+          <span>kandidaten <b data-readout-n>170</b></span>
+          <span>randvoorwaarden <b>4</b></span>
+          <span>uitkomst <b>identiek</b></span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
-  {{/* SECTION 2: STATS STRIP */}}
-  <section class="stats-strip section--alt">
-    <div class="container">
+  {{/* 02 WHAT IT COSTS NOW */}}
+  <section class="stats-strip section section--tint">
+    <div class="container" data-stamp="kosten">
+      <h2 class="section__title">Wat het nu kost</h2>
       <div class="stat">
         <span class="stat__number">11 uur</span>
         <span class="stat__label">per week per inkoper aan vergelijkingswerk</span>
@@ -33,19 +52,20 @@
     </div>
   </section>
 
-  {{/* SECTION 3: WHAT DUNDIR DOES */}}
+  {{/* 03 WHAT DUNDIR DOES */}}
   <section class="section">
-    <div class="container container--narrow">
+    <div class="container container--narrow" data-stamp="systeem">
       <h2 class="section__title">Wat Dundir doet</h2>
       <div class="section__body">
         <p>Dundir is een lokaal geïmplementeerd inkoopbeslissingssysteem. Voor elk inkoopdossier berekent het de wiskundig optimale leverancierscombinatie op basis van prijs, levertijd en kwaliteitscriteria. Het systeem genereert automatisch een auditklaar rapport. Uw data verlaat nooit uw server. De inkoper beoordeelt en beslist. Dundir verzorgt de berekening en de documentatie.</p>
+        <p>Dezelfde invoer geeft dezelfde uitkomst. Elke keer. Dat is het verschil tussen een systeem dat rekent en een systeem dat antwoorden genereert.</p>
       </div>
     </div>
   </section>
 
-  {{/* SECTION 4: WHO IT'S FOR */}}
-  <section class="section section--alt">
-    <div class="container">
+  {{/* 04 WHO IT IS FOR */}}
+  <section class="section">
+    <div class="container" data-stamp="segmenten">
       <h2 class="section__title">Voor wie</h2>
       <div class="two-col">
         <div class="segment-card">
@@ -59,15 +79,21 @@
           <a href="{{ "het-probleem/" | relURL }}">Lees meer over het probleem</a>
         </div>
       </div>
+      <p class="scale-lbl">Regelgeving die dit afdwingt</p>
+      <div class="chips">
+        <span class="chip chip--live">Aanbestedingswet</span>
+        <span class="chip chip--live">CPR 2024/3110</span>
+        <span class="chip">CSRD Scope 3</span>
+      </div>
     </div>
   </section>
 
-  {{/* SECTION 5: SCAN CTA */}}
+  {{/* 05 SCAN */}}
   {{ partial "scan-cta.html" . }}
 
-  {{/* SECTION 6: TEAM STRIP */}}
+  {{/* 06 TEAM */}}
   <section class="section">
-    <div class="container">
+    <div class="container" data-stamp="team">
       <h2 class="section__title">Het team</h2>
       <div class="team-strip">
         <div class="team-card">
