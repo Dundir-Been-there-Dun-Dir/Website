@@ -88,7 +88,12 @@
     if (!r.width) return;
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = Math.round(r.width);
-    H = Math.round(W * (W < 640 ? 0.80 : 0.72));
+    /* Height is capped by --figure-max-h and by the viewport, so the hero cannot
+       eat the whole screen and hide the band underneath it. */
+    var capRem = parseFloat(getComputedStyle(fig).getPropertyValue('--figure-max-h')) || 30;
+    var cap = Math.min(capRem * 16, window.innerHeight * (W < 900 ? 0.34 : 0.56));
+    H = Math.round(Math.min(W * (W < 640 ? 0.80 : 0.72), cap));
+    if (H < 200) H = 200;
     canvas.width = Math.round(W * dpr);
     canvas.height = Math.round(H * dpr);
     canvas.style.width = W + 'px';
