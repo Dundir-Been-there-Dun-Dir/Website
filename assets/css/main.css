@@ -148,10 +148,7 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent-paper); }
 
 .container--narrow { max-width: calc(var(--wrap-narrow) + var(--rail) + 4rem); }
 
-/* Prose keeps its measure even as the page widens */
-@media (min-width: 1800px) {
-  :root { --wrap-narrow: 820px; }
-}
+
 
 .section,
 .scan-cta,
@@ -161,19 +158,11 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent-paper); }
   counter-increment: band;
 }
 
-/* The measure grows with the viewport instead of stranding the page in a fixed
-   1180px column on a large monitor, and the gutter grows with it. */
-@media (min-width: 1500px) {
-  :root { --wrap: 1300px; }
-}
-
+/* The measure stays at 1180px at every size. A longer line does not make a page
+   feel larger, it makes it feel stretched; on a wide monitor the margins are the
+   design. Only the body size lifts a step, because the reading distance grows. */
 @media (min-width: 1800px) {
-  :root { --wrap: 1440px; --band-y: clamp(5rem, 6.5vw, 9rem); }
   body { font-size: 1.1875rem; }
-}
-
-@media (min-width: 2200px) {
-  :root { --wrap: 1560px; }
 }
 
 /* Hairline between consecutive bands of the same colour. With the rhythm opened
@@ -536,14 +525,74 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent-paper); }
   color: var(--ink-inv);
   padding: clamp(1.75rem, 5vh, 4rem) 0 clamp(1.5rem, 4vh, 3.25rem);
   overflow: hidden;
+
+  /* The hero fills the screen by height, not by width. The fold then lands on a
+     deliberate edge instead of halfway through a stat row. svh, so the mobile
+     address bar collapsing does not resize it mid scroll. */
+  display: grid;
+  align-items: stretch;
+  /* Capped, so a very tall window does not stretch the hero into a void. */
+  min-height: calc(100vh - var(--nav-h));
+  min-height: min(calc(100svh - var(--nav-h)), 58rem);
+}
+
+/* The statement takes the middle of whatever height is left, the spec strip is
+   pinned to the bottom edge of the hero. The fold then falls on a rule. */
+.hero > .container {
+  width: 100%;
+  grid-template-rows: 1fr auto;
+}
+
+.hero__main { align-self: center; }
+
+/* Short landscape phones: let it be as tall as it needs, not taller */
+@media (max-height: 560px) {
+  .hero { min-height: 0; }
 }
 
 .hero .container,
 .hero .container--narrow {
   display: grid;
+  gap: clamp(1.5rem, 4vh, 3rem);
+  max-width: var(--wrap);
+}
+
+/* The hero fills its screen with content, not with padding: the statement and the
+   figure take the middle, and a spec strip closes it along the bottom edge. */
+.hero__main {
+  display: grid;
   gap: clamp(1.25rem, 3vw, 3.5rem);
   align-items: center;
-  max-width: var(--wrap);
+}
+
+.hero__specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem 2rem;
+  padding-top: clamp(1rem, 2.5vh, 1.75rem);
+  border-top: var(--hair) solid var(--rule-inv);
+  margin: 0;
+}
+
+.hero__spec dt {
+  font-family: var(--ledger);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 0.2rem;
+}
+
+.hero__spec dd {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink-inv);
+}
+
+@media (min-width: 760px) {
+  .hero__specs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 .hero__copy { max-width: 34rem; }
@@ -602,10 +651,10 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent-paper); }
 
 /* Read by the canvas script: the figure never grows past this, so the band below
    the hero stays on screen on a laptop. */
-.hero__figure { --figure-max-h: 30rem; }
+.hero__figure { --figure-max-h: 34rem; }
 
 @media (max-width: 899px) {
-  .hero__figure { --figure-max-h: 17rem; }
+  .hero__figure { --figure-max-h: 18rem; }
   .hero__note { font-size: 0.74rem; }
 }
 
@@ -625,15 +674,10 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent-paper); }
 .hero__readout b { color: var(--hivis); font-weight: 500; }
 
 @media (min-width: 900px) {
-  .hero .container,
-  .hero .container--narrow { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); }
+  .hero__main { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); }
 }
 
-@media (min-width: 1500px) {
-  .hero .container,
-  .hero .container--narrow { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-  .hero__copy { max-width: 38rem; }
-}
+
 
 /* ============================================================
    8. Page hero (inner pages)
@@ -643,6 +687,15 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent-paper); }
   color: var(--ink-inv);
   padding: clamp(2rem, 5.5vh, 4rem) 0 clamp(1.5rem, 4vh, 3rem);
   counter-increment: none;
+  display: flex;
+  align-items: center;
+  min-height: min(46svh, 28rem);
+}
+
+.page-hero > .container { width: 100%; }
+
+@media (max-height: 560px) {
+  .page-hero { min-height: 0; }
 }
 
 .page-hero .container { display: block; }
@@ -1004,6 +1057,18 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent-paper); }
   padding: var(--band-y) 0;
   counter-increment: band;
 }
+
+.scan-cta {
+  display: flex;
+  align-items: center;
+  min-height: min(58svh, 32rem);
+}
+
+@media (max-height: 560px) {
+  .scan-cta { min-height: 0; }
+}
+
+.scan-cta > .container { width: 100%; }
 
 .scan-cta::after {
   content: "";
