@@ -1,0 +1,258 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container">
+    <span class="kicker">Design system</span>
+    <h1 class="page-hero__headline">The page is a decision under constraint.</h1>
+    <p class="page-hero__subheading">Every token, band and component on dundir.com, rendered with the system itself. The written rationale lives in <code>DESIGN.md</code>; this page is the working reference. If something here looks wrong, the site is wrong.</p>
+  </div>
+</div>
+
+{{/* 01 PRINCIPLE */}}
+<section class="section">
+  <div class="container container--narrow" data-stamp="principe">
+    <h2 class="section-heading">One idea, held everywhere</h2>
+    <p>An optimizer does not offer an opinion. It removes everything that violates a constraint and returns what stands at the optimum. The site is built the same way: bands cut by hairlines, a ledger rail that stamps every claim, and exactly one accent colour that marks the chosen thing and nothing else.</p>
+    <p>Three rules carry most of the design:</p>
+    <ul>
+      <li><strong>The accent marks the optimum.</strong> One accented element per view: the primary action, the current page, the winning number. If everything is accented, nothing is.</li>
+      <li><strong>One ground, two tones.</strong> The page is a single warm paper surface with a tint band for separation. Dark is spent only on the hero and the closing call, where the argument starts and ends. Hairlines and space do the rest, so the page reads as one document rather than a stack of inverted blocks.</li>
+      <li><strong>No claim without a source line.</strong> Every number has a citation set in mono underneath it.</li>
+    </ul>
+  </div>
+</section>
+
+{{/* 02 COLOUR */}}
+<section class="section section--tint">
+  <div class="container" data-stamp="kleur">
+    <h2 class="section-heading">Colour</h2>
+    <p>Warm neutral grounds, one accent, and a cool data colour that lives only inside the optimizer figure. The grounds are deliberately not blue shifted: on a blue black band every cool element reads as a shade of the ground rather than as a category of its own, which is the mistake this palette corrects.</p>
+
+    <p>Amber is the accent. It was trialled against audit teal #0F6E63 and signal orange #C8481B, and it holds the mark and the hero better than either. The cost of that choice is a hard rule: at 1.39:1 on paper, amber can never be text there. It is a fill, a rule, a dot or a vertex, and nothing else.</p>
+
+    <p class="scale-lbl">Grounds</p>
+    <div class="swatches">
+      {{ partial "swatch.html" (dict "token" "--pour" "hex" "#191817" "role" "warm near black. Header, hero, closing call") }}
+      {{ partial "swatch.html" (dict "token" "--formwork" "hex" "#221F1D" "role" "the dark band, and the figure ground") }}
+      {{ partial "swatch.html" (dict "token" "--paper" "hex" "#F1EDE4" "role" "the page. Nearly everything sits here") }}
+      {{ partial "swatch.html" (dict "token" "--paper-2" "hex" "#E7E2D6" "role" "tint band. Separation without inversion") }}
+    </div>
+
+    <p class="scale-lbl">Ink and rules</p>
+    <div class="swatches">
+      {{ partial "swatch.html" (dict "token" "--ink" "hex" "#16181A" "role" "body text on paper. 15.2:1") }}
+      {{ partial "swatch.html" (dict "token" "--ink-soft" "hex" "#4A4844" "role" "secondary prose") }}
+      {{ partial "swatch.html" (dict "token" "--steel-ink" "hex" "#5C5A56" "role" "sources and stamps on paper. 5.9:1") }}
+      {{ partial "swatch.html" (dict "token" "--rule" "hex" "#DAD4C7" "role" "hairlines on paper") }}
+      {{ partial "swatch.html" (dict "token" "--ink-inv" "hex" "#EDE8DE" "role" "body text on the dark surfaces") }}
+      {{ partial "swatch.html" (dict "token" "--steel" "hex" "#8E8B85" "role" "sources and stamps on dark") }}
+      {{ partial "swatch.html" (dict "token" "--rule-inv" "hex" "#38352F" "role" "hairlines on dark") }}
+    </div>
+
+    <p class="scale-lbl">Accent, live</p>
+    <div class="swatches">
+      {{ partial "swatch.html" (dict "token" "--accent" "hex" "var(--accent)" "value" "live" "role" "fills, the optimum, the current item. One per view") }}
+      {{ partial "swatch.html" (dict "token" "--accent-deep" "hex" "var(--accent-deep)" "value" "live" "role" "the hover step") }}
+      {{ partial "swatch.html" (dict "token" "--accent-light" "hex" "var(--accent-light)" "value" "live" "role" "the accent on the dark surfaces") }}
+      {{ partial "swatch.html" (dict "token" "--accent-paper" "hex" "#7A5E00" "role" "the olive step. Small mono labels only, never display numbers") }}
+      {{ partial "swatch.html" (dict "token" "--accent-on" "hex" "var(--accent-on)" "value" "live" "role" "the text colour that sits on an accent fill") }}
+    </div>
+
+    <p class="scale-lbl">The mark</p>
+    <div class="swatches">
+      {{ partial "swatch.html" (dict "token" "--mark-line" "hex" "#5FB0CE" "role" "the region, on the dark header. Darkens to #26647F on paper") }}
+      {{ partial "swatch.html" (dict "token" "--mark-dot" "hex" "#FFC400" "role" "the optimum vertex. Always amber") }}
+    </div>
+
+    <p class="scale-lbl">The figure</p>
+    <div class="swatches">
+      {{ partial "swatch.html" (dict "token" "--figure-live" "hex" "var(--figure-live)" "value" "live" "role" "candidate combinations. The only cool colour on the site") }}
+      {{ partial "swatch.html" (dict "token" "--figure-cut" "hex" "var(--figure-cut)" "value" "live" "role" "constraint lines. Neutral where red would collide with the accent") }}
+      {{ partial "swatch.html" (dict "token" "--figure-opt" "hex" "var(--figure-opt)" "value" "live" "role" "the optimum vertex. Always the accent") }}
+    </div>
+
+    <p class="text-small text-muted">Display numbers on paper are set in ink, not in the olive step: at 2.4rem the olive reads muddy next to black serif. Amber returns at full strength the moment there is a fill behind it, which is why the primary button, the proof block rule, the chip dots and the mark's vertex all carry it. On the dark surfaces the constraint lifts entirely and amber is text: 11.1:1 on the header, 10.6:1 on the band.</p>
+  </div>
+</section>
+
+{{/* 03 TYPE */}}
+<section class="section">
+  <div class="container" data-stamp="type">
+    <h2 class="section-heading">Type</h2>
+    <p>Three families, self-hosted, subset to Latin and Latin Extended so Dutch, English and Serbian all set natively. No third party font request: municipalities review that.</p>
+
+    <div class="spec">
+      <p class="spec__label">Archivo, display</p>
+      <p class="spec__sample spec__sample--display">Elf uur per week. Per inkoper.</p>
+      <p class="spec__note">Variable grotesque, width axis at 108 to 112 percent for headlines. Used for headings, buttons, names and nav. Never for prose.</p>
+    </div>
+
+    <div class="spec">
+      <p class="spec__label">Source Serif 4, body</p>
+      <p class="spec__sample spec__sample--body">Voor elk inkoopdossier berekent Dundir de wiskundig optimale leverancierscombinatie, en documenteert waarom.</p>
+      <p class="spec__note">The report voice. 18px minimum, 1.7 line height, measure capped at 68 characters.</p>
+    </div>
+
+    <div class="spec">
+      <p class="spec__label">JetBrains Mono, ledger</p>
+      <p class="spec__sample spec__sample--ledger">11 uur  ·  49.500 EUR  ·  8.354 EUR  ·  342 gemeenten</p>
+      <p class="spec__note">Numbers, stamps, sources, constraint labels, the hero readout. Tabular figures on, ligatures off. These are measurements, so they align in a column.</p>
+    </div>
+
+    <div class="spec">
+      <p class="spec__label">Three languages, one face</p>
+      <p class="spec__sample spec__sample--display">Jelisavčić · Gluhović · građevinarstvo · doelfunctie</p>
+      <p class="spec__note">Serbian Latin diacritics come from the same variable file, not a fallback face.</p>
+    </div>
+  </div>
+</section>
+
+{{/* 04 BANDS */}}
+<section class="section section--tint">
+  <div class="container" data-stamp="banden">
+    <h2 class="section-heading">Bands and the ledger rail</h2>
+    <p>Sections are full width bands, separated by a hairline or by a change of ground. Nothing floats: no cards, no shadows, no rounded panels on grey.</p>
+    <p>The rail on the left of this band is not markup. Every band lays its container out as a two column grid, so a CSS counter and the band's <code>data-stamp</code> attribute produce the stamp you see rotated in the margin. Below 1080px the stamp folds inline above the heading. That is the site keeping its own audit trail, which is what the product sells.</p>
+  </div>
+</section>
+
+{{/* 05 COMPONENTS ON PAPER */}}
+<section class="section">
+  <div class="container" data-stamp="componenten">
+    <h2 class="section-heading">Components</h2>
+
+    <p class="scale-lbl">Buttons</p>
+    <div class="hero__actions">
+      <a href="{{ "scan/" | relURL }}" class="btn btn--primary">Primary, the optimum</a>
+      <a href="{{ "hoe-het-werkt/" | relURL }}" class="btn btn--secondary">Secondary</a>
+    </div>
+    <p class="text-small text-muted">One primary per view. The tick on the primary button is the same mark as the optimum in the hero figure.</p>
+
+    <p class="scale-lbl">Constraint chips</p>
+    <div class="chips">
+      <span class="chip chip--live">Aanbestedingswet</span>
+      <span class="chip chip--live">CPR 2024/3110</span>
+      <span class="chip">CSRD Scope 3</span>
+    </div>
+    <p class="text-small text-muted">A hivis dot means the obligation is live today. A steel dot means it is pending.</p>
+
+    <p class="scale-lbl">Stat rows</p>
+    <div class="stat">
+      <span class="stat__number">11 uur</span>
+      <span class="stat__label">per week per inkoper aan vergelijkingswerk</span>
+      <span class="stat__source">Remarcable / BuildMate 2025</span>
+    </div>
+    <div class="stat">
+      <span class="stat__number">88%</span>
+      <span class="stat__label">van aannemers beheert inkoop nog in spreadsheets</span>
+      <span class="stat__source">Remarcable 2025</span>
+    </div>
+
+    <p class="scale-lbl">Proof block, one decisive number</p>
+    <div class="proof-block">
+      <p class="proof-block__stat">8.354 euro</p>
+      <p class="proof-block__label">fout op een enkele aanbestedingsregel bij gebruik van een generieke enterprise AI-tool</p>
+      <p class="proof-block__source">Hamppi 2025, Aalto Universiteit</p>
+    </div>
+
+    <p class="scale-lbl">Step list</p>
+    <ol class="step-list">
+      <li>
+        <div>
+          <p class="step-list__title">U voert een materiaalspecificatie in</p>
+          <p class="step-list__body">In gewoon Nederlands, dezelfde manier waarop u het nu ook zou omschrijven.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">De optimalisatie-engine rekent</p>
+          <p class="step-list__body">Harde eisen als randvoorwaarden, gewogen doelstellingen als doelfunctie. Een berekend antwoord, geen suggestie.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="scale-lbl">People</p>
+    <div class="team-strip">
+      <div class="team-card">
+        <span class="team-card__name">Dr. Milan Jelisavčić</span>
+        <span class="team-card__role">CTO</span>
+        <span class="team-card__cred">PhD Evolutionaire Robotica, VU Amsterdam. Productie-AI bij Stedin, ABN AMRO.</span>
+      </div>
+    </div>
+
+    <p class="scale-lbl">Deck row</p>
+    <div class="deck-grid">
+      <div class="deck-card">
+        <p class="deck-card__title">Bouwbedrijven</p>
+        <p class="deck-card__body">Voor inkoopverantwoordelijken bij middelgrote aannemers.</p>
+        <div class="deck-card__actions">
+          <a href="{{ "presentaties/" | relURL }}" class="btn btn-secondary">Bekijk presentatie</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="scale-lbl">Form field</p>
+    <div class="form-group">
+      <label for="sg-demo">Naam</label>
+      <input type="text" id="sg-demo" name="demo" autocomplete="off">
+    </div>
+  </div>
+</section>
+
+{{/* 06 MARK */}}
+<section class="section section--tint">
+  <div class="container" data-stamp="merk">
+    <h2 class="section-heading">The mark</h2>
+    <div class="mark-row">
+      <span class="mark-row__big">{{ partial "mark.html" . }}</span>
+      <p>A feasible region with the optimum sitting on one of its vertices. The same idea as the hero figure, reduced to 22 pixels. It appears in the header, in the favicon, and on every slide of every deck. It is never redrawn in another colour: the region is blueprint, the vertex is hivis.</p>
+    </div>
+  </div>
+</section>
+
+{{/* 07 MOTION AND ACCESS */}}
+<section class="section">
+  <div class="container container--narrow" data-stamp="gedrag">
+    <h2 class="section-heading">Motion and access</h2>
+    <ul>
+      <li>The hero optimizer is the only continuous motion on the site. 30fps, paused off screen and on a hidden tab, halved population under 760px.</li>
+      <li>Sections rise 8px and fade in once, staggered by 60ms. No parallax, no scroll-jacking, no carousel.</li>
+      <li><code>prefers-reduced-motion</code> disables all of it and draws the optimizer's final converged frame instead, with the region, the optimum and the labels in place.</li>
+      <li>Focus rings use the accent at 3px with 3px offset, visible on both grounds. A skip link precedes the header.</li>
+      <li>Every text pairing meets AA in its own band. Metadata switches token between <code>--steel</code> and <code>--steel-ink</code> for exactly this reason.</li>
+    </ul>
+  </div>
+</section>
+
+{{/* 08 RULES */}}
+<section class="section section--tint">
+  <div class="container" data-stamp="regels">
+    <h2 class="section-heading">What this design refuses</h2>
+    <div class="two-col">
+      <div class="segment-card">
+        <h3>Never</h3>
+        <ul>
+          <li>Stock photography of handshakes, hard hats or glass towers</li>
+          <li>Blue gradient heroes and rounded card grids on grey</li>
+          <li>A second accent colour competing with the first</li>
+          <li>Numbers without a source line</li>
+          <li>Em-dashes, in any file. CI fails the build on them</li>
+          <li>The words on the forbidden list in <code>.github/workflows/deploy.yml</code></li>
+        </ul>
+      </div>
+      <div class="segment-card">
+        <h3>Always</h3>
+        <ul>
+          <li>One h1 per page, and it is the page subject</li>
+          <li>A stamp on every band, in the language of the page</li>
+          <li>Dark reserved for the hero and the closing call</li>
+          <li>Mono for anything measured</li>
+          <li>Self-hosted fonts, no third party requests</li>
+          <li>A single CSS file and one 6 kB script, no framework</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

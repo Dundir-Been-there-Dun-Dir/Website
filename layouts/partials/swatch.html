@@ -1,0 +1,8 @@
+{{/* One colour token: chip, name, value, role. Pass hex as any CSS colour,
+     including var(--accent), and pass value to print something else. */}}
+<div class="swatch">
+  <span class="swatch__chip" style="background: {{ .hex }};"></span>
+  <span class="swatch__token">{{ .token }}</span>
+  <span class="swatch__hex">{{ if .value }}{{ .value }}{{ else }}{{ .hex }}{{ end }}</span>
+  <span class="swatch__role">{{ .role }}</span>
+</div>

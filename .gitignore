@@ -3,3 +3,10 @@ resources/_gen/
 .hugo_build.lock
 .DS_Store
 node_modules/
+
+# local preview helpers (server-side only)
+.shots/
+.deck-backups/
+
+# local tooling and backups (server-side only)
+.tools/

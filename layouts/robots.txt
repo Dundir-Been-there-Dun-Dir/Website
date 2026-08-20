@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /styleguide/
+Disallow: /en/styleguide/
+Disallow: /sr/styleguide/
+
+Sitemap: {{ "sitemap.xml" | absURL }}

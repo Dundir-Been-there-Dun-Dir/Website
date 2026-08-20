@@ -1,20 +1,60 @@
 {{ define "main" }}
 
-  {{/* SECTION 1: HERO */}}
+  {{/* 01 HERO */}}
   <section class="hero">
-    <div class="container container--narrow">
-      <h1 class="hero__hl">Eleven hours a week. Per procurement officer. Every week.</h1>
-      <p class="hero__sub">That's €49,500 a year in procurement admin per person. Not counting the cost of a wrong decision.</p>
-      <div class="hero__actions">
-        <a href="{{ "en/scan/" | relURL }}" class="btn btn--primary">Take the scan</a>
+    <div class="container">
+        <div class="hero__main">
+      <div class="hero__copy">
+        <span class="kicker">Procurement, calculated</span>
+        <h1 class="hero__hl">Eleven hours a week. Per procurement officer. <em>Every week.</em></h1>
+        <p class="hero__sub">That is 49,500 euro a year in procurement admin per person. Not counting the cost of a wrong decision.</p>
+        <div class="hero__actions">
+          <a href="{{ "en/scan/" | relURL }}" class="btn btn--primary">Take the scan</a>
+          <a href="{{ "en/how-it-works/" | relURL }}" class="btn btn--secondary">How it works</a>
+        </div>
+        <p class="hero__note">Ten questions about your current process. An instant personalised report. No email required to see the result.</p>
       </div>
-      <p>Ten questions about your current process. An instant personalised report. No email required to see the result.</p>
+
+      <figure class="hero__figure" data-optimizer
+              data-xlabel="price" data-ylabel="lead time"
+              data-c1="certification" data-c2="max lead time" data-c3="quality" data-c4="budget"
+              data-optimum="optimum">
+        <canvas class="hero__canvas" width="640" height="480" role="img"
+                aria-label="Candidate supplier combinations plotted against price and lead time. Constraints cut away the infeasible ones. The optimal combination sits on a vertex of what is left."></canvas>
+        <figcaption class="hero__readout">
+          <span>run <b data-readout-run>01</b></span>
+          <span>candidates <b data-readout-n>170</b></span>
+          <span>constraints <b>4</b></span>
+          <span>outcome <b>identical</b></span>
+        </figcaption>
+      </figure>
+      </div>
+
+      <dl class="hero__specs">
+        <div class="hero__spec">
+          <dt>Deployment</dt>
+          <dd>local, on your server</dd>
+        </div>
+        <div class="hero__spec">
+          <dt>Engine</dt>
+          <dd>linear optimisation</dd>
+        </div>
+        <div class="hero__spec">
+          <dt>Output</dt>
+          <dd>audit ready report</dd>
+        </div>
+        <div class="hero__spec">
+          <dt>Data</dt>
+          <dd>never leaves your server</dd>
+        </div>
+      </dl>
     </div>
   </section>
 
-  {{/* SECTION 2: STATS STRIP */}}
-  <section class="stats-strip section--alt">
-    <div class="container">
+  {{/* 02 WHAT IT COSTS NOW */}}
+  <section class="stats-strip section section--tint">
+    <div class="container" data-stamp="cost">
+      <h2 class="section__title">What it costs today</h2>
       <div class="stat">
         <span class="stat__number">11 hours</span>
         <span class="stat__label">per week per procurement officer on comparison work</span>
@@ -33,19 +73,20 @@
     </div>
   </section>
 
-  {{/* SECTION 3: WHAT DUNDIR DOES */}}
+  {{/* 03 WHAT DUNDIR DOES */}}
   <section class="section">
-    <div class="container container--narrow">
+    <div class="container container--narrow" data-stamp="system">
       <h2 class="section__title">What Dundir does</h2>
       <div class="section__body">
         <p>Dundir is a locally deployed procurement decision system. For every procurement file it calculates the mathematically optimal supplier combination based on price, delivery time and quality criteria. The system automatically generates an audit-ready report. Your data never leaves your server. The procurement officer reviews and decides. Dundir handles the calculation and the documentation.</p>
+        <p>The same input gives the same outcome. Every time. That is the difference between a system that calculates and a system that generates answers.</p>
       </div>
     </div>
   </section>
 
-  {{/* SECTION 4: WHO IT'S FOR */}}
-  <section class="section section--alt">
-    <div class="container">
+  {{/* 04 WHO IT IS FOR */}}
+  <section class="section">
+    <div class="container" data-stamp="segments">
       <h2 class="section__title">Who it's for</h2>
       <div class="two-col">
         <div class="segment-card">
@@ -59,15 +100,21 @@
           <a href="{{ "en/the-problem/" | relURL }}">Read more about the problem</a>
         </div>
       </div>
+      <p class="scale-lbl">The regulation that enforces this</p>
+      <div class="chips">
+        <span class="chip chip--live">Aanbestedingswet</span>
+        <span class="chip chip--live">CPR 2024/3110</span>
+        <span class="chip">CSRD Scope 3</span>
+      </div>
     </div>
   </section>
 
-  {{/* SECTION 5: SCAN CTA */}}
+  {{/* 05 SCAN */}}
   {{ partial "scan-cta.html" . }}
 
-  {{/* SECTION 6: TEAM STRIP */}}
+  {{/* 06 TEAM */}}
   <section class="section">
-    <div class="container">
+    <div class="container" data-stamp="team">
       <h2 class="section__title">The team</h2>
       <div class="team-strip">
         <div class="team-card">
