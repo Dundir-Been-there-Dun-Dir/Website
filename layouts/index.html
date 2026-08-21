@@ -1,152 +1,46 @@
 {{ define "main" }}
 
-  {{/* 01 HERO: the claim, and the optimizer that backs it */}}
+  {{/* 01 HERO: the claim, and the cost stack that carries it.
+       Copy comes from content/_index.<lang>.md, structure lives here once. */}}
   <section class="hero">
     <div class="container">
-        <div class="hero__main">
-      <div class="hero__copy">
-        <span class="kicker">Inkoopbeslissing, berekend</span>
-        <h1 class="hero__hl">Elf uur per week. Per inkoper. <em>Elke week.</em></h1>
-        <p class="hero__sub">Dat is 49.500 euro per jaar aan inkoopadministratie, per persoon. Zonder de kosten van een verkeerde beslissing.</p>
+      <h1>{{ .Params.headline | safeHTML }}</h1>
+
+      <div class="hero__sub">
+        <p>{{ .Params.sub }}</p>
         <div class="hero__actions">
-          <a href="{{ "scan/" | relURL }}" class="btn btn--primary">Doe de scan</a>
-          <a href="{{ "hoe-het-werkt/" | relURL }}" class="btn btn--secondary">Hoe het werkt</a>
+          <a href="{{ i18n "url_scan" | relURL }}" class="btn btn--primary">{{ i18n "nav_scan" }}</a>
+          <a href="{{ i18n "url_how" | relURL }}" class="btn btn--secondary">{{ i18n "nav_how" }}</a>
         </div>
-        <p class="hero__note">Tien vragen over uw huidige proces. Direct een persoonlijk rapport. Geen e-mailadres vereist voor u het resultaat ziet.</p>
       </div>
 
-      <figure class="hero__figure" data-optimizer
-              data-xlabel="prijs" data-ylabel="levertijd"
-              data-c1="certificering" data-c2="max levertijd" data-c3="kwaliteit" data-c4="budget"
-              data-rows="kozijnen,beton,staal,isolatie,dakbedekking" data-cols="A,B,C,D,E,F"
-              data-total-label="gekozen combinatie" data-xlabel2="iteraties" data-ylabel2="kosten"
-              data-optimum="optimum">
-        <canvas class="hero__canvas" width="640" height="480" role="img"
-                aria-label="Kandidaat-leverancierscombinaties uitgezet tegen prijs en levertijd. Randvoorwaarden snijden de onhaalbare combinaties weg. De optimale combinatie ligt op een hoekpunt van het overgebleven gebied."></canvas>
-        <figcaption class="hero__readout">
-          <span>run <b data-readout-run>01</b></span>
-          <span>kandidaten <b data-readout-n>170</b></span>
-          <span>randvoorwaarden <b>4</b></span>
-          <span>uitkomst <b>identiek</b></span>
-        </figcaption>
-      </figure>
+      {{ with .Params.stack }}
+      <div class="stack">
+        <div class="stack__hd">
+          <span class="mono">{{ .label }}</span>
+          <span class="mono">{{ .source }}</span>
+        </div>
+        <div class="stack__bar" role="img" aria-label="{{ .alt }}">
+          {{ range .segments }}
+          <div class="seg seg--{{ .kind }}">
+            <span class="seg__pct">{{ .pct }}</span>
+            <span class="seg__nm">{{ .name | safeHTML }}</span>
+          </div>
+          {{ end }}
+        </div>
+        <div class="stack__ft">
+          <span class="mono">{{ .footLeft }}</span>
+          <span class="mono">{{ .footRight }}</span>
+        </div>
       </div>
-
-      <dl class="hero__specs">
-        <div class="hero__spec">
-          <dt>Implementatie</dt>
-          <dd>lokaal, op uw server</dd>
-        </div>
-        <div class="hero__spec">
-          <dt>Motor</dt>
-          <dd>lineaire optimalisatie</dd>
-        </div>
-        <div class="hero__spec">
-          <dt>Uitvoer</dt>
-          <dd>auditklaar rapport</dd>
-        </div>
-        <div class="hero__spec">
-          <dt>Data</dt>
-          <dd>verlaat uw server niet</dd>
-        </div>
-      </dl>
+      {{ end }}
     </div>
   </section>
 
-  {{/* 02 WHAT IT COSTS NOW */}}
-  <section class="stats-strip section section--tint">
-    <div class="container" data-stamp="kosten">
-      <h2 class="section__title">Wat het nu kost</h2>
-      <div class="stat">
-        <span class="stat__number">11 uur</span>
-        <span class="stat__label">per week per inkoper aan vergelijkingswerk</span>
-        <span class="stat__source">Remarcable / BuildMate 2025</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">88%</span>
-        <span class="stat__label">van aannemers beheert inkoop nog in spreadsheets</span>
-        <span class="stat__source">Remarcable 2025</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">70%</span>
-        <span class="stat__label">van de projectkosten zit in materiaal. Inkoop is geen backoffice-functie.</span>
-        <span class="stat__source">Donyavi et al. 2024, geciteerd in Hamppi 2025</span>
-      </div>
-    </div>
-  </section>
+  {{ range .Params.sections }}
+    {{ partial "band.html" (dict "section" . "page" $) }}
+  {{ end }}
 
-  {{/* 03 WHAT DUNDIR DOES */}}
-  <section class="section">
-    <div class="container container--narrow" data-stamp="systeem">
-      <h2 class="section__title">Wat Dundir doet</h2>
-      <div class="section__body">
-        <p>Dundir is een lokaal geïmplementeerd inkoopbeslissingssysteem. Voor elk inkoopdossier berekent het de wiskundig optimale leverancierscombinatie op basis van prijs, levertijd en kwaliteitscriteria. Het systeem genereert automatisch een auditklaar rapport. Uw data verlaat nooit uw server. De inkoper beoordeelt en beslist. Dundir verzorgt de berekening en de documentatie.</p>
-        <p>Dezelfde invoer geeft dezelfde uitkomst. Elke keer. Dat is het verschil tussen een systeem dat rekent en een systeem dat antwoorden genereert.</p>
-      </div>
-    </div>
-  </section>
-
-  {{/* 04 WHO IT IS FOR */}}
-  <section class="section">
-    <div class="container" data-stamp="segmenten">
-      <h2 class="section__title">Voor wie</h2>
-      <div class="two-col">
-        <div class="segment-card">
-          <h3>Middelgrote aannemers</h3>
-          <p>50 tot 500 medewerkers. De inkoopadministratie kost tijd die beter besteed kan worden. ROI is direct meetbaar in teruggewonnen uren. CPR 2024 stelt nieuwe eisen aan inkoopdocumentatie. Dundir levert die documentatie automatisch mee.</p>
-          <a href="{{ "het-probleem/" | relURL }}">Lees meer over het probleem</a>
-        </div>
-        <div class="segment-card">
-          <h3>Nederlandse gemeenten</h3>
-          <p>Elke inkoopbeslissing moet aantoonbaar verdedigbaar zijn. De Aanbestedingswet vereist gedocumenteerde evaluatie van leveranciersselectie. Er zijn 342 gemeenten met vrijwel identieke inkoopprocessen. Dundir produceert bij elke beslissing het benodigde auditspoor.</p>
-          <a href="{{ "het-probleem/" | relURL }}">Lees meer over het probleem</a>
-        </div>
-      </div>
-      <p class="scale-lbl">Regelgeving die dit afdwingt</p>
-      <div class="chips">
-        <span class="chip chip--live">Aanbestedingswet</span>
-        <span class="chip chip--live">CPR 2024/3110</span>
-        <span class="chip">CSRD Scope 3</span>
-      </div>
-    </div>
-  </section>
-
-  {{/* 05 SCAN */}}
-  {{ partial "scan-cta.html" . }}
-
-  {{/* 06 TEAM */}}
-  <section class="section">
-    <div class="container" data-stamp="team">
-      <h2 class="section__title">Het team</h2>
-      <div class="team-strip">
-        <div class="team-card">
-          <span class="team-card__name">Christiaan Verhoef</span>
-          <span class="team-card__role">CEO</span>
-          <span class="team-card__cred">Hogeschool Windesheim, Value Chain Hackers AI lab</span>
-        </div>
-        <div class="team-card">
-          <span class="team-card__name">Dr. Milan Jelisavčić</span>
-          <span class="team-card__role">CTO</span>
-          <span class="team-card__cred">PhD Evolutionaire Robotica, VU Amsterdam. Productie-AI bij Stedin, ABN AMRO.</span>
-        </div>
-        <div class="team-card">
-          <span class="team-card__name">Kirsten Coppoolse</span>
-          <span class="team-card__role">COO</span>
-          <span class="team-card__cred">Open Food Chain opgeschaald van 1 naar 20 medewerkers. Zes jaar omzet verdubbeld.</span>
-        </div>
-        <div class="team-card">
-          <span class="team-card__name">Dr. Nina Gluhovic</span>
-          <span class="team-card__role">Domeinexpert</span>
-          <span class="team-card__cred">Universitair hoofddocent Civiele Techniek, Universiteit van Belgrado. 12 jaar bouwspecificatienormen.</span>
-        </div>
-        <div class="team-card">
-          <span class="team-card__name">Gerard Tunteler</span>
-          <span class="team-card__role">Head of Government Sales</span>
-          <span class="team-card__cred">HPE Local Government Lead Nederland, 19 jaar. Directe relaties met alle 342 gemeenten.</span>
-        </div>
-      </div>
-      <p><a href="{{ "over-ons/" | relURL }}">Leer het team kennen</a></p>
-    </div>
-  </section>
+  {{ partial "doors.html" (dict "page" . "class" "band--zinc") }}
 
 {{ end }}

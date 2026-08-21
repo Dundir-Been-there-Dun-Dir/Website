@@ -1,38 +1,27 @@
-<form class="contact-form" action="https://formsubmit.co/christiaan.verhoef@dundir.com" method="POST">
+{{/* FormSubmit.co: a plain POST, no signup, no CORS. The first submission needs
+     Christiaan to click a verification mail once. */}}
+<form action="https://formsubmit.co/christiaan.verhoef@dundir.com" method="POST" class="mt-1">
+  <input type="hidden" name="_subject" value="{{ i18n "f_subject" }}">
   <input type="hidden" name="_cc" value="milan.jelisavcic@dundir.com">
-  <input type="hidden" name="_subject" value="Contact via dundir.com">
+  <input type="hidden" name="_next" value="{{ "success.html" | absURL }}">
   <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://dundir.com/success.html">
+  <input type="text" name="_honey" style="display:none">
 
-  <div class="form-group">
-    <label for="cf-name-{{ .Lang }}">
-      {{ if eq .Lang "en" }}Name{{ else if eq .Lang "sr" }}Ime{{ else }}Naam{{ end }}
-    </label>
-    <input type="text" id="cf-name-{{ .Lang }}" name="name" autocomplete="name" required>
+  <div class="field">
+    <label for="cf-name">{{ i18n "f_name" }}</label>
+    <input id="cf-name" type="text" name="naam" required autocomplete="name">
   </div>
-
-  <div class="form-group">
-    <label for="cf-company-{{ .Lang }}">
-      {{ if eq .Lang "en" }}Company{{ else if eq .Lang "sr" }}Kompanija{{ else }}Bedrijf{{ end }}
-    </label>
-    <input type="text" id="cf-company-{{ .Lang }}" name="company" autocomplete="organization">
+  <div class="field">
+    <label for="cf-org">{{ i18n "f_org" }}</label>
+    <input id="cf-org" type="text" name="bedrijf" autocomplete="organization">
   </div>
-
-  <div class="form-group">
-    <label for="cf-email-{{ .Lang }}">
-      {{ if eq .Lang "en" }}Email{{ else if eq .Lang "sr" }}Email{{ else }}E-mail{{ end }}
-    </label>
-    <input type="email" id="cf-email-{{ .Lang }}" name="email" autocomplete="email" required>
+  <div class="field">
+    <label for="cf-mail">{{ i18n "f_mail" }}</label>
+    <input id="cf-mail" type="email" name="email" required autocomplete="email">
   </div>
-
-  <div class="form-group">
-    <label for="cf-message-{{ .Lang }}">
-      {{ if eq .Lang "en" }}Message{{ else if eq .Lang "sr" }}Poruka{{ else }}Bericht{{ end }}
-    </label>
-    <textarea id="cf-message-{{ .Lang }}" name="message" rows="5" required></textarea>
+  <div class="field">
+    <label for="cf-msg">{{ i18n "f_msg" }}</label>
+    <textarea id="cf-msg" name="bericht" required></textarea>
   </div>
-
-  <button type="submit" class="btn-primary">
-    {{ if eq .Lang "en" }}Send message{{ else if eq .Lang "sr" }}Pošaljite poruku{{ else }}Stuur bericht{{ end }}
-  </button>
+  <button type="submit" class="btn btn--primary">{{ i18n "f_send" }}</button>
 </form>

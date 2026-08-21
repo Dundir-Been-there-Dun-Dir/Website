@@ -1,0 +1,194 @@
+{
+  "currency": "EUR",
+  "rate": 65,
+  "buyerCount": [
+    1,
+    3,
+    7,
+    12
+  ],
+  "hourCount": [
+    3,
+    6,
+    11,
+    17
+  ],
+  "locale": "en-GB",
+  "progress": "{n} of {total} answered",
+  "scoreLabel": "Exposure score",
+  "costLabel": "a year in procurement admin time, at your own numbers",
+  "costSource": "Your answers x 46 working weeks x EUR 65 per hour. Benchmark: Remarcable / BuildMate 2025",
+  "bands": [
+    {
+      "upTo": 25,
+      "name": "Contained",
+      "text": "Your process holds up better than most. The remaining exposure is concentrated, which makes it cheap to close."
+    },
+    {
+      "upTo": 50,
+      "name": "Elevated",
+      "text": "The work gets done, but the trail behind it is thin. That is fine until somebody asks why, and then it is not."
+    },
+    {
+      "upTo": 75,
+      "name": "High",
+      "text": "Time is going into comparison work that produces nothing reusable, and the documentation obligation is arriving whether or not you are ready for it."
+    },
+    {
+      "upTo": 100,
+      "name": "Critical",
+      "text": "Almost every supplier decision you make right now would be hard to defend in an audit, and the knowledge holding it together sits in somebody's head."
+    }
+  ],
+  "clean": {
+    "head": "Nothing urgent found",
+    "text": "On these ten questions your process is in better shape than the sector average. Worth a conversation anyway: the regulatory load is rising for everybody, and the cheapest time to document a process is before you are required to."
+  },
+  "questions": [
+    {
+      "id": "buyers",
+      "ask": "How many people at your organisation compare suppliers?",
+      "hint": "Anyone who assembles quotes into a comparison, whether or not procurement is their job title.",
+      "opts": [
+        "One",
+        "Two or three",
+        "Four to ten",
+        "More than ten"
+      ]
+    },
+    {
+      "id": "tool",
+      "ask": "Where does the comparison actually happen?",
+      "hint": "Not where the data is supposed to live. Where the comparing gets done.",
+      "opts": [
+        "A procurement platform",
+        "A module in our ERP",
+        "Excel",
+        "Email and paper"
+      ]
+    },
+    {
+      "id": "hours",
+      "ask": "How many hours a week does one buyer spend on comparison work?",
+      "hint": "Gathering quotes, checking certificates, building the comparison. Not negotiating, not deciding.",
+      "scores": true,
+      "opts": [
+        "Under four",
+        "Four to eight",
+        "Eight to fifteen",
+        "More than fifteen"
+      ],
+      "findings": {
+        "head": "Comparison work is the job now",
+        "text": "At this volume the comparing has stopped being preparation for the decision and has become the work itself. This is the single largest recoverable block of time in the process."
+      }
+    },
+    {
+      "id": "cycle",
+      "ask": "How long does one full supplier comparison take, start to signed off?",
+      "hint": "From the specification landing on the desk to a manager approving the choice.",
+      "scores": true,
+      "opts": [
+        "Under an hour",
+        "Half a day",
+        "One to two days",
+        "Longer"
+      ],
+      "findings": {
+        "head": "The cycle is long enough to shape the decision",
+        "text": "When a comparison costs days, buyers reduce the shortlist to keep it affordable. The supplier set narrows for reasons that have nothing to do with the suppliers."
+      }
+    },
+    {
+      "id": "doc",
+      "ask": "When the choice is made, is there a documented rationale?",
+      "hint": "Something a colleague could read and follow without asking you.",
+      "scores": true,
+      "opts": [
+        "Always",
+        "Usually",
+        "Sometimes",
+        "No"
+      ],
+      "findings": {
+        "head": "The reasoning is not written down",
+        "text": "The comparison work is being done and then discarded. Every decision costs full price and leaves nothing behind that the next one can build on."
+      }
+    },
+    {
+      "id": "recon",
+      "ask": "Could you reconstruct why you picked a supplier two years ago?",
+      "hint": "Not who you picked. Why, on what criteria, against which alternatives.",
+      "scores": true,
+      "opts": [
+        "Fully",
+        "Mostly",
+        "With difficulty",
+        "No"
+      ],
+      "findings": {
+        "head": "Past decisions cannot be reconstructed",
+        "text": "This is the exposure an auditor tests first, and it is also what makes a challenged tender expensive. The evidence has to exist before the question is asked."
+      }
+    },
+    {
+      "id": "keyman",
+      "ask": "What happens if your most experienced buyer leaves?",
+      "hint": "Twenty years of knowing which supplier actually delivers.",
+      "scores": true,
+      "opts": [
+        "It is all recorded",
+        "Mostly recorded",
+        "A lot of knowledge walks out",
+        "It would be a serious problem"
+      ],
+      "findings": {
+        "head": "The knowledge is in a person, not a system",
+        "text": "Fewer than five percent of staff see a large project through from start to finish, so this loss is structural rather than bad luck. Rockx 2023, TU Delft."
+      }
+    },
+    {
+      "id": "reg",
+      "ask": "Which obligation reaches you first?",
+      "hint": "The one your organisation has to satisfy soonest.",
+      "scores": true,
+      "opts": [
+        "None of these apply",
+        "Not sure yet",
+        "CSRD Scope 3 reporting",
+        "Aanbestedingswet or CPR 2024/3110"
+      ],
+      "findings": {
+        "head": "A documentation obligation is already live",
+        "text": "These rules do not ask you to buy differently. They ask you to show how you bought, consistently, on every file. That is a documentation problem before it is a procurement problem."
+      }
+    },
+    {
+      "id": "audit",
+      "ask": "Has your procurement documentation been tested in the past year?",
+      "hint": "Internal audit, external audit, or a supplier challenging an award.",
+      "scores": true,
+      "opts": [
+        "Yes, no findings",
+        "Yes, with findings",
+        "No",
+        "Not sure"
+      ],
+      "findings": {
+        "head": "Untested documentation",
+        "text": "Documentation that has never been read by an outsider tends to be documentation that only works for the person who wrote it. The first real test is the wrong moment to find that out."
+      }
+    },
+    {
+      "id": "decide",
+      "ask": "Who decides on procurement tooling?",
+      "hint": "So we know who needs to be in the conversation.",
+      "opts": [
+        "I do",
+        "The board",
+        "IT",
+        "Procurement and IT together"
+      ]
+    }
+  ]
+}
