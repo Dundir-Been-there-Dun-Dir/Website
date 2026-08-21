@@ -1,0 +1,162 @@
+# Dundir copy for EN. Structure lives in the layouts, strings live here.
+# Adding a language means adding one file, not copying nine templates.
+
+[nav_aria]
+other = "Main"
+
+[nav_problem]
+other = "The problem"
+
+[nav_how]
+other = "How it works"
+
+[nav_about]
+other = "About"
+
+[nav_decks]
+other = "Presentations"
+
+[nav_scan]
+other = "Take the scan"
+
+[skip]
+other = "Skip to content"
+
+[foot_tagline]
+other = "Procurement optimisation for construction"
+
+[foot_nav]
+other = "Navigation"
+
+[foot_ways]
+other = "Ways in"
+
+[foot_partners]
+other = "Research partners"
+
+[foot_events]
+other = "Events"
+
+[foot_privacy]
+other = "Privacy policy"
+
+[partner_wind]
+other = "Windesheim University of Applied Sciences<br>Academic anchor for AI research and grant tracks"
+
+[partner_bg]
+other = "University of Belgrade<br>Faculty of Civil Engineering, construction domain expertise"
+
+[doors_eyebrow]
+other = "Four ways in"
+
+[doors_head]
+other = "Where you come in depends on what you need."
+
+[door1_idx]
+other = "Open now"
+
+[door1_h]
+other = "Become a research partner"
+
+[door1_p]
+other = "Construction SMEs join the research track with Windesheim and Belgrade. No cost, and a say in what gets built."
+
+[door1_go]
+other = "What it involves"
+
+[door2_idx]
+other = "Way in 02"
+
+[door2_h]
+other = "Pilot as a design partner"
+
+[door2_p]
+other = "The system is not finished. You decide what it gets calibrated on, and you own the result."
+
+[door2_go]
+other = "Terms"
+
+[door3_idx]
+other = "Way in 03"
+
+[door3_h]
+other = "Procurement scan"
+
+[door3_p]
+other = "Ten questions about your current process. Report on screen straight away. No email address needed to read it."
+
+[door3_go]
+other = "Start the scan"
+
+[door4_idx]
+other = "Way in 04"
+
+[door4_h]
+other = "A 30 minute conversation"
+
+[door4_p]
+other = "With Christiaan or Milan. No deck, no pitch. We ask the questions."
+
+[door4_go]
+other = "Request a call"
+
+[f_name]
+other = "Name"
+
+[f_org]
+other = "Organisation"
+
+[f_mail]
+other = "Email"
+
+[f_msg]
+other = "Message"
+
+[f_send]
+other = "Send message"
+
+[f_subject]
+other = "Message via dundir.com"
+
+[scan_submit]
+other = "Show my report"
+
+[scan_after_h]
+other = "Want this in writing?"
+
+[scan_after_p]
+other = "You have already seen the result. If you want a copy, and optionally a conversation about it, leave an address. We send the report and nothing else."
+
+[scan_after_send]
+other = "Send me the report"
+
+[scan_mail_subj]
+other = "Procurement scan result"
+
+# route fragments, so a slug change is one edit per language
+[url_problem]
+other = "en/the-problem/"
+
+[url_how]
+other = "en/how-it-works/"
+
+[url_about]
+other = "en/about/"
+
+[url_decks]
+other = "en/presentations/"
+
+[url_events]
+other = "en/events/"
+
+[url_scan]
+other = "en/scan/"
+
+[url_partner]
+other = "en/research-partner/"
+
+[url_pilot]
+other = "en/pilot/"
+
+[url_privacy]
+other = "en/privacy/"

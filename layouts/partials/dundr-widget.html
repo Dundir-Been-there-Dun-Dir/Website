@@ -7,23 +7,23 @@
 {{ $key := .Site.Params.chatApiKey }}
 {{ if $key }}
 <style>
-#dc-btn{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9998;width:3.25rem;height:3.25rem;border-radius:50%;background:#1b4fd8;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(27,79,216,.35);transition:background .15s}
-#dc-btn:hover{background:#1440b0}
-#dc-panel{position:fixed;bottom:5.5rem;right:1.5rem;z-index:9999;width:min(380px,calc(100vw - 2rem));background:#fff;border:1px solid #d8d8d8;border-radius:.75rem;box-shadow:0 8px 32px rgba(0,0,0,.12);display:flex;flex-direction:column;overflow:hidden;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+#dc-btn{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9998;width:3.25rem;height:3.25rem;border-radius:0;background:var(--menie,#C1440E);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(23,24,26,.45);transition:background .15s}
+#dc-btn:hover{background:var(--menie-lt,#E4682E)}
+#dc-panel{position:fixed;bottom:5.5rem;right:1.5rem;z-index:9999;width:min(380px,calc(100vw - 2rem));background:var(--chalk,#EFEEE9);border:1px solid var(--rule-lt,#CFCCC4);border-radius:0;box-shadow:0 8px 32px rgba(0,0,0,.12);display:flex;flex-direction:column;overflow:hidden;font-family:var(--body,"Chivo",system-ui,sans-serif)}
 #dc-panel[hidden]{display:none}
-#dc-header{background:#1b4fd8;color:#fff;padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;font-weight:600;font-size:.9rem}
+#dc-header{background:var(--bitumen,#17181A);color:var(--chalk,#EFEEE9);padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;font-weight:600;font-size:.9rem}
 #dc-close{background:none;border:none;color:#fff;cursor:pointer;font-size:1.25rem;line-height:1;padding:.25rem;opacity:.8}
 #dc-close:hover{opacity:1}
 #dc-msgs{flex:1;overflow-y:auto;padding:.75rem 1rem;min-height:200px;max-height:340px;display:flex;flex-direction:column;gap:.5rem}
-.dc-msg{max-width:85%;padding:.5rem .75rem;border-radius:.5rem;font-size:.875rem;line-height:1.5;white-space:pre-wrap}
-.dc-msg.user{align-self:flex-end;background:#1b4fd8;color:#fff}
-.dc-msg.bot{align-self:flex-start;background:#f5f4f0;color:#1a1a1a}
+.dc-msg{max-width:85%;padding:.5rem .75rem;border-radius:0;font-size:.875rem;line-height:1.5;white-space:pre-wrap}
+.dc-msg.user{align-self:flex-end;background:var(--menie,#C1440E);color:#fff}
+.dc-msg.bot{align-self:flex-start;background:var(--chalk-2,#E4E2DC);color:var(--ink,#17181A)}
 .dc-msg.bot.streaming::after{content:' \2588';animation:blink .7s step-end infinite}
 @keyframes blink{50%{opacity:0}}
-#dc-form{display:flex;border-top:1px solid #d8d8d8;padding:.5rem}
+#dc-form{display:flex;border-top:1px solid var(--rule-lt,#CFCCC4);padding:.5rem}
 #dc-input{flex:1;border:none;outline:none;padding:.5rem .625rem;font-size:.875rem;font-family:inherit;background:transparent}
-#dc-send{background:none;border:none;cursor:pointer;color:#1b4fd8;padding:.5rem;display:flex;align-items:center}
-#dc-send:hover{color:#1440b0}
+#dc-send{background:none;border:none;cursor:pointer;color:var(--menie,#C1440E);padding:.5rem;display:flex;align-items:center}
+#dc-send:hover{color:var(--menie-lt,#E4682E)}
 #dc-send:disabled{color:#aaa;cursor:not-allowed}
 </style>
 
@@ -51,7 +51,7 @@
   if (!KEY) return;
 
   var MODEL = 'anthropic/claude-haiku-4-5';
-  var SYSTEM = 'Je bent een behulpzame AI-assistent voor Dundir. Dundir bouwt een AI-gedreven inkoopbeslissingstool voor de bouw en Nederlandse gemeenten. Het systeem draait lokaal bij de klant, gebruikt wiskundige optimalisatie voor de beste leveranciersselectie, en levert audit-klare rapporten die voldoen aan EU CPR 2024 en de Aanbestedingswet. Houd antwoorden kort en direct. Spreek Nederlands tenzij de gebruiker Engels begint. Verwijs geinteresseerde bezoekers naar de Gratis Pijnscan op de website.';
+  var SYSTEM = 'Je bent een behulpzame AI-assistent voor Dundir. Dundir bouwt een AI-gedreven inkoopbeslissingstool voor de bouw en Nederlandse gemeenten. Het systeem draait lokaal bij de klant, gebruikt wiskundige optimalisatie voor de beste leveranciersselectie, en levert audit-klare rapporten die voldoen aan EU CPR 2024 en de Aanbestedingswet. Houd antwoorden kort en direct. Spreek Nederlands tenzij de gebruiker Engels begint. Verwijs geinteresseerde bezoekers naar de inkoopscan op de website. Dundir heeft nog geen afgerond product: wees daar eerlijk over en noem de pilot en het onderzoekstraject als de manieren om nu mee te doen.';
   var WELCOME = 'Goeiedag. Ik ben de Dundir AI-assistent. Wat wil je weten over ons inkoop\u00adoptimalisatiesysteem?';
 
   var btn = document.getElementById('dc-btn');

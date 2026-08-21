@@ -1,0 +1,194 @@
+{
+  "currency": "EUR",
+  "rate": 65,
+  "buyerCount": [
+    1,
+    3,
+    7,
+    12
+  ],
+  "hourCount": [
+    3,
+    6,
+    11,
+    17
+  ],
+  "locale": "nl-NL",
+  "progress": "{n} van {total} beantwoord",
+  "scoreLabel": "Blootstelling",
+  "costLabel": "per jaar aan inkoopadministratie, op uw eigen cijfers",
+  "costSource": "Uw antwoorden x 46 werkweken x 65 euro per uur. Referentie: Remarcable / BuildMate 2025",
+  "bands": [
+    {
+      "upTo": 25,
+      "name": "Beheerst",
+      "text": "Uw proces staat er beter voor dan gemiddeld. De blootstelling die overblijft zit geconcentreerd, en dat maakt haar goedkoop om te dichten."
+    },
+    {
+      "upTo": 50,
+      "name": "Verhoogd",
+      "text": "Het werk komt af, maar het spoor erachter is dun. Dat is geen probleem tot iemand vraagt waarom, en dan is het dat wel."
+    },
+    {
+      "upTo": 75,
+      "name": "Hoog",
+      "text": "Er gaat tijd in vergelijkingswerk dat niets herbruikbaars oplevert, en de documentatieplicht komt eraan of u er klaar voor bent of niet."
+    },
+    {
+      "upTo": 100,
+      "name": "Kritiek",
+      "text": "Vrijwel elke leveranciersbeslissing die u nu neemt zou lastig te verdedigen zijn bij een audit, en de kennis die het bij elkaar houdt zit in iemands hoofd."
+    }
+  ],
+  "clean": {
+    "head": "Niets urgents gevonden",
+    "text": "Op deze tien vragen staat uw proces er beter voor dan het sectorgemiddelde. Een gesprek is alsnog de moeite: de regeldruk loopt voor iedereen op, en het goedkoopste moment om een proces vast te leggen is voordat het moet."
+  },
+  "questions": [
+    {
+      "id": "buyers",
+      "ask": "Hoeveel mensen bij u vergelijken leveranciers?",
+      "hint": "Iedereen die offertes tot een vergelijking samenvoegt, of inkoop nu in de functietitel staat of niet.",
+      "opts": [
+        "Eén",
+        "Twee of drie",
+        "Vier tot tien",
+        "Meer dan tien"
+      ]
+    },
+    {
+      "id": "tool",
+      "ask": "Waar gebeurt het vergelijken werkelijk?",
+      "hint": "Niet waar de data hoort te staan. Waar het vergelijken gebeurt.",
+      "opts": [
+        "Een inkoopplatform",
+        "Een module in ons ERP",
+        "Excel",
+        "E-mail en papier"
+      ]
+    },
+    {
+      "id": "hours",
+      "ask": "Hoeveel uur per week besteedt één inkoper aan vergelijkingswerk?",
+      "hint": "Offertes verzamelen, certificaten controleren, de vergelijking opbouwen. Niet onderhandelen, niet beslissen.",
+      "scores": true,
+      "opts": [
+        "Minder dan vier",
+        "Vier tot acht",
+        "Acht tot vijftien",
+        "Meer dan vijftien"
+      ],
+      "findings": {
+        "head": "Vergelijken is het werk geworden",
+        "text": "Bij dit volume is vergelijken geen voorbereiding op de beslissing meer, maar het werk zelf. Dit is het grootste blok tijd dat in uw proces terug te winnen valt."
+      }
+    },
+    {
+      "id": "cycle",
+      "ask": "Hoe lang duurt één volledige leveranciersvergelijking, tot en met akkoord?",
+      "hint": "Van de specificatie op tafel tot een manager die de keuze goedkeurt.",
+      "scores": true,
+      "opts": [
+        "Minder dan een uur",
+        "Een halve dag",
+        "Eén tot twee dagen",
+        "Langer"
+      ],
+      "findings": {
+        "head": "De doorlooptijd stuurt de beslissing",
+        "text": "Als een vergelijking dagen kost, wordt de shortlist ingekort om het betaalbaar te houden. Het leveranciersveld versmalt om redenen die niets met de leveranciers te maken hebben."
+      }
+    },
+    {
+      "id": "doc",
+      "ask": "Ligt er na de keuze een gedocumenteerde onderbouwing?",
+      "hint": "Iets wat een collega kan lezen en volgen zonder het u te vragen.",
+      "scores": true,
+      "opts": [
+        "Altijd",
+        "Meestal",
+        "Soms",
+        "Nee"
+      ],
+      "findings": {
+        "head": "De redenering wordt niet vastgelegd",
+        "text": "Het vergelijkingswerk wordt gedaan en daarna weggegooid. Elke beslissing kost de volle prijs en laat niets achter waar de volgende op verder kan."
+      }
+    },
+    {
+      "id": "recon",
+      "ask": "Kunt u reconstrueren waarom u twee jaar geleden een leverancier koos?",
+      "hint": "Niet wie u koos. Waarom, op welke criteria, tegen welke alternatieven.",
+      "scores": true,
+      "opts": [
+        "Volledig",
+        "Grotendeels",
+        "Met moeite",
+        "Nee"
+      ],
+      "findings": {
+        "head": "Eerdere beslissingen zijn niet te reconstrueren",
+        "text": "Dit is wat een auditor als eerste toetst, en het is ook wat een aangevochten gunning duur maakt. Het bewijs moet bestaan voordat de vraag gesteld wordt."
+      }
+    },
+    {
+      "id": "keyman",
+      "ask": "Wat gebeurt er als uw meest ervaren inkoper vertrekt?",
+      "hint": "Twintig jaar weten welke leverancier daadwerkelijk levert.",
+      "scores": true,
+      "opts": [
+        "Het ligt allemaal vast",
+        "Grotendeels vastgelegd",
+        "Er loopt veel kennis de deur uit",
+        "Dat zou een groot probleem zijn"
+      ],
+      "findings": {
+        "head": "De kennis zit in een persoon, niet in een systeem",
+        "text": "Minder dan vijf procent van de staf maakt een groot project van begin tot eind mee, dus dit verlies is structureel en geen pech. Rockx 2023, TU Delft."
+      }
+    },
+    {
+      "id": "reg",
+      "ask": "Welke verplichting raakt u het eerst?",
+      "hint": "Degene waaraan uw organisatie het snelst moet voldoen.",
+      "scores": true,
+      "opts": [
+        "Geen van deze",
+        "Nog niet duidelijk",
+        "CSRD Scope 3 rapportage",
+        "Aanbestedingswet of CPR 2024/3110"
+      ],
+      "findings": {
+        "head": "Er loopt al een documentatieplicht",
+        "text": "Deze regels vragen niet dat u anders inkoopt. Ze vragen dat u laat zien hoe u inkocht, consistent, op elk dossier. Dat is eerst een documentatieprobleem en pas daarna een inkoopprobleem."
+      }
+    },
+    {
+      "id": "audit",
+      "ask": "Is uw inkoopdocumentatie het afgelopen jaar getoetst?",
+      "hint": "Interne audit, externe audit, of een leverancier die een gunning aanvocht.",
+      "scores": true,
+      "opts": [
+        "Ja, zonder opmerkingen",
+        "Ja, met opmerkingen",
+        "Nee",
+        "Weet ik niet"
+      ],
+      "findings": {
+        "head": "Ongetoetste documentatie",
+        "text": "Documentatie die nooit door een buitenstaander is gelezen, blijkt meestal documentatie die alleen werkt voor wie haar schreef. De eerste echte toets is het verkeerde moment om daar achter te komen."
+      }
+    },
+    {
+      "id": "decide",
+      "ask": "Wie beslist er over inkoopgereedschap?",
+      "hint": "Zodat we weten wie er bij het gesprek hoort.",
+      "opts": [
+        "Ikzelf",
+        "De directie",
+        "IT",
+        "Inkoop en IT samen"
+      ]
+    }
+  ]
+}

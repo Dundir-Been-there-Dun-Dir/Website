@@ -1,0 +1,162 @@
+# Dundir copy for NL. Structure lives in the layouts, strings live here.
+# Adding a language means adding one file, not copying nine templates.
+
+[nav_aria]
+other = "Hoofd"
+
+[nav_problem]
+other = "Het probleem"
+
+[nav_how]
+other = "Hoe het werkt"
+
+[nav_about]
+other = "Over ons"
+
+[nav_decks]
+other = "Presentaties"
+
+[nav_scan]
+other = "Doe de scan"
+
+[skip]
+other = "Ga naar de inhoud"
+
+[foot_tagline]
+other = "Inkoopoptimalisatie voor de bouw"
+
+[foot_nav]
+other = "Navigatie"
+
+[foot_ways]
+other = "Ingangen"
+
+[foot_partners]
+other = "Onderzoekspartners"
+
+[foot_events]
+other = "Beurzen &amp; evenementen"
+
+[foot_privacy]
+other = "Privacybeleid"
+
+[partner_wind]
+other = "Hogeschool Windesheim<br>Academisch anker voor AI-onderzoek en subsidietrajecten"
+
+[partner_bg]
+other = "Universiteit van Belgrado<br>Faculteit Bouwkunde, domeinexpertise civiele techniek"
+
+[doors_eyebrow]
+other = "Vier ingangen"
+
+[doors_head]
+other = "Waar u binnenkomt hangt af van wat u nodig heeft."
+
+[door1_idx]
+other = "Nu open"
+
+[door1_h]
+other = "Onderzoekspartner worden"
+
+[door1_p]
+other = "Bouwbedrijven uit het mkb sluiten aan bij het onderzoekstraject met Windesheim en Belgrado. Geen kosten, wel invloed op wat er gebouwd wordt."
+
+[door1_go]
+other = "Wat het inhoudt"
+
+[door2_idx]
+other = "Ingang 02"
+
+[door2_h]
+other = "Pilot als ontwerppartner"
+
+[door2_p]
+other = "Het systeem is nog niet af. U bepaalt mee waarop het gekalibreerd wordt, en u bezit het resultaat."
+
+[door2_go]
+other = "Voorwaarden"
+
+[door3_idx]
+other = "Ingang 03"
+
+[door3_h]
+other = "Inkoopscan"
+
+[door3_p]
+other = "Tien vragen over uw huidige proces. Rapport direct op het scherm. Geen e-mailadres nodig om het te lezen."
+
+[door3_go]
+other = "Start de scan"
+
+[door4_idx]
+other = "Ingang 04"
+
+[door4_h]
+other = "Gesprek van 30 minuten"
+
+[door4_p]
+other = "Met Christiaan of Milan. Geen presentatie, geen verkooppraatje. Wij stellen de vragen."
+
+[door4_go]
+other = "Plan een gesprek"
+
+[f_name]
+other = "Naam"
+
+[f_org]
+other = "Bedrijf"
+
+[f_mail]
+other = "E-mailadres"
+
+[f_msg]
+other = "Bericht"
+
+[f_send]
+other = "Stuur bericht"
+
+[f_subject]
+other = "Bericht via dundir.com"
+
+[scan_submit]
+other = "Toon mijn rapport"
+
+[scan_after_h]
+other = "Wilt u dit op papier?"
+
+[scan_after_p]
+other = "U heeft het resultaat al gezien. Wilt u een kopie, en eventueel een gesprek erover, laat dan een adres achter. Wij sturen het rapport en verder niets."
+
+[scan_after_send]
+other = "Stuur mij het rapport"
+
+[scan_mail_subj]
+other = "Inkoopscan resultaat"
+
+# route fragments, so a slug change is one edit per language
+[url_problem]
+other = "het-probleem/"
+
+[url_how]
+other = "hoe-het-werkt/"
+
+[url_about]
+other = "over-ons/"
+
+[url_decks]
+other = "presentaties/"
+
+[url_events]
+other = "evenementen/"
+
+[url_scan]
+other = "scan/"
+
+[url_partner]
+other = "onderzoekspartner/"
+
+[url_pilot]
+other = "pilot/"
+
+[url_privacy]
+other = "privacy/"

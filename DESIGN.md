@@ -12,14 +12,9 @@ budget), weighs the soft ones (price, reliability, sustainability) and returns t
 mathematically optimal supplier combination together with an audit-ready report.
 The language model writes the report. The optimizer makes the decision.
 
-Three things follow from that and they drive every choice below:
-
-1. The product is **deterministic**. It is the opposite of a chatbot that produces
-   a different number each time you ask. The site must feel calculated, not generated.
-2. The output is **a document**. An auditor, an ACM reviewer or a procurement board
-   reads it. The site should read like the first page of that document.
-3. The domain is **construction**. Not fintech, not SaaS. Concrete, site vests,
-   drawings, tender folders.
+One more thing is true and the site now says it out loud: **the product is not
+finished**. Dundir is a research track with a company around it. The site therefore
+sells partnership, not licences.
 
 ## Audience and job
 
@@ -31,216 +26,185 @@ will survive an audit.
 Secondary: municipality procurement and IT, who need the legal defensibility
 argument before they need the time saving argument.
 
-The page's job: make the cost visible, make the determinism credible, move the
-visitor to the scan. Everything else is subordinate to those three.
+The page's job: make the cost visible, make the determinism credible, and route the
+visitor to whichever of the four ways in fits them.
 
-## Direction: the page is a decision under constraint
+## Direction: massa
 
-The visual vernacular of this business is the **feasible region**. An optimizer does
-not produce an opinion; it removes everything that violates a constraint and returns
-what is left standing at the optimum. The site is built the same way.
+Seventy percent of a construction project is material. That is the one number the
+whole business rests on, so the page is built to carry that weight.
 
-- Sections do not float as cards on a background. They are **bands** that are cut by
-  a hairline and stamped, the way a drawing sheet or a tender document is.
-- Every band carries a **ledger stamp** in the left rail: an index, a short label,
-  and where relevant the source of the number in the band. The rail is the site's
-  audit trail. Audit-readiness is what the product sells, so the site itself keeps a
-  visible audit trail of its own claims.
-- The one moving element on the site is the optimizer converging. Nothing else moves
-  except an 8px rise on scroll.
+- Display type is set **very large and very wide**, edge to edge, with almost no
+  chrome around it. The headline is the loudest object on every page.
+- Grounds are sampled from the site, not from software: bitumen, concrete, chalk.
+- One accent, **menie**, the red lead primer that goes on Dutch steel before
+  anything else. It is the only colour in the system that is allowed to mean
+  something.
+- Sections are **bands**, cut by a hairline, with no card shadows anywhere.
 
-This replaces the previous design's generic SaaS pattern (white page, blue accent,
-rounded card grid, system font). That pattern says "we are a startup". This one says
-"we compute the answer and we can show our working".
+This replaced two earlier attempts. The first was a generic SaaS pattern. The
+second was a tender-document pattern, warm paper with a serif and a ledger rail,
+which read as competent but landed on a well worn look rather than a chosen one.
+
+### What this deliberately avoids
+
+- Stock photography of handshakes, hard hats or glass towers.
+- A blue gradient hero, or blue as a brand wash of any kind.
+- Rounded corner cards on a grey background.
+- Any claim without a source line under it.
+- Any claim the research does not actually support. Where the evidence stops, the
+  page says so in a caveat block.
 
 ## Tokens
 
-### Colour, drawn from the site and the paperwork
+### Colour
 
-Version 2. The first palette put every cool element on a blue shifted ground: the
-dark band was #171D23, its links #5FB0CE, the figure grid #232B33, the figure points
-#5FB0CE. Text contrast passed AA everywhere, so the problem was never legibility. It
-was that hue never changed. ColorBrewer's split is that qualitative sets separate by
-hue and sequential ones by lightness; that palette did neither.
-
-The correction: the grounds go warm neutral, so a cool colour on top reads as a
-category rather than a shade of the ground, and the cool colour is confined to the
-figure where it means something.
-
-| token | hex | source |
+| token | hex | role |
 |---|---|---|
-| `--pour` | `#191817` | warm near black. Header, hero, closing call |
-| `--formwork` | `#221F1D` | the dark band, and the figure's ground |
-| `--paper` | `#F1EDE4` | tender document stock. The page |
-| `--paper-2` | `#E7E2D6` | tint band. Separation without inversion |
-| `--ink` | `#16181A` | body text on paper, 15.2:1 |
-| `--ink-soft` | `#4A4844` | secondary prose |
-| `--steel-ink` | `#5C5A56` | sources and stamps on paper, 5.9:1 |
-| `--steel` | `#8E8B85` | the same role on the dark surfaces |
-| `--rule` / `--rule-inv` | `#DAD4C7` / `#38352F` | hairlines |
-| `--accent` | `#FFC400` | amber. Fills, rules, dots, the optimum |
-| `--accent-deep` | `#E0A800` | the hover step |
-| `--accent-paper` | `#7A5E00` | the olive step, small mono labels only |
-| `--mark-line` | `#5FB0CE` | the mark's region, `#26647F` on paper |
-| `--figure-live` | `#6FA8C8` | candidate combinations, figure only |
-| `--figure-cut` | `#B4442F` | constraint lines, figure only |
+| `--bitumen` | `#17181A` | the page. Hero, dark bands, header, footer |
+| `--zinc` | `#212325` | raised surface, hover state |
+| `--zinc-2` | `#33363A` | hairlines and grid gaps on dark |
+| `--chalk` | `#EFEEE9` | the light band |
+| `--chalk-2` | `#E4E2DC` | tint band, separation without inversion |
+| `--concrete` | `#B0AEA6` | body text on dark, 8.0:1 |
+| `--concrete-dim` | `#8E8D86` | mono labels and sources on dark, 5.3:1 |
+| `--ink` | `#17181A` | text on chalk, 15.5:1 |
+| `--ink-soft` | `#4A4945` | secondary prose on chalk |
+| `--ink-quiet` | `#6B6A64` | sources and labels on chalk, 4.6:1 |
+| `--rule-lt` | `#CFCCC4` | hairlines on chalk |
+| `--menie` | `#C1440E` | the accent |
+| `--menie-lt` | `#E4682E` | the accent's light step |
+| `--menie-wash` | `#F7E5DC` | caveat panel ground on chalk |
+| `--mark-region` | `#C1440E` | the mark's feasible region |
+| `--mark-dot` | `#FFFFFF` | the mark's optimum |
 
-Amber was trialled against audit teal `#0F6E63` and signal orange `#C8481B`, both of
-which can carry text on paper where amber cannot. Amber won on the mark and the hero.
-The cost of that choice is a rule that is now absolute:
+**Accent discipline, worked per surface rather than per component.** This is the
+one rule in the system that is absolute:
 
-**Amber is a fill, a rule, a dot or a vertex. It is never text on paper.** At 1.39:1
-it cannot be. Display numbers on paper are therefore set in ink; the olive step is for
-small mono labels only, because at 2.4rem it reads muddy next to black serif. On the
-dark surfaces the constraint lifts and amber is text at 11.1:1.
+- menie on chalk is **4.7:1**, so on a light band it may be text.
+- menie on bitumen is **3.5:1**, so on a dark band it may only be a fill, a rule,
+  or display sized type. Never small text.
+- `--menie-lt` on bitumen is **5.3:1**, so every small label on dark uses that step.
 
-The mark is the one place a cool colour appears outside the figure: the region is
-blueprint, the vertex is amber. It predates the rest of the system and it is the
-reason the figure's data colour is blue in the first place.
+Nothing else in the system carries the accent. If a component wants colour, the
+answer is a hairline or a change of ground.
 
-### Type, constrained by three languages
+The mark is a feasible region filled in menie with the optimum as a white dot on
+one of its vertices. Two colours, both dominant on the site, so one mark holds on
+bitumen and on chalk without a second variant.
+
+### Type
 
 The site ships Dutch, English and Serbian in Latin script, so `č ć š ž đ` must be
-native, not synthesised. That eliminated most display faces at the shortlist stage.
+native, not synthesised. All three faces are self-hosted woff2 in `static/fonts/`,
+subset to latin and latin-ext. No Google Fonts request: Dutch municipalities are a
+target segment and a third party font call is a question we do not need to answer
+in a procurement review.
 
-- **Display: Archivo.** Variable, grotesque, drawn from American gothic signage.
-  Its width axis lets headlines be set wide and tight without a second family.
-  Latin Extended A covers Serbian Latin in full.
-- **Body: Source Serif 4.** The report voice. A serif at 18px is what a procurement
-  director reads all day in a tender document, and it separates this site from every
-  competitor running Inter on white.
-- **Ledger: JetBrains Mono.** Numbers, section stamps, sources, constraint labels,
-  the hero readout. Tabular figures on, ligatures off, because these are measurements
-  and they must align in a column.
+- **Display: Anybody.** Variable width axis, set at `wdth 118` for headings and
+  `wdth 135` for the wordmark. Its extreme widths are the whole point: nothing else
+  on the page needs to be loud, because the headline already is.
+- **Body: Chivo.** A grotesque with enough warmth to read at length and enough
+  structure to sit under Anybody without arguing with it.
+- **Data: Space Mono.** Numbers, section labels, sources, buttons. Tabular figures
+  on, because these are measurements and they align in a column.
 
-All three are **self-hosted woff2** in `static/fonts/`. No Google Fonts CDN request.
-Dutch municipalities are a target segment and a third party font request is a GDPR
-question we do not need to answer in a procurement review.
-
-### Scale
-
-Type scale is a fifth (1.5) at the display end and a fourth (1.25) in body copy, so
-headlines separate hard from prose while prose stays quiet. Numbers in stats are set
-in mono at display size, because a number is data, not a headline.
+Long Dutch compounds break lines badly at display size, so headings carry
+`hyphens: auto` and the page hero is capped at `20ch`. A figure that is a word
+rather than a number takes `.claim__fig--word` and drops to label size, because a
+long word at display size reads as a headline and steals the band.
 
 ### Layout
 
-Asymmetric, 12 columns, content offset to the right of a fixed ledger rail of 88px
-from 1080px up. Under 1080px the rail collapses and its stamps run inline above each
-section as a single mono line, so nothing is lost on the phone the director actually
-uses.
+Twelve columns, content in a `4fr / 8fr` split with the argument on the left and
+the evidence on the right. Under 860px the split collapses and the rail runs above.
+Band padding is `clamp(3.5rem, 8vw, 7rem)`. Measure capped at 62 characters.
 
-Band rhythm, version 2. The first pass inverted the ground at almost every section,
-which read as a stack of blocks rather than a document. dhaidas holds one continuous
-light surface and lets hairlines, a small mono label and a lot of space do the
-separating. Dundir now does the same:
+Dark is the default ground. Chalk is spent on the sections that need to feel like a
+document: the mechanism, the honesty about the stage, the team.
 
-- **dark** is spent only on the hero and the closing scan call, where the argument
-  starts and ends.
-- **everything between** is paper, with `--paper-2` tint bands for separation.
-- band padding is `clamp(4.25rem, 8.5vw, 8rem)`, up about a third from the first pass,
-  because the space is what carries the rhythm once the inversions are gone.
+### Signature: the cost stack
 
-Nothing is centred except the hero statement and the closing call to action.
+The hero holds no photograph and no gradient. It holds one euro of project cost,
+divided: 70 percent material in menie, 18 percent labour in concrete, 12 percent
+other in zinc, labelled in mono, sourced under the bar. The material block carries
+the line "hier rekent Dundir".
 
-### Signature: the optimizer converging
-
-The hero holds no photograph and no abstract mesh gradient. It holds the actual
-mechanism: a scatter of candidate supplier combinations plotted on price against
-lead time. Constraint lines sweep in one by one, each labelled in mono
-(`certificering`, `levertijd`, `budget`). Candidates that violate a constraint go
-grey and drop back. The feasible region draws itself as a thin polygon, and the
-optimum lands on one vertex in hivis with its value printed beside it.
-
-Then it resets with a different population and finds the same vertex. That repetition
-is the entire product claim: same inputs, same answer, every time. A generic AI tool
-would land somewhere different on each pass, which is precisely the Skanska finding
-the site cites two sections further down.
-
-`assets/js/hero-optimizer.js`, canvas 2D, no library, no WebGL, about 6 kB.
-Rules it keeps:
-
-- Nothing is allocated inside the frame loop.
-- 30fps is enough for a sweep this slow and costs a third less than 60.
-- Under 760px the population halves and the labels drop to two.
-- Paused when off screen or the tab is hidden.
-- `prefers-reduced-motion` draws the final converged frame once, with the region,
-  the optimum and the labels all in place, and never starts the loop. The static
-  frame has to carry the whole idea on its own.
-
-### Second motif: the constraint chip
-
-Regulation is the urgency in the pitch, so regulation gets a component. `CPR
-2024/3110`, `Aanbestedingswet`, `CSRD Scope 3` are set as mono chips with a hairline
-box and a dot in `--hivis` when the deadline is already live, `--steel` when it is
-pending. They appear on the problem page and in the closing band of the homepage.
+It is the argument and the diagram at the same time, it costs no JavaScript, and it
+is the one object on the site that a reader will still remember in a week.
 
 ### Motion
 
-- Sections rise 8px and fade in on first view, staggered by 60ms.
-- Stat figures count up once, over 700ms, only if they are on screen and only once.
-- No parallax. No scroll-jacking. No carousel.
-- Every one of the above is disabled under `prefers-reduced-motion`.
+- Bands rise 10px and fade in on first view, staggered by 60ms.
+- Nothing else moves. No parallax, no scroll-jacking, no carousel.
+- All of it is disabled under `prefers-reduced-motion`, and the reveal class is
+  added by script, so with JavaScript off nothing is ever hidden.
 
 ## Components
 
 | component | role |
 |---|---|
-| `ledger-rail` | fixed left column of section stamps; the audit trail |
-| `band` | full width section, `band--dark` or `band--paper` |
-| `stat-row` | hairline separated rows of mono figure, label, source |
-| `proof` | one large number with its claim and citation, dark band only |
-| `chip` | regulation or constraint label |
-| `segment` | the two buyer types, side by side, no card chrome |
-| `step` | numbered mechanism steps on the how it works page |
-| `person` | team member: name, role, credential line, no photograph |
-| `deck` | presentation links |
-| `cta` | the scan call, closing every page |
+| `band` | full width section, `band--chalk`, `band--chalk-2`, `band--zinc` |
+| `stack` | the cost bar. Home page only, once |
+| `claim` | a figure with its statement and source |
+| `proof` | one large figure with a rule beside it, once per page at most |
+| `caveat` | what the research does not prove. Used wherever a claim needs a limit |
+| `step` | numbered sequence, only where order actually carries information |
+| `person` | name, role, credential line, no photograph |
+| `chip` | regulation label, a dot when the obligation is live |
+| `card` | deck or event |
+| `door` | one of the four ways in |
 
-No card shadows anywhere. Separation is done with hairlines and background bands,
-which is how a printed document separates things.
+## Architecture
 
-## What this deliberately avoids
+**One layout per page, one content file per language.** Structure lives in
+`layouts/`, copy lives in `content/` and `i18n/`. There are no per-language
+templates: a page describes itself in front matter and `partials/band.html`
+renders it. Adding a language is a content file and an `i18n/<lang>.toml`, not a
+copy of nine templates.
 
-- Stock photography of handshakes, hard hats or glass towers.
-- A blue gradient hero.
-- Rounded corner cards on a grey background.
-- Any claim without a source line under it.
-- The word "transformeer" and the rest of the forbidden list in CI.
+- `i18n/<lang>.toml` holds the chrome: navigation, footer, form labels, the four
+  doors, and the `url_*` route fragments so a slug change is one edit.
+- `data/scan/<lang>.json` holds the scan question set, so the scan template is one
+  loop and a translator never opens a Go template.
+- `partials/band.html` is the only place that knows what a section looks like.
+
+## The four ways in
+
+The site closes every page on four doors rather than one call to action, because
+Dundir needs four different things and a single "buy" button would be dishonest
+about all of them: research partner, pilot as design partner, the procurement scan,
+and a thirty minute conversation. The lead door is deliberately soft worded so it
+stays true whichever grant round happens to be open.
+
+## The scan
+
+Ten questions shaped on SPICED, seven of them scored. It runs entirely in the
+browser: the score, the euro figure computed from the visitor's own buyer count and
+hours, and up to four findings each carrying its source. Nothing is transmitted
+unless the visitor asks for a copy afterwards.
+
+This replaced a Formbricks embed that served an English usability questionnaire
+titled "UC8 Survey" on the Dutch page, and promised a report by email while the
+copy around it promised a report on screen with no email required.
 
 ## Accessibility and performance
 
 - AA contrast on every text pairing, verified per token pair, not per component.
-- Focus rings are `--hivis` at 3px offset, visible on both band types.
-- Body copy 18px minimum, 1.7 line height, measure capped at 68 characters.
+- Focus rings are `--menie-lt` at 2px with 3px offset, visible on both grounds.
+- Body copy 17px minimum, 1.62 line height.
 - Fonts self-hosted, `font-display: swap`, subset to the three languages.
-- Total CSS under 30 kB minified, one file. One 6 kB script. No framework.
-- Every image has dimensions set so nothing shifts on load.
+- One stylesheet, one 2 kB site script, one 3 kB scan script. No framework.
 
-## The decks carry the same system
+## Known issues
 
-The presentations under `/presentaties/decks/` are Quarto revealjs exports, generated
-outside this repo. They are not re-authored here; they are re-themed on top:
-
-- `static/presentaties/deck-theme.css` is injected last into every deck's
-  `index.html` and redefines the reveal variables: Archivo headings, Source Serif
-  body, JetBrains Mono for metadata, paper background, ink text.
-- The old palette is remapped in place: `#0d2b7a` becomes `--pour`, `#1b4fd8`
-  becomes `--blueprint-ink`, the blue tints become paper tones. The greens in a few
-  decks are left alone; they carry a positive or negative reading that the site
-  palette has no substitute for.
-- The slide title takes the one hivis rule under it, the same accent discipline as
-  the site. Callout boxes become the deck version of the site's proof block.
-- The white boxed `logo.png` export is replaced by `deck-mark.svg`, the same mark
-  the site header uses, so it sits on light and dark slides alike.
-
-Originals of every deck `index.html` are kept in `.deck-backups/` (git ignored). If a
-deck is re-exported from Quarto, re-run the retheme: remap the palette, then inject
-the `dundir-deck-theme` stylesheet link before `</head>`.
+- The chat widget embeds an OpenRouter API key in client side JavaScript, where
+  any visitor can read it. It also posts visitor messages to a service outside the
+  EU, which sits badly next to the data sovereignty argument the site makes. Both
+  are flagged in the privacy policy; neither is fixed.
 
 ## Build note
 
 The site must be built with Hugo 0.147.3 extended or newer, the version CI uses.
-On 0.139 the section templates under `layouts/<section>/single.html` are not picked
-up and every inner page renders empty through `_default/single.html`, which is easy
-to miss because the pages still return 200 and still carry their meta description.
+On 0.139 the section templates are not picked up and inner pages render empty,
+which is easy to miss because the pages still return 200.

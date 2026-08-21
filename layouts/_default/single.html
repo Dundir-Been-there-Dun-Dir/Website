@@ -1,7 +1,28 @@
 {{ define "main" }}
-<section class="section">
-  <div class="container container--narrow">
-    {{ .Content }}
+
+<div class="page-hero">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lede }}<p class="lede">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+</div>
+
+{{/* Structured pages describe themselves in front matter and are rendered by
+     one band template. Plain prose pages (privacy, success) just render body. */}}
+{{ range .Params.sections }}
+  {{ partial "band.html" (dict "section" . "page" $) }}
+{{ end }}
+
+{{ if .Content }}
+<section class="band">
+  <div class="container">
+    <div class="prose narrow">{{ .Content }}</div>
   </div>
 </section>
+{{ end }}
+
+{{ if not .Params.nodoors }}
+  {{ partial "doors.html" (dict "page" . "class" "band--zinc") }}
+{{ end }}
+
 {{ end }}
