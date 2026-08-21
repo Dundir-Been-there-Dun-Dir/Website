@@ -3,5 +3,8 @@ Allow: /
 Disallow: /styleguide/
 Disallow: /en/styleguide/
 Disallow: /sr/styleguide/
+Disallow: /viz/
+Disallow: /en/viz/
+Disallow: /sr/viz/
 
 Sitemap: {{ "sitemap.xml" | absURL }}

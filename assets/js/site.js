@@ -1,5 +1,6 @@
 /* Dundir site behaviour: nav, reveal on first view, current section marking.
-   No framework. Everything degrades to a fully readable page without it. */
+   No framework. Everything degrades to a fully readable page without it: the
+   reveal class is added by this script, so with JS off nothing is ever hidden. */
 (function () {
   /* --- mobile nav --- */
   var toggle = document.querySelector('.nav-toggle');
@@ -23,7 +24,7 @@
   var links = document.querySelectorAll('.site-nav__links a');
   for (var i = 0; i < links.length; i++) {
     var href = links[i].getAttribute('href') || '';
-    if (href && here.indexOf(href.replace(/^\.\//, '/')) === 0 && href !== '/') {
+    if (href && href !== '/' && here.indexOf(href.replace(/^\.\//, '/')) === 0) {
       links[i].setAttribute('aria-current', 'page');
     }
   }
@@ -32,7 +33,7 @@
   if (reduce || !('IntersectionObserver' in window)) return;
 
   /* --- reveal bands on first view --- */
-  var targets = document.querySelectorAll('.section > .container > *, .page-hero .container > *');
+  var targets = document.querySelectorAll('.band > .container > *, .page-hero .container > *');
   for (var t = 0; t < targets.length; t++) targets[t].classList.add('reveal');
 
   var io = new IntersectionObserver(function (entries) {

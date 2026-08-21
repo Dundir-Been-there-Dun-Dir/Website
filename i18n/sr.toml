@@ -1,0 +1,162 @@
+# Dundir copy for SR. Structure lives in the layouts, strings live here.
+# Adding a language means adding one file, not copying nine templates.
+
+[nav_aria]
+other = "Glavna"
+
+[nav_problem]
+other = "Problem"
+
+[nav_how]
+other = "Kako radi"
+
+[nav_about]
+other = "O nama"
+
+[nav_decks]
+other = "Prezentacije"
+
+[nav_scan]
+other = "Uradite skeniranje"
+
+[skip]
+other = "Pređite na sadržaj"
+
+[foot_tagline]
+other = "Optimizacija nabavke za građevinarstvo"
+
+[foot_nav]
+other = "Navigacija"
+
+[foot_ways]
+other = "Ulazi"
+
+[foot_partners]
+other = "Istraživački partneri"
+
+[foot_events]
+other = "Sajmovi i događaji"
+
+[foot_privacy]
+other = "Politika privatnosti"
+
+[partner_wind]
+other = "Hogeschool Windesheim<br>Akademsko sidro za AI istraživanje i grantove"
+
+[partner_bg]
+other = "Univerzitet u Beogradu<br>Građevinski fakultet, domenska ekspertiza"
+
+[doors_eyebrow]
+other = "Četiri ulaza"
+
+[doors_head]
+other = "Gde ulazite zavisi od toga šta vam treba."
+
+[door1_idx]
+other = "Otvoreno"
+
+[door1_h]
+other = "Postanite istraživački partner"
+
+[door1_p]
+other = "Građevinska mala i srednja preduzeća ulaze u istraživački program sa Windesheimom i Beogradom. Bez troškova, sa uticajem na ono što se gradi."
+
+[door1_go]
+other = "Šta to znači"
+
+[door2_idx]
+other = "Ulaz 02"
+
+[door2_h]
+other = "Pilot kao partner u razvoju"
+
+[door2_p]
+other = "Sistem još nije gotov. Vi odlučujete na čemu se kalibriše i vi posedujete rezultat."
+
+[door2_go]
+other = "Uslovi"
+
+[door3_idx]
+other = "Ulaz 03"
+
+[door3_h]
+other = "Skeniranje nabavke"
+
+[door3_p]
+other = "Deset pitanja o vašem procesu. Izveštaj odmah na ekranu. Bez adrese e-pošte da biste ga pročitali."
+
+[door3_go]
+other = "Započnite"
+
+[door4_idx]
+other = "Ulaz 04"
+
+[door4_h]
+other = "Razgovor od 30 minuta"
+
+[door4_p]
+other = "Sa Christiaanom ili Milanom. Bez prezentacije, bez prodaje. Mi postavljamo pitanja."
+
+[door4_go]
+other = "Zakažite razgovor"
+
+[f_name]
+other = "Ime"
+
+[f_org]
+other = "Organizacija"
+
+[f_mail]
+other = "E-pošta"
+
+[f_msg]
+other = "Poruka"
+
+[f_send]
+other = "Pošaljite poruku"
+
+[f_subject]
+other = "Poruka preko dundir.com"
+
+[scan_submit]
+other = "Prikaži izveštaj"
+
+[scan_after_h]
+other = "Želite ovo napismeno?"
+
+[scan_after_p]
+other = "Rezultat ste već videli. Ako želite kopiju, i po želji razgovor o njoj, ostavite adresu. Šaljemo izveštaj i ništa drugo."
+
+[scan_after_send]
+other = "Pošaljite mi izveštaj"
+
+[scan_mail_subj]
+other = "Rezultat skeniranja nabavke"
+
+# route fragments, so a slug change is one edit per language
+[url_problem]
+other = "sr/problem/"
+
+[url_how]
+other = "sr/kako-radi/"
+
+[url_about]
+other = "sr/o-nama/"
+
+[url_decks]
+other = "sr/prezentacije/"
+
+[url_events]
+other = "sr/dogadjaji/"
+
+[url_scan]
+other = "sr/skeniranje/"
+
+[url_partner]
+other = "sr/istrazivacki-partner/"
+
+[url_pilot]
+other = "sr/pilot/"
+
+[url_privacy]
+other = "sr/privatnost/"
