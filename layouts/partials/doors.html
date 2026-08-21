@@ -1,0 +1,39 @@
+{{/* The four ways in. Every page closes on these.
+
+     Dundir has no finished product, so a single "buy" call would be dishonest and
+     a single "scan" call ignores the two audiences that matter most right now:
+     research partners and design partners. The lead door is deliberately soft,
+     so it stays true whichever grant round happens to be open. */}}
+
+<section class="band {{ .class | default "band--chalk" }}">
+  <div class="container">
+    <p class="eyebrow">{{ i18n "doors_eyebrow" }}</p>
+    <h2>{{ i18n "doors_head" }}</h2>
+    <div class="doors">
+      <a class="door door--lead" href="{{ i18n "url_partner" | relURL }}">
+        <span class="door__idx">{{ i18n "door1_idx" }}</span>
+        <h3>{{ i18n "door1_h" }}</h3>
+        <p>{{ i18n "door1_p" }}</p>
+        <span class="door__go">{{ i18n "door1_go" }}</span>
+      </a>
+      <a class="door" href="{{ i18n "url_pilot" | relURL }}">
+        <span class="door__idx">{{ i18n "door2_idx" }}</span>
+        <h3>{{ i18n "door2_h" }}</h3>
+        <p>{{ i18n "door2_p" }}</p>
+        <span class="door__go">{{ i18n "door2_go" }}</span>
+      </a>
+      <a class="door" href="{{ i18n "url_scan" | relURL }}">
+        <span class="door__idx">{{ i18n "door3_idx" }}</span>
+        <h3>{{ i18n "door3_h" }}</h3>
+        <p>{{ i18n "door3_p" }}</p>
+        <span class="door__go">{{ i18n "door3_go" }}</span>
+      </a>
+      <a class="door" href="{{ printf "%s#contact" (i18n "url_about") | relURL }}">
+        <span class="door__idx">{{ i18n "door4_idx" }}</span>
+        <h3>{{ i18n "door4_h" }}</h3>
+        <p>{{ i18n "door4_p" }}</p>
+        <span class="door__go">{{ i18n "door4_go" }}</span>
+      </a>
+    </div>
+  </div>
+</section>

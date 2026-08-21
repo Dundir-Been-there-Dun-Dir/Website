@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0E1216">
+  <meta name="theme-color" content="#17181A">
 
   <title>
     {{- if .IsHome -}}
@@ -24,6 +24,11 @@
 
   <link rel="canonical" href="{{ .Permalink }}">
 
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+  {{ end }}
+  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+
   {{ if .Params.noindex }}<meta name="robots" content="noindex, nofollow">{{ end }}
 
   <!-- Favicon: the mark is the feasible region with the optimum on its vertex -->
@@ -39,10 +44,11 @@
   <meta property="og:image" content="https://dundir.com/logo.png">
   <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 
-  <!-- Self-hosted faces. No third party font request: municipalities review that. -->
-  <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/sourceserif-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/jbmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Self-hosted faces. No third party font request: municipalities review that
+       in a procurement assessment and we do not want to answer the question. -->
+  <link rel="preload" href="/fonts/anybody-02.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/chivo-02.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/spacemono-05.woff2" as="font" type="font/woff2" crossorigin>
 
   {{- $fonts := resources.Get "css/fonts.css" -}}
   {{- $main := resources.Get "css/main.css" -}}
@@ -50,7 +56,6 @@
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
 
   {{ if .IsHome }}
-  <!-- Schema.org Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

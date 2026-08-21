@@ -1,0 +1,70 @@
+{{/* The procurement scan.
+
+     Replaces the Formbricks embed, which served an English usability questionnaire
+     called "UC8 Survey" on a Dutch page and promised a report by email while the
+     copy around it promised a report on screen with no email required.
+
+     Ten questions shaped on SPICED: situation, pain, impact, critical event,
+     decision. Seven are scored. The question set lives in data/scan/<lang>.json,
+     so this template is one loop and adding a language is one data file.
+     Everything runs in the browser; nothing leaves the page unless the visitor
+     asks for a copy by email afterwards. */}}
+
+{{ $d := index .Site.Data.scan .Lang }}
+{{ if not $d }}{{ $d = .Site.Data.scan.nl }}{{ end }}
+
+<div class="scan" id="scan">
+  <form class="scan__form" novalidate>
+    <div class="scan__progress">
+      <span class="mono scan__count"></span>
+      <span class="scan__track"><span class="scan__fill"></span></span>
+    </div>
+
+    {{ range $i, $q := $d.questions }}
+    <fieldset class="q">
+      <legend class="q__ask">{{ add $i 1 }}. {{ $q.ask }}</legend>
+      {{ with $q.hint }}<p class="q__hint">{{ . }}</p>{{ end }}
+      <div class="q__opts">
+        {{ range $v, $opt := $q.opts }}
+        <label class="q__opt">
+          <input type="radio" name="{{ $q.id }}" value="{{ $v }}" data-label="{{ $opt }}">
+          <span>{{ $opt }}</span>
+        </label>
+        {{ end }}
+      </div>
+    </fieldset>
+    {{ end }}
+
+    <button type="submit" class="btn btn--primary scan__submit mt-2" disabled>{{ i18n "scan_submit" }}</button>
+  </form>
+
+  <div class="scan__report" hidden></div>
+
+  <div id="scan-after" hidden class="mt-2">
+    <h3>{{ i18n "scan_after_h" }}</h3>
+    <p class="narrow">{{ i18n "scan_after_p" }}</p>
+    <form action="https://formsubmit.co/christiaan.verhoef@dundir.com" method="POST">
+      <input type="hidden" name="_subject" value="{{ i18n "scan_mail_subj" }}">
+      <input type="hidden" name="_cc" value="milan.jelisavcic@dundir.com">
+      <input type="hidden" name="_next" value="{{ "success.html" | absURL }}">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <textarea id="scan-summary" name="resultaat" class="visually-hidden" tabindex="-1" aria-hidden="true"></textarea>
+      <div class="field">
+        <label for="scan-name">{{ i18n "f_name" }}</label>
+        <input id="scan-name" type="text" name="naam" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="scan-org">{{ i18n "f_org" }}</label>
+        <input id="scan-org" type="text" name="organisatie" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="scan-mail">{{ i18n "f_mail" }}</label>
+        <input id="scan-mail" type="email" name="email" required autocomplete="email">
+      </div>
+      <button type="submit" class="btn btn--primary">{{ i18n "scan_after_send" }}</button>
+    </form>
+  </div>
+
+  <script type="application/json" id="scan-data">{{ $d | jsonify | safeJS }}</script>
+</div>

@@ -2,68 +2,42 @@
   <div class="container">
     <div class="footer-col">
       <strong>Dundir</strong>
-      {{ if eq .Lang "en" }}
-      <p>Procurement optimisation for construction</p>
-      {{ else if eq .Lang "sr" }}
-      <p>Optimizacija nabavke za građevinarstvo</p>
-      {{ else }}
-      <p>Inkoopoptimalisatie voor de bouw</p>
-      {{ end }}
+      <p>{{ i18n "foot_tagline" }}</p>
       <a href="mailto:christiaan.verhoef@dundir.com,milan.jelisavcic@dundir.com">info@dundir.com</a>
     </div>
+
     <div class="footer-col">
-      {{ if eq .Lang "en" }}
-      <strong>Navigation</strong>
+      <strong>{{ i18n "foot_nav" }}</strong>
       <nav>
-        <a href="{{ "en/the-problem/" | relURL }}">The problem</a>
-        <a href="{{ "en/how-it-works/" | relURL }}">How it works</a>
-        <a href="{{ "en/about/" | relURL }}">About</a>
-        <a href="{{ "en/scan/" | relURL }}">Procurement scan</a>
-        <a href="{{ "en/presentations/" | relURL }}">Presentations</a>
-        <a href="{{ "en/events/" | relURL }}">Events</a>
+        <a href="{{ i18n "url_problem" | relURL }}">{{ i18n "nav_problem" }}</a>
+        <a href="{{ i18n "url_how" | relURL }}">{{ i18n "nav_how" }}</a>
+        <a href="{{ i18n "url_about" | relURL }}">{{ i18n "nav_about" }}</a>
+        <a href="{{ i18n "url_decks" | relURL }}">{{ i18n "nav_decks" }}</a>
+        <a href="{{ i18n "url_events" | relURL }}">{{ i18n "foot_events" | safeHTML }}</a>
       </nav>
-      {{ else if eq .Lang "sr" }}
-      <strong>Navigacija</strong>
-      <nav>
-        <a href="{{ "sr/problem/" | relURL }}">Problem</a>
-        <a href="{{ "sr/kako-radi/" | relURL }}">Kako radi</a>
-        <a href="{{ "sr/o-nama/" | relURL }}">O nama</a>
-        <a href="{{ "sr/skeniranje/" | relURL }}">Skeniranje</a>
-        <a href="{{ "sr/prezentacije/" | relURL }}">Prezentacije</a>
-        <a href="{{ "sr/dogadjaji/" | relURL }}">Sajmovi i događaji</a>
-      </nav>
-      {{ else }}
-      <strong>Navigatie</strong>
-      <nav>
-        <a href="{{ "het-probleem/" | relURL }}">Het probleem</a>
-        <a href="{{ "hoe-het-werkt/" | relURL }}">Hoe het werkt</a>
-        <a href="{{ "over-ons/" | relURL }}">Over ons</a>
-        <a href="{{ "scan/" | relURL }}">Inkoopscan</a>
-        <a href="{{ "presentaties/" | relURL }}">Presentaties</a>
-        <a href="{{ "evenementen/" | relURL }}">Beurzen &amp; evenementen</a>
-      </nav>
-      {{ end }}
     </div>
+
     <div class="footer-col">
-      {{ if eq .Lang "en" }}
-      <strong>Research partners</strong>
-      <p>Windesheim University<br>Academic anchor for AI research and grant tracks</p>
-      <p>University of Belgrade<br>Faculty of Civil Engineering, construction domain expertise</p>
-      {{ else if eq .Lang "sr" }}
-      <strong>Istraživački partneri</strong>
-      <p>Hogeschool Windesheim<br>Akademsko sidro za AI istraživanje i grantove</p>
-      <p>Univerzitet Beograd<br>Arhitektonski fakultet, domenski ekspertiza za građevinarstvo</p>
-      {{ else }}
-      <strong>Onderzoekspartners</strong>
-      <p>Hogeschool Windesheim<br>Academisch anker voor AI-onderzoek en subsidietrajecten</p>
-      <p>Universiteit van Belgrado<br>Faculteit Bouwkunde, domeinexpertise civiele techniek</p>
-      {{ end }}
+      <strong>{{ i18n "foot_ways" }}</strong>
+      <nav>
+        <a href="{{ i18n "url_partner" | relURL }}">{{ i18n "door1_h" }}</a>
+        <a href="{{ i18n "url_pilot" | relURL }}">{{ i18n "door2_h" }}</a>
+        <a href="{{ i18n "url_scan" | relURL }}">{{ i18n "door3_h" }}</a>
+        <a href="{{ printf "%s#contact" (i18n "url_about") | relURL }}">{{ i18n "door4_go" }}</a>
+      </nav>
+    </div>
+
+    <div class="footer-col">
+      <strong>{{ i18n "foot_partners" }}</strong>
+      <p>{{ i18n "partner_wind" | safeHTML }}</p>
+      <p>{{ i18n "partner_bg" | safeHTML }}</p>
     </div>
   </div>
+
   <div class="footer-bottom">
     <div class="container">
       <span>&copy; 2026 Dundir</span>
-      <a href="/privacy/">{{ if eq .Lang "en" }}Privacy policy{{ else if eq .Lang "sr" }}Politika privatnosti{{ else }}Privacybeleid{{ end }}</a>
+      <a href="{{ i18n "url_privacy" | relURL }}">{{ i18n "foot_privacy" }}</a>
     </div>
   </div>
 </footer>

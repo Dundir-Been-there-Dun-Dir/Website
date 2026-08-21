@@ -1,0 +1,150 @@
+{{/* Generic band renderer.
+
+     Page structure lives here once. Every language contributes only copy, from
+     its own content file, so a structural change is one edit rather than three
+     and the translations cannot drift out of shape.
+
+     Recognised keys on a section:
+       tone     "" | chalk | chalk-2 | zinc      the band ground
+       eyebrow, heading                          the left rail
+       lede, body                                markdown, right column
+       proof    {fig,label,src}
+       claims   [{fig,body,word}]   word: the figure is a label, not a number
+       steps    [{h,p}]
+       people   [{name,role,body}]
+       cards    [{meta,h,p,href,meta2,href2}]
+       chips    [{label,live}]
+       caveat   {lab,text}
+       form     "contact" | "scan"
+       scanside true                             render the steps as a sticky rail
+       full     true                             single column instead of two
+       id                                        anchor
+*/}}
+{{ $s := .section }}
+{{ $page := .page }}
+
+<section class="band{{ with $s.tone }} band--{{ . }}{{ end }}"{{ with $s.id }} id="{{ . }}"{{ end }}>
+  <div class="container{{ if not $s.full }} two{{ end }}">
+
+    {{ if not $s.full }}
+    <div{{ if $s.scanside }} class="scan-side"{{ end }}>
+      {{ with $s.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      {{ with $s.heading }}<h2>{{ . | safeHTML }}</h2>{{ end }}
+      {{ with $s.sidesteps }}
+      <div class="steps">
+        {{ range $i, $st := . }}
+        <div class="step">
+          <span class="step__n">{{ printf "%02d" (add $i 1) }}</span>
+          <div><h3>{{ $st.h }}</h3><p>{{ $st.p }}</p></div>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ with $s.sidenote }}<p class="src">{{ . }}</p>{{ end }}
+    </div>
+    {{ else }}
+      {{ with $s.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      {{ with $s.heading }}<h2>{{ . | safeHTML }}</h2>{{ end }}
+    {{ end }}
+
+    <div{{ if or $s.body $s.lede }} class="prose"{{ end }}>
+      {{ with $s.lede }}<p class="lede">{{ . | safeHTML }}</p>{{ end }}
+
+      {{ with $s.proof }}
+      <div class="proof">
+        <p class="proof__fig">{{ .fig | safeHTML }}</p>
+        <p class="proof__label">{{ .label }}</p>
+        {{ with .src }}<p class="src">{{ . }}</p>{{ end }}
+      </div>
+      {{ end }}
+
+      {{ with $s.body }}{{ . | $page.RenderString }}{{ end }}
+
+      {{ with $s.claims }}
+      {{ range . }}
+      <div class="claim">
+        <span class="claim__fig{{ if .word }} claim__fig--word{{ end }}">{{ .fig | safeHTML }}</span>
+        <div class="claim__body">{{ .body | $page.RenderString }}</div>
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{ with $s.steps }}
+      <div class="steps">
+        {{ range $i, $st := . }}
+        <div class="step">
+          <span class="step__n">{{ printf "%02d" (add $i 1) }}</span>
+          <div><h3>{{ $st.h }}</h3><p>{{ $st.p }}</p></div>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ with $s.people }}
+      <div class="people">
+        {{ range . }}
+        <div class="person">
+          <span class="person__name">{{ .name }}</span>
+          <span class="person__role">{{ .role }}</span>
+          {{ .body | $page.RenderString }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ with $s.cards }}
+      <div class="cards">
+        {{ range . }}
+        {{ if .href2 }}
+        <div class="card">
+          <span class="card__meta">{{ .meta }}</span>
+          <h3>{{ .h }}</h3>
+          <p>{{ .p }}</p>
+          <span class="card__go" style="display:flex;gap:1rem;flex-wrap:wrap">
+            <a href="{{ .href | relURL }}" target="_blank" rel="noopener">{{ .go }}</a>
+            <a href="{{ .href2 | relURL }}">{{ .go2 }}</a>
+          </span>
+        </div>
+        {{ else if .href }}
+        <a class="card" href="{{ .href | relURL }}" target="_blank" rel="noopener">
+          <span class="card__meta">{{ .meta }}</span>
+          <h3>{{ .h }}</h3>
+          <p>{{ .p }}</p>
+          <span class="card__go">{{ .go }}</span>
+        </a>
+        {{ else }}
+        <div class="card">
+          <span class="card__meta">{{ .meta }}</span>
+          <h3>{{ .h }}</h3>
+          <p>{{ .p }}</p>
+        </div>
+        {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ with $s.chipslabel }}<p class="mono mt-2" style="color:var(--concrete-dim)">{{ . }}</p>{{ end }}
+      {{ with $s.chips }}
+      <div class="chips">
+        {{ range . }}<span class="chip{{ if .live }} chip--live{{ end }}">{{ .label }}</span>{{ end }}
+      </div>
+      {{ end }}
+
+      {{ with $s.after }}{{ . | $page.RenderString }}{{ end }}
+
+      {{ with $s.caveat }}
+      <div class="caveat mt-1">
+        <span class="caveat__lab">{{ .lab }}</span>
+        {{ .text }}
+      </div>
+      {{ end }}
+
+      {{ with $s.source }}<p class="src">{{ . }}</p>{{ end }}
+
+      {{ if eq $s.form "contact" }}{{ partial "contact-form.html" $page }}{{ end }}
+      {{ if eq $s.form "scan" }}{{ partial "scan-form.html" $page }}{{ end }}
+
+      {{ with $s.link }}<p class="mt-1"><a href="{{ .href | relURL }}">{{ .label }}</a></p>{{ end }}
+    </div>
+  </div>
+</section>

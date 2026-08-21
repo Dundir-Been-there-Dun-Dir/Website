@@ -1,0 +1,194 @@
+{
+  "currency": "EUR",
+  "rate": 65,
+  "buyerCount": [
+    1,
+    3,
+    7,
+    12
+  ],
+  "hourCount": [
+    3,
+    6,
+    11,
+    17
+  ],
+  "locale": "sr-RS",
+  "progress": "odgovoreno {n} od {total}",
+  "scoreLabel": "Nivo izloženosti",
+  "costLabel": "godišnje na administraciju nabavke, prema vašim brojkama",
+  "costSource": "Vaši odgovori x 46 radnih nedelja x 65 evra po satu. Referenca: Remarcable / BuildMate 2025",
+  "bands": [
+    {
+      "upTo": 25,
+      "name": "Pod kontrolom",
+      "text": "Vaš proces stoji bolje od proseka. Preostala izloženost je koncentrisana, pa je jeftino zatvoriti je."
+    },
+    {
+      "upTo": 50,
+      "name": "Povišen",
+      "text": "Posao se obavlja, ali je trag iza njega tanak. To nije problem dok neko ne pita zašto."
+    },
+    {
+      "upTo": 75,
+      "name": "Visok",
+      "text": "Vreme odlazi na upoređivanje koje ne ostavlja ništa upotrebljivo, a obaveza dokumentovanja stiže bez obzira na spremnost."
+    },
+    {
+      "upTo": 100,
+      "name": "Kritičan",
+      "text": "Skoro svaku odluku o dobavljaču koju sada donosite bilo bi teško odbraniti u reviziji, a znanje koje je drži na okupu je u nečijoj glavi."
+    }
+  ],
+  "clean": {
+    "head": "Ništa hitno",
+    "text": "Po ovih deset pitanja vaš proces je u boljem stanju od proseka. Razgovor se ipak isplati: regulatorni teret raste za sve, a najjeftiniji trenutak za dokumentovanje procesa je pre nego što postane obavezno."
+  },
+  "questions": [
+    {
+      "id": "buyers",
+      "ask": "Koliko ljudi kod vas upoređuje dobavljače?",
+      "hint": "Svako ko sklapa ponude u poređenje, bez obzira na naziv radnog mesta.",
+      "opts": [
+        "Jedan",
+        "Dvoje ili troje",
+        "Četvoro do desetoro",
+        "Više od desetoro"
+      ]
+    },
+    {
+      "id": "tool",
+      "ask": "Gde se poređenje zapravo obavlja?",
+      "hint": "Ne gde podaci treba da stoje, nego gde se poredi.",
+      "opts": [
+        "Platforma za nabavku",
+        "Modul u ERP sistemu",
+        "Excel",
+        "E-pošta i papir"
+      ]
+    },
+    {
+      "id": "hours",
+      "ask": "Koliko sati nedeljno jedan nabavljač troši na upoređivanje?",
+      "hint": "Prikupljanje ponuda, provera sertifikata, sastavljanje poređenja. Ne pregovaranje.",
+      "scores": true,
+      "opts": [
+        "Manje od četiri",
+        "Četiri do osam",
+        "Osam do petnaest",
+        "Više od petnaest"
+      ],
+      "findings": {
+        "head": "Upoređivanje je postalo sam posao",
+        "text": "Pri ovom obimu poređenje više nije priprema za odluku, nego posao po sebi. Ovo je najveći pojedinačni blok vremena koji se može vratiti."
+      }
+    },
+    {
+      "id": "cycle",
+      "ask": "Koliko traje jedno celo poređenje dobavljača, do odobrenja?",
+      "hint": "Od specifikacije na stolu do rukovodioca koji potvrđuje izbor.",
+      "scores": true,
+      "opts": [
+        "Manje od sat vremena",
+        "Pola dana",
+        "Jedan do dva dana",
+        "Duže"
+      ],
+      "findings": {
+        "head": "Ciklus je dovoljno dug da oblikuje odluku",
+        "text": "Kada poređenje košta dane, uži izbor se skraćuje da bi ostalo izvodljivo. Skup dobavljača se sužava iz razloga koji nemaju veze sa dobavljačima."
+      }
+    },
+    {
+      "id": "doc",
+      "ask": "Kada je izbor napravljen, postoji li dokumentovano obrazloženje?",
+      "hint": "Nešto što kolega može da pročita i isprati bez pitanja.",
+      "scores": true,
+      "opts": [
+        "Uvek",
+        "Uglavnom",
+        "Ponekad",
+        "Ne"
+      ],
+      "findings": {
+        "head": "Obrazloženje se ne zapisuje",
+        "text": "Posao poređenja se obavi pa odbaci. Svaka odluka košta punu cenu i ne ostavlja ništa na šta se sledeća može osloniti."
+      }
+    },
+    {
+      "id": "recon",
+      "ask": "Možete li da rekonstruišete zašto ste pre dve godine izabrali dobavljača?",
+      "hint": "Ne koga, nego zašto, po kojim kriterijumima, naspram kojih alternativa.",
+      "scores": true,
+      "opts": [
+        "U potpunosti",
+        "Uglavnom",
+        "Teško",
+        "Ne"
+      ],
+      "findings": {
+        "head": "Ranije odluke se ne mogu rekonstruisati",
+        "text": "Ovo revizor prvo proverava, i ovo osporenu nabavku čini skupom. Dokaz mora da postoji pre nego što se pitanje postavi."
+      }
+    },
+    {
+      "id": "keyman",
+      "ask": "Šta se dešava ako vaš najiskusniji nabavljač ode?",
+      "hint": "Dvadeset godina znanja o tome koji dobavljač zaista isporučuje.",
+      "scores": true,
+      "opts": [
+        "Sve je zabeleženo",
+        "Uglavnom zabeleženo",
+        "Mnogo znanja odlazi",
+        "Bio bi ozbiljan problem"
+      ],
+      "findings": {
+        "head": "Znanje je u čoveku, ne u sistemu",
+        "text": "Manje od pet odsto zaposlenih prati veliki projekat od početka do kraja, pa je ovaj gubitak strukturni, a ne peh. Rockx 2023, TU Delft."
+      }
+    },
+    {
+      "id": "reg",
+      "ask": "Koja obaveza vas prva pogađa?",
+      "hint": "Ona koju vaša organizacija mora prva da ispuni.",
+      "scores": true,
+      "opts": [
+        "Ništa od navedenog",
+        "Još nisam siguran",
+        "CSRD Scope 3 izveštavanje",
+        "Zakon o javnim nabavkama ili CPR 2024/3110"
+      ],
+      "findings": {
+        "head": "Obaveza dokumentovanja je već na snazi",
+        "text": "Ovi propisi ne traže da drugačije kupujete. Traže da pokažete kako ste kupili, dosledno, u svakom predmetu. To je prvo problem dokumentacije."
+      }
+    },
+    {
+      "id": "audit",
+      "ask": "Da li je vaša dokumentacija o nabavci proveravana u poslednjih godinu dana?",
+      "hint": "Interna revizija, eksterna revizija ili dobavljač koji osporava odluku.",
+      "scores": true,
+      "opts": [
+        "Da, bez primedbi",
+        "Da, sa primedbama",
+        "Ne",
+        "Nisam siguran"
+      ],
+      "findings": {
+        "head": "Neproverena dokumentacija",
+        "text": "Dokumentacija koju spolja niko nije čitao obično radi samo za onoga ko ju je pisao. Prva prava provera je pogrešan trenutak da se to otkrije."
+      }
+    },
+    {
+      "id": "decide",
+      "ask": "Ko odlučuje o alatima za nabavku?",
+      "hint": "Da znamo ko treba da bude u razgovoru.",
+      "opts": [
+        "Ja",
+        "Uprava",
+        "IT",
+        "Nabavka i IT zajedno"
+      ]
+    }
+  ]
+}
