@@ -66,26 +66,4 @@ sections:
     live: true
   - label: CSRD Scope 3
     live: false
-- tone: chalk
-  eyebrow: Tim
-  heading: Pet ljudi, nijedan generalista.
-  people:
-  - name: Christiaan Verhoef
-    role: CEO
-    body: Hogeschool Windesheim, osnivač Value Chain Hackers AI laboratorije. Učestvovao u prikupljanju 2 miliona evra.
-  - name: Dr Milan Jelisavčić
-    role: CTO
-    body: Doktorat iz evolutivne robotike, VU Amsterdam. Produkcijski ML u Stedinu, bliqu i ABN AMRO.
-  - name: Kirsten Coppoolse
-    role: COO
-    body: Open Food Chain podigla od prvog zaposlenog do dvadeset ljudi, šest godina zaredom udvostručen prihod.
-  - name: Dr Nina Jelisavčić
-    role: Domenski ekspert
-    body: Vanredni profesor Građevinskog fakulteta Univerziteta u Beogradu. Dvanaest godina rada na građevinskim standardima.
-  - name: Gerard Tunteler
-    role: Rukovodilac prodaje javnom sektoru
-    body: Devetnaest godina kao HPE Local Government Lead za Holandiju. Osnivač HPE Okruglog stola za opštine.
-  link:
-    href: /sr/o-nama/
-    label: Upoznajte tim
 ---

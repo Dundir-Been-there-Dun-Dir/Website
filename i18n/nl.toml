@@ -32,7 +32,7 @@ other = "Navigatie"
 other = "Ingangen"
 
 [foot_partners]
-other = "Onderzoekspartners"
+other = "Onderzoekspartner"
 
 [foot_events]
 other = "Beurzen &amp; evenementen"
@@ -42,9 +42,6 @@ other = "Privacybeleid"
 
 [partner_wind]
 other = "Hogeschool Windesheim<br>Academisch anker voor AI-onderzoek en subsidietrajecten"
-
-[partner_bg]
-other = "Universiteit van Belgrado<br>Faculteit Bouwkunde, domeinexpertise civiele techniek"
 
 [doors_eyebrow]
 other = "Vier ingangen"
@@ -59,7 +56,7 @@ other = "Nu open"
 other = "Onderzoekspartner worden"
 
 [door1_p]
-other = "Bouwbedrijven uit het mkb sluiten aan bij het onderzoekstraject met Windesheim en Belgrado. Geen kosten, wel invloed op wat er gebouwd wordt."
+other = "Bouwbedrijven uit het mkb sluiten aan bij het onderzoekstraject met Windesheim. Geen kosten, wel invloed op wat er gebouwd wordt."
 
 [door1_go]
 other = "Wat het inhoudt"
@@ -95,7 +92,7 @@ other = "Ingang 04"
 other = "Gesprek van 30 minuten"
 
 [door4_p]
-other = "Met Christiaan of Milan. Geen presentatie, geen verkooppraatje. Wij stellen de vragen."
+other = "Geen presentatie, geen verkooppraatje. Wij stellen de vragen."
 
 [door4_go]
 other = "Plan een gesprek"

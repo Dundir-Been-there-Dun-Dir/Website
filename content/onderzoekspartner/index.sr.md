@@ -1,8 +1,8 @@
 ---
 title: Postanite istraživački partner
-description: Građevinska mala i srednja preduzeća mogu da se priključe istraživačkom programu sa Windesheimom i Beogradom. Bez troškova, sa uticajem.
+description: Građevinska mala i srednja preduzeća mogu da se priključe istraživačkom programu sa Windesheimom. Bez troškova, sa uticajem.
 slug: istrazivacki-partner
-lede: Dundir je vezan za Hogeschool Windesheim i Građevinski fakultet u Beogradu. Građevinska mala i srednja preduzeća mogu da se priključe tom istraživačkom programu. Ne košta vas ništa, a donosi vam uticaj na ono što se gradi.
+lede: Dundir je vezan za Hogeschool Windesheim. Građevinska mala i srednja preduzeća mogu da se priključe tom istraživačkom programu. Ne košta vas ništa, a donosi vam uticaj na ono što se gradi.
 sections:
 - eyebrow: Otvoreno pitanje
   heading: Niko nikada nije definisao <em class="cut" style="font-style:normal">optimalno</em>.

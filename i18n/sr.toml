@@ -32,7 +32,7 @@ other = "Navigacija"
 other = "Ulazi"
 
 [foot_partners]
-other = "Istraživački partneri"
+other = "Istraživački partner"
 
 [foot_events]
 other = "Sajmovi i događaji"
@@ -42,9 +42,6 @@ other = "Politika privatnosti"
 
 [partner_wind]
 other = "Hogeschool Windesheim<br>Akademsko sidro za AI istraživanje i grantove"
-
-[partner_bg]
-other = "Univerzitet u Beogradu<br>Građevinski fakultet, domenska ekspertiza"
 
 [doors_eyebrow]
 other = "Četiri ulaza"
@@ -59,7 +56,7 @@ other = "Otvoreno"
 other = "Postanite istraživački partner"
 
 [door1_p]
-other = "Građevinska mala i srednja preduzeća ulaze u istraživački program sa Windesheimom i Beogradom. Bez troškova, sa uticajem na ono što se gradi."
+other = "Građevinska mala i srednja preduzeća ulaze u istraživački program sa Windesheimom. Bez troškova, sa uticajem na ono što se gradi."
 
 [door1_go]
 other = "Šta to znači"
@@ -95,7 +92,7 @@ other = "Ulaz 04"
 other = "Razgovor od 30 minuta"
 
 [door4_p]
-other = "Sa Christiaanom ili Milanom. Bez prezentacije, bez prodaje. Mi postavljamo pitanja."
+other = "Bez prezentacije, bez prodaje. Mi postavljamo pitanja."
 
 [door4_go]
 other = "Zakažite razgovor"

@@ -1,8 +1,8 @@
 ---
 title: Become a research partner
-description: Construction SMEs can join the research track with Windesheim and Belgrade. No cost, and a say in what gets built.
+description: Construction SMEs can join the research track with Windesheim. No cost, and a say in what gets built.
 slug: research-partner
-lede: Dundir is anchored at Windesheim University of Applied Sciences and the Faculty of Civil Engineering in Belgrade. Construction SMEs can join that research track. It costs you nothing and it buys you influence over what gets built.
+lede: Dundir is anchored at Windesheim University of Applied Sciences. Construction SMEs can join that research track. It costs you nothing and it buys you influence over what gets built.
 sections:
 - eyebrow: The open question
   heading: Nobody has ever defined <em class="cut" style="font-style:normal">optimal</em>.

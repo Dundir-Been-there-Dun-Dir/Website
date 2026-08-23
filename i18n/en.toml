@@ -32,7 +32,7 @@ other = "Navigation"
 other = "Ways in"
 
 [foot_partners]
-other = "Research partners"
+other = "Research partner"
 
 [foot_events]
 other = "Events"
@@ -42,9 +42,6 @@ other = "Privacy policy"
 
 [partner_wind]
 other = "Windesheim University of Applied Sciences<br>Academic anchor for AI research and grant tracks"
-
-[partner_bg]
-other = "University of Belgrade<br>Faculty of Civil Engineering, construction domain expertise"
 
 [doors_eyebrow]
 other = "Four ways in"
@@ -59,7 +56,7 @@ other = "Open now"
 other = "Become a research partner"
 
 [door1_p]
-other = "Construction SMEs join the research track with Windesheim and Belgrade. No cost, and a say in what gets built."
+other = "Construction SMEs join the research track with Windesheim. No cost, and a say in what gets built."
 
 [door1_go]
 other = "What it involves"
@@ -95,7 +92,7 @@ other = "Way in 04"
 other = "A 30 minute conversation"
 
 [door4_p]
-other = "With Christiaan or Milan. No deck, no pitch. We ask the questions."
+other = "No deck, no pitch. We ask the questions."
 
 [door4_go]
 other = "Request a call"
