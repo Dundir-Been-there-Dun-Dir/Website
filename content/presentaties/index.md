@@ -8,7 +8,7 @@ sections:
   cards:
   - meta: Investeerders en subsidies
     h: Het volledige verhaal
-    p: Probleem, product, markt en team, in tien slides.
+    p: Probleem, product en markt, in negen slides.
     href: presentaties/decks/dundir-investor-pitch/
     go: Bekijk
     href2: presentaties/decks/dundir-investor-pitch/dundir-pitch.pdf
