@@ -9,7 +9,7 @@ sections:
   cards:
   - meta: Investors and grants
     h: The full story
-    p: Problem, product, market and team, in ten slides.
+    p: Problem, product and market, in nine slides.
     href: presentaties/decks/dundir-investor-pitch/
     go: View
     href2: presentaties/decks/dundir-investor-pitch/dundir-pitch.pdf

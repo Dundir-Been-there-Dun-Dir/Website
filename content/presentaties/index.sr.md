@@ -9,7 +9,7 @@ sections:
   cards:
   - meta: Investitori i grantovi
     h: Cela priča
-    p: Problem, proizvod, tržište i tim, u deset slajdova.
+    p: Problem, proizvod i tržište, u devet slajdova.
     href: presentaties/decks/dundir-investor-pitch/
     go: Pogledajte
     href2: presentaties/decks/dundir-investor-pitch/dundir-pitch.pdf
