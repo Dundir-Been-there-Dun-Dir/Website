@@ -1,7 +1,7 @@
 ---
 title: Onderzoekspartner worden
-description: Bouwbedrijven uit het mkb kunnen aansluiten bij het onderzoekstraject met Windesheim en Belgrado. Geen kosten, wel invloed op wat er gebouwd wordt.
-lede: Dundir is verankerd bij Hogeschool Windesheim en de Faculteit Bouwkunde in Belgrado. Bouwbedrijven uit het mkb kunnen aansluiten bij dat onderzoekstraject. Het kost u geen geld en het levert u invloed op wat er gebouwd wordt.
+description: Bouwbedrijven uit het mkb kunnen aansluiten bij het onderzoekstraject met Windesheim. Geen kosten, wel invloed op wat er gebouwd wordt.
+lede: Dundir is verankerd bij Hogeschool Windesheim. Bouwbedrijven uit het mkb kunnen aansluiten bij dat onderzoekstraject. Het kost u geen geld en het levert u invloed op wat er gebouwd wordt.
 sections:
 - eyebrow: De open vraag
   heading: Niemand heeft <em class="cut" style="font-style:normal">optimaal</em> ooit gedefinieerd.

@@ -66,26 +66,4 @@ sections:
     live: true
   - label: CSRD Scope 3
     live: false
-- tone: chalk
-  eyebrow: The team
-  heading: Five people, no generalists.
-  people:
-  - name: Christiaan Verhoef
-    role: CEO
-    body: Windesheim University of Applied Sciences, founder of the Value Chain Hackers AI Lab. Contributed to 2 million euro in fundraising.
-  - name: Dr Milan Jelisavčić
-    role: CTO
-    body: PhD Evolutionary Robotics, VU Amsterdam. Production ML at Stedin, bliq and ABN AMRO.
-  - name: Kirsten Coppoolse
-    role: COO
-    body: Scaled Open Food Chain from first employee to twenty people, doubling revenue six years running.
-  - name: Dr Nina Jelisavčić
-    role: Domain expert
-    body: Assistant Professor of Civil Engineering, University of Belgrade. Twelve years in construction specification standards.
-  - name: Gerard Tunteler
-    role: Head of government sales
-    body: Nineteen years as HPE Local Government Lead Netherlands. Founder of the HPE Roundtable for Municipalities.
-  link:
-    href: /en/about/
-    label: Meet the team
 ---
