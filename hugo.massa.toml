@@ -1,0 +1,12 @@
+# The massa variant: the palette the site shipped on before Oranje.
+#
+#   hugo --config hugo.toml,hugo.massa.toml -d /var/www/dundir-massa \
+#        -b https://dundir.46-224-30-151.sslip.io/massa/
+#
+# Everything is inherited from hugo.toml. This file only swaps the palette file
+# and points the style guide at the matching hex labels. It is also the rollback
+# recipe: put these two keys in hugo.toml and the shipped site returns to massa.
+
+[params]
+  palette  = "css/palettes/massa.css"
+  tokenset = "tokens_massa"

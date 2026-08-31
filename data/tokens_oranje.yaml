@@ -3,17 +3,16 @@
 # blue rather than the flag blue itself, and why the accent is an orange rather
 # than the flag red.
 
-name: Variant, orange
+name: Oranje
 tagline: "The averaged flag white and blue as grounds, with Oranje #F36C21 as the accent: the loudest of the three candidates on /ab/, and the one that made the accent split into three roles."
 
 intro:
-  lab: You are looking at the variant palette
+  lab: This is the shipped palette
   text: >-
-    Only the colour band below changes. Everything on this page after it, and
-    the direction the next paragraphs describe, is the shipped massa system, so
-    where the text says bitumen and menie and no blue, read the swatches rather
-    than the words. This build exists to answer one question: does the argument
-    survive a red, white and blue palette.
+    Navy grounds from the flag averages, with Oranje #F36C21 as the accent,
+    picked over the flag red and a darker orange on /ab/. Because it is bright,
+    text on an accent fill is dark rather than white. The previous palette,
+    massa, is still built and reachable at /massa/.
 
 groups:
   - label: The source colours, as each flag specifies them

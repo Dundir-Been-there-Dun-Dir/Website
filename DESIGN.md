@@ -31,6 +31,16 @@ visitor to whichever of the four ways in fits them.
 
 ## Direction: massa
 
+**Out of date as of 2026-08-31.** The palette moved to Oranje: navy grounds
+derived from the US, Dutch and Russian flag averages, with `#F36C21` as the
+accent. See `assets/css/palettes/oranje.css` for the derivation and `/ab/` for
+the comparison it came out of. Everything below about layout, type, bands and
+the absence of chrome still holds. The colour sentences do not, and the
+direction needs rewriting to say what navy and Oranje are for the way this
+section said what bitumen and menie were for. That rewrite is a copy job, not a
+code one, and it has not been done.
+
+
 Seventy percent of a construction project is material. That is the one number the
 whole business rests on, so the page is built to carry that weight.
 

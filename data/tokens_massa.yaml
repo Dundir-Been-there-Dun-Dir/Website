@@ -5,8 +5,15 @@
 # one place they are written down. If a label ever stops matching its chip,
 # main.css moved and this file did not.
 
-name: Massa
-tagline: Bitumen, chalk, and menie, the red lead primer that goes on Dutch steel before anything else.
+name: Massa, retired
+tagline: Bitumen, chalk, and menie, the red lead primer that goes on Dutch steel before anything else. The palette the site shipped on until Oranje replaced it.
+
+intro:
+  lab: This is the previous palette
+  text: >-
+    Kept built and reachable so the two stay comparable, and as the rollback:
+    the two keys in hugo.massa.toml moved into hugo.toml return the site to
+    this. The shipped palette is now Oranje.
 
 groups:
   - label: Grounds
