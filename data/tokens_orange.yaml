@@ -4,7 +4,7 @@
 # than the flag red.
 
 name: Variant, orange
-tagline: "The same averaged white and blue, with the accent moved off the flag red and onto the brightest orange that still clears every ground: #B64900."
+tagline: "The averaged flag white and blue as grounds, with Oranje #F36C21 as the accent: the loudest of the three candidates on /ab/, and the one that made the accent split into three roles."
 
 intro:
   lab: You are looking at the variant palette
@@ -49,7 +49,7 @@ groups:
         fill: "#BC2130"
         hex: "#BC2130"
         sample: "red"
-        role: "the mean of the three flag reds. Evidence, not a token: the accent is the orange below"
+        role: "the mean of the three flag reds. Evidence, not a token: the accent is Oranje, below"
       - token: white
         fill: "#FFFFFF"
         onhex: "#061127"
@@ -114,20 +114,28 @@ groups:
         on: "--ink"
         role: "hairlines on white"
 
-  - label: The accent
+  - label: The accent, in three steps
     swatches:
       - token: "--menie"
-        hex: "#B64900"
-        sample: "the accent"
-        role: "fills, rules, display type, the optimum. 5.33:1 on white, 3.56:1 on navy"
+        hex: "#F36C21"
+        sample: "fill and display"
+        role: "fills, rules, and display sized type. 6.29:1 on navy, 3.01:1 on white so large text only"
       - token: "--menie-lt"
-        hex: "#D56B37"
+        hex: "#FF9051"
         sample: "small text on dark"
-        role: "the light step. Every small label on a dark band, 5.40:1"
+        role: "the accent as small text on a dark band, 8.44:1"
+      - token: "--menie-dk"
+        hex: "#BE4200"
+        on: "--chalk"
+        sample: "small text on light"
+        role: "the accent as small text on a light band, 5.29:1 on white and 4.54:1 on the tint"
+      - token: "--on-menie"
+        hex: "#061127"
+        role: "what sits on an accent fill. Dark, because white on this orange is 3.01:1"
       - token: "--menie-wash"
-        hex: "#FFEEDF"
+        hex: "#FFF4E1"
         on: "--ink"
-        role: "caveat panel ground on white"
+        role: "caveat panel ground on a light band"
 
 grounds:
   - class: g-bitumen
@@ -140,18 +148,26 @@ grounds:
     label: white tint
 
 contrast:
-  - pair: orange on white
-    ratio: "5.33:1"
-    rule: "text, at any size"
+  - pair: menie on navy
+    ratio: "6.29:1"
+    rule: "anything. Fill, rule, display type, small text"
     ok: true
-  - pair: orange on the tint band
-    ratio: "4.57:1"
-    rule: "text, at any size. This pairing is what fixes the orange in place"
-    ok: true
-  - pair: orange on navy
-    ratio: "3.56:1"
+  - pair: menie on white
+    ratio: "3.01:1"
     rule: "a fill, a rule, or display sized type. Never small text"
-  - pair: orange-lt on navy
-    ratio: "5.40:1"
-    rule: "every small label and every headline accent on a dark band"
+  - pair: menie-lt on navy
+    ratio: "8.44:1"
+    rule: "the accent as small text on a dark band"
+    ok: true
+  - pair: menie-dk on white
+    ratio: "5.29:1"
+    rule: "the accent as small text on a light band"
+    ok: true
+  - pair: menie-dk on the tint band
+    ratio: "4.54:1"
+    rule: "the pairing that fixes the dark step where it is"
+    ok: true
+  - pair: ink on a menie fill
+    ratio: "6.25:1"
+    rule: "text on the accent is dark, not white. White would be 3.01:1"
     ok: true

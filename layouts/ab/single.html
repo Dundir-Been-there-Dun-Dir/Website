@@ -12,16 +12,16 @@
 {{ $opts := slice
   (dict "key" "red"    "name" "Flag red"    "hex" "#BC2130" "lt" "#DC4D50"
         "src"  "the Oklab mean of the US, Dutch and Russian flag reds"
-        "navy" "3.07" "ltnavy" "4.71" "white" "6.18" "fill" "6.18"
+        "navy" "3.07" "ltnavy" "4.71" "white" "6.18" "fill" "6.18" "on" "#FFFFFF"
         "verdict" "Text on white, fill with white text, and display type on navy. Every rule holds, and the headline is the weakest of the three at 3.07:1.")
-  (dict "key" "deep"   "name" "Deep orange (chosen)" "hex" "#B64900" "lt" "#D56B37"
+  (dict "key" "deep"   "name" "Deep orange" "hex" "#B64900" "lt" "#D56B37"
         "src"  "the darkest orange that is still legal on every ground the site has"
-        "navy" "3.56" "ltnavy" "5.40" "white" "5.33" "fill" "5.33"
+        "navy" "3.56" "ltnavy" "5.40" "white" "5.33" "fill" "5.33" "on" "#FFFFFF"
         "verdict" "The drop in. Everything the red is allowed to do, this is allowed to do, and the headline gains most of a stop. It lands within a few units of menie, the accent the shipped site already uses, which is what happens when the same constraints are solved twice.")
-  (dict "key" "oranje" "name" "Oranje"      "hex" "#F36C21" "lt" "#FF9051"
+  (dict "key" "oranje" "name" "Oranje (chosen)" "hex" "#F36C21" "lt" "#FF9051"
         "src"  "the Dutch football orange, the loudest of the three"
-        "navy" "6.29" "ltnavy" "8.44" "white" "3.01" "fill" "3.01"
-        "verdict" "Best on navy by a distance, and it stops being text on white and stops taking white text on a fill. Buttons and the cost stack would need dark text.")
+        "navy" "6.29" "ltnavy" "8.44" "white" "3.01" "fill" "3.01" "on" "#061127"
+        "verdict" "Best on navy by a distance. The cost is real and was paid: it is not text on white, so the accent carries a dark step for small text on a light band, and it does not take white text on a fill, so the button, the nav call to action, the material block and the lead door all run dark text at 6.25:1.")
 }}
 
 <div class="page-hero ab">
@@ -37,26 +37,29 @@
   <div class="container">
     <div class="caveat" style="margin-bottom:1.6rem">
       <span class="caveat__lab">Settled</span>
-      Deep orange won and is what /orange/ serves. The flag red is kept here as
-      the thing it was compared against, because a palette choice with the
-      alternatives deleted is an assertion rather than a decision.
+      Oranje won and is what /orange/ serves. It was the loud one, and the thing
+      that made it expensive is now paid for rather than avoided: the accent
+      carries three steps instead of one, and text on an accent fill is dark.
+      The other two are kept here as the things it was compared against, because
+      a palette choice with the alternatives deleted is an assertion rather than
+      a decision.
     </div>
 
     <div class="ab-ctl" role="group" aria-label="Accent under test">
       {{ range $i, $o := $opts }}
       <button type="button" data-hex="{{ $o.hex }}" data-lt="{{ $o.lt }}" data-name="{{ $o.name }}"
               data-navy="{{ $o.navy }}" data-ltnavy="{{ $o.ltnavy }}" data-white="{{ $o.white }}" data-fill="{{ $o.fill }}"
-              aria-pressed="{{ if eq $i 1 }}true{{ else }}false{{ end }}">
+              aria-pressed="{{ if eq $i 2 }}true{{ else }}false{{ end }}">
         <i style="{{ printf "background:%s" $o.hex | safeCSS }}"></i>{{ $o.name }}
       </button>
       {{ end }}
     </div>
 
     <p class="ab-read" id="ab-read">
-      <b>Deep orange</b> base #B64900, headline step #D56B37 · headline on navy 5.40:1 · base as text on white 5.33:1 · white on a fill 5.33:1
+      <b>Oranje</b> #F36C21, small text step #FF9051 on dark and #BE4200 on light · headline on navy 6.29:1 · as text on white 3.01:1, large only · white on a fill 3.01:1, so the fill runs dark text
     </p>
 
-    <div class="ab-stage" id="ab-stage" style="--menie:#B64900;--menie-lt:#D56B37">
+    <div class="ab-stage" id="ab-stage" style="--menie:#F36C21;--menie-lt:#FF9051">
       <h2>Zeventig procent van uw project is <span class="cut">inkoop.</span></h2>
     </div>
 
@@ -74,9 +77,9 @@
     </div>
     <div>
       {{ range $opts }}
-      <div class="ab-row" style="{{ printf "--menie:%s;--menie-lt:%s" .hex .lt | safeCSS }}">
+      <div class="ab-row" style="{{ printf "--menie:%s;--menie-lt:%s;--on-ab:%s" .hex .lt .on | safeCSS }}">
         <h3>{{ .name }} {{ .hex }} · {{ .src }}</h3>
-        <p class="big">Zeventig procent van uw project is <span class="cut" style="{{ printf "color:%s" .lt | safeCSS }}">inkoop.</span></p>
+        <p class="big">Zeventig procent van uw project is <span class="cut" style="{{ printf "color:%s" .hex | safeCSS }}">inkoop.</span></p>
       </div>
       {{ end }}
     </div>
@@ -96,14 +99,14 @@
       <div class="ab-scroll">
       <table class="ab-tbl">
         <thead>
-          <tr><th>accent</th><th>headline<br>on navy</th><th>fill or rule<br>on navy</th><th>as text<br>on white</th><th>white on<br>a fill</th><th>what it may be</th></tr>
+          <tr><th>accent</th><th>headline<br>on navy</th><th>small text<br>on navy</th><th>as text<br>on white</th><th>white on<br>a fill</th><th>what it may be</th></tr>
         </thead>
         <tbody>
           {{ range $opts }}
           <tr>
             <td class="k"><i style="{{ printf "background:%s" .hex | safeCSS }}"></i>{{ .name }}</td>
-            <td class="{{ if ge (float .ltnavy) 4.5 }}yes{{ else }}no{{ end }}">{{ .ltnavy }}:1</td>
             <td class="{{ if ge (float .navy) 3.0 }}yes{{ else }}no{{ end }}">{{ .navy }}:1</td>
+            <td class="{{ if ge (float .ltnavy) 4.5 }}yes{{ else }}no{{ end }}">{{ .ltnavy }}:1</td>
             <td class="{{ if ge (float .white) 4.5 }}yes{{ else }}no{{ end }}">{{ .white }}:1</td>
             <td class="{{ if ge (float .fill) 4.5 }}yes{{ else }}no{{ end }}">{{ .fill }}:1</td>
             <td>{{ .verdict }}</td>
@@ -112,7 +115,7 @@
         </tbody>
       </table>
       </div>
-      <p class="src">The headline column is the light step, which is what a headline on a dark band uses. Below 4.5:1 a pairing cannot carry small text; below 3:1 it cannot carry display type either</p>
+      <p class="src">The headline column is the accent itself, the small text column its light step. Below 4.5:1 a pairing cannot carry small text; below 3:1 it cannot carry display type either</p>
 
       <div class="caveat mt-2">
         <span class="caveat__lab">The one that decides it</span>
@@ -129,9 +132,9 @@
     <h2>Every job the accent has.</h2>
     {{ range $opts }}
     <p class="ab-read mt-2" style="margin-bottom:.4rem"><b>{{ .name }}</b> {{ .hex }}</p>
-    <div class="ab-apply" style="{{ printf "--menie:%s;--menie-lt:%s" .hex .lt | safeCSS }}">
+    <div class="ab-apply" style="{{ printf "--menie:%s;--menie-lt:%s;--on-ab:%s" .hex .lt .on | safeCSS }}">
       <div class="ab-cell">
-        <h4>Primary button, white on a fill</h4>
+        <h4>Primary button, text on a fill</h4>
         <span class="ab-fill">Doe de scan</span>
       </div>
       <div class="ab-cell">
@@ -165,10 +168,10 @@
   function pick(b) {
     stage.style.setProperty('--menie', b.dataset.hex);
     stage.style.setProperty('--menie-lt', b.dataset.lt);
-    read.innerHTML = '<b>' + b.dataset.name + '</b> base ' + b.dataset.hex +
-      ', headline step ' + b.dataset.lt +
-      ' · headline on navy ' + b.dataset.ltnavy +
-      ':1 · base as text on white ' + b.dataset.white +
+    read.innerHTML = '<b>' + b.dataset.name + '</b> ' + b.dataset.hex +
+      ', small text step ' + b.dataset.lt +
+      ' on dark · headline on navy ' + b.dataset.navy +
+      ':1 · as text on white ' + b.dataset.white +
       ':1 · white on a fill ' + b.dataset.fill + ':1';
     btns.forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
   }

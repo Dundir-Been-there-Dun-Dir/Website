@@ -1,13 +1,16 @@
-/* The variant palette: flag derived grounds, orange accent.
+/* The variant palette: flag derived grounds, Oranje accent.
 
-   The shipped palette is massa (bitumen, chalk, menie). This is the alternative
-   that came out of the tricolor question, and it is what /orange/ serves.
+   This file is a palette and nothing else. It redeclares the named colours in
+   main.css and stops there: every component reads a role, and the roles read
+   these names, so a swap is this file and no rule anywhere else. If a palette
+   ever needs a per-component override, the role layer is missing a role and
+   that is the thing to fix.
 
-   Where the grounds come from. Each of the US, Dutch and Russian flags was taken
-   at its official colour and averaged in Oklab rather than in sRGB, because
-   averaging gamma encoded channels darkens and desaturates the result. All three
-   methods landed within two units of each other here, so the choice was
-   correctness rather than appearance.
+   Where the grounds come from. Each of the US, Dutch and Russian flags was
+   taken at its official colour and averaged in Oklab rather than in sRGB,
+   because averaging gamma encoded channels darkens and desaturates the result.
+   All three methods landed within two units of each other here, so the choice
+   was correctness rather than appearance.
 
      red    US #B31942   NL #AE1C28   RU #D52B1E   ->  #BC2130
      white  US #FFFFFF   NL #FFFFFF   RU #FFFFFF   ->  #FFFFFF
@@ -18,31 +21,23 @@
    the hue anchor and the grounds are steps down its lightness at 80 percent
    chroma, and the flag white is the light band unchanged.
 
-   The accent is not the flag red. That was compared against two oranges on the
-   word the headline turns on, and the orange won; see /ab/ for the comparison
-   and what each candidate cost. Which orange was not a free choice either. The
-   accent has to be text on white, text on the tint band, a fill that carries
-   white text, and display type on a very dark navy, and those pull in opposite
-   directions, because brightening an orange helps the navy case and breaks the
-   two light ones. #B64900 is the brightest one that clears all four.
+   The accent is Oranje, #F36C21, picked over the flag red and over a darker
+   orange on /ab/. It is the loudest of the three on this navy by a distance,
+   6.29:1, and it is the one that made the accent split into three roles rather
+   than one, because it cannot do every job at one value:
 
-   Every pairing is checked as a pair, not as a colour:
+     as small text on navy      --menie-lt #FF9051   8.44:1
+     as small text on white     --menie-dk #BE4200   5.29:1
+     as small text on the tint  --menie-dk #BE4200   4.54:1
+     at display size on navy    --menie   #F36C21    6.29:1
+     at display size on white   --menie   #F36C21    3.01:1, large text only
+     as a fill                  --menie   #F36C21    with --on-menie on top
 
-     mist on navy          9.73:1      ink on white          18.80:1
-     mist-dim on navy      5.80:1      ink-soft on white      8.54:1
-     orange-lt on navy     5.40:1      ink-quiet on white     5.46:1
-     orange on navy        3.56:1      orange on white        5.33:1
-     white on orange fill  5.33:1      orange on the tint      4.57:1
-
-   The accent discipline the massa system states as a rule survives the swap.
-   The orange on this navy is 3.56:1, so on a dark band it may be a fill, a rule,
-   or display sized type, and never small text. Small text and headline accents
-   on dark step to --menie-lt. On white it clears 4.5:1 and may be text at any
-   size.
-
-   One note worth keeping. Menie, the accent the shipped site already uses, is
-   #C1440E. Solving the same constraints against these grounds produced a colour
-   a few units away from it. */
+   The consequence the comparison flagged, now paid: white on this fill is
+   3.01:1 and unreadable, so text on an accent fill is dark. The primary button,
+   the nav call to action, the material block in the cost stack and the lead
+   door all carry ink at 6.25:1 rather than white. That is the design change the
+   colour asked for, and it is one token: --on-menie. */
 
 :root {
   /* grounds: the flag blue stepped down in lightness, chroma pulled to 80% so a
@@ -57,63 +52,33 @@
   --chalk-2: #E9EEF6;
 
   /* text on the dark grounds */
-  --concrete:     #ABBBD4;
-  --concrete-dim: #818FA8;
+  --concrete:     #ABBBD4;   /* body text, 9.73:1 */
+  --concrete-dim: #818FA8;   /* mono labels and sources, 5.80:1 */
 
   /* text on white */
-  --ink:       #061127;
-  --ink-soft:  #3E4D66;
-  --ink-quiet: #5C6A83;
+  --ink:       #061127;      /* 18.80:1 */
+  --ink-soft:  #3E4D66;      /* 8.54:1 */
+  --ink-quiet: #5C6A83;      /* 5.46:1 */
   --rule-lt:   #C1CCDF;
 
-  /* the accent, and the light step that small text and headline accents on a
-     dark band are required to use */
-  --menie:      #B64900;
-  --menie-lt:   #D56B37;
-  --menie-wash: #FFEEDF;
+  /* the accent, in the three steps the role layer asks for */
+  --menie:      #F36C21;
+  --menie-lt:   #FF9051;
+  --menie-dk:   #BE4200;
+  --menie-wash: #FFF4E1;
+  --menie-deep: #8A3000;
+  --menie-glow: rgba(243, 108, 33, .25);
+
+  /* what sits on top of an accent fill. Dark, because this orange is bright */
+  --on-menie:      var(--ink);
+  --on-menie-soft: #4D1800;
+
+  /* the one neutral used as a fill: the labour block in the cost stack */
+  --neutral-fill:    var(--concrete);
+  --on-neutral:      var(--bitumen);
+  --on-neutral-soft: #2A3550;
 
   /* the mark: the accent as the region, the flag white as the optimum */
-  --mark-region: #B64900;
+  --mark-region: #F36C21;
   --mark-dot:    #FFFFFF;
-
-  /* local to this palette */
-  --red-tint: #FFEED0;  /* a label sitting on an accent fill */
-  --red-deep: #943B03;  /* caveat prose on the wash */
 }
-
-/* ------------------------------------------------------------------
-   The handful of places main.css hardcodes a colour derived from menie
-   rather than reading the token. Each one is remapped, not restyled.
-   ------------------------------------------------------------------ */
-
-/* the accent word inside a headline: on a dark band it takes the light step,
-   and only a headline on a light band keeps the base accent. */
-.cut { color: var(--menie-lt); }
-.band--chalk .cut,
-.band--chalk-2 .cut { color: var(--menie); }
-
-/* Display figures. On the massa palette menie cleared large text on bitumen at
-   3.5:1; on this navy the accent sits at 3.56:1, which passes AA for large text
-   and still reads thin at weight 800 against a ground this dark. So a figure on
-   a dark band takes the light step at 5.40:1, and only a figure on white keeps
-   the base accent. Same rule as the headline accent, same reason. */
-.claim__fig, .proof__fig { color: var(--menie-lt); }
-.band--chalk .claim__fig, .band--chalk-2 .claim__fig,
-.band--chalk .proof__fig, .band--chalk-2 .proof__fig { color: var(--menie); }
-
-/* the cost stack */
-.seg--material .seg__nm { color: var(--red-tint); }
-.seg--labour   .seg__nm { color: #2A3550; }
-
-/* the lead door */
-.door--lead .door__idx { color: var(--red-tint); }
-.door--lead p { color: var(--red-tint); }
-.band--chalk .door--lead p,
-.band--chalk-2 .door--lead p { color: var(--red-tint); }
-
-/* the caveat panel on a light band */
-.band--chalk .caveat,
-.band--chalk-2 .caveat { color: var(--red-deep); }
-
-/* the focus shadow on a form field, which carried the accent as a literal rgba */
-input:focus, textarea:focus { box-shadow: 0 0 0 2px rgba(182, 73, 0, .25); }

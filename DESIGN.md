@@ -93,6 +93,32 @@ The mark is a feasible region filled in menie with the optimum as a white dot on
 one of its vertices. Two colours, both dominant on the site, so one mark holds on
 bitumen and on chalk without a second variant.
 
+### Roles
+
+The table above is the palette: colours with names. Between it and the components
+sits a second layer, roles, which say what a colour is for. Components read only
+roles, never palette names.
+
+    --surface --panel --rule            the ground, a raised panel, a hairline
+    --fg --fg-prose --fg-2 --fg-3       text, from headings down to mono labels
+    --accent-text                       the accent as small text. Steps per ground
+    --accent-display                    the accent at display size, or as a rule
+    --accent-fill --on-accent           the accent as a fill, and what sits on it
+    --wash --wash-rule --on-wash        the caveat panel
+    --field-bg --focus --focus-glow     form fields and the focus ring
+
+The default set is the dark ground. A band that changes its ground restates the
+roles once and every component inside it follows, including ones written later.
+This replaced roughly forty rules of the shape `.band--chalk .thing { color }`,
+one per component per ground, of which the tint band was missing a third: an
+eyebrow on `chalk-2` was inheriting the dark ground's step and sitting at 2.6:1.
+
+Two consequences worth stating. A palette swap is now one file that redeclares
+the named colours and nothing else; if a palette needs a component override, the
+role layer is missing a role. And the accent carries three roles rather than one,
+because no single accent value clears contrast on both grounds: small text steps
+per ground, display type and fills do not.
+
 ### Type
 
 The site ships Dutch, English and Serbian in Latin script, so `č ć š ž đ` must be

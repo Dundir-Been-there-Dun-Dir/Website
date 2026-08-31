@@ -20,8 +20,9 @@
   --mark-dot: #FFFFFF;
 
   /* the variable under test, and the light step that goes with it */
-  --menie: #BC2130;
-  --menie-lt: #DC4D50;
+  --menie: #F36C21;
+  --menie-lt: #FF9051;
+  --on-ab: #061127;
   --mark-region: var(--menie);
   background: var(--bitumen);
 }
@@ -66,7 +67,7 @@
   max-width: 15ch;
   color: var(--chalk);
 }
-.ab-stage .cut { color: var(--menie-lt); }
+.ab-stage .cut { color: var(--menie); }
 
 /* ---- all candidates at once, so the eye does not have to remember --------- */
 .ab-row { border-top: 1px solid var(--zinc-2); padding: clamp(1.2rem, 3vw, 2rem) 0; }
@@ -107,12 +108,12 @@
   font-variation-settings: normal;
 }
 .ab-cell--light h4 { color: var(--ink-quiet); }
-.ab-fill { background: var(--menie); color: #fff; padding: .7rem .95rem; font-family: var(--data); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; display: inline-block; }
+.ab-fill { background: var(--menie); color: var(--on-ab);  padding: .7rem .95rem; font-family: var(--data); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; display: inline-block; }
 .ab-text-dark { color: var(--menie-lt); font-family: var(--disp); font-weight: 800; font-size: 1.6rem; font-variation-settings: "wdth" 118; }
 .ab-text-light { color: var(--menie); font-weight: 700; }
 .ab-bar { display: flex; height: 54px; margin-top: .3rem; }
 .ab-bar span { display: flex; align-items: flex-end; padding: .35rem .5rem; font-family: var(--data); font-size: .64rem; letter-spacing: .06em; }
-.ab-bar .m { background: var(--menie); color: #fff; flex: 70; }
+.ab-bar .m { background: var(--menie); color: var(--on-ab); flex: 70; }
 .ab-bar .l { background: var(--concrete); color: var(--bitumen); flex: 18; }
 .ab-bar .o { background: var(--zinc-2); color: var(--concrete); flex: 12; }
 
