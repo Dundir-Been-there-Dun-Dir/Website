@@ -1,0 +1,13 @@
+{{/* One colour swatch, filled from the live token rather than from a copied
+     hex, so the chip and the site can never disagree. The hex underneath is a
+     label: if it ever stops matching the chip, main.css moved and this line
+     did not. Pass `on` to set the chip's text colour from a second token, so a
+     pairing is shown rather than asserted. */}}
+{{- $style := printf "background:var(%s)" .token -}}
+{{- with .on -}}{{- $style = printf "%s;color:var(%s)" $style . -}}{{- end -}}
+<div class="sw">
+  <div class="sw__chip" style="{{ $style | safeCSS }}">{{ with .sample }}{{ . }}{{ end }}</div>
+  <span class="sw__token">{{ .token }}</span>
+  <span class="sw__hex">{{ .hex }}</span>
+  <span class="sw__role">{{ .role }}</span>
+</div>

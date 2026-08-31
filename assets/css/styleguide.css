@@ -1,0 +1,168 @@
+/* Style guide only.
+
+   Loaded through the `pagecss` front matter key, not concatenated into
+   dundir.css, so the one stylesheet every visitor downloads does not carry the
+   weight of a page that only the team opens. Nothing in here may be used by a
+   real page: if a rule earns its place on the site it moves to main.css. */
+
+/* ---- swatch grid -------------------------------------------------------- */
+.sg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1px;
+  background: var(--zinc-2);
+  border: 1px solid var(--zinc-2);
+  margin: 0 0 1.9rem;
+}
+.band--chalk .sg-grid,
+.band--chalk-2 .sg-grid { background: var(--rule-lt); border-color: var(--rule-lt); }
+
+.sw { background: var(--bitumen); display: flex; flex-direction: column; padding-bottom: .9rem; }
+.band--chalk .sw { background: var(--chalk); }
+.band--chalk-2 .sw { background: var(--chalk-2); }
+
+.sw__chip {
+  height: 76px;
+  display: flex;
+  align-items: flex-end;
+  padding: .5rem .65rem;
+  margin-bottom: .7rem;
+  font-family: var(--data);
+  font-size: .74rem;
+  letter-spacing: .04em;
+}
+.sw__token {
+  font-family: var(--data);
+  font-size: .74rem;
+  padding: 0 .65rem;
+  color: var(--chalk);
+}
+.band--chalk .sw__token, .band--chalk-2 .sw__token { color: var(--ink); }
+.sw__hex {
+  font-family: var(--data);
+  font-size: .62rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .1rem .65rem .35rem;
+  color: var(--concrete-dim);
+}
+.band--chalk .sw__hex, .band--chalk-2 .sw__hex { color: var(--ink-quiet); }
+.sw__role {
+  font-size: .84rem;
+  line-height: 1.45;
+  padding: 0 .65rem;
+  color: var(--concrete);
+}
+.band--chalk .sw__role, .band--chalk-2 .sw__role { color: var(--ink-soft); }
+
+/* ---- section label above a specimen row --------------------------------- */
+.sg-lbl {
+  font-family: var(--data);
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--concrete-dim);
+  margin: 2rem 0 .8rem;
+}
+.band--chalk .sg-lbl, .band--chalk-2 .sg-lbl { color: var(--ink-quiet); }
+.sg-lbl:first-child { margin-top: 0; }
+
+/* ---- type specimens ------------------------------------------------------ */
+.spec { border-top: 1px solid var(--zinc-2); padding-top: 1.1rem; margin-top: 1.6rem; }
+.band--chalk .spec, .band--chalk-2 .spec { border-top-color: var(--rule-lt); }
+.spec:first-child { margin-top: 0; }
+
+.spec__smp { margin: .5rem 0 .6rem; }
+.spec__smp--disp {
+  font-family: var(--disp);
+  font-weight: 800;
+  font-variation-settings: "wdth" 118;
+  letter-spacing: -.035em;
+  line-height: .9;
+  font-size: clamp(1.9rem, 4.4vw, 3.4rem);
+  color: var(--chalk);
+}
+.band--chalk .spec__smp--disp, .band--chalk-2 .spec__smp--disp { color: var(--ink); }
+.spec__smp--body { font-family: var(--body); font-size: 1.12rem; line-height: 1.62; max-width: 62ch; }
+.spec__smp--data {
+  font-family: var(--data);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.02rem;
+  letter-spacing: .02em;
+}
+.spec__note { font-size: .9rem; color: var(--concrete-dim); max-width: 58ch; margin: 0; }
+.band--chalk .spec__note, .band--chalk-2 .spec__note { color: var(--ink-quiet); }
+
+/* the width axis, shown rather than described */
+.axis { display: grid; gap: .35rem; margin: .6rem 0 .9rem; }
+.axis b {
+  font-family: var(--disp);
+  font-weight: 800;
+  font-size: clamp(1.4rem, 3.4vw, 2.6rem);
+  line-height: .95;
+  letter-spacing: -.03em;
+  display: block;
+}
+.axis .w100 { font-variation-settings: "wdth" 100; }
+.axis .w118 { font-variation-settings: "wdth" 118; }
+.axis .w135 { font-variation-settings: "wdth" 135; }
+
+/* ---- contrast table ------------------------------------------------------ */
+.sg-tbl { width: 100%; border-collapse: collapse; margin: 1rem 0 1.2rem; font-size: .9rem; }
+.sg-tbl th, .sg-tbl td {
+  text-align: left;
+  padding: .5rem .7rem .5rem 0;
+  border-bottom: 1px solid var(--zinc-2);
+  vertical-align: top;
+}
+.band--chalk .sg-tbl th, .band--chalk .sg-tbl td,
+.band--chalk-2 .sg-tbl th, .band--chalk-2 .sg-tbl td { border-bottom-color: var(--rule-lt); }
+.sg-tbl th {
+  font-family: var(--data);
+  font-size: .66rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--concrete-dim);
+}
+.band--chalk .sg-tbl th, .band--chalk-2 .sg-tbl th { color: var(--ink-quiet); }
+.sg-tbl td:first-child { font-family: var(--data); font-size: .82rem; }
+.sg-tbl .ok { color: var(--menie-lt); }
+.band--chalk .sg-tbl .ok, .band--chalk-2 .sg-tbl .ok { color: var(--menie); }
+
+/* ---- ground samples, so the four grounds sit next to each other ---------- */
+.grounds { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--rule-lt); border: 1px solid var(--rule-lt); }
+.grounds div {
+  min-height: 96px;
+  padding: .7rem;
+  font-family: var(--data);
+  font-size: .68rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: flex-end;
+}
+.g-bitumen { background: var(--bitumen); color: var(--concrete); }
+.g-zinc    { background: var(--zinc);    color: var(--concrete); }
+.g-chalk   { background: var(--chalk);   color: var(--ink-quiet); }
+.g-chalk2  { background: var(--chalk-2); color: var(--ink-quiet); }
+
+/* ---- the mark, shown at the size a print job would ask for --------------- */
+.mark-row { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; margin: .8rem 0 1rem; }
+.mark-lg svg { width: 96px; height: 96px; }
+.mark-md svg { width: 48px; height: 48px; }
+.mark-sm svg { width: 22px; height: 22px; }
+
+/* ---- the grid, drawn ----------------------------------------------------- */
+.gridfig { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--gut); margin: .8rem 0 1rem; }
+.gridfig div {
+  border: 1px dashed var(--zinc-2);
+  padding: .8rem;
+  font-family: var(--data);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--concrete-dim);
+}
+.band--chalk .gridfig div, .band--chalk-2 .gridfig div { border-color: var(--rule-lt); color: var(--ink-quiet); }
+@media (max-width: 860px) { .gridfig { grid-template-columns: 1fr; } }
