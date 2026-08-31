@@ -9,7 +9,7 @@
 {{/* Which palette this build documents. The chips are filled from the live
      tokens either way; this only decides which hex labels and which measured
      ratios are printed under them. Set `tokenset` in config to swap. */}}
-{{ $tokens := index site.Data (site.Params.tokenset | default "tokens") }}
+{{ $tokens := index site.Data (site.Params.tokenset | default "tokens_oranje") }}
 
 <div class="page-hero">
   <div class="container">
@@ -34,6 +34,13 @@
         {{ .text }}
       </div>
       {{ end }}
+      <div class="caveat mt-1">
+        <span class="caveat__lab">Out of date below</span>
+        The direction the next paragraphs describe is massa, and the shipped
+        palette is no longer massa. The layout, the type and the rules still
+        hold; the colour sentences do not. Read the swatches rather than the
+        words until the direction is rewritten.
+      </div>
       <p class="lede mt-1">Seventy percent of a construction project is material. That is the number the whole business rests on, so the page is built to carry the weight rather than to decorate it.</p>
       <ul>
         <li><strong>The headline is the loudest object on the page.</strong> Display type is set very large and very wide, edge to edge, with almost no chrome around it. Nothing else needs to shout, because that already does.</li>

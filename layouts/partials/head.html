@@ -50,22 +50,14 @@
   <link rel="preload" href="/fonts/chivo-02.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/spacemono-05.woff2" as="font" type="font/woff2" crossorigin>
 
+  {{/* One bundle: faces, then the palette, then the system. The palette is a
+       file of named colours and nothing else, so switching the site's colours is
+       switching which file goes in the middle. */}}
   {{- $fonts := resources.Get "css/fonts.css" -}}
+  {{- $palette := resources.Get (site.Params.palette | default "css/palettes/oranje.css") -}}
   {{- $main := resources.Get "css/main.css" -}}
-  {{- $css := slice $fonts $main | resources.Concat "css/dundir.css" | minify | fingerprint -}}
+  {{- $css := slice $fonts $palette $main | resources.Concat "css/dundir.css" | minify | fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
-
-  {{/* An alternative palette, loaded after the bundle so it only redeclares the
-       tokens. Unset on the shipped build: this exists so a palette can be put
-       in front of people on a real page instead of in a swatch grid. */}}
-  {{ with site.Params.paletteOverride }}
-    {{- $parts := slice -}}
-    {{- range (cond (reflect.IsSlice .) . (slice .)) -}}
-      {{- $parts = $parts | append (resources.Get .) -}}
-    {{- end -}}
-    {{- $pal := $parts | resources.Concat "css/palette.css" | minify | fingerprint -}}
-    <link rel="stylesheet" href="{{ $pal.RelPermalink }}" integrity="{{ $pal.Data.Integrity }}" crossorigin="anonymous">
-  {{ end }}
 
   {{/* A page may load one stylesheet of its own. Used by the style guide, which
        is internal and must not add weight to the bundle every visitor gets. */}}

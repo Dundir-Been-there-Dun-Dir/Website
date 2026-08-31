@@ -38,47 +38,13 @@
    ============================================================ */
 
 /* ============================================================
-   01 Tokens
+   01 Type and rhythm
    ============================================================ */
+/* No colour is declared in this file. The palette lives in css/palettes/ and is
+   concatenated in front of this one, so what follows is roles, type and rhythm:
+   the things that do not change when the site changes colour. */
+
 :root {
-  /* grounds */
-  --bitumen: #17181A;
-  --zinc: #212325;
-  --zinc-2: #33363A;
-  --chalk: #EFEEE9;
-  --chalk-2: #E4E2DC;
-
-  /* text on dark */
-  --concrete: #B0AEA6;
-  --concrete-dim: #8E8D86;
-
-  /* text on chalk */
-  --ink: #17181A;
-  --ink-soft: #4A4945;
-  --ink-quiet: #6B6A64;
-  --rule-lt: #CFCCC4;
-
-  /* accent, stepped per surface */
-  --menie: #C1440E;
-  --menie-lt: #E4682E;
-  --menie-dk: #B13900;
-  --menie-wash: #F7E5DC;
-  --menie-deep: #6E3410;
-  --menie-glow: rgba(193, 68, 14, .25);
-
-  /* what sits on top of an accent fill */
-  --on-menie: #FFFFFF;
-  --on-menie-soft: #FDEDE7;
-
-  /* the one neutral used as a fill: the labour block in the cost stack */
-  --neutral-fill: var(--concrete);
-  --on-neutral: var(--bitumen);
-  --on-neutral-soft: #403F39;
-
-  /* the mark: the region in the accent, the optimum as a white dot inside it */
-  --mark-region: #C1440E;
-  --mark-dot: #FFFFFF;
-
   /* faces */
   --disp: "Anybody", "Arial Black", "Helvetica Neue", sans-serif;
   --body: "Chivo", "Helvetica Neue", Arial, sans-serif;
@@ -89,11 +55,13 @@
   --gut: clamp(1.5rem, 4vw, 4rem);
 }
 
+
 /* ============================================================
    01b Roles
 
-   Everything above this point is the palette: colours with names. Everything
-   below it is roles: what a colour is for. Components only ever read a role,
+   The palette is a separate file, concatenated in front of this one: colours
+   with names, and nothing else. Everything below here is roles: what a colour
+   is for. Components only ever read a role,
    never a palette name, which is why swapping a palette is one small file and
    why a band that changes its ground does not need a rule of its own for every
    component that might sit inside it.

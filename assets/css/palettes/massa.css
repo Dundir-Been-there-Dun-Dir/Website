@@ -1,0 +1,52 @@
+/* Massa: the palette the site shipped on until Oranje replaced it.
+
+   Grounds sampled from a construction site rather than from software: bitumen,
+   zinc, concrete, chalk. One accent, menie, the red lead primer that goes on
+   Dutch steel before anything else.
+
+   Kept as a variant so the previous look stays comparable and reachable. It is
+   also the rollback: set `palette` back to this file and the site returns.
+   Built to /massa/ by deploy-massa.sh.
+
+   A palette file declares named colours and nothing else. No selectors, no
+   component rules. If it ever needs one, main.css is missing a role. */
+
+:root {
+  /* grounds */
+  --bitumen: #17181A;
+  --zinc: #212325;
+  --zinc-2: #33363A;
+  --chalk: #EFEEE9;
+  --chalk-2: #E4E2DC;
+
+  /* text on dark */
+  --concrete: #B0AEA6;
+  --concrete-dim: #8E8D86;
+
+  /* text on chalk */
+  --ink: #17181A;
+  --ink-soft: #4A4945;
+  --ink-quiet: #6B6A64;
+  --rule-lt: #CFCCC4;
+
+  /* the accent, in the three steps the role layer asks for */
+  --menie: #C1440E;
+  --menie-lt: #E4682E;
+  --menie-dk: #B13900;
+  --menie-wash: #F7E5DC;
+  --menie-deep: #6E3410;
+  --menie-glow: rgba(193, 68, 14, .25);
+
+  /* what sits on top of an accent fill */
+  --on-menie: #FFFFFF;
+  --on-menie-soft: #FDEDE7;
+
+  /* the one neutral used as a fill: the labour block in the cost stack */
+  --neutral-fill:    var(--concrete);
+  --on-neutral:      var(--bitumen);
+  --on-neutral-soft: #403F39;
+
+  /* the mark: the region in the accent, the optimum as a white dot inside it */
+  --mark-region: #C1440E;
+  --mark-dot:    #FFFFFF;
+}
