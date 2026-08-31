@@ -1,0 +1,100 @@
+# The shipped palette, as the style guide reports it.
+#
+# The chips on /styleguide/ are filled from var(--token), so they cannot go
+# stale. These hex strings are the labels underneath them and this file is the
+# one place they are written down. If a label ever stops matching its chip,
+# main.css moved and this file did not.
+
+name: Massa
+tagline: Bitumen, chalk, and menie, the red lead primer that goes on Dutch steel before anything else.
+
+groups:
+  - label: Grounds
+    swatches:
+      - token: "--bitumen"
+        hex: "#17181A"
+        role: "the page. Hero, dark bands, header, footer"
+      - token: "--zinc"
+        hex: "#212325"
+        role: "raised surface, hover state"
+      - token: "--zinc-2"
+        hex: "#33363A"
+        role: "hairlines and grid gaps on dark"
+      - token: "--chalk"
+        hex: "#EFEEE9"
+        role: "the light band"
+      - token: "--chalk-2"
+        hex: "#E4E2DC"
+        role: "tint band. Separation without inversion"
+
+  - label: Text on dark
+    swatches:
+      - token: "--concrete"
+        hex: "#B0AEA6"
+        on: "--bitumen"
+        sample: "8.0:1"
+        role: "body text on dark"
+      - token: "--concrete-dim"
+        hex: "#8E8D86"
+        on: "--bitumen"
+        sample: "5.3:1"
+        role: "mono labels and sources on dark"
+
+  - label: Text on chalk
+    swatches:
+      - token: "--ink"
+        hex: "#17181A"
+        on: "--chalk"
+        sample: "15.5:1"
+        role: "text on chalk"
+      - token: "--ink-soft"
+        hex: "#4A4945"
+        on: "--chalk"
+        role: "secondary prose on chalk"
+      - token: "--ink-quiet"
+        hex: "#6B6A64"
+        on: "--chalk"
+        sample: "4.6:1"
+        role: "sources and labels on chalk"
+      - token: "--rule-lt"
+        hex: "#CFCCC4"
+        on: "--ink"
+        role: "hairlines on chalk"
+
+  - label: The accent
+    swatches:
+      - token: "--menie"
+        hex: "#C1440E"
+        sample: "the accent"
+        role: "fills, rules, display type, the optimum"
+      - token: "--menie-lt"
+        hex: "#E4682E"
+        sample: "small text on dark"
+        role: "the light step. Every small label on a dark band"
+      - token: "--menie-wash"
+        hex: "#F7E5DC"
+        on: "--ink"
+        role: "caveat panel ground on chalk"
+
+grounds:
+  - class: g-bitumen
+    label: bitumen
+  - class: g-zinc
+    label: zinc
+  - class: g-chalk
+    label: chalk
+  - class: g-chalk2
+    label: chalk 2
+
+contrast:
+  - pair: menie on chalk
+    ratio: "4.7:1"
+    rule: "text, at any size"
+    ok: true
+  - pair: menie on bitumen
+    ratio: "3.5:1"
+    rule: "a fill, a rule, or display sized type. Never small text"
+  - pair: menie-lt on bitumen
+    ratio: "5.3:1"
+    rule: "every small label on a dark band"
+    ok: true

@@ -1,0 +1,152 @@
+# The tricolor variant, as the style guide reports it. See assets/css/tricolor.css
+# for how the three flag bands were averaged and why the grounds are steps down
+# the flag blue rather than the flag blue itself.
+
+name: Tricolor
+tagline: "Red, white and blue, averaged in Oklab across the US, Dutch and Russian flags: #BC2130, #FFFFFF, #0F3B86."
+
+intro:
+  lab: You are looking at the tricolor variant
+  text: >-
+    Only the colour band below changes. Everything on this page after it, and
+    the direction the next paragraphs describe, is the shipped massa system, so
+    where the text says bitumen and menie and no blue, read the swatches rather
+    than the words. This build exists to answer one question: does the argument
+    survive a red, white and blue palette.
+
+groups:
+  - label: The source colours, as each flag specifies them
+    swatches:
+      - token: "US red"
+        fill: "#B31942"
+        hex: "#B31942"
+        role: "Old Glory Red"
+      - token: "NL red"
+        fill: "#AE1C28"
+        hex: "#AE1C28"
+        role: "helder vermiljoen, the Dutch state specification"
+      - token: "RU red"
+        fill: "#D52B1E"
+        hex: "#D52B1E"
+        role: "the brightest of the three, and it pulls the mean"
+      - token: "US blue"
+        fill: "#0A3161"
+        hex: "#0A3161"
+        role: "Old Glory Blue"
+      - token: "NL blue"
+        fill: "#21468B"
+        hex: "#21468B"
+        role: "kobaltblauw, the lightest of the three"
+      - token: "RU blue"
+        fill: "#0039A6"
+        hex: "#0039A6"
+        role: "the most saturated of the three"
+
+  - label: The three bands, averaged in Oklab
+    swatches:
+      - token: red
+        fill: "#BC2130"
+        hex: "#BC2130"
+        sample: "red"
+        role: "the mean of the three flag reds. Becomes the accent, unchanged"
+      - token: white
+        fill: "#FFFFFF"
+        onhex: "#061127"
+        hex: "#FFFFFF"
+        sample: "white"
+        role: "identical in all three flags. Becomes the light band, unchanged"
+      - token: blue
+        fill: "#0F3B86"
+        hex: "#0F3B86"
+        sample: "blue"
+        role: "the mean of the three flag blues. Too light to be a page ground, so it becomes the hue the grounds are stepped down from"
+
+  - label: Grounds, stepped down the flag blue
+    swatches:
+      - token: "--bitumen"
+        hex: "#000840"
+        role: "the page. Hero, dark bands, header, footer"
+      - token: "--zinc"
+        hex: "#00144C"
+        role: "raised surface, hover state"
+      - token: "--zinc-2"
+        hex: "#0D2F68"
+        role: "hairlines and grid gaps on dark"
+      - token: "--chalk"
+        hex: "#FFFFFF"
+        role: "the light band. The flag white, not an off white"
+      - token: "--chalk-2"
+        hex: "#E9EEF6"
+        role: "tint band. Separation without inversion"
+
+  - label: Text on dark
+    swatches:
+      - token: "--concrete"
+        hex: "#ABBBD4"
+        on: "--bitumen"
+        sample: "9.7:1"
+        role: "body text on dark"
+      - token: "--concrete-dim"
+        hex: "#818FA8"
+        on: "--bitumen"
+        sample: "5.8:1"
+        role: "mono labels and sources on dark"
+
+  - label: Text on white
+    swatches:
+      - token: "--ink"
+        hex: "#061127"
+        on: "--chalk"
+        sample: "18.8:1"
+        role: "text on white"
+      - token: "--ink-soft"
+        hex: "#3E4D66"
+        on: "--chalk"
+        role: "secondary prose on white"
+      - token: "--ink-quiet"
+        hex: "#5C6A83"
+        on: "--chalk"
+        sample: "5.5:1"
+        role: "sources and labels on white"
+      - token: "--rule-lt"
+        hex: "#C1CCDF"
+        on: "--ink"
+        role: "hairlines on white"
+
+  - label: The accent
+    swatches:
+      - token: "--menie"
+        hex: "#BC2130"
+        sample: "the accent"
+        role: "fills, rules, display type, the optimum"
+      - token: "--menie-lt"
+        hex: "#E75759"
+        sample: "small text on dark"
+        role: "the light step. Every small label on a dark band"
+      - token: "--menie-wash"
+        hex: "#FFE0DD"
+        on: "--ink"
+        role: "caveat panel ground on white"
+
+grounds:
+  - class: g-bitumen
+    label: navy
+  - class: g-zinc
+    label: navy raised
+  - class: g-chalk
+    label: white
+  - class: g-chalk2
+    label: white tint
+
+contrast:
+  - pair: red on white
+    ratio: "6.18:1"
+    rule: "text, at any size"
+    ok: true
+  - pair: red on navy
+    ratio: "3.07:1"
+    rule: "a fill, a rule, or display sized type. Never small text"
+  - pair: red-lt on navy
+    ratio: "5.33:1"
+    rule: "every small label on a dark band"
+    ok: true

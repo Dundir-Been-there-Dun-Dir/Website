@@ -6,6 +6,10 @@
      for every choice below lives in DESIGN.md; this page is what the argument
      actually looks like. */}}
 {{ define "main" }}
+{{/* Which palette this build documents. The chips are filled from the live
+     tokens either way; this only decides which hex labels and which measured
+     ratios are printed under them. Set `tokenset` in config to swap. */}}
+{{ $tokens := index site.Data (site.Params.tokenset | default "tokens") }}
 
 <div class="page-hero">
   <div class="container">
@@ -24,7 +28,13 @@
       <p class="src">DESIGN.md, direction</p>
     </div>
     <div class="prose">
-      <p class="lede">Seventy percent of a construction project is material. That is the number the whole business rests on, so the page is built to carry the weight rather than to decorate it.</p>
+      {{ with $tokens.intro }}
+      <div class="caveat">
+        <span class="caveat__lab">{{ .lab }}</span>
+        {{ .text }}
+      </div>
+      {{ end }}
+      <p class="lede mt-1">Seventy percent of a construction project is material. That is the number the whole business rests on, so the page is built to carry the weight rather than to decorate it.</p>
       <ul>
         <li><strong>The headline is the loudest object on the page.</strong> Display type is set very large and very wide, edge to edge, with almost no chrome around it. Nothing else needs to shout, because that already does.</li>
         <li><strong>Grounds are sampled from the site, not from software.</strong> Bitumen, zinc, concrete, chalk. No blue, no gradient, no photograph of a hard hat.</li>
@@ -45,40 +55,18 @@
     <div>
       <p class="eyebrow">02 Colour</p>
       <h2>Two grounds, one accent.</h2>
-      <p class="src">Chips are filled from the live token</p>
+      <p class="lede">{{ $tokens.tagline }}</p>
+      <p class="src">{{ $tokens.name }} palette. Chips are filled from the live token</p>
     </div>
     <div class="prose">
       <p class="lede">Dark is the default ground. Chalk is spent on the sections that need to feel like a document: the mechanism, the honesty about the stage, the team.</p>
 
-      <p class="sg-lbl">Grounds</p>
+      {{ range $tokens.groups }}
+      <p class="sg-lbl">{{ .label }}</p>
       <div class="sg-grid">
-        {{ partial "swatch.html" (dict "token" "--bitumen" "hex" "#17181A" "role" "the page. Hero, dark bands, header, footer") }}
-        {{ partial "swatch.html" (dict "token" "--zinc" "hex" "#212325" "role" "raised surface, hover state") }}
-        {{ partial "swatch.html" (dict "token" "--zinc-2" "hex" "#33363A" "role" "hairlines and grid gaps on dark") }}
-        {{ partial "swatch.html" (dict "token" "--chalk" "hex" "#EFEEE9" "role" "the light band") }}
-        {{ partial "swatch.html" (dict "token" "--chalk-2" "hex" "#E4E2DC" "role" "tint band. Separation without inversion") }}
+        {{ range .swatches }}{{ partial "swatch.html" . }}{{ end }}
       </div>
-
-      <p class="sg-lbl">Text on dark</p>
-      <div class="sg-grid">
-        {{ partial "swatch.html" (dict "token" "--concrete" "hex" "#B0AEA6" "on" "--bitumen" "sample" "8.0:1" "role" "body text on dark") }}
-        {{ partial "swatch.html" (dict "token" "--concrete-dim" "hex" "#8E8D86" "on" "--bitumen" "sample" "5.3:1" "role" "mono labels and sources on dark") }}
-      </div>
-
-      <p class="sg-lbl">Text on chalk</p>
-      <div class="sg-grid">
-        {{ partial "swatch.html" (dict "token" "--ink" "hex" "#17181A" "on" "--chalk" "sample" "15.5:1" "role" "text on chalk") }}
-        {{ partial "swatch.html" (dict "token" "--ink-soft" "hex" "#4A4945" "on" "--chalk" "role" "secondary prose on chalk") }}
-        {{ partial "swatch.html" (dict "token" "--ink-quiet" "hex" "#6B6A64" "on" "--chalk" "sample" "4.6:1" "role" "sources and labels on chalk") }}
-        {{ partial "swatch.html" (dict "token" "--rule-lt" "hex" "#CFCCC4" "on" "--ink" "role" "hairlines on chalk") }}
-      </div>
-
-      <p class="sg-lbl">The accent</p>
-      <div class="sg-grid">
-        {{ partial "swatch.html" (dict "token" "--menie" "hex" "#C1440E" "sample" "the accent" "role" "fills, rules, display type, the optimum") }}
-        {{ partial "swatch.html" (dict "token" "--menie-lt" "hex" "#E4682E" "sample" "small text on dark" "role" "the light step. Every small label on a dark band") }}
-        {{ partial "swatch.html" (dict "token" "--menie-wash" "hex" "#F7E5DC" "on" "--ink" "role" "caveat panel ground on chalk") }}
-      </div>
+      {{ end }}
 
       <h3 class="mt-2">Accent discipline</h3>
       <p>This is the one rule in the system that is absolute, and it is worked per surface rather than per component. Contrast decides what the accent is allowed to be on each ground.</p>
@@ -87,9 +75,9 @@
           <tr><th>pairing</th><th>ratio</th><th>what it may be</th></tr>
         </thead>
         <tbody>
-          <tr><td>menie on chalk</td><td>4.7:1</td><td class="ok">text, at any size</td></tr>
-          <tr><td>menie on bitumen</td><td>3.5:1</td><td>a fill, a rule, or display sized type. Never small text</td></tr>
-          <tr><td>menie-lt on bitumen</td><td>5.3:1</td><td class="ok">every small label on a dark band</td></tr>
+          {{ range $tokens.contrast }}
+          <tr><td>{{ .pair }}</td><td>{{ .ratio }}</td><td{{ if .ok }} class="ok"{{ end }}>{{ .rule }}</td></tr>
+          {{ end }}
         </tbody>
       </table>
       <p class="src">Verified per token pair, not per component</p>
@@ -108,10 +96,7 @@
     <div class="prose">
       <p>Every component is specified on both grounds. A component that only works on one of them is not finished. The four grounds, in the order they are spent:</p>
       <div class="grounds">
-        <div class="g-bitumen">bitumen</div>
-        <div class="g-zinc">zinc</div>
-        <div class="g-chalk">chalk</div>
-        <div class="g-chalk2">chalk 2</div>
+        {{ range $tokens.grounds }}<div class="{{ .class }}">{{ .label }}</div>{{ end }}
       </div>
       <p class="src">band, band--zinc, band--chalk, band--chalk-2</p>
       <p class="mt-2">On chalk the accent is text, so this sentence can carry <a href="{{ i18n "url_how" | relURL }}">a link in menie</a> and stay above 4.5:1. On a dark band the same link steps to menie-lt. Neither case is a component decision; both fall out of the ground.</p>
