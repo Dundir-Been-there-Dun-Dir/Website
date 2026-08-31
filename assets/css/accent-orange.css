@@ -1,0 +1,26 @@
+/* The orange accent, layered on top of tricolor.css.
+
+   Same grounds, same text tones, one variable changed: the accent moves from
+   the averaged flag red to an orange. Which orange is not a free choice. The
+   accent has to be text on white, text on the tint band, a fill that carries
+   white text, and display type on a very dark navy, and those pull in opposite
+   directions: brightening an orange helps the navy case and breaks the two
+   light ones. #B64900 is the brightest orange that still clears every one of
+   them, at 5.33:1 on white, 4.57:1 on the tint band and 3.56:1 on navy.
+
+   Worth noting where it landed. Menie, the accent the shipped site already
+   uses, is #C1440E. Solving the same constraints against a different set of
+   grounds produced a colour a few units away from it. The system was already
+   sitting at the edge of what an orange can do here. */
+
+:root {
+  --menie:      #B64900;
+  --menie-lt:   #D56B37;
+  --menie-wash: #FFEEDF;
+  --mark-region: #B64900;
+
+  --red-tint: #FFEED0;
+  --red-deep: #943B03;
+}
+
+input:focus, textarea:focus { box-shadow: 0 0 0 2px rgba(182, 73, 0, .25); }

@@ -1,0 +1,159 @@
+# The tricolor variant with the orange accent. Generated from tokens_tricolor.yaml
+# by swapping the accent group; the grounds and text tones are identical.
+#
+# The tricolor variant, as the style guide reports it. See assets/css/tricolor.css
+# for how the three flag bands were averaged and why the grounds are steps down
+# the flag blue rather than the flag blue itself.
+
+name: Tricolor orange
+tagline: "The same averaged white and blue, with the accent moved off the flag red and onto the brightest orange that still clears every ground: #B64900."
+
+intro:
+  lab: You are looking at the tricolor variant
+  text: >-
+    Only the colour band below changes. Everything on this page after it, and
+    the direction the next paragraphs describe, is the shipped massa system, so
+    where the text says bitumen and menie and no blue, read the swatches rather
+    than the words. This build exists to answer one question: does the argument
+    survive a red, white and blue palette.
+
+groups:
+  - label: The source colours, as each flag specifies them
+    swatches:
+      - token: "US red"
+        fill: "#B31942"
+        hex: "#B31942"
+        role: "Old Glory Red"
+      - token: "NL red"
+        fill: "#AE1C28"
+        hex: "#AE1C28"
+        role: "helder vermiljoen, the Dutch state specification"
+      - token: "RU red"
+        fill: "#D52B1E"
+        hex: "#D52B1E"
+        role: "the brightest of the three, and it pulls the mean"
+      - token: "US blue"
+        fill: "#0A3161"
+        hex: "#0A3161"
+        role: "Old Glory Blue"
+      - token: "NL blue"
+        fill: "#21468B"
+        hex: "#21468B"
+        role: "kobaltblauw, the lightest of the three"
+      - token: "RU blue"
+        fill: "#0039A6"
+        hex: "#0039A6"
+        role: "the most saturated of the three"
+
+  - label: The three bands, averaged in Oklab
+    swatches:
+      - token: red
+        fill: "#BC2130"
+        hex: "#BC2130"
+        sample: "red"
+        role: "the mean of the three flag reds. Not the accent in this build, see below"
+      - token: white
+        fill: "#FFFFFF"
+        onhex: "#061127"
+        hex: "#FFFFFF"
+        sample: "white"
+        role: "identical in all three flags. Becomes the light band, unchanged"
+      - token: blue
+        fill: "#0F3B86"
+        hex: "#0F3B86"
+        sample: "blue"
+        role: "the mean of the three flag blues. Too light to be a page ground, so it becomes the hue the grounds are stepped down from"
+
+  - label: Grounds, stepped down the flag blue
+    swatches:
+      - token: "--bitumen"
+        hex: "#000840"
+        role: "the page. Hero, dark bands, header, footer"
+      - token: "--zinc"
+        hex: "#00144C"
+        role: "raised surface, hover state"
+      - token: "--zinc-2"
+        hex: "#0D2F68"
+        role: "hairlines and grid gaps on dark"
+      - token: "--chalk"
+        hex: "#FFFFFF"
+        role: "the light band. The flag white, not an off white"
+      - token: "--chalk-2"
+        hex: "#E9EEF6"
+        role: "tint band. Separation without inversion"
+
+  - label: Text on dark
+    swatches:
+      - token: "--concrete"
+        hex: "#ABBBD4"
+        on: "--bitumen"
+        sample: "9.7:1"
+        role: "body text on dark"
+      - token: "--concrete-dim"
+        hex: "#818FA8"
+        on: "--bitumen"
+        sample: "5.8:1"
+        role: "mono labels and sources on dark"
+
+  - label: Text on white
+    swatches:
+      - token: "--ink"
+        hex: "#061127"
+        on: "--chalk"
+        sample: "18.8:1"
+        role: "text on white"
+      - token: "--ink-soft"
+        hex: "#3E4D66"
+        on: "--chalk"
+        role: "secondary prose on white"
+      - token: "--ink-quiet"
+        hex: "#5C6A83"
+        on: "--chalk"
+        sample: "5.5:1"
+        role: "sources and labels on white"
+      - token: "--rule-lt"
+        hex: "#C1CCDF"
+        on: "--ink"
+        role: "hairlines on white"
+
+  - label: The accent
+    swatches:
+      - token: "--menie"
+        hex: "#B64900"
+        sample: "the accent"
+        role: "fills, rules, display type, the optimum. 5.33:1 on white, 3.56:1 on navy"
+      - token: "--menie-lt"
+        hex: "#D56B37"
+        sample: "small text on dark"
+        role: "the light step. Every small label on a dark band, 5.40:1"
+      - token: "--menie-wash"
+        hex: "#FFEEDF"
+        on: "--ink"
+        role: "caveat panel ground on white"
+
+grounds:
+  - class: g-bitumen
+    label: navy
+  - class: g-zinc
+    label: navy raised
+  - class: g-chalk
+    label: white
+  - class: g-chalk2
+    label: white tint
+
+contrast:
+  - pair: orange on white
+    ratio: "5.33:1"
+    rule: "text, at any size"
+    ok: true
+  - pair: orange on the tint band
+    ratio: "4.57:1"
+    rule: "text, at any size. This pairing is what fixes the orange in place"
+    ok: true
+  - pair: orange on navy
+    ratio: "3.56:1"
+    rule: "a fill, a rule, or display sized type. Never small text"
+  - pair: orange-lt on navy
+    ratio: "5.40:1"
+    rule: "every small label and every headline accent on a dark band"
+    ok: true

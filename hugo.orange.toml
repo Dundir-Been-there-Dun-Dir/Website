@@ -1,0 +1,12 @@
+# The tricolor demo, orange cut.
+#
+#   hugo --config hugo.toml,hugo.orange.toml -d /var/www/dundir-orange \
+#        -b https://dundir.46-224-30-151.sslip.io/orange/
+#
+# Same grounds as hugo.tricolor.toml, accent moved off the averaged flag red and
+# onto #B64900. The palette is composed from two files rather than copied, so a
+# change to the grounds reaches both cuts.
+
+[params]
+  paletteOverride = ["css/tricolor.css", "css/accent-orange.css"]
+  tokenset = "tokens_tricolor_orange"
