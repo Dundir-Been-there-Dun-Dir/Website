@@ -85,6 +85,44 @@
   </div>
 </section>
 
+{{/* 02b ROLES ------------------------------------------------------------ */}}
+<section class="band band--zinc">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">02b Roles</p>
+      <h2>Nothing reads a colour by name.</h2>
+      <p class="src">main.css, section 01b</p>
+    </div>
+    <div class="prose">
+      <p class="lede">The swatches above are the palette: colours with names. Between them and the components sits a second layer, roles: what a colour is <em>for</em>. A component only ever reads a role.</p>
+      <p>The point is what it removes. A band that changes its ground restates the roles once, and every component inside it follows, including components written afterwards. Before this layer the stylesheet carried about forty rules of the shape <code>.band--chalk .thing { color: ... }</code>, one per component per ground, and the tint band was missing a third of them, which is why an eyebrow on it sat at 2.6:1.</p>
+      <table class="sg-tbl">
+        <thead><tr><th>role</th><th>on a dark band</th><th>on a light band</th></tr></thead>
+        <tbody>
+          <tr><td>--surface</td><td>bitumen</td><td>chalk, or the tint</td></tr>
+          <tr><td>--panel</td><td>bitumen</td><td>chalk</td></tr>
+          <tr><td>--rule</td><td>zinc-2</td><td>rule-lt</td></tr>
+          <tr><td>--fg</td><td>chalk</td><td>ink</td></tr>
+          <tr><td>--fg-prose</td><td>chalk</td><td>ink-soft</td></tr>
+          <tr><td>--fg-2</td><td>concrete</td><td>ink-soft</td></tr>
+          <tr><td>--fg-3</td><td>concrete-dim</td><td>ink-quiet</td></tr>
+          <tr><td>--accent-text</td><td class="ok">menie-lt</td><td class="ok">menie-dk</td></tr>
+          <tr><td>--accent-display</td><td>menie</td><td>menie</td></tr>
+          <tr><td>--accent-fill</td><td>menie</td><td>menie</td></tr>
+          <tr><td>--on-accent</td><td colspan="2">what sits on an accent fill</td></tr>
+          <tr><td>--wash / --on-wash</td><td>zinc / concrete</td><td>menie-wash / menie-deep</td></tr>
+          <tr><td>--focus</td><td>menie-lt</td><td>menie-dk</td></tr>
+        </tbody>
+      </table>
+      <p>The accent needs three roles rather than one because no single accent value clears contrast on both grounds. Small text steps per ground; display type and fills do not. That split is what lets an accent as bright as this one be used at all.</p>
+      <div class="caveat mt-1">
+        <span class="caveat__lab">What a palette is now</span>
+        A palette file redeclares the named colours and stops. No component rules, no per band overrides. If a palette ever needs one, the role layer is missing a role, and that is the thing to fix rather than the palette.
+      </div>
+    </div>
+  </div>
+</section>
+
 {{/* 03 THE GROUNDS SIDE BY SIDE ----------------------------------------- */}}
 <section class="band band--chalk">
   <div class="container two">
