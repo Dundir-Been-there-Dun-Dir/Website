@@ -1,15 +1,13 @@
-# The tricolor variant with the orange accent. Generated from tokens_tricolor.yaml
-# by swapping the accent group; the grounds and text tones are identical.
-#
-# The tricolor variant, as the style guide reports it. See assets/css/tricolor.css
-# for how the three flag bands were averaged and why the grounds are steps down
-# the flag blue rather than the flag blue itself.
+# The variant palette, as the style guide reports it. See assets/css/orange.css
+# for how the flag bands were averaged, why the grounds are steps down the flag
+# blue rather than the flag blue itself, and why the accent is an orange rather
+# than the flag red.
 
-name: Tricolor orange
+name: Variant, orange
 tagline: "The same averaged white and blue, with the accent moved off the flag red and onto the brightest orange that still clears every ground: #B64900."
 
 intro:
-  lab: You are looking at the tricolor variant
+  lab: You are looking at the variant palette
   text: >-
     Only the colour band below changes. Everything on this page after it, and
     the direction the next paragraphs describe, is the shipped massa system, so
@@ -51,7 +49,7 @@ groups:
         fill: "#BC2130"
         hex: "#BC2130"
         sample: "red"
-        role: "the mean of the three flag reds. Not the accent in this build, see below"
+        role: "the mean of the three flag reds. Evidence, not a token: the accent is the orange below"
       - token: white
         fill: "#FFFFFF"
         onhex: "#061127"

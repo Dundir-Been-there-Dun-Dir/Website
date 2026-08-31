@@ -1,11 +1,11 @@
 /* The accent A/B, page only.
 
    The page carries both palettes itself rather than inheriting whichever build
-   serves it, so /ab/ and /tricolor/ab/ show the same thing and the comparison
+   serves it, so /ab/ and /orange/ab/ show the same thing and the comparison
    cannot drift with the ambient stylesheet. */
 
 .ab {
-  /* the tricolor grounds, pinned so this page is stable in any build */
+  /* the variant grounds, pinned so this page is stable in any build */
   --bitumen: #000840;
   --zinc: #00144C;
   --zinc-2: #0D2F68;

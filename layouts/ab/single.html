@@ -5,7 +5,7 @@
      the word swaps in place, rather than three thumbnails side by side that the
      eye has to hold in memory.
 
-     The page pins the tricolor grounds itself, so it shows the same thing
+     The page pins the variant grounds itself, so it shows the same thing
      whichever build serves it. */}}
 {{ define "main" }}
 
@@ -14,7 +14,7 @@
         "src"  "the Oklab mean of the US, Dutch and Russian flag reds"
         "navy" "3.07" "ltnavy" "4.71" "white" "6.18" "fill" "6.18"
         "verdict" "Text on white, fill with white text, and display type on navy. Every rule holds, and the headline is the weakest of the three at 3.07:1.")
-  (dict "key" "deep"   "name" "Deep orange" "hex" "#B64900" "lt" "#D56B37"
+  (dict "key" "deep"   "name" "Deep orange (chosen)" "hex" "#B64900" "lt" "#D56B37"
         "src"  "the darkest orange that is still legal on every ground the site has"
         "navy" "3.56" "ltnavy" "5.40" "white" "5.33" "fill" "5.33"
         "verdict" "The drop in. Everything the red is allowed to do, this is allowed to do, and the headline gains most of a stop. It lands within a few units of menie, the accent the shipped site already uses, which is what happens when the same constraints are solved twice.")
@@ -35,21 +35,28 @@
 {{/* 01 THE SWITCH ------------------------------------------------------- */}}
 <section class="band ab">
   <div class="container">
+    <div class="caveat" style="margin-bottom:1.6rem">
+      <span class="caveat__lab">Settled</span>
+      Deep orange won and is what /orange/ serves. The flag red is kept here as
+      the thing it was compared against, because a palette choice with the
+      alternatives deleted is an assertion rather than a decision.
+    </div>
+
     <div class="ab-ctl" role="group" aria-label="Accent under test">
       {{ range $i, $o := $opts }}
       <button type="button" data-hex="{{ $o.hex }}" data-lt="{{ $o.lt }}" data-name="{{ $o.name }}"
               data-navy="{{ $o.navy }}" data-ltnavy="{{ $o.ltnavy }}" data-white="{{ $o.white }}" data-fill="{{ $o.fill }}"
-              aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+              aria-pressed="{{ if eq $i 1 }}true{{ else }}false{{ end }}">
         <i style="{{ printf "background:%s" $o.hex | safeCSS }}"></i>{{ $o.name }}
       </button>
       {{ end }}
     </div>
 
     <p class="ab-read" id="ab-read">
-      <b>Flag red</b> base #BC2130, headline step #DC4D50 · headline on navy 4.71:1 · base as text on white 6.18:1 · white on a fill 6.18:1
+      <b>Deep orange</b> base #B64900, headline step #D56B37 · headline on navy 5.40:1 · base as text on white 5.33:1 · white on a fill 5.33:1
     </p>
 
-    <div class="ab-stage" id="ab-stage">
+    <div class="ab-stage" id="ab-stage" style="--menie:#B64900;--menie-lt:#D56B37">
       <h2>Zeventig procent van uw project is <span class="cut">inkoop.</span></h2>
     </div>
 
