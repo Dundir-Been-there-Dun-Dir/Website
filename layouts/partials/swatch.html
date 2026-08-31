@@ -1,10 +1,18 @@
-{{/* One colour swatch, filled from the live token rather than from a copied
+{{/* One colour swatch.
+
+     By default the chip is filled from the live token rather than from a copied
      hex, so the chip and the site can never disagree. The hex underneath is a
-     label: if it ever stops matching the chip, main.css moved and this line
-     did not. Pass `on` to set the chip's text colour from a second token, so a
-     pairing is shown rather than asserted. */}}
+     label: if it ever stops matching the chip, main.css moved and the data file
+     did not.
+
+     Pass `fill` to bypass the token and paint a literal colour. That is for
+     swatches that are evidence rather than tokens, such as a flag's own red.
+     Pass `on` to set the chip's text colour from a second token, so a pairing is
+     shown rather than asserted. */}}
 {{- $style := printf "background:var(%s)" .token -}}
-{{- with .on -}}{{- $style = printf "%s;color:var(%s)" $style . -}}{{- end -}}
+{{- with .fill }}{{ $style = printf "background:%s" . }}{{ end -}}
+{{- with .on }}{{ $style = printf "%s;color:var(%s)" $style . }}{{ end -}}
+{{- with .onhex }}{{ $style = printf "%s;color:%s" $style . }}{{ end -}}
 <div class="sw">
   <div class="sw__chip" style="{{ $style | safeCSS }}">{{ with .sample }}{{ . }}{{ end }}</div>
   <span class="sw__token">{{ .token }}</span>
