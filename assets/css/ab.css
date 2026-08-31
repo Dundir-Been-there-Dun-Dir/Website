@@ -1,0 +1,132 @@
+/* The accent A/B, page only.
+
+   The page carries both palettes itself rather than inheriting whichever build
+   serves it, so /ab/ and /tricolor/ab/ show the same thing and the comparison
+   cannot drift with the ambient stylesheet. */
+
+.ab {
+  /* the tricolor grounds, pinned so this page is stable in any build */
+  --bitumen: #000840;
+  --zinc: #00144C;
+  --zinc-2: #0D2F68;
+  --chalk: #FFFFFF;
+  --chalk-2: #E9EEF6;
+  --concrete: #ABBBD4;
+  --concrete-dim: #818FA8;
+  --ink: #061127;
+  --ink-soft: #3E4D66;
+  --ink-quiet: #5C6A83;
+  --rule-lt: #C1CCDF;
+  --mark-dot: #FFFFFF;
+
+  /* the variable under test, and the light step that goes with it */
+  --menie: #BC2130;
+  --menie-lt: #DC4D50;
+  --mark-region: var(--menie);
+  background: var(--bitumen);
+}
+
+/* ---- the switch ---------------------------------------------------------- */
+.ab-ctl { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.6rem; }
+.ab-ctl button {
+  font-family: var(--data);
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .6rem .9rem .6rem .75rem;
+  background: none;
+  border: 1px solid var(--zinc-2);
+  color: var(--concrete);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+}
+.ab-ctl button:hover { border-color: var(--concrete-dim); color: #fff; }
+.ab-ctl button[aria-pressed="true"] { border-color: var(--concrete); color: #fff; background: var(--zinc); }
+.ab-ctl i { width: 14px; height: 14px; display: block; flex: none; }
+
+.ab-read {
+  font-family: var(--data);
+  font-size: .66rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--concrete-dim);
+  margin: 0 0 2rem;
+}
+.ab-read b { color: var(--concrete); font-weight: 400; }
+
+/* ---- the stage: the hero at the size it actually ships ------------------- */
+.ab-stage { padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(2rem, 5vw, 3.5rem); }
+.ab-stage h2 {
+  font-size: clamp(2.2rem, 6.4vw, 5.4rem);
+  line-height: .9;
+  letter-spacing: -.035em;
+  font-variation-settings: "wdth" 118;
+  max-width: 15ch;
+  color: var(--chalk);
+}
+.ab-stage .cut { color: var(--menie-lt); }
+
+/* ---- all candidates at once, so the eye does not have to remember --------- */
+.ab-row { border-top: 1px solid var(--zinc-2); padding: clamp(1.2rem, 3vw, 2rem) 0; }
+.ab-row:last-child { border-bottom: 1px solid var(--zinc-2); }
+.ab-row h3 {
+  font-family: var(--data);
+  font-weight: 400;
+  font-size: .66rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--concrete-dim);
+  margin: 0 0 .7rem;
+  font-variation-settings: normal;
+}
+.ab-row p.big {
+  font-family: var(--disp);
+  font-weight: 800;
+  font-variation-settings: "wdth" 118;
+  letter-spacing: -.035em;
+  line-height: .92;
+  font-size: clamp(1.9rem, 5.6vw, 4.4rem);
+  margin: 0;
+  color: var(--chalk);
+}
+
+/* ---- the accent is not only a headline ----------------------------------- */
+.ab-apply { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--zinc-2); border: 1px solid var(--zinc-2); margin-top: 1.4rem; }
+.ab-cell { background: var(--bitumen); padding: 1.2rem; }
+.ab-cell--light { background: var(--chalk); color: var(--ink); }
+.ab-cell h4 {
+  font-family: var(--data);
+  font-weight: 400;
+  font-size: .62rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--concrete-dim);
+  margin: 0 0 .9rem;
+  font-variation-settings: normal;
+}
+.ab-cell--light h4 { color: var(--ink-quiet); }
+.ab-fill { background: var(--menie); color: #fff; padding: .7rem .95rem; font-family: var(--data); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; display: inline-block; }
+.ab-text-dark { color: var(--menie-lt); font-family: var(--disp); font-weight: 800; font-size: 1.6rem; font-variation-settings: "wdth" 118; }
+.ab-text-light { color: var(--menie); font-weight: 700; }
+.ab-bar { display: flex; height: 54px; margin-top: .3rem; }
+.ab-bar span { display: flex; align-items: flex-end; padding: .35rem .5rem; font-family: var(--data); font-size: .64rem; letter-spacing: .06em; }
+.ab-bar .m { background: var(--menie); color: #fff; flex: 70; }
+.ab-bar .l { background: var(--concrete); color: var(--bitumen); flex: 18; }
+.ab-bar .o { background: var(--zinc-2); color: var(--concrete); flex: 12; }
+
+/* ---- the consequences table --------------------------------------------- */
+.ab-tbl { width: 100%; border-collapse: collapse; font-size: .9rem; margin-top: 1rem; }
+.ab-tbl th, .ab-tbl td { text-align: left; padding: .55rem .7rem .55rem 0; border-bottom: 1px solid var(--zinc-2); vertical-align: top; }
+.ab-tbl th { font-family: var(--data); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 400; color: var(--concrete-dim); }
+.ab-tbl td { color: var(--concrete); }
+.ab-tbl td.k { font-family: var(--data); font-size: .8rem; color: #fff; white-space: nowrap; }
+.ab-tbl td.k i { display: inline-block; width: 11px; height: 11px; margin-right: .5rem; vertical-align: baseline; }
+.ab-tbl .no { color: #FF9AA0; }
+.ab-tbl .yes { color: #9FE0B0; }
+
+/* a decision table is wide by nature; it scrolls inside its own box rather than
+   pushing the page sideways */
+.ab-scroll { overflow-x: auto; margin-top: 1rem; }
+.ab-scroll .ab-tbl { min-width: 46rem; margin-top: 0; }

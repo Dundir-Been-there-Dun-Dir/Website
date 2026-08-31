@@ -1,0 +1,172 @@
+{{/* The accent A/B.
+
+     A colour is not decided in a swatch grid, it is decided in the place it has
+     to work. So the headline is rendered at shipping size and the accent under
+     the word swaps in place, rather than three thumbnails side by side that the
+     eye has to hold in memory.
+
+     The page pins the tricolor grounds itself, so it shows the same thing
+     whichever build serves it. */}}
+{{ define "main" }}
+
+{{ $opts := slice
+  (dict "key" "red"    "name" "Flag red"    "hex" "#BC2130" "lt" "#DC4D50"
+        "src"  "the Oklab mean of the US, Dutch and Russian flag reds"
+        "navy" "3.07" "ltnavy" "4.71" "white" "6.18" "fill" "6.18"
+        "verdict" "Text on white, fill with white text, and display type on navy. Every rule holds, and the headline is the weakest of the three at 3.07:1.")
+  (dict "key" "deep"   "name" "Deep orange" "hex" "#B64900" "lt" "#D56B37"
+        "src"  "the darkest orange that is still legal on every ground the site has"
+        "navy" "3.56" "ltnavy" "5.40" "white" "5.33" "fill" "5.33"
+        "verdict" "The drop in. Everything the red is allowed to do, this is allowed to do, and the headline gains most of a stop. It lands within a few units of menie, the accent the shipped site already uses, which is what happens when the same constraints are solved twice.")
+  (dict "key" "oranje" "name" "Oranje"      "hex" "#F36C21" "lt" "#FF9051"
+        "src"  "the Dutch football orange, the loudest of the three"
+        "navy" "6.29" "ltnavy" "8.44" "white" "3.01" "fill" "3.01"
+        "verdict" "Best on navy by a distance, and it stops being text on white and stops taking white text on a fill. Buttons and the cost stack would need dark text.")
+}}
+
+<div class="page-hero ab">
+  <div class="container">
+    <p class="eyebrow">Accent A/B</p>
+    <h1>Rood of <span class="cut">oranje</span>.</h1>
+    {{ with .Params.lede }}<p class="lede">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+</div>
+
+{{/* 01 THE SWITCH ------------------------------------------------------- */}}
+<section class="band ab">
+  <div class="container">
+    <div class="ab-ctl" role="group" aria-label="Accent under test">
+      {{ range $i, $o := $opts }}
+      <button type="button" data-hex="{{ $o.hex }}" data-lt="{{ $o.lt }}" data-name="{{ $o.name }}"
+              data-navy="{{ $o.navy }}" data-ltnavy="{{ $o.ltnavy }}" data-white="{{ $o.white }}" data-fill="{{ $o.fill }}"
+              aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+        <i style="{{ printf "background:%s" $o.hex | safeCSS }}"></i>{{ $o.name }}
+      </button>
+      {{ end }}
+    </div>
+
+    <p class="ab-read" id="ab-read">
+      <b>Flag red</b> base #BC2130, headline step #DC4D50 · headline on navy 4.71:1 · base as text on white 6.18:1 · white on a fill 6.18:1
+    </p>
+
+    <div class="ab-stage" id="ab-stage">
+      <h2>Zeventig procent van uw project is <span class="cut">inkoop.</span></h2>
+    </div>
+
+    <p class="src">The home page headline, at the size it ships. The switch changes the accent and nothing else</p>
+  </div>
+</section>
+
+{{/* 02 ALL THREE AT ONCE ------------------------------------------------- */}}
+<section class="band ab">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">Side by side</p>
+      <h2>The same word, three times.</h2>
+      <p class="src">For the comparison the switch cannot make, because it shows one at a time</p>
+    </div>
+    <div>
+      {{ range $opts }}
+      <div class="ab-row" style="{{ printf "--menie:%s;--menie-lt:%s" .hex .lt | safeCSS }}">
+        <h3>{{ .name }} {{ .hex }} · {{ .src }}</h3>
+        <p class="big">Zeventig procent van uw project is <span class="cut" style="{{ printf "color:%s" .lt | safeCSS }}">inkoop.</span></p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{/* 03 WHAT EACH ONE COSTS ----------------------------------------------- */}}
+<section class="band ab">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">The consequence</p>
+      <h2>The word is not the only place it lands.</h2>
+      <p class="src">Measured per pairing, not per component</p>
+    </div>
+    <div class="prose">
+      <p>The accent has four jobs on this site: the word in the headline, the primary button, the material block in the cost stack, and small text on a white band. Brightening an orange helps the first and hurts the other three, because the same colour is being asked to sit on a very dark ground and on white.</p>
+      <div class="ab-scroll">
+      <table class="ab-tbl">
+        <thead>
+          <tr><th>accent</th><th>headline<br>on navy</th><th>fill or rule<br>on navy</th><th>as text<br>on white</th><th>white on<br>a fill</th><th>what it may be</th></tr>
+        </thead>
+        <tbody>
+          {{ range $opts }}
+          <tr>
+            <td class="k"><i style="{{ printf "background:%s" .hex | safeCSS }}"></i>{{ .name }}</td>
+            <td class="{{ if ge (float .ltnavy) 4.5 }}yes{{ else }}no{{ end }}">{{ .ltnavy }}:1</td>
+            <td class="{{ if ge (float .navy) 3.0 }}yes{{ else }}no{{ end }}">{{ .navy }}:1</td>
+            <td class="{{ if ge (float .white) 4.5 }}yes{{ else }}no{{ end }}">{{ .white }}:1</td>
+            <td class="{{ if ge (float .fill) 4.5 }}yes{{ else }}no{{ end }}">{{ .fill }}:1</td>
+            <td>{{ .verdict }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+      </div>
+      <p class="src">The headline column is the light step, which is what a headline on a dark band uses. Below 4.5:1 a pairing cannot carry small text; below 3:1 it cannot carry display type either</p>
+
+      <div class="caveat mt-2">
+        <span class="caveat__lab">The one that decides it</span>
+        Oranje at 3.01:1 on white means the primary button stops working as it is drawn today: white on that fill is unreadable, so the button would take dark text, and every accent word on a chalk band would have to step darker. That is a real design change, not a colour swap. Deep orange is a colour swap.
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* 04 THE ACCENT EVERYWHERE ELSE ---------------------------------------- */}}
+<section class="band ab">
+  <div class="container">
+    <p class="eyebrow">In place</p>
+    <h2>Every job the accent has.</h2>
+    {{ range $opts }}
+    <p class="ab-read mt-2" style="margin-bottom:.4rem"><b>{{ .name }}</b> {{ .hex }}</p>
+    <div class="ab-apply" style="{{ printf "--menie:%s;--menie-lt:%s" .hex .lt | safeCSS }}">
+      <div class="ab-cell">
+        <h4>Primary button, white on a fill</h4>
+        <span class="ab-fill">Doe de scan</span>
+      </div>
+      <div class="ab-cell">
+        <h4>A figure on a dark band</h4>
+        <span class="ab-text-dark">8.354 euro</span>
+      </div>
+      <div class="ab-cell">
+        <h4>The cost stack</h4>
+        <div class="ab-bar"><span class="m">70% materiaal</span><span class="l">18%</span><span class="o">12%</span></div>
+      </div>
+      <div class="ab-cell ab-cell--light">
+        <h4>Small text on a white band</h4>
+        <p style="margin:0">Een <span class="ab-text-light">wiskundig optimale</span> leverancierscombinatie, met bronvermelding.</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<script>
+/* The switch. Sets the two accent tokens on the stage and rewrites the readout;
+   everything else on the stage reads those tokens, so nothing here knows what a
+   headline is. No dependency, no build step, and the page works with the script
+   dead: it just stays on the first candidate. */
+(function () {
+  var stage = document.getElementById('ab-stage');
+  var read  = document.getElementById('ab-read');
+  var btns  = document.querySelectorAll('.ab-ctl button');
+  if (!stage || !read || !btns.length) return;
+
+  function pick(b) {
+    stage.style.setProperty('--menie', b.dataset.hex);
+    stage.style.setProperty('--menie-lt', b.dataset.lt);
+    read.innerHTML = '<b>' + b.dataset.name + '</b> base ' + b.dataset.hex +
+      ', headline step ' + b.dataset.lt +
+      ' · headline on navy ' + b.dataset.ltnavy +
+      ':1 · base as text on white ' + b.dataset.white +
+      ':1 · white on a fill ' + b.dataset.fill + ':1';
+    btns.forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { pick(b); }); });
+})();
+</script>
+
+{{ end }}

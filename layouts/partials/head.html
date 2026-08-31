@@ -59,7 +59,11 @@
        tokens. Unset on the shipped build: this exists so a palette can be put
        in front of people on a real page instead of in a swatch grid. */}}
   {{ with site.Params.paletteOverride }}
-    {{- $pal := resources.Get . | minify | fingerprint -}}
+    {{- $parts := slice -}}
+    {{- range (cond (reflect.IsSlice .) . (slice .)) -}}
+      {{- $parts = $parts | append (resources.Get .) -}}
+    {{- end -}}
+    {{- $pal := $parts | resources.Concat "css/palette.css" | minify | fingerprint -}}
     <link rel="stylesheet" href="{{ $pal.RelPermalink }}" integrity="{{ $pal.Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
 
