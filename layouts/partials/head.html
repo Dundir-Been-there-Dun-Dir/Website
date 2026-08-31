@@ -55,6 +55,13 @@
   {{- $css := slice $fonts $main | resources.Concat "css/dundir.css" | minify | fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
 
+  {{/* A page may load one stylesheet of its own. Used by the style guide, which
+       is internal and must not add weight to the bundle every visitor gets. */}}
+  {{ with .Params.pagecss }}
+    {{- $page := resources.Get . | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $page.RelPermalink }}" integrity="{{ $page.Data.Integrity }}" crossorigin="anonymous">
+  {{ end }}
+
   {{ if .IsHome }}
   <script type="application/ld+json">
   {

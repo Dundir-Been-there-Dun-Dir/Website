@@ -1,0 +1,373 @@
+{{/* The style guide.
+
+     Internal reference, noindex and unlisted. It renders the live stylesheet
+     rather than a picture of it, so a token that moves in main.css moves here
+     on the next build and a stale swatch is impossible. The written argument
+     for every choice below lives in DESIGN.md; this page is what the argument
+     actually looks like. */}}
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Design system</p>
+    <h1>The system, <span class="cut">drawn by itself</span>.</h1>
+    {{ with .Params.lede }}<p class="lede">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+</div>
+
+{{/* 01 DIRECTION ------------------------------------------------------- */}}
+<section class="band">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">01 Direction</p>
+      <h2>Massa.</h2>
+      <p class="src">DESIGN.md, direction</p>
+    </div>
+    <div class="prose">
+      <p class="lede">Seventy percent of a construction project is material. That is the number the whole business rests on, so the page is built to carry the weight rather than to decorate it.</p>
+      <ul>
+        <li><strong>The headline is the loudest object on the page.</strong> Display type is set very large and very wide, edge to edge, with almost no chrome around it. Nothing else needs to shout, because that already does.</li>
+        <li><strong>Grounds are sampled from the site, not from software.</strong> Bitumen, zinc, concrete, chalk. No blue, no gradient, no photograph of a hard hat.</li>
+        <li><strong>One accent, menie, and it is allowed to mean something.</strong> The red lead primer that goes on Dutch steel before anything else. If a component wants colour, the answer is a hairline or a change of ground.</li>
+      </ul>
+      <p>Sections are bands, cut by a hairline. There are no cards on grey, no shadows and no rounded panels anywhere in the system.</p>
+      <div class="caveat mt-1">
+        <span class="caveat__lab">What this replaced</span>
+        Two earlier attempts: a generic SaaS pattern, then a tender document pattern in warm paper with a serif and a ledger rail. The second read as competent, and landed on a well worn look rather than a chosen one.
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* 02 COLOUR ON DARK --------------------------------------------------- */}}
+<section class="band">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">02 Colour</p>
+      <h2>Two grounds, one accent.</h2>
+      <p class="src">Chips are filled from the live token</p>
+    </div>
+    <div class="prose">
+      <p class="lede">Dark is the default ground. Chalk is spent on the sections that need to feel like a document: the mechanism, the honesty about the stage, the team.</p>
+
+      <p class="sg-lbl">Grounds</p>
+      <div class="sg-grid">
+        {{ partial "swatch.html" (dict "token" "--bitumen" "hex" "#17181A" "role" "the page. Hero, dark bands, header, footer") }}
+        {{ partial "swatch.html" (dict "token" "--zinc" "hex" "#212325" "role" "raised surface, hover state") }}
+        {{ partial "swatch.html" (dict "token" "--zinc-2" "hex" "#33363A" "role" "hairlines and grid gaps on dark") }}
+        {{ partial "swatch.html" (dict "token" "--chalk" "hex" "#EFEEE9" "role" "the light band") }}
+        {{ partial "swatch.html" (dict "token" "--chalk-2" "hex" "#E4E2DC" "role" "tint band. Separation without inversion") }}
+      </div>
+
+      <p class="sg-lbl">Text on dark</p>
+      <div class="sg-grid">
+        {{ partial "swatch.html" (dict "token" "--concrete" "hex" "#B0AEA6" "on" "--bitumen" "sample" "8.0:1" "role" "body text on dark") }}
+        {{ partial "swatch.html" (dict "token" "--concrete-dim" "hex" "#8E8D86" "on" "--bitumen" "sample" "5.3:1" "role" "mono labels and sources on dark") }}
+      </div>
+
+      <p class="sg-lbl">Text on chalk</p>
+      <div class="sg-grid">
+        {{ partial "swatch.html" (dict "token" "--ink" "hex" "#17181A" "on" "--chalk" "sample" "15.5:1" "role" "text on chalk") }}
+        {{ partial "swatch.html" (dict "token" "--ink-soft" "hex" "#4A4945" "on" "--chalk" "role" "secondary prose on chalk") }}
+        {{ partial "swatch.html" (dict "token" "--ink-quiet" "hex" "#6B6A64" "on" "--chalk" "sample" "4.6:1" "role" "sources and labels on chalk") }}
+        {{ partial "swatch.html" (dict "token" "--rule-lt" "hex" "#CFCCC4" "on" "--ink" "role" "hairlines on chalk") }}
+      </div>
+
+      <p class="sg-lbl">The accent</p>
+      <div class="sg-grid">
+        {{ partial "swatch.html" (dict "token" "--menie" "hex" "#C1440E" "sample" "the accent" "role" "fills, rules, display type, the optimum") }}
+        {{ partial "swatch.html" (dict "token" "--menie-lt" "hex" "#E4682E" "sample" "small text on dark" "role" "the light step. Every small label on a dark band") }}
+        {{ partial "swatch.html" (dict "token" "--menie-wash" "hex" "#F7E5DC" "on" "--ink" "role" "caveat panel ground on chalk") }}
+      </div>
+
+      <h3 class="mt-2">Accent discipline</h3>
+      <p>This is the one rule in the system that is absolute, and it is worked per surface rather than per component. Contrast decides what the accent is allowed to be on each ground.</p>
+      <table class="sg-tbl">
+        <thead>
+          <tr><th>pairing</th><th>ratio</th><th>what it may be</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>menie on chalk</td><td>4.7:1</td><td class="ok">text, at any size</td></tr>
+          <tr><td>menie on bitumen</td><td>3.5:1</td><td>a fill, a rule, or display sized type. Never small text</td></tr>
+          <tr><td>menie-lt on bitumen</td><td>5.3:1</td><td class="ok">every small label on a dark band</td></tr>
+        </tbody>
+      </table>
+      <p class="src">Verified per token pair, not per component</p>
+    </div>
+  </div>
+</section>
+
+{{/* 03 THE GROUNDS SIDE BY SIDE ----------------------------------------- */}}
+<section class="band band--chalk">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">03 Grounds</p>
+      <h2>The same page, lit twice.</h2>
+      <p class="src">This band is band--chalk</p>
+    </div>
+    <div class="prose">
+      <p>Every component is specified on both grounds. A component that only works on one of them is not finished. The four grounds, in the order they are spent:</p>
+      <div class="grounds">
+        <div class="g-bitumen">bitumen</div>
+        <div class="g-zinc">zinc</div>
+        <div class="g-chalk">chalk</div>
+        <div class="g-chalk2">chalk 2</div>
+      </div>
+      <p class="src">band, band--zinc, band--chalk, band--chalk-2</p>
+      <p class="mt-2">On chalk the accent is text, so this sentence can carry <a href="{{ i18n "url_how" | relURL }}">a link in menie</a> and stay above 4.5:1. On a dark band the same link steps to menie-lt. Neither case is a component decision; both fall out of the ground.</p>
+    </div>
+  </div>
+</section>
+
+{{/* 04 TYPE -------------------------------------------------------------- */}}
+<section class="band">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">04 Type</p>
+      <h2>Three faces, self hosted.</h2>
+      <p class="src">static/fonts, subset to latin and latin-ext</p>
+    </div>
+    <div class="prose">
+      <p class="lede">The site ships Dutch, English and Serbian in Latin script, so the diacritics have to be native rather than synthesised. No third party font request: Dutch municipalities review that in a procurement assessment, and it is a question we do not need to answer.</p>
+
+      <div class="spec">
+        <p class="sg-lbl">Display: Anybody</p>
+        <p class="spec__smp spec__smp--disp">Zeventig procent is materiaal.</p>
+        <p class="spec__note">Variable width axis. Headings sit at wdth 118, the wordmark at wdth 135. Its extreme widths are the whole point. Never used for prose.</p>
+      </div>
+
+      <div class="spec">
+        <p class="sg-lbl">The width axis</p>
+        <div class="axis">
+          <b class="w100">wdth 100, too polite</b>
+          <b class="w118">wdth 118, headings</b>
+          <b class="w135">wdth 135, wordmark</b>
+        </div>
+        <p class="spec__note">Long Dutch compounds break badly at display size, so headings carry hyphens auto and the page hero is capped at 20ch.</p>
+      </div>
+
+      <div class="spec">
+        <p class="sg-lbl">Body: Chivo</p>
+        <p class="spec__smp spec__smp--body">Voor elk inkoopdossier berekent Dundir de wiskundig optimale leverancierscombinatie, en documenteert waarom. Het taalmodel schrijft het rapport. De optimalisatie neemt de beslissing.</p>
+        <p class="spec__note">A grotesque with enough warmth to read at length and enough structure to sit under Anybody without arguing with it. 17px minimum, 1.62 line height, measure capped at 62 characters.</p>
+      </div>
+
+      <div class="spec">
+        <p class="sg-lbl">Data: Space Mono</p>
+        <p class="spec__smp spec__smp--data">70%  ·  18%  ·  12%  ·  8.354 EUR  ·  342 gemeenten</p>
+        <p class="spec__note">Numbers, section labels, sources, buttons. Tabular figures on, because these are measurements and they align in a column.</p>
+      </div>
+
+      <div class="spec">
+        <p class="sg-lbl">Three languages, one file</p>
+        <p class="spec__smp spec__smp--disp">Jelisavčić · građevinarstvo · doelfunctie</p>
+        <p class="spec__note">Serbian Latin diacritics come from the same variable file, not from a fallback face.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* 05 LAYOUT ------------------------------------------------------------ */}}
+<section class="band band--chalk">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">05 Layout</p>
+      <h2>Argument left, evidence right.</h2>
+      <p class="src">container two, 4fr / 8fr</p>
+    </div>
+    <div class="prose">
+      <p>Twelve columns, content in a four to eight split. The rail on the left carries the eyebrow and the heading; the right column carries everything that has to be believed. Under 860px the split collapses and the rail runs above, which is the layout you are looking at if this figure is stacked.</p>
+      <div class="gridfig">
+        <div>4fr, the rail</div>
+        <div>8fr, the evidence</div>
+      </div>
+      <p>Band padding is <code>clamp(3.5rem, 8vw, 7rem)</code>. Measure is capped at 62 characters. A band that needs one column instead of two sets <code>full</code> in front matter and drops the <code>two</code> class.</p>
+      <p class="src">partials/band.html is the only place that knows what a section looks like</p>
+    </div>
+  </div>
+</section>
+
+{{/* 06 THE SIGNATURE ----------------------------------------------------- */}}
+<section class="band">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">06 Signature</p>
+      <h2>The cost stack.</h2>
+      <p class="src">Home page only, once</p>
+    </div>
+    <div class="prose">
+      <p class="lede">One euro of project cost, divided. It is the argument and the diagram at the same time, it costs no JavaScript, and it is the one object on the site a reader will still remember in a week.</p>
+      <div class="stack">
+        <div class="stack__hd">
+          <span class="mono">1 euro projectkosten</span>
+          <span class="mono">bron: brancheanalyse</span>
+        </div>
+        <div class="stack__bar" role="img" aria-label="Seventy percent material, eighteen percent labour, twelve percent other">
+          <div class="seg seg--material">
+            <span class="seg__pct">70%</span>
+            <span class="seg__nm">materiaal</span>
+          </div>
+          <div class="seg seg--labour">
+            <span class="seg__pct">18%</span>
+            <span class="seg__nm">arbeid</span>
+          </div>
+          <div class="seg seg--other">
+            <span class="seg__pct">12%</span>
+            <span class="seg__nm">overig</span>
+          </div>
+        </div>
+        <div class="stack__ft">
+          <span class="mono">hier rekent Dundir</span>
+          <span class="mono">70% van de kosten</span>
+        </div>
+      </div>
+      <p class="src mt-1">The material block is the only element on the home page filled in menie</p>
+    </div>
+  </div>
+</section>
+
+{{/* 07 THE MARK ---------------------------------------------------------- */}}
+<section class="band band--chalk-2">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">07 The mark</p>
+      <h2>A feasible region with the optimum on a vertex.</h2>
+      <p class="src">partials/mark.html</p>
+    </div>
+    <div class="prose">
+      <p>Two colours, both dominant on the site, so one mark holds on bitumen and on chalk without a second variant. The region is menie, the optimum is a white dot on one of its vertices. That is the product drawn at 22 pixels.</p>
+      <div class="mark-row">
+        <span class="mark-lg">{{ partial "mark.html" . }}</span>
+        <span class="mark-md">{{ partial "mark.html" . }}</span>
+        <span class="mark-sm">{{ partial "mark.html" . }}</span>
+      </div>
+      <p class="src">96px, 48px, 22px. The nav uses 22px, the favicon is the same path</p>
+    </div>
+  </div>
+</section>
+
+{{/* 08 COMPONENTS -------------------------------------------------------- */}}
+<section class="band band--chalk">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">08 Components</p>
+      <h2>Ten of them, and that is the list.</h2>
+      <p class="src">Anything not here does not exist</p>
+    </div>
+    <div class="prose">
+
+      <p class="sg-lbl">Buttons</p>
+      <div class="hero__actions">
+        <a href="{{ i18n "url_scan" | relURL }}" class="btn btn--primary">{{ i18n "nav_scan" }}</a>
+        <a href="{{ i18n "url_how" | relURL }}" class="btn btn--secondary">{{ i18n "nav_how" }}</a>
+      </div>
+      <p class="spec__note mt-1">One primary per view. The primary is a menie fill with white text, which is the only place the accent carries text on a light band by fill rather than by contrast.</p>
+
+      <p class="sg-lbl">Claim</p>
+      <div class="claim">
+        <span class="claim__fig">70%</span>
+        <div class="claim__body"><p>van de projectkosten is materiaal. Dat is de post waar een inkoopbeslissing daadwerkelijk geld verplaatst.</p></div>
+      </div>
+      <div class="claim">
+        <span class="claim__fig claim__fig--word">Lokaal</span>
+        <div class="claim__body"><p>Een figuur die een woord is neemt <code>claim__fig--word</code> en zakt naar labelgrootte, want een lang woord op displaygrootte leest als een kop en steelt de band.</p></div>
+      </div>
+
+      <p class="sg-lbl">Proof, at most once per page</p>
+      <div class="proof">
+        <p class="proof__fig">8.354 euro</p>
+        <p class="proof__label">fout op een enkele aanbestedingsregel bij gebruik van een generieke enterprise AI-tool</p>
+        <p class="src">Hamppi 2025, Aalto Universiteit</p>
+      </div>
+
+      <p class="sg-lbl">Caveat</p>
+      <div class="caveat">
+        <span class="caveat__lab">Wat dit niet bewijst</span>
+        Where the evidence stops, the page says so. The caveat is not an apology, it is the reason a procurement director keeps reading: a claim with a stated limit is a claim they can take into an audit.
+      </div>
+
+      <p class="sg-lbl">Steps, only where order carries information</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step__n">01</span>
+          <div><h3>U voert een materiaalspecificatie in</h3><p>In gewoon Nederlands, dezelfde manier waarop u het nu ook zou omschrijven.</p></div>
+        </div>
+        <div class="step">
+          <span class="step__n">02</span>
+          <div><h3>De optimalisatie rekent</h3><p>Harde eisen als randvoorwaarden, gewogen doelstellingen als doelfunctie. Een berekend antwoord, geen suggestie.</p></div>
+        </div>
+      </div>
+
+      <p class="sg-lbl">Person, no photograph</p>
+      <div class="people">
+        <div class="person">
+          <span class="person__name">Voorbeeld Naam</span>
+          <span class="person__role">Rol</span>
+          <p>Credential line, one sentence. The system carries no portraits: a face is not evidence and a stock face is worse than none.</p>
+        </div>
+      </div>
+
+      <p class="sg-lbl">Chips, a dot when the obligation is live</p>
+      <div class="chips">
+        <span class="chip chip--live">Aanbestedingswet</span>
+        <span class="chip chip--live">CPR 2024/3110</span>
+        <span class="chip">CSRD Scope 3</span>
+      </div>
+      <p class="spec__note mt-1">A menie dot means the obligation applies today. No dot means it is pending.</p>
+
+      <p class="sg-lbl">Cards, deck or event</p>
+      <div class="cards">
+        <div class="card">
+          <span class="card__meta">Presentatie</span>
+          <h3>Bouwbedrijven</h3>
+          <p>Voor inkoopverantwoordelijken bij middelgrote aannemers.</p>
+        </div>
+        <div class="card">
+          <span class="card__meta">Evenement</span>
+          <h3>Werksessie</h3>
+          <p>Een kaart zonder href rendert als div, met href als anchor met een pijl.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* 09 MOTION, ACCESS, BUILD --------------------------------------------- */}}
+<section class="band">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">09 The rest</p>
+      <h2>Motion, access, build.</h2>
+      <p class="src">DESIGN.md, closing sections</p>
+    </div>
+    <div class="prose">
+      <h3>Motion</h3>
+      <p>Bands rise 10px and fade in on first view, staggered by 60ms. Nothing else moves: no parallax, no scroll jacking, no carousel. All of it is disabled under <code>prefers-reduced-motion</code>, and the reveal class is added by script, so with JavaScript off nothing is ever hidden.</p>
+
+      <h3>Accessibility</h3>
+      <ul>
+        <li>AA contrast on every text pairing, verified per token pair rather than per component.</li>
+        <li>Focus rings are menie-lt at 2px with 3px offset, visible on both grounds. Tab through this page to see it.</li>
+        <li>Body copy 17px minimum, 1.62 line height.</li>
+        <li>Fonts self hosted, font-display swap, subset to the three languages.</li>
+      </ul>
+
+      <h3>Budget</h3>
+      <p>One stylesheet, one 2 kB site script, one 3 kB scan script. No framework. This page is the one exception: it loads a second stylesheet of its own so the site bundle does not carry it.</p>
+
+      <h3>Build</h3>
+      <p>Hugo 0.147.3 extended or newer, the version CI uses. On 0.139 the section templates are not picked up and inner pages render empty, which is easy to miss because the pages still return 200.</p>
+
+      <div class="caveat mt-1">
+        <span class="caveat__lab">Known issue</span>
+        The chat widget embeds an OpenRouter API key in client side JavaScript, where any visitor can read it, and posts visitor messages to a service outside the EU. Both sit badly next to the data sovereignty argument the site makes. Both are flagged in the privacy policy; neither is fixed.
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* The doors close every page, so they close this one too, and the component
+     documents itself by being used rather than by being drawn. */}}
+{{ partial "doors.html" (dict "page" . "class" "band--zinc") }}
+
+{{ end }}
