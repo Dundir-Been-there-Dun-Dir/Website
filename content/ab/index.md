@@ -4,7 +4,7 @@ description: "Flag red against two oranges on the word that carries the home pag
 lede: "The variant palette puts the accent on one word: <strong>inkoop</strong>. This page swapped the accent under that word so the candidates could be compared in place, at the size they ship, and it shows what each one costs everywhere else the accent lands. Oranje won; the page stays as the record of what it beat and what it cost."
 noindex: true
 pagecss: css/ab.css
-_build:
+build:
   list: never
   render: always
 ---
