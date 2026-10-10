@@ -13,6 +13,9 @@ other = "Hoe het werkt"
 [nav_about]
 other = "Over ons"
 
+[nav_usecases]
+other = "Toepassingen"
+
 [nav_decks]
 other = "Presentaties"
 
@@ -139,6 +142,9 @@ other = "hoe-het-werkt/"
 
 [url_about]
 other = "over-ons/"
+
+[url_usecases]
+other = "toepassingen/"
 
 [url_decks]
 other = "presentaties/"

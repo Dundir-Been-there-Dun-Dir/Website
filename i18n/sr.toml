@@ -13,6 +13,9 @@ other = "Kako radi"
 [nav_about]
 other = "O nama"
 
+[nav_usecases]
+other = "Primene"
+
 [nav_decks]
 other = "Prezentacije"
 
@@ -139,6 +142,9 @@ other = "sr/kako-radi/"
 
 [url_about]
 other = "sr/o-nama/"
+
+[url_usecases]
+other = "toepassingen/"
 
 [url_decks]
 other = "sr/prezentacije/"

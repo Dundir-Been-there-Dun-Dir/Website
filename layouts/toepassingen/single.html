@@ -1,0 +1,57 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero__headline">Vier inkoopfases. Wetenschappelijk onderbouwd.</h1>
+    <p class="page-hero__subheading">Onderzoekers van Aalto Universiteit, TU Delft en KTH identificeerden onafhankelijk dezelfde vier fases als de hoogste waardekansen voor AI in bouwinkoop. Dundir dekt ze alle vier.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="deck-grid">
+      <div class="deck-card">
+        <p class="deck-card__title">UC1 — Offertevergelijking</p>
+        <p class="deck-card__body">Vergelijk leveranciersoffertes in minuten in plaats van uren. Deterministisch. Reproduceerbaar. Met volledig redeneerproces en auditklare output.</p>
+        <div class="deck-card__actions">
+          <a href="{{ "offertevergelijking/" | relURL }}" class="btn-secondary">Lees meer</a>
+        </div>
+      </div>
+      <div class="deck-card">
+        <p class="deck-card__title">UC2 — Leveranciersevaluatie</p>
+        <p class="deck-card__body">Bouw en onderhoud een gekwalificeerde leveranciersdatabase op basis van prijs, betrouwbaarheid, certificering en duurzaamheidsscore.</p>
+        <div class="deck-card__actions">
+          <a href="{{ "leveranciersevaluatie/" | relURL }}" class="btn-secondary">Lees meer</a>
+        </div>
+      </div>
+      <div class="deck-card">
+        <p class="deck-card__title">UC3 — Inkooppakket samenstellen</p>
+        <p class="deck-card__body">Van een specificatie in gewoon Nederlands naar gestructureerde inkoopvereisten: harde eisen, gewogen doelstellingen en een certificeringslijst klaar voor vergelijking.</p>
+        <div class="deck-card__actions">
+          <a href="{{ "inkooppakket/" | relURL }}" class="btn-secondary">Lees meer</a>
+        </div>
+      </div>
+      <div class="deck-card">
+        <p class="deck-card__title">UC4 — Contractbeheer</p>
+        <p class="deck-card__body">Volg op of leveranciers leveren wat ze beloofd hebben. Certificeringsvervaldatums. Levertijdafwijkingen. Auditspoor van uitvoering — niet alleen van selectie.</p>
+        <div class="deck-card__actions">
+          <a href="{{ "contractbeheer/" | relURL }}" class="btn-secondary">Lees meer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt">
+  <div class="container container--narrow">
+    <div class="proof-block">
+      <p class="proof-block__label">Onderzoeksbasis</p>
+      <p class="proof-block__body">Joni Hamppi (Aalto Universiteit, 2025) identificeerde vier inkoopfases als de hoogste waardekansen voor AI in de bouw, op basis van interviews met inkoopprofessionals bij Skanska Talonrakennus Oy: offertevergelijking, leveranciersevaluatie, inkooppakket samenstellen en contractbeheer. Dezelfde fases worden bevestigd in onderzoek van TU Delft (Van Duuren, 2025) en Robert Gordon University (Adebayo, 2025).</p>
+      <p class="proof-block__source">Hamppi 2025, Aalto Universiteit &middot; Van Duuren 2025, TU Delft &middot; Adebayo 2025, Robert Gordon University</p>
+    </div>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}

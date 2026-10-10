@@ -13,6 +13,9 @@ other = "How it works"
 [nav_about]
 other = "About"
 
+[nav_usecases]
+other = "Use cases"
+
 [nav_decks]
 other = "Presentations"
 
@@ -139,6 +142,9 @@ other = "en/how-it-works/"
 
 [url_about]
 other = "en/about/"
+
+[url_usecases]
+other = "en/use-cases/"
 
 [url_decks]
 other = "en/presentations/"
