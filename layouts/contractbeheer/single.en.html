@@ -1,0 +1,66 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC4 &mdash; Contract oversight</p>
+    <h1 class="page-hero__headline">The contract is signed. The work isn't done.</h1>
+    <p class="page-hero__subheading">Dundir records not just the selection decision &mdash; it also monitors whether suppliers actually deliver what they promised. Certification expiry dates. Delivery time deviations. An audit trail of execution, not just selection.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">The problem</h2>
+    <p>A contractor awards a contract to supplier X on the basis of a certified bid, a promised delivery window, and a sustainability score. Three months later: the delivery is two weeks late, the KOMO certificate has lapsed, and the material specification diverges from the bid.</p>
+    <p>Who tracked this? In most construction companies: nobody systematically. The buyer remembers &mdash; or it disappears into an email thread. When an audit arrives &mdash; or worse, when a defect surfaces &mdash; there is no trail.</p>
+    <p>For municipalities, this is not an inconvenience. It is legal exposure. The Aanbestedingswet requires demonstrable documentation of supplier selection. EU CPR 2024 and CSRD Scope 3 impose traceability requirements on materials through the supply chain. That traceability starts at the contract &mdash; and ends at the actual delivery.</p>
+  </div>
+</section>
+
+<section class="section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">What contract oversight means in practice</h2>
+    <div class="two-col">
+      <div>
+        <p><strong>Certification monitoring</strong><br>KOMO, SKG-IKOB, and other certifications have expiry dates. Dundir tracks validity per supplier and per contract &mdash; and flags when a certificate is about to lapse during the execution of an assignment.</p>
+      </div>
+      <div>
+        <p><strong>Delivery time tracking</strong><br>Promised delivery windows are compared against actual deliveries. Deviations are logged per assignment and per supplier, and feed into supplier scores for future tenders.</p>
+      </div>
+      <div>
+        <p><strong>Specification conformance</strong><br>Does the delivered material conform to the specification in the procurement package? Deviations are documented. When a technical inspection or audit arrives, the trail is already there.</p>
+      </div>
+      <div>
+        <p><strong>Execution audit trail</strong><br>Every contract phase &mdash; award, delivery, inspection, payment &mdash; is logged with date, responsible party, and any deviation. The file the auditor or procurement supervisor asks for already exists.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Why this is a legal requirement for municipalities</h2>
+    <p>For a mid-size contractor, contract oversight is a matter of efficiency and knowledge retention. For a municipality, it is a legal requirement.</p>
+    <p>The Aanbestedingswet requires that every award decision be demonstrably defensible &mdash; not just to the internal manager, but to the municipal council, the audit chamber, and the Authority for Consumers and Markets. That defensibility does not stop at the award. If a municipality selects a supplier on the basis of a sustainability score and that supplier does not perform to that score, the documentation of the deviation is as important as the original selection documentation.</p>
+    <p>There are 342 Dutch municipalities with near-identical procurement processes and near-identical compliance challenges. Dundir produces the required audit trail at every contract phase &mdash; automatically, not as extra work after the fact.</p>
+
+    <div class="proof-block">
+      <p class="proof-block__label">Regulatory context</p>
+      <p class="proof-block__body">EU CPR 2024 requires demonstrable documentation of construction product performance through the supply chain. CSRD Directive 2022/2464/EU requires large organisations to report their Scope 3 emissions, including those of purchased materials and services. Aanbestedingswet article 2.130 requires a reasoned award decision that is verifiable. None of these requirements stop at supplier selection. They apply to contract execution as well.</p>
+      <p class="proof-block__source">EU CPR 2024 &middot; CSRD Directive 2022/2464/EU &middot; Aanbestedingswet 2012, art. 2.130</p>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Contract oversight closes the procurement loop</h2>
+    <p>The four use cases form a closed loop together: procurement package formation (UC3) &rarr; bid comparison (UC1) &rarr; supplier evaluation (UC2) &rarr; contract oversight (UC4). Every execution data point from UC4 improves the supplier scores in UC2, which in turn inform the next bid comparison in UC1.</p>
+    <p>A system that becomes more accurate after every project. That retains the knowledge of departing buyers. And that documents every phase of every tender &mdash; from specification to final delivery.</p>
+    <p style="margin-top:1.5rem;"><a href="{{ "en/use-cases/" | relURL }}">&larr; Back to all use cases</a></p>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}

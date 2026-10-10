@@ -1,0 +1,76 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC1 &mdash; Offertevergelijking</p>
+    <h1 class="page-hero__headline">Van vijf offertes naar een auditklaar vergelijkingsrapport. In minuten.</h1>
+    <p class="page-hero__subheading">Inkopers in de bouw besteden gemiddeld dertig minuten aan het vergelijken van zes offertes &mdash; voor elke aanbesteding, elke week. Dundir vervangt dat handwerk met een deterministisch berekeningsproces dat hetzelfde resultaat geeft bij dezelfde invoer, altijd.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Het probleem</h2>
+    <p>Een inkoper ontvangt vijf offertes voor hetzelfde werk. Elke offerte heeft een andere structuur, andere regelindelingen, andere aannames over materiaal en arbeid. Om ze eerlijk te vergelijken, moet hij ze handmatig normaliseren: prijzen per eenheid uitrekenen, omissies opsporen, levertijden naast elkaar leggen.</p>
+    <p>Dat kost een half uur. En dan is er nog geen rapport geschreven. Schaal dit op naar de gemiddelde inkoper en je verliest wekelijks uren aan werk dat geen beslissingswaarde toevoegt.</p>
+    <p>Generatieve AI lost dit niet op. In een intern experiment bij Skanska gaf een generiek enterprise AI-systeem voor identieke ingevoerde offertes verschillende numerieke uitkomsten &mdash; fouten tot &euro;8.354 op &eacute;&eacute;n aanbestedingsregel. Het systeem genereerde antwoorden. Het kon de berekening niet reproduceren.</p>
+
+    <div class="proof-block">
+      <p class="proof-block__stat">&euro;8.354</p>
+      <p class="proof-block__label">maximale berekeningsfout bij een generiek GenAI-systeem voor offertevergelijking</p>
+      <p class="proof-block__body">Bij identieke invoer gaf het systeem in afzonderlijke sessies verschillende numerieke uitkomsten &mdash; een fout tot 28% op &eacute;&eacute;n aanbestedingsregel. Dit is de reden waarom een generatief AI-systeem niet geschikt is voor numerieke offertevergelijking. Dundir's optimalisatie-engine is deterministisch: hetzelfde resultaat bij dezelfde invoer, altijd.</p>
+      <p class="proof-block__source">Hamppi 2025, p. 62 &mdash; Aalto Universiteit / Skanska Talonrakennus Oy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Hoe Dundir offertevergelijking aanpakt</h2>
+    <ol class="step-list">
+      <li>
+        <div>
+          <p class="step-list__title">Offertes worden genormaliseerd</p>
+          <p class="step-list__body">De AI-laag zet heterogene offertedocumenten &mdash; PDF, e-mail, spreadsheet &mdash; om naar een gestructureerd vergelijkingsformaat. Prijs per eenheid, levertijd, certificeringsstatus, aannames: alles op &eacute;&eacute;n lijn.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">De optimalisatie-engine berekent</p>
+          <p class="step-list__body">Op basis van uw harde eisen (certificeringen, levertijden, budgetlimiet) en gewogen doelstellingen (prijs, betrouwbaarheid, duurzaamheid) berekent de engine de aantoonbaar beste leverancierscombinatie. Deterministisch: hetzelfde resultaat bij dezelfde invoer, altijd.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">U beoordeelt. Het systeem documenteert.</p>
+          <p class="step-list__body">U ziet een gerangschikte vergelijking met brongegevens, certificeringsstatus en volledig redeneerproces. U beslist. Het systeem registreert uw beslissing &mdash; klaar voor interne goedkeuring, externe audit of openbare aanbestedingsbeoordeling.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Wat het oplevert</h2>
+    <div class="two-col">
+      <div>
+        <p><strong>Tijdsbesparing</strong><br>30 minuten handmatig werk per vergelijking, schaalbaar over elk inkoopvolume zonder extra personeel.</p>
+      </div>
+      <div>
+        <p><strong>Reproduceerbaarheid</strong><br>Dezelfde invoer geeft altijd hetzelfde resultaat. Geen variatie tussen sessies, inkopers of momenten.</p>
+      </div>
+      <div>
+        <p><strong>Auditklaar rapport</strong><br>Elke vergelijking levert automatisch documentatie op die geschikt is voor interne goedkeuring, externe audit of openbare aanbestedingsbeoordeling.</p>
+      </div>
+      <div>
+        <p><strong>Kennisbehoud</strong><br>Als een senior inkoper vertrekt, blijft de gecalibreerde beslissingslogica beschikbaar voor het hele team.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem;"><a href="{{ "toepassingen/" | relURL }}">&larr; Terug naar alle toepassingen</a></p>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}

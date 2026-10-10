@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC2 &mdash; Supplier evaluation</p>
+    <h1 class="page-hero__headline">Qualify your suppliers on data. Not on memory.</h1>
+    <p class="page-hero__subheading">In most construction companies, supplier knowledge lives in one experienced buyer's head. When that person leaves, it goes with them. Dundir builds a structured, searchable supplier database from your own procurement history.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">The problem</h2>
+    <p>Certifications expire. A KOMO certificate is valid for three years, an SKG-IKOB assessment for two. In a normal procurement process, nobody tracks this systematically. The buyer remembers &mdash; until that buyer goes on holiday, falls ill, or leaves.</p>
+    <p>On large infrastructure projects, fewer than 5% of staff experience the project from start to finish. Institutional knowledge about supplier performance disappears systematically. Every new tender starts from zero.</p>
+
+    <div class="proof-block">
+      <p class="proof-block__stat">&lt;5%</p>
+      <p class="proof-block__label">of staff on a large infrastructure project experience it from start to finish</p>
+      <p class="proof-block__body">Knowledge about supplier performance, certification status, and past collaborations disappears systematically. A qualified supplier database replaces institutional memory with structured data that stays when people leave.</p>
+      <p class="proof-block__source">Rockx 2023, TU Delft &mdash; Complexity and risk assessment in Dutch infrastructure projects.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">How Dundir handles supplier evaluation</h2>
+    <ul>
+      <li><strong>Certification management</strong> &mdash; The system registers KOMO, SKG-IKOB, Kiwa, and other relevant certifications per supplier, including expiry dates and alert moments before they lapse.</li>
+      <li><strong>Performance history</strong> &mdash; Every completed assignment adds data: was the delivery on time? Did the specification match? What deviations were documented?</li>
+      <li><strong>Structured scoring</strong> &mdash; Suppliers are scored on price, reliability, certification status, and sustainability performance. Scores are transparent and exportable.</li>
+      <li><strong>Pre-qualification</strong> &mdash; For a new tender, the buyer immediately sees which suppliers meet the minimum requirements, without manually requesting certifications.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">What it delivers</h2>
+    <p>A structured supplier database that grows with every procurement decision. No more knowledge that walks out the door when a person leaves. Certification status always current. And a pre-qualification shortlist that accelerates the starting point of every tender.</p>
+    <p style="margin-top:1.5rem;"><a href="{{ "en/use-cases/" | relURL }}">&larr; Back to all use cases</a></p>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}
