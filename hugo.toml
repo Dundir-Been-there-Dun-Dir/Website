@@ -17,7 +17,7 @@ pluralizeListTitles = false
   email = "christiaan.verhoef@dundir.com,milan.jelisavcic@dundir.com"
   linkedIn = "https://www.linkedin.com/company/dundir"
 
-  # SUS survey webhook — n8n on CT104
+  # SUS survey webhook: n8n on CT104
   # Set RESEND_API_KEY env var on CT104 to enable email delivery
   n8nWebhook = "https://n8n.research-ready.nl/webhook/sus-scan"
 

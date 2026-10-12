@@ -30,7 +30,7 @@ Dundir is an AI-powered, locally deployed deterministic procurement decision eng
 ### Core Strategic Constraints & Guardrails
 1. **Audience Mindset:** 45–55 year old Dutch procurement directors and municipality advisors. Highly analytical, legally exposed, skeptical of AI marketing.
 2. **Forbidden Buzzwords:** `cutting-edge`, `transformeer`, `revolutie`, `game-changer`, `harness`, `future-proof`, `toekomstbestendig`, `best-in-class`, `seamless`, `naadloos`.
-3. **No Em-Dashes:** CI fails if any em-dashes (`—`) appear in HTML output.
+3. **No Em-Dashes:** CI fails if any em-dashes (`-`) appear in HTML output.
 4. **Primary Proof Point:** The Skanska / Hamppi 2025 experiment showing enterprise GenAI produced errors up to €8,354 on a single procurement line, compared to Dundir's deterministic optimization.
 5. **Primary CTA:** The Inkoopscan (SPICED-aligned, live calculating euro cost based on visitor's own numbers, followed by an autonomy-preserving meeting invite).
 
@@ -253,7 +253,7 @@ Every task satisfies the **INVEST** principles:
 
 For any user story to be marked complete:
 - [ ] Hugo compiles cleanly with zero warnings or errors (`~/.local/bin/hugo --minify`).
-- [ ] No em-dashes (`—`) exist anywhere in the generated HTML files.
+- [ ] No em-dashes (`-`) exist anywhere in the generated HTML files.
 - [ ] None of the 10 forbidden marketing buzzwords are present in copy.
 - [ ] All internal links resolve to existing, active endpoints.
 - [ ] Responsive layout verified at 375px, 768px, and 1280px viewports with zero horizontal overflow.

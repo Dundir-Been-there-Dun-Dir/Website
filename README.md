@@ -1,6 +1,6 @@
 # Dundir Website
 
-Marketing website for [dundir.nl](https://dundir.nl) — a locally-deployed procurement decision system for Dutch construction companies and municipalities.
+Marketing website for [dundir.nl](https://dundir.nl): a locally-deployed procurement decision system for Dutch construction companies and municipalities.
 
 ## Why it's built this way
 
@@ -9,13 +9,13 @@ The site has no user accounts, no dynamic content, and no backend. Hugo compiles
 - Zero runtime cost (GitHub Pages hosting is free)
 - No attack surface (no server-side code to exploit)
 - Sub-100ms page loads (no JS frameworks, no hydration)
-- Every page is a file — easy to audit, easy to test
+- Every page is a file: easy to audit, easy to test
 
 ### Custom layouts, no theme
 We wrote every template from scratch rather than using a Hugo theme. This keeps the CSS naming predictable, allows the CI tests to assert on specific page structure, and means the design is entirely controlled. Themes bring hundreds of unused classes and hidden assumptions.
 
 ### GitHub Actions CI gate
-The deploy pipeline has two jobs: `build-and-test` runs 8 automated checks, then `deploy` only runs if all checks pass. If a commit breaks a test, GitHub Pages keeps the last successful version live. No rollback needed — a failed deploy is simply a no-op.
+The deploy pipeline has two jobs: `build-and-test` runs 8 automated checks, then `deploy` only runs if all checks pass. If a commit breaks a test, GitHub Pages keeps the last successful version live. No rollback needed; a failed deploy is simply a no-op.
 
 The 8 tests check: required pages exist, CSS was generated, minimum HTML count, no em-dashes, no forbidden marketing phrases, meta descriptions on all pages, internal links resolve, sitemap generated.
 
@@ -26,7 +26,7 @@ The site is currently hosted at a GitHub Pages subdirectory (`/Website/`) as an 
 The scan page embeds a self-hosted Formbricks survey via their JS SDK. Formbricks is configured in `hugo.toml` under `[params.formbricks]`. The embed falls back gracefully if the survey is not yet configured (shows a placeholder). This keeps the survey data under our control and GDPR-compliant without a separate backend.
 
 ### Dutch-first, citation-backed copy
-All copy is in Dutch. Every statistic has an inline source citation. The CI pipeline enforces a list of forbidden marketing phrases (transformeer, seamless, naadloos, etc.) and bans em-dashes from all HTML output. This is enforced in CI — a violation blocks the deploy.
+All copy is in Dutch. Every statistic has an inline source citation. The CI pipeline enforces a list of forbidden marketing phrases (transformeer, seamless, naadloos, etc.) and bans em-dashes from all HTML output. This is enforced in CI; a violation blocks the deploy.
 
 ---
 
@@ -55,7 +55,7 @@ All copy is in Dutch. Every statistic has an inline source citation. The CI pipe
 - [ ] Gerard to review Dutch copy (native speaker check before launch)
 - [ ] First Inzichten article: Dutch summary of Hamppi/Skanska 2025 paper
 - [ ] Team photos: real headshots for Over ons page
-- [ ] Privacy policy page (`/privacy/`) — currently skipped in link checker
+- [ ] Privacy policy page (`/privacy/`): currently skipped in link checker
 
 ### DNS records for GitHub Pages (for when dundir.nl is ready)
 A records pointing to:

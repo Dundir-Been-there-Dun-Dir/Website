@@ -24,16 +24,16 @@ This index is designed to be read at the start of any working session. It gives 
 ### For pitches and investor conversations
 
 **The non-determinism problem (Hamppi, 2025)**
-A live Skanska experiment showed that a generic enterprise GenAI tool gave different numerical outputs for identical inputs — errors up to €8,354 on a single procurement line. This is the sharpest practitioner-documented argument for a deterministic optimization engine over a prompt-based tool. Cite this when explaining why the architecture matters.
+A live Skanska experiment showed that a generic enterprise GenAI tool gave different numerical outputs for identical inputs; errors up to €8,354 on a single procurement line. This is the sharpest practitioner-documented argument for a deterministic optimization engine over a prompt-based tool. Cite this when explaining why the architecture matters.
 
 **Materials as share of project cost (Hamppi, 2025, p.8)**
-70% of construction project costs are in materials (Donyavi et al., 2024, cited in Hamppi). Procurement is not a back-office function — it is the cost structure of the project.
+70% of construction project costs are in materials (Donyavi et al., 2024, cited in Hamppi). Procurement is not a back-office function; it is the cost structure of the project.
 
 **Productivity stagnation (Hamppi, 2025, p.8)**
 Construction productivity has grown at 1% annually for decades (Regona et al., 2022, cited in Hamppi). The industry is not improving on its own.
 
 **AI adoption acceleration (Adebayo, 2025)**
-ML adoption in construction research jumped from 29.7% of papers in Industry 3.0 to 73.4% post-COVID — more than doubling. The inflection is real, recent, and peer-reviewed.
+ML adoption in construction research jumped from 29.7% of papers in Industry 3.0 to 73.4% post-COVID; more than doubling. The inflection is real, recent, and peer-reviewed.
 
 **The market gap is peer-reviewed (Öksüz et al., 2025)**
 The paper explicitly states that research and tooling for "construction procurement operations remains limited." This is a direct citable statement of the gap from a 2025 peer-reviewed source.
@@ -58,14 +58,14 @@ GenAI worked on simple bids, failed on complex ones. Hamppi explicitly recommend
 Interviewees with decades of experience reported never encountering a systematic risk assessment approach. One practitioner said it explicitly in interview. This is primary evidence of the gap in the Dutch market.
 
 **Validated AI use case in construction (Adebayo, 2025, Table 1, p.5)**
-Bidding and pricing optimization is explicitly listed as a documented AI application category. The product is not speculative — it is in an established research category.
+Bidding and pricing optimization is explicitly listed as a documented AI application category. The product is not speculative; it is in an established research category.
 
 ---
 
 ### For product and architecture decisions
 
 **Local deployment is the only viable model for practitioners (Friðriksson, 2025)**
-At Cedervall Arkitekter: GPT-4 was prototyped and rejected on cost and third-party dependency grounds. Cloud Llama-3 was rejected because 20-second latency was unacceptable and data had to stay on the internal network. On-premise deployment was the only acceptable outcome — and this was in an architecture firm, not a security-sensitive construction or public sector context.
+At Cedervall Arkitekter: GPT-4 was prototyped and rejected on cost and third-party dependency grounds. Cloud Llama-3 was rejected because 20-second latency was unacceptable and data had to stay on the internal network. On-premise deployment was the only acceptable outcome; and this was in an architecture firm, not a security-sensitive construction or public sector context.
 
 **Confidentiality is a hard precondition (van Duuren, 2025)**
 Practitioners in the TU Delft study named confidentiality as a non-negotiable, not a preference. Local deployment resolves this. Cloud tools cannot.
@@ -77,31 +77,31 @@ The thesis identifies missing domain context as the primary cause of poor AI out
 Practitioners confirmed four phases where AI is immediately applicable: bid comparison, supplier evaluation, procurement package formation, and contract oversight. Bid comparison is the clearest, lowest-resistance entry point.
 
 **Rijkswaterstaat procurement reform (Rockx, 2023)**
-The Dutch national infrastructure authority is actively shifting from large DBFM contracts toward risk-sharing models. This is a structural change creating new tool demand in the Dutch infrastructure segment — relevant for Segment C positioning and public sector grant framing.
+The Dutch national infrastructure authority is actively shifting from large DBFM contracts toward risk-sharing models. This is a structural change creating new tool demand in the Dutch infrastructure segment; relevant for Segment C positioning and public sector grant framing.
 
 ---
 
 ## What the Research Collectively Argues
 
-1. **Generic GenAI fails in construction procurement** — non-determinism, confidentiality exposure, missing domain context, and input variability all undermine trust. The failure mode is documented with practitioner evidence, not just theoretical.
+1. **Generic GenAI fails in construction procurement**: non-determinism, confidentiality exposure, missing domain context, and input variability all undermine trust. The failure mode is documented with practitioner evidence, not just theoretical.
 
-2. **Local, domain-specific deployment is the only architecture practitioners accept** — independently documented across Friðriksson (architecture), van Duuren (infrastructure), and implied by Hamppi (construction procurement).
+2. **Local, domain-specific deployment is the only architecture practitioners accept**: independently documented across Friðriksson (architecture), van Duuren (infrastructure), and implied by Hamppi (construction procurement).
 
-3. **The entry point is bid comparison / supplier evaluation** — confirmed by Hamppi as the clearest AI-ready phase with the highest practitioner acceptance.
+3. **The entry point is bid comparison / supplier evaluation**: confirmed by Hamppi as the clearest AI-ready phase with the highest practitioner acceptance.
 
-4. **Input standardization is both the main barrier and the main lever** — whoever solves structured data input (supplier templates, ERP normalization) unlocks the optimization layer. This is a product design problem, not just a technical one.
+4. **Input standardization is both the main barrier and the main lever**: whoever solves structured data input (supplier templates, ERP normalization) unlocks the optimization layer. This is a product design problem, not just a technical one.
 
-5. **The Dutch market has a documented, practitioner-confirmed gap** — Rockx provides the most direct evidence for the Netherlands specifically. Rijkswaterstaat reform, gut-feel risk assessment, and systemic knowledge loss are all named and sourced.
+5. **The Dutch market has a documented, practitioner-confirmed gap**: Rockx provides the most direct evidence for the Netherlands specifically. Rijkswaterstaat reform, gut-feel risk assessment, and systemic knowledge loss are all named and sourced.
 
 ---
 
 ## What the Research Does NOT Prove
 
-- **Willingness to pay** — none of these papers studied commercial adoption or pricing. Customer discovery conversations are still required.
-- **Quantitative ROI** — most time-saving figures (50-60% reduction) are self-reported by small samples (3-5 users). Do not cite as industry benchmarks.
-- **Dutch mid-size construction company specifically** — Rockx covers Dutch infrastructure (large contractors, Rijkswaterstaat clients). The mid-size Segment A target is not directly studied in this corpus.
-- **The optimization approach specifically** — the papers validate the problem and the local deployment model, not the LP/evolutionary algorithm solution. That validation comes from customer discovery and pilot data.
-- **Any of these papers study the contractor/bidder side with quantitative rigor** — most study consultant, architect, or infrastructure client perspectives.
+- **Willingness to pay**: none of these papers studied commercial adoption or pricing. Customer discovery conversations are still required.
+- **Quantitative ROI**: most time-saving figures (50-60% reduction) are self-reported by small samples (3-5 users). Do not cite as industry benchmarks.
+- **Dutch mid-size construction company specifically**: Rockx covers Dutch infrastructure (large contractors, Rijkswaterstaat clients). The mid-size Segment A target is not directly studied in this corpus.
+- **The optimization approach specifically**: the papers validate the problem and the local deployment model, not the LP/evolutionary algorithm solution. That validation comes from customer discovery and pilot data.
+- **Any of these papers study the contractor/bidder side with quantitative rigor**: most study consultant, architect, or infrastructure client perspectives.
 
 ---
 
