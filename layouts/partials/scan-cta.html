@@ -1,0 +1,18 @@
+{{/* scan-cta.html
+   Bottom-of-page CTA band used by UC detail pages (toepassingen, offertevergelijking, etc.)
+   Links to the procurement pain scan. Language-aware via i18n. */}}
+
+{{ $scanURL := i18n "url_scan" | default "scan/" }}
+
+<section class="band band--zinc">
+  <div class="container two">
+    <div>
+      <p class="eyebrow">{{ i18n "scan_eyebrow" | default "Inkoopscan" }}</p>
+      <h2>{{ i18n "scan_cta_h" | default "Bereken uw inkoopkosten" }}</h2>
+    </div>
+    <div class="prose">
+      <p class="lede">{{ i18n "scan_cta_p" | default "Vijf minuten. Geen registratie. Direct uw persoonlijke schatting van de tijd en kosten die uw organisatie verliest aan handmatige inkoop." }}</p>
+      <p class="mt-1"><a href="{{ $scanURL | relURL }}" class="btn btn--primary">{{ i18n "nav_scan" | default "Doe de scan" }}</a></p>
+    </div>
+  </div>
+</section>
