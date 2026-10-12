@@ -10,3 +10,9 @@ node_modules/
 
 # local tooling and backups (server-side only)
 .tools/
+
+# agent & build cache
+.claude-flow/
+.quarto/
+.swarm/
+ruvector.db
