@@ -1,4 +1,4 @@
-# CLAUDE.md — Dundir Website
+# CLAUDE.md: Dundir Website
 
 This file is the authoritative brief for any AI working in this repository. Read it fully before doing anything else.
 
@@ -6,15 +6,15 @@ This file is the authoritative brief for any AI working in this repository. Read
 
 ## What Dundir is
 
-Dundir builds an AI-powered procurement decision tool for construction companies and Dutch municipalities. It is locally deployed — the client's data never leaves their server. The core engine is a linear optimization / evolutionary algorithm system that finds the mathematically optimal supplier combination given hard constraints (certifications, delivery windows, budget) and weighted objectives (price, reliability, sustainability). An AI language layer reads the specification and generates the audit-ready report. The optimizer makes the decision.
+Dundir builds an AI-powered procurement decision tool for construction companies and Dutch municipalities. It is locally deployed; the client's data never leaves their server. The core engine is a linear optimization / evolutionary algorithm system that finds the mathematically optimal supplier combination given hard constraints (certifications, delivery windows, budget) and weighted objectives (price, reliability, sustainability). An AI language layer reads the specification and generates the audit-ready report. The optimizer makes the decision.
 
-**The problem it solves:** A construction procurement manager spends 11 hours a week comparing suppliers in spreadsheets — €49,500 a year per person in lost productive time. The output of that work (a supplier comparison report) is almost never properly documented, is not legally defensible, and disappears when the person leaves. EU CPR 2024, CSRD Scope 3, and the Aanbestedingswet are turning procurement documentation from good practice into legal obligation. The timing is not incidental.
+**The problem it solves:** A construction procurement manager spends 11 hours a week comparing suppliers in spreadsheets (€49,500 a year per person in lost productive time). a year per person in lost productive time. The output of that work (a supplier comparison report) is almost never properly documented, is not legally defensible, and disappears when the person leaves. EU CPR 2024, CSRD Scope 3, and the Aanbestedingswet are turning procurement documentation from good practice into legal obligation. The timing is not incidental.
 
-**Why it is different from generic AI tools:** A 2025 Skanska experiment (Hamppi, Aalto University) showed that a generic enterprise GenAI tool gave different numerical outputs for identical procurement inputs — errors up to €8,354 on a single line. The Dundir optimizer is deterministic. It shows its working. Every recommendation is mathematically grounded, auditable, and defensible in front of a manager, an auditor, or a public procurement board.
+**Why it is different from generic AI tools:** A 2025 Skanska experiment (Hamppi, Aalto University) showed that a generic enterprise GenAI tool gave different numerical outputs for identical procurement inputs, resulting in errors up to €8,354 on a single line. The Dundir optimizer is deterministic. It shows its working. Every recommendation is mathematically grounded, auditable, and defensible in front of a manager, an auditor, or a public procurement board.
 
 **Primary customer segments:**
-- Mid-size construction companies (50-500 employees) — fastest sales cycle, clearest ROI on procurement admin time
-- Dutch municipalities — 342 identical buyers; legal documentation requirements make explainable AI essential, not optional
+- Mid-size construction companies (50-500 employees): fastest sales cycle, clearest ROI on procurement admin time
+- Dutch municipalities: 342 identical buyers; legal documentation requirements make explainable AI essential, not optional
 
 **Team:** Christiaan Verhoef (CEO, Windesheim University anchor), Dr. Milan Jelisavčić (CTO, PhD Evolutionary Robotics VU Amsterdam), Kirsten Coppoolse (COO, scaled Open Food Chain 0→20 people, 6x revenue), Dr. Nina Gluhović (Domain Expert, Assistant Professor Civil Engineering Belgrade), Gerard Tunteler (Head of Government Sales, HPE Local Government Lead Netherlands 19 years, founder HPE Ronde Tafel voor Gemeenten).
 
@@ -24,9 +24,9 @@ Dundir builds an AI-powered procurement decision tool for construction companies
 
 **Primary audience:** Construction procurement managers and their direct superiors at mid-size Dutch construction companies. Secondary: municipality procurement and IT decision-makers.
 
-**Tone:** Sharp and direct. Confident. No fluff. Speaks to people who already know the problem — do not over-explain it. The copy should feel like it was written by someone who has sat in a procurement meeting, not by a marketing agency. Think: the pitch documents in the Company repo, not a SaaS homepage.
+**Tone:** Sharp and direct. Confident. No fluff. Speaks to people who already know the problem; do not over-explain it. The copy should feel like it was written by someone who has sat in a procurement meeting, not by a marketing agency. Think: the pitch documents in the Company repo, not a SaaS homepage.
 
-**Primary CTA:** A procurement pain scan — a short interactive questionnaire (5-7 questions) that asks about their current process, outputs a personalised estimate of time and money lost to manual procurement, and converts to a follow-up conversation. This is the digital equivalent of the simulation workshop: it makes the cost of bad procurement visible, qualifies the lead, and collects customer discovery data simultaneously.
+**Primary CTA:** A procurement pain scan: a short interactive questionnaire (5-7 questions) that asks about their current process, outputs a personalised estimate of time and money lost to manual procurement, and converts to a follow-up conversation. This is the digital equivalent of the simulation workshop: it makes the cost of bad procurement visible, qualifies the lead, and collects customer discovery data simultaneously.
 
 **Platform:** GitHub Pages. No backend. Static site only for now.
 **Domains:** `dundir.nl` (primary, owned) and `dundir.com` (secondary, redirect to .nl). Hugo base URL: `https://dundir.nl`. DNS via Cloudflare.
@@ -35,26 +35,26 @@ Dundir builds an AI-powered procurement decision tool for construction companies
 
 ---
 
-## Winning by Design — Bowtie Methodology
+## Winning by Design: Bowtie Methodology
 
 Apply the WbD Bowtie framework to every design decision. The website serves the left side of the bowtie (pre-sale) but must be designed with the full lifecycle in mind.
 
 **The six stages:**
-1. **Awareness** — visitor first recognises the problem or discovers Dundir exists
-2. **Education** — visitor learns about the problem and explores whether this solution fits
-3. **Selection** — visitor compares options and evaluates Dundir seriously
-4. **Onboard** — new client is activated (post-sale; website supports but does not own this)
-5. **Impact** — client experiences measurable value (website can show proof/case studies later)
-6. **Expansion** — satisfied client grows (not a website concern at this stage)
+1. **Awareness**: visitor first recognises the problem or discovers Dundir exists
+2. **Education**: visitor learns about the problem and explores whether this solution fits
+3. **Selection**: visitor compares options and evaluates Dundir seriously
+4. **Onboard**: new client is activated (post-sale; website supports but does not own this)
+5. **Impact**: client experiences measurable value (website can show proof/case studies later)
+6. **Expansion**: satisfied client grows (not a website concern at this stage)
 
-**Design implication:** Every page element should be assignable to a bowtie stage. The homepage serves Awareness and Education. The scan serves the Education→Selection transition. The team page serves Selection (credibility). There should be no content that exists "just because" — every section must move a visitor from one stage to the next.
+**Design implication:** Every page element should be assignable to a bowtie stage. The homepage serves Awareness and Education. The scan serves the Education→Selection transition. The team page serves Selection (credibility). There should be no content that exists "just because"; every section must move a visitor from one stage to the next.
 
-**SPICED framework** — use this to structure the scan questions and the copy:
-- **Situation** — what does their current procurement process look like?
-- **Pain** — what specifically is costing them time, money, or risk?
-- **Impact** — what is the measurable cost of that pain?
-- **Critical Event** — what is creating urgency right now? (regulatory deadlines, audit risk, staff turnover)
-- **Decision** — who decides, and what do they need to say yes?
+**SPICED framework**: use this to structure the scan questions and the copy:
+- **Situation**: what does their current procurement process look like?
+- **Pain**: what specifically is costing them time, money, or risk?
+- **Impact**: what is the measurable cost of that pain?
+- **Critical Event**: what is creating urgency right now? (regulatory deadlines, audit risk, staff turnover)
+- **Decision**: who decides, and what do they need to say yes?
 
 ---
 
@@ -77,53 +77,53 @@ This repo uses specialised planning agents. Each agent owns one planning documen
 When working on this project, load and apply the following skills as relevant to your task:
 
 **Copy and messaging:**
-- `copywriting-psychologist` — persuasive copy patterns for B2B buyers
-- `copywriting` — core copywriting fundamentals
-- `marketing-psychology` — psychological triggers (loss aversion, social proof, authority)
-- `headline-psychologist` — headline design for conversion
+- `copywriting-psychologist`: persuasive copy patterns for B2B buyers
+- `copywriting`: core copywriting fundamentals
+- `marketing-psychology`: psychological triggers (loss aversion, social proof, authority)
+- `headline-psychologist`: headline design for conversion
 
 **Conversion and UX:**
-- `landing-page-generator` — landing page structure and patterns
-- `page-cro` — conversion rate optimisation for pages
-- `form-cro` — form and survey design for conversion
-- `ux-flow` — user journey and flow design
-- `onboarding-psychologist` — first-touch experience design
+- `landing-page-generator`: landing page structure and patterns
+- `page-cro`: conversion rate optimisation for pages
+- `form-cro`: form and survey design for conversion
+- `ux-flow`: user journey and flow design
+- `onboarding-psychologist`: first-touch experience design
 
 **SEO:**
-- `seo-fundamentals` — SEO foundation
-- `seo-content` — content-driven SEO
-- `seo-page` — on-page SEO optimisation
-- `seo-aeo-meta-description-generator` — meta descriptions
+- `seo-fundamentals`: SEO foundation
+- `seo-content`: content-driven SEO
+- `seo-page`: on-page SEO optimisation
+- `seo-aeo-meta-description-generator`: meta descriptions
 
 **Strategy and research:**
-- `jobs-to-be-done-analyst` — JTBD analysis for construction procurement buyers
-- `content-strategy` — content planning and architecture
-- `growth-engine` — growth strategy aligned with WbD bowtie
-- `competitive-landscape` — what competitors' websites look like
+- `jobs-to-be-done-analyst`: JTBD analysis for construction procurement buyers
+- `content-strategy`: content planning and architecture
+- `growth-engine`: growth strategy aligned with WbD bowtie
+- `competitive-landscape`: what competitors' websites look like
 
 **Design and frontend:**
-- `frontend-design` — visual design direction
-- `web-design-guidelines` — design standards for credibility
-- `ui-ux-designer` — UX design principles
-- `minimalist-ui` — clean, direct UI appropriate for this audience
+- `frontend-design`: visual design direction
+- `web-design-guidelines`: design standards for credibility
+- `ui-ux-designer`: UX design principles
+- `minimalist-ui`: clean, direct UI appropriate for this audience
 
 ---
 
 ## Key constraints
 
-- Static site only — no backend, no server-side processing at launch
+- Static site only: no backend, no server-side processing at launch
 - The scan must work without a backend at MVP (options: Typeform embed, Tally, or client-side JS with email output)
-- GitHub Pages compatible stack — Jekyll, Hugo, or plain HTML/CSS/JS
-- Must load fast — construction industry buyers are often on-site on mobile
+- GitHub Pages compatible stack: Jekyll, Hugo, or plain HTML/CSS/JS
+- Must load fast: construction industry buyers are often on-site on mobile
 - Must look credible to a 55-year-old Dutch procurement director, not just to a tech audience
 - No lorem ipsum, no stock photos of handshakes, no generic "AI transforms your business" headlines
-- Every claim on the site must be sourceable — use the research insights from the Company repo
+- Every claim on the site must be sourceable: use the research insights from the Company repo
 
 ---
 
 ## Credentials
 
-Website-related passwords are stored in `credentials/dundir.kdbx` (KeePass vault, committed to repo). Master password held by Christiaan Verhoef — do not store it here or anywhere in the repo.
+Website-related passwords are stored in `credentials/dundir.kdbx` (KeePass vault, committed to repo). Master password held by Christiaan Verhoef; do not store it here or anywhere in the repo.
 
 ### Zoho Mail server config (dundir.com)
 
@@ -138,21 +138,21 @@ Website-related passwords are stored in `credentials/dundir.kdbx` (KeePass vault
 
 ## Dundr AI chat widget
 
-Embedded on every page via `layouts/partials/dundr-widget.html`. Backend at `46-224-30-151.sslip.io` (Milan's server, Salesteq/Dundr product). Widget ID: `demo`. All LLM routing, system prompts, and docs are configured server-side — SSH to that server or Dundr admin panel required to change them.
+Embedded on every page via `layouts/partials/dundr-widget.html`. Backend at `46-224-30-151.sslip.io` (Milan's server, Salesteq/Dundr product). Widget ID: `demo`. All LLM routing, system prompts, and docs are configured server-side; SSH to that server or Dundr admin panel required to change them.
 
 ---
 
 ## Domains & deployment
 
-- `dundir.com` — primary, DNS via Cloudflare, GitHub Pages custom domain (`static/CNAME`)
-- `dundir.nl` — registered at STRATO (account 1 78429677), DNS issues, parked for now
+- `dundir.com`: primary, DNS via Cloudflare, GitHub Pages custom domain (`static/CNAME`)
+- `dundir.nl`: registered at STRATO (account 1 78429677), DNS issues, parked for now
 - `dundir.com` registrar: Namecheap (username: kamitor077), DNS managed by Cloudflare
 
 ## Email
 
 - Provider: Zoho Mail EU
 - Addresses: christiaan.verhoef@, milan.jelisavcic@, nina.jelisavcic@, kirsten.coppoolse@, info@ dundir.com
-- Note: Nina's surname is Jelisavčić (married to Milan), bios still show Gluhovic — update when ready
+- Note: Nina's surname is Jelisavčić (married to Milan), bios still show Gluhovic: update when ready
 
 ## Contact form
 
@@ -167,12 +167,12 @@ Embedded on every page via `layouts/partials/dundr-widget.html`. Backend at `46-
 
 The following documents from the Company repo are the authoritative source of truth. Any copy, data, or claims on the website must be consistent with these:
 
-- `README.md` — elevator pitches, three-minute pitch, team, market sizing
-- `business/business-model-canvas.md` — full business model, customer segments, value propositions
-- `business/value-propositions/vpc-a-construction-company.md` — construction company pain points
-- `business/value-propositions/vpc-b-municipality.md` — municipality pain points
-- `resources/insights/INDEX.md` — research citations and citable statistics
-- `resources/insights/hamppi-2025-ai-procurement-construction.md` — strongest research source (Skanska experiment, €8,354 error, 70% materials cost)
+- `README.md`: elevator pitches, three-minute pitch, team, market sizing
+- `business/business-model-canvas.md`: full business model, customer segments, value propositions
+- `business/value-propositions/vpc-a-construction-company.md`: construction company pain points
+- `business/value-propositions/vpc-b-municipality.md`: municipality pain points
+- `resources/insights/INDEX.md`: research citations and citable statistics
+- `resources/insights/hamppi-2025-ai-procurement-construction.md`: strongest research source (Skanska experiment, €8,354 error, 70% materials cost)
 
 ## Absolute Veracity & Real-World Deliverable Proof (Never False Completion)
 - **Zero False Completion**: NEVER claim a feature, integration, or system is done, verified, or working based solely on isolated unit tests or files written to disk if the actual user-facing application (e.g., OpenWebUI, database, deployed service) is not genuinely configured, populated, and verified in reality.

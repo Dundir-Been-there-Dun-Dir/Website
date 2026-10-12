@@ -24,9 +24,9 @@
 ---
 
 ### Jekyll
-**Pros:** GitHub Pages compiles Jekyll natively — no Actions workflow, no build pipeline, push-to-deploy out of the box. Mature ecosystem, many clean themes, good documentation, Liquid templates are learnable. YAML front matter is readable by non-developers. GitHub Pages applies security patches automatically.
+**Pros:** GitHub Pages compiles Jekyll natively; no Actions workflow, no build pipeline, push-to-deploy out of the box. Mature ecosystem, many clean themes, good documentation, Liquid templates are learnable. YAML front matter is readable by non-developers. GitHub Pages applies security patches automatically.
 
-**Cons:** Ruby dependency stack is slow and often breaks on local development across platforms (Windows in particular). Build times degrade at scale. The ecosystem is visibly declining — most active theme development has moved to Hugo or Astro. Liquid templating is less capable than Go templates or JSX.
+**Cons:** Ruby dependency stack is slow and often breaks on local development across platforms (Windows in particular). Build times degrade at scale. The ecosystem is visibly declining; most active theme development has moved to Hugo or Astro. Liquid templating is less capable than Go templates or JSX.
 
 **Maintenance burden:** Low once set up. Non-developers can edit Markdown files in the GitHub UI directly without touching code. Critical weakness: local preview requires a functioning Ruby environment, which is painful to set up and keep working.
 
@@ -41,7 +41,7 @@
 
 **Cons:** Requires a GitHub Actions workflow to build (GitHub Pages does not run Hugo natively). Go templating syntax is initially confusing. Local Hugo binary installation is required. Non-developers cannot preview changes without running Hugo locally or waiting for CI.
 
-**Maintenance burden:** Medium. The Actions workflow is simple and reliable once written, but a non-developer cannot do a quick GitHub UI edit and immediately see it render correctly — they have to trust the pipeline or wait.
+**Maintenance burden:** Medium. The Actions workflow is simple and reliable once written, but a non-developer cannot do a quick GitHub UI edit and immediately see it render correctly; they have to trust the pipeline or wait.
 
 **Developer skill required:** Low-to-medium. Hugo itself is learnable in a day, but the Go template syntax has a steeper curve than Liquid.
 
@@ -56,7 +56,7 @@
 
 **Maintenance burden:** High at scale. Low at MVP. The crossover point is approximately 6-8 pages.
 
-**Developer skill required:** Low for initial build. The problem is non-developer maintainability — editing raw HTML is error-prone for people who do not code.
+**Developer skill required:** Low for initial build. The problem is non-developer maintainability; editing raw HTML is error-prone for people who do not code.
 
 **GitHub Pages compatibility:** Native. Perfect. Just files.
 
@@ -65,9 +65,9 @@
 ### Astro
 **Pros:** Modern, component-based, ships zero JS by default (fully static). Excellent Core Web Vitals out of the box. Supports Markdown and MDX. Component model is clean. Growing ecosystem.
 
-**Cons:** Requires a build step and GitHub Actions workflow. Newer than Hugo or Jekyll — less battle-tested at scale. A non-developer editing MDX files in the GitHub UI is workable but not frictionless. Framework updates are more frequent.
+**Cons:** Requires a build step and GitHub Actions workflow. Newer than Hugo or Jekyll; less battle-tested at scale. A non-developer editing MDX files in the GitHub UI is workable but not frictionless. Framework updates are more frequent.
 
-**Maintenance burden:** Medium. Similar to Hugo — the Actions pipeline is reliable, but local development requires a Node environment.
+**Maintenance burden:** Medium. Similar to Hugo; the Actions pipeline is reliable, but local development requires a Node environment.
 
 **Developer skill required:** Medium. React/Vue component patterns help. JSX syntax for layout files.
 
@@ -87,7 +87,7 @@
 
 4. **The Actions workflow is one file and is permanent.** Write it once, never touch it again. This is not a meaningful ongoing maintenance burden.
 
-5. **Theme ecosystem.** Hugo themes like PaperMod and Blist are actively maintained, load fast, and look credible — not like a Bootstrap 3 template from 2015.
+5. **Theme ecosystem.** Hugo themes like PaperMod and Blist are actively maintained, load fast, and look credible: not like a Bootstrap 3 template from 2015.
 
 **What to use alongside Hugo:**
 - **Decap CMS** (open source, GitHub-backed storage) for non-developer content editing
@@ -104,13 +104,13 @@
 
 **The site should be primarily in Dutch.** The rationale:
 
-The primary buyer is a Dutch construction procurement manager or a gemeente procurement officer. When they search, they search in Dutch. "Inkoop software bouw" gets searched; "construction procurement software Netherlands" does not — that is what their IT manager might type, but the decision-maker searches in their own language.
+The primary buyer is a Dutch construction procurement manager or a gemeente procurement officer. When they search, they search in Dutch. "Inkoop software bouw" gets searched; "construction procurement software Netherlands" does not; that is what their IT manager might type, but the decision-maker searches in their own language.
 
-Dutch is also a trust signal. A site in English for a Dutch company targeting Dutch public sector clients signals that you are not really a Dutch company. The Aanbestedingswet, CPR 2024, and CSRD are Dutch regulatory contexts — they should be discussed in Dutch.
+Dutch is also a trust signal. A site in English for a Dutch company targeting Dutch public sector clients signals that you are not really a Dutch company. The Aanbestedingswet, CPR 2024, and CSRD are Dutch regulatory contexts; they should be discussed in Dutch.
 
 **English landing pages for secondary traffic sources:**
-- `/en/` — English homepage for investors, international partners, and EU municipality visitors
-- `/en/research/` — The Skanska/Hamppi research summary in English (this is the most citeable content internationally)
+- `/en/`: English homepage for investors, international partners, and EU municipality visitors
+- `/en/research/`: The Skanska/Hamppi research summary in English (this is the most citeable content internationally)
 - All blog content in Dutch, with selected posts available in English translation
 
 **Hugo handles this natively.** The `content/nl/` and `content/en/` directory structure with hreflang tags is a standard Hugo configuration.
@@ -121,7 +121,7 @@ Dutch is also a trust signal. A site in English for a Dutch company targeting Du
 
 These are the queries where Dundir can realistically rank within 12-18 months given a new domain. They are chosen for intent match (procurement managers comparing tools or looking for solutions to specific problems), manageable competition (no well-funded incumbents dominating Dutch SERPs for these exact phrases), and alignment with Dundir's content authority.
 
-**Dutch — Tier 1 (primary targets, homepage and core pages)**
+**Dutch; Tier 1 (primary targets, homepage and core pages)**
 
 | Keyword (Dutch) | English translation | Intent | Rationale |
 |---|---|---|---|
@@ -131,7 +131,7 @@ These are the queries where Dundir can realistically rank within 12-18 months gi
 | aanbestedingsrapportage software gemeente | tendering report software municipality | Commercial | Municipality segment, high compliance intent |
 | AI inkoop gemeente aanbestedingswet | AI procurement municipality aanbestedingswet | Commercial | Regulatory keyword; high specificity, low competition |
 
-**Dutch — Tier 2 (blog and resource content, educational intent)**
+**Dutch; Tier 2 (blog and resource content, educational intent)**
 
 | Keyword (Dutch) | English translation | Intent |
 |---|---|---|
@@ -143,7 +143,7 @@ These are the queries where Dundir can realistically rank within 12-18 months gi
 | uitlegbare AI overheidsinkoop | explainable AI public procurement | Informational |
 | gemeentelijke aanbesteding automatisering | municipal tendering automation | Informational |
 
-**English — Secondary targets (for `/en/` pages and research content)**
+**English; Secondary targets (for `/en/` pages and research content)**
 
 | Keyword | Intent |
 |---|---|
@@ -159,25 +159,25 @@ These are the queries where Dundir can realistically rank within 12-18 months gi
 
 These are high-intent queries with very low competition. Each is a viable standalone blog post or FAQ entry. They represent the specific, contextual searches made by people who already know the problem exists and are researching solutions.
 
-1. "hoeveel tijd besteedt een inkoopmanager aan leveranciersvergelijking" (how much time does a procurement manager spend on supplier comparison) — informational, directly supports the 11-hours-per-week hook
+1. "hoeveel tijd besteedt een inkoopmanager aan leveranciersvergelijking" (how much time does a procurement manager spend on supplier comparison): informational, directly supports the 11-hours-per-week hook
 
-2. "leveranciersrapport aanbestedingswet vereisten gemeente" (supplier report aanbestedingswet requirements municipality) — regulatory, high intent for municipality segment
+2. "leveranciersrapport aanbestedingswet vereisten gemeente" (supplier report aanbestedingswet requirements municipality): regulatory, high intent for municipality segment
 
-3. "AI inkoop tool lokaal geinstalleerd" (AI procurement tool locally installed) — commercial, data sovereignty angle, very low competition
+3. "AI inkoop tool lokaal geinstalleerd" (AI procurement tool locally installed): commercial, data sovereignty angle, very low competition
 
-4. "bouw specificatie naar leverancier koppelen software" (construction specification to supplier matching software) — specific feature query
+4. "bouw specificatie naar leverancier koppelen software" (construction specification to supplier matching software): specific feature query
 
-5. "inkoopdocumentatie auditbestendig maken" (making procurement documentation audit-proof) — pain point query from procurement managers facing audits
+5. "inkoopdocumentatie auditbestendig maken" (making procurement documentation audit-proof): pain point query from procurement managers facing audits
 
-6. "CSRD rapportage leveranciers bouwbedrijf" (CSRD reporting suppliers construction company) — regulatory, growing search volume as CSRD deadlines approach
+6. "CSRD rapportage leveranciers bouwbedrijf" (CSRD reporting suppliers construction company): regulatory, growing search volume as CSRD deadlines approach
 
-7. "aanbestedingssoftware gemeente vergelijken" (compare tendering software municipalities) — comparison intent, late-stage buyer
+7. "aanbestedingssoftware gemeente vergelijken" (compare tendering software municipalities): comparison intent, late-stage buyer
 
-8. "inkoop AI fout detectie bouw" (procurement AI error detection construction) — connects to the Skanska research (€8,354 error on a single line)
+8. "inkoop AI fout detectie bouw" (procurement AI error detection construction): connects to the Skanska research (€8,354 error on a single line)
 
-9. "leverancierskwalificatie certificaten automatisch controleren" (supplier qualification automatic certificate check) — feature-specific, high intent
+9. "leverancierskwalificatie certificaten automatisch controleren" (supplier qualification automatic certificate check): feature-specific, high intent
 
-10. "bouw inkoop zonder spreadsheets" (construction procurement without spreadsheets) — pain-point lead, educational intent
+10. "bouw inkoop zonder spreadsheets" (construction procurement without spreadsheets): pain-point lead, educational intent
 
 ---
 
@@ -187,16 +187,16 @@ Each post below is mapped to a bowtie stage, a keyword cluster, and a specific a
 
 **Priority 1: Foundational content (publish at launch)**
 
-**Post 1 — "Generieke AI maakt rekenfouten bij bouwinkoop. Wat dat betekent voor uw aanbestedingsdossier."**
+**Post 1; "Generieke AI maakt rekenfouten bij bouwinkoop. Wat dat betekent voor uw aanbestedingsdossier."**
 - Bowtie stage: Awareness / Education
 - Primary keyword: AI inkoop fout bouw
 - Audience: Construction procurement managers, municipality procurement officers
-- Angle: Summarise the Skanska/Hamppi 2025 experiment. A generic enterprise AI tool gave different numerical outputs for identical inputs — variance up to €8,354 on a single procurement line. What does this mean for your documentation? For a municipality, a wrong number in an aanbesteding dossier is not a cost — it is a legal liability.
+- Angle: Summarise the Skanska/Hamppi 2025 experiment. A generic enterprise AI tool gave different numerical outputs for identical inputs: variance up to €8,354 on a single procurement line. What does this mean for your documentation? For a municipality, a wrong number in an aanbesteding dossier is not a cost: it is a legal liability.
 - Why it ranks: No Dutch-language coverage of this research exists. It is citable, specific, and alarming to the exact audience.
 - Target length: 1,200-1,500 words
 - CTA: Link to the procurement pain scan
 
-**Post 2 — "11 uur per week. Wat spreadsheet-inkoop uw organisatie echt kost."**
+**Post 2; "11 uur per week. Wat spreadsheet-inkoop uw organisatie echt kost."**
 - Bowtie stage: Education / Pain
 - Primary keyword: inkoopmanager tijdverspilling bouw
 - Audience: Construction company directors and procurement managers
@@ -204,8 +204,8 @@ Each post below is mapped to a bowtie stage, a keyword cluster, and a specific a
 - Target length: 900-1,200 words
 - CTA: Run the procurement pain scan to get your personalised figure
 
-**Post 3 — "CPR 2024 en CSRD: wat betekent dit voor uw inkooprapportage?"**
-- Bowtie stage: Education — Regulatory urgency
+**Post 3; "CPR 2024 en CSRD: wat betekent dit voor uw inkooprapportage?"**
+- Bowtie stage: Education: Regulatory urgency
 - Primary keyword: CPR 2024 CSRD inkoop bouw
 - Audience: Construction company compliance managers, municipality procurement officers
 - Angle: Plain-language explanation of what CPR 2024 and CSRD Scope 3 require in practice from a procurement documentation perspective. What does "auditbestendig" mean in this context? What happens if you cannot show your working in a CSRD report?
@@ -214,7 +214,7 @@ Each post below is mapped to a bowtie stage, a keyword cluster, and a specific a
 
 **Priority 2: Comparison and validation content (publish months 2-3)**
 
-**Post 4 — "Onventis, SAP Ariba, of iets anders? Een eerlijk overzicht voor Nederlandse bouwbedrijven."**
+**Post 4; "Onventis, SAP Ariba, of iets anders? Een eerlijk overzicht voor Nederlandse bouwbedrijven."**
 - Bowtie stage: Selection
 - Primary keyword: aanbestedingssoftware bouw vergelijken
 - Audience: Construction company procurement directors evaluating software
@@ -222,14 +222,14 @@ Each post below is mapped to a bowtie stage, a keyword cluster, and a specific a
 - Note: This is a comparison post, not a hit piece. Be factually accurate on competitors.
 - Target length: 1,500 words
 
-**Post 5 — "Uitlegbare AI: waarom gemeenten niet kunnen vertrouwen op een black box."**
+**Post 5; "Uitlegbare AI: waarom gemeenten niet kunnen vertrouwen op een black box."**
 - Bowtie stage: Education / Selection
 - Primary keyword: uitlegbare AI overheidsinkoop gemeente
 - Audience: Municipality IT and procurement decision-makers
 - Angle: EU AI Act, Aanbestedingswet audit requirements, and public accountability mean that a municipality cannot use an AI system that cannot explain its reasoning. What does explainability mean technically? What questions should a municipality ask any AI vendor?
 - Target length: 1,200-1,500 words
 
-**Post 6 — "Hoe een bouwbedrijf van 120 medewerkers zijn inkoopproces in 8 weken digitaliseerde."**
+**Post 6; "Hoe een bouwbedrijf van 120 medewerkers zijn inkoopproces in 8 weken digitaliseerde."**
 - Bowtie stage: Selection / Impact (use as a case study when first pilot client is available)
 - Primary keyword: inkoop digitaliseren bouwbedrijf
 - Note: This is a case study format. Do not publish until there is a real client willing to be named or quoted. A fictional case study will destroy the trust signal it is trying to create.
@@ -254,8 +254,8 @@ GitHub Pages introduces specific constraints and defaults that require explicit 
 
 **Indexability**
 
-- [ ] Set canonical tags on every page. Hugo themes include this by default in the `<head>` partial — verify it is present and self-referencing.
-- [ ] www vs non-www: Choose one and enforce it at the DNS/GitHub Pages level. Redirect the other. Use `dundir.nl` (non-www) as the canonical form — it is shorter and consistent with the majority of Dutch company domains.
+- [ ] Set canonical tags on every page. Hugo themes include this by default in the `<head>` partial: verify it is present and self-referencing.
+- [ ] www vs non-www: Choose one and enforce it at the DNS/GitHub Pages level. Redirect the other. Use `dundir.nl` (non-www) as the canonical form: it is shorter and consistent with the majority of Dutch company domains.
 - [ ] Set `noindex` explicitly only on the thank-you page after the pain scan form submission. All other pages should be indexable.
 - [ ] No parameter URLs. Hugo generates clean paths by default. Do not add UTM parameters to internal links.
 - [ ] Implement hreflang tags correctly if running Dutch and English content. Hugo's multilingual mode generates these automatically when properly configured:
@@ -268,30 +268,30 @@ GitHub Pages introduces specific constraints and defaults that require explicit 
 **Security and HTTPS**
 
 - [ ] GitHub Pages provides HTTPS via Let's Encrypt automatically for custom domains. Enable "Enforce HTTPS" in repository settings.
-- [ ] GitHub Pages does NOT support custom security headers (Content-Security-Policy, HSTS, etc.) on the free tier. For a launch site this is acceptable — revisit if moving to Cloudflare Pages or Netlify where headers can be set via config files.
+- [ ] GitHub Pages does NOT support custom security headers (Content-Security-Policy, HSTS, etc.) on the free tier. For a launch site this is acceptable: revisit if moving to Cloudflare Pages or Netlify where headers can be set via config files.
 - [ ] Mixed content: Ensure all external resources (fonts, scripts, images) are loaded via HTTPS. No `http://` references anywhere.
 
 **URL Structure**
 
-- [ ] Use clean Dutch slugs: `/inkoop-pijnscan/` not `/procurement-pain-scan/` — the primary audience searches in Dutch
+- [ ] Use clean Dutch slugs: `/inkoop-pijnscan/` not `/procurement-pain-scan/`: the primary audience searches in Dutch
 - [ ] Keep slugs short and descriptive: `/blog/ai-inkoopfouten-bouw/` not `/blog/2026/05/14/generieke-ai-maakt-rekenfouten-bij-bouwinkoop/`
 - [ ] No trailing slash inconsistency. Hugo defaults to `uglyURLs = false` (clean URLs with directory index). Keep this. `dundir.nl/over-ons/` is correct. Do not mix `dundir.nl/over-ons` and `dundir.nl/over-ons/`.
 
 **Mobile Optimisation**
 
-- [ ] Viewport meta tag: `<meta name="viewport" content="width=device-width, initial-scale=1">` — present in every Hugo base template by default, but verify
+- [ ] Viewport meta tag: `<meta name="viewport" content="width=device-width, initial-scale=1">`: present in every Hugo base template by default, but verify
 - [ ] Google indexes the mobile version exclusively (mobile-first indexing, 100% complete July 2024). Every design decision must start from the mobile view.
-- [ ] Touch targets: All buttons and links must be minimum 48x48px with 8px spacing — especially the primary CTA button on mobile
+- [ ] Touch targets: All buttons and links must be minimum 48x48px with 8px spacing: especially the primary CTA button on mobile
 - [ ] Base font size: 16px minimum. Do not use 14px body text to make a page look dense and professional. It fails both mobile readability and accessibility.
-- [ ] Test on a mid-range Android phone (not just iPhone) — the construction site buyer is often on a Samsung A-series device on a slow 4G connection, not a MacBook on WiFi.
+- [ ] Test on a mid-range Android phone (not just iPhone): the construction site buyer is often on a Samsung A-series device on a slow 4G connection, not a MacBook on WiFi.
 
 **Open Graph and Social Tags**
 
-Every page needs full OG and Twitter Card tags. Hugo themes include these by default but they use the page title and description as fallbacks — override them with specific social copy for the homepage and key landing pages.
+Every page needs full OG and Twitter Card tags. Hugo themes include these by default but they use the page title and description as fallbacks; override them with specific social copy for the homepage and key landing pages.
 
 ```html
 <!-- Homepage example -->
-<meta property="og:title" content="Dundir — AI inkooptool voor de bouwsector" />
+<meta property="og:title" content="Dundir; AI inkooptool voor de bouwsector" />
 <meta property="og:description" content="Stop met spreadsheets. Dundir vindt de mathematisch optimale leverancierscombinatie voor uw bouwproject en legt elke beslissing auditbestendig vast." />
 <meta property="og:image" content="https://dundir.nl/images/og-homepage.png" />
 <meta property="og:url" content="https://dundir.nl/" />
@@ -300,7 +300,7 @@ Every page needs full OG and Twitter Card tags. Hugo themes include these by def
 <meta name="twitter:card" content="summary_large_image" />
 ```
 
-OG image specification: 1200x630px, WebP format. Show the product interface or a clear visual metaphor — not a stock photo of a building site. The image is the first thing a Dutch procurement manager sees when someone shares a link in a WhatsApp group or LinkedIn post.
+OG image specification: 1200x630px, WebP format. Show the product interface or a clear visual metaphor; not a stock photo of a building site. The image is the first thing a Dutch procurement manager sees when someone shares a link in a WhatsApp group or LinkedIn post.
 
 **IndexNow**
 
@@ -319,7 +319,7 @@ Dundir is not a local service business (it does not have a physical storefront p
 
 **Dutch-language entity signals**
 
-- Include the company's full legal name, KvK number, BTW number (once registered), and physical address (Windesheim Zwolle anchor) in the footer and on the contact page. This is a standard Dutch business trust signal — B2B buyers check it.
+- Include the company's full legal name, KvK number, BTW number (once registered), and physical address (Windesheim Zwolle anchor) in the footer and on the contact page. This is a standard Dutch business trust signal: B2B buyers check it.
 - Submit to Dutch business directories: Bedrijfsgids.nl, KvK.nl company profile, LinkedIn company page with Dutch language content.
 
 **Regulatory keyword authority**
@@ -385,7 +385,7 @@ All schema should be implemented as JSON-LD in the `<head>` of each page. Hugo a
     "Linear optimisation and evolutionary algorithm supplier matching",
     "Specification-to-supplier AI matching",
     "Audit-ready procurement documentation",
-    "Local deployment — data never leaves your server",
+    "Local deployment; data never leaves your server",
     "Per-client fine-tuned model",
     "Aanbestedingswet and CPR 2024 compliant output"
   ],
@@ -423,7 +423,7 @@ Note: Google restricts FAQPage rich results to authoritative government and heal
       "name": "Wat betekent 'uitlegbare AI' in de context van inkoop?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dundir's optimizer is deterministisch: voor dezelfde invoer geeft het altijd dezelfde uitvoer, en het toont zijn rekenwerk. Elke leveranciersselectie wordt onderbouwd met de gewogen criteria die u heeft ingesteld. Dit in tegenstelling tot generieke LLM-tools die bij identieke invoer verschillende uitkomsten geven — soms met afwijkingen tot €8.354 op een enkele inkooppost (Skanska/Hamppi, Aalto University, 2025)."
+        "text": "Dundir's optimizer is deterministisch: voor dezelfde invoer geeft het altijd dezelfde uitvoer, en het toont zijn rekenwerk. Elke leveranciersselectie wordt onderbouwd met de gewogen criteria die u heeft ingesteld. Dit in tegenstelling tot generieke LLM-tools die bij identieke invoer verschillende uitkomsten geven; soms met afwijkingen tot €8.354 op een enkele inkooppost (Skanska/Hamppi, Aalto University, 2025)."
       }
     }
   ]
@@ -470,15 +470,15 @@ Using the three-variant framework (benefit lead, question hook, social proof / s
 #### Homepage (dundir.nl)
 
 **Title options:**
-- V1 (Benefit lead): `Dundir — Auditbestendig inkopen voor de bouwsector` (51 chars) RECOMMENDED
+- V1 (Benefit lead): `Dundir: Auditbestendig inkopen voor de bouwsector` (51 chars) RECOMMENDED
 - V2 (Pain point): `Stop met spreadsheets. AI inkooptool voor aannemers` (52 chars)
 - V3 (Specificity): `11 uur per week verspild aan inkoop? Dundir lost dat op` (56 chars)
 
 **Meta description options:**
-- V1 (Benefit lead): `Dundir vindt de mathematisch optimale leverancierscombinatie voor uw bouwproject en legt elke beslissing auditbestendig vast. Lokale AI, geen clouddata. Ontdek meer.` (165 chars — trim slightly)
+- V1 (Benefit lead): `Dundir vindt de mathematisch optimale leverancierscombinatie voor uw bouwproject en legt elke beslissing auditbestendig vast. Lokale AI, geen clouddata. Ontdek meer.` (165 chars: trim slightly)
   - Trimmed: `Dundir vindt de optimale leverancierscombinatie voor uw bouwproject en legt elke beslissing auditbestendig vast. Lokale AI, geen clouddata. Ontdek meer.` (153 chars) RECOMMENDED
 - V2 (Question hook): `Vergelijkt u nog steeds leveranciers in Excel? Dundir vervangt spreadsheets door een deterministisch AI-model dat uw inkoophistorie kent. Vraag een demo aan.` (159 chars)
-- V3 (Specificity): `Een Skanska-experiment toonde fouten tot €8.354 per inkooppost bij generieke AI. Dundir is deterministisch, uitlegbaar en auditbestendig. Bekijk hoe het werkt.` (161 chars — trim)
+- V3 (Specificity): `Een Skanska-experiment toonde fouten tot €8.354 per inkooppost bij generieke AI. Dundir is deterministisch, uitlegbaar en auditbestendig. Bekijk hoe het werkt.` (161 chars: trim)
   - Trimmed: `Skanska-onderzoek: generieke AI maakt fouten tot €8.354 per inkooppost. Dundir is deterministisch, uitlegbaar en auditbestendig. Bekijk hoe het werkt.` (151 chars)
 
 **OG description (social):** `Bouwinkoop hoort geen spreadsheet-werk te zijn. Dundir's AI optimaliseert uw leveranciersselectie, legt het auditbestendig vast, en draait op uw eigen server. Geen clouddata.`
@@ -488,12 +488,12 @@ Using the three-variant framework (benefit lead, question hook, social proof / s
 #### Product page (/product/ or /hoe-het-werkt/)
 
 **Title options:**
-- V1 (Benefit lead): `Hoe Dundir werkt — Deterministisch AI voor bouwinkoop` (54 chars) RECOMMENDED
+- V1 (Benefit lead): `Hoe Dundir werkt: Deterministisch AI voor bouwinkoop` (54 chars) RECOMMENDED
 - V2 (Feature lead): `AI leveranciersselectie die zijn rekenwerk toont` (49 chars)
 - V3 (Specificity): `Lokaal geinstalleerde AI die uw inkoophistorie kent` (52 chars)
 
 **Meta description options:**
-- V1 (Benefit lead): `De Dundir optimizer combineert lineaire optimalisatie met een per-klant gefinetuned AI-model. Elke selectie is volledig gedocumenteerd. Lokale installatie, geen clouddienst.` (173 chars — trim)
+- V1 (Benefit lead): `De Dundir optimizer combineert lineaire optimalisatie met een per-klant gefinetuned AI-model. Elke selectie is volledig gedocumenteerd. Lokale installatie, geen clouddienst.` (173 chars: trim)
   - Trimmed: `Dundir combineert lineaire optimalisatie met een per-klant gefinetuned AI. Elke leveranciersselectie is gedocumenteerd en auditbestendig. Lokale installatie.` (158 chars) RECOMMENDED
 - V2 (Question hook): `Hoe weet u zeker dat uw AI-inkooptool de juiste keuze maakt? Dundir toont zijn rekenwerk bij elke aanbeveling. Geschikt voor gemeenten en aannemers.` (149 chars)
 - V3 (Specificity): `Dundir verwerkt uw specificaties, uw leveranciersdata en uw gewogen criteria tot een auditbestendig rapport in minuten. Lokaal. Deterministisch. Uitlegbaar.` (156 chars)
@@ -503,12 +503,12 @@ Using the three-variant framework (benefit lead, question hook, social proof / s
 #### Municipality page (/gemeenten/)
 
 **Title options:**
-- V1 (Benefit lead): `Dundir voor Gemeenten — Uitlegbare AI voor aanbestedingen` (57 chars) RECOMMENDED
+- V1 (Benefit lead): `Dundir voor Gemeenten: Uitlegbare AI voor aanbestedingen` (57 chars) RECOMMENDED
 - V2 (Regulatory): `Aanbestedingswet-conforme AI inkoop voor gemeenten` (50 chars)
 - V3 (Pain point): `Geen black-box AI voor gemeentelijke inkoop meer` (49 chars)
 
 **Meta description options:**
-- V1 (Benefit lead): `Dundir helpt Nederlandse gemeenten bij inkoop- en aanbestedingsrapportages die voldoen aan de Aanbestedingswet en CPR 2024. Volledig uitlegbare AI, lokale installatie.` (165 chars — trim)
+- V1 (Benefit lead): `Dundir helpt Nederlandse gemeenten bij inkoop- en aanbestedingsrapportages die voldoen aan de Aanbestedingswet en CPR 2024. Volledig uitlegbare AI, lokale installatie.` (165 chars: trim)
   - Trimmed: `Dundir helpt gemeenten bij inkoop die voldoet aan de Aanbestedingswet en CPR 2024. Volledig uitlegbare AI, lokale installatie, geen clouddata.` (142 chars) RECOMMENDED
 - V2 (Question hook): `Kan een gemeente een AI-inkooptool gebruiken die zijn beslissingen niet uitlegt? Nee. Dundir is deterministisch, auditbestendig en lokaal deployed.` (147 chars)
 - V3 (Specificity): `342 Nederlandse gemeenten hebben dezelfde documentatieverplichting. Dundir levert auditbestendig inkoopdossier voor elke aanbesteding. Vraag een gesprek aan.` (157 chars)
@@ -518,7 +518,7 @@ Using the three-variant framework (benefit lead, question hook, social proof / s
 #### Construction companies page (/aannemers/)
 
 **Title options:**
-- V1 (Benefit lead): `Dundir voor Aannemers — Slimmere leveranciersselectie` (53 chars) RECOMMENDED
+- V1 (Benefit lead): `Dundir voor Aannemers: Slimmere leveranciersselectie` (53 chars) RECOMMENDED
 - V2 (Pain point): `Minder tijd aan inkoop, betere leveranciersdossiers` (52 chars)
 - V3 (ROI): `€49.500 per jaar verspild aan spreadsheet-inkoop?' (50 chars)
 
@@ -532,7 +532,7 @@ Using the three-variant framework (benefit lead, question hook, social proof / s
 #### Procurement pain scan (/inkoop-pijnscan/)
 
 **Title options:**
-- V1 (Benefit lead): `Inkoop Pijnscan — Bereken wat slechte inkoop u kost` (51 chars) RECOMMENDED
+- V1 (Benefit lead): `Inkoop Pijnscan: Bereken wat slechte inkoop u kost` (51 chars) RECOMMENDED
 - V2 (Action): `Wat kost uw inkoopproces echt? Doe de pijnscan` (47 chars)
 - V3 (Specificity): `5 vragen. Uw persoonlijke inkooprisicoanalyse.` (47 chars)
 
@@ -546,8 +546,8 @@ Using the three-variant framework (benefit lead, question hook, social proof / s
 #### About / Team page (/over-ons/)
 
 **Title options:**
-- V1 (Credibility lead): `Over Dundir — Het team achter de bouwinkoop-AI` (47 chars) RECOMMENDED
-- V2 (Mission): `Dundir — AI voor bouwinkoop gebouwd door domeinexperts` (55 chars)
+- V1 (Credibility lead): `Over Dundir: Het team achter de bouwinkoop-AI` (47 chars) RECOMMENDED
+- V2 (Mission): `Dundir: AI voor bouwinkoop gebouwd door domeinexperts` (55 chars)
 
 **Meta description options:**
 - V1 (Benefit lead): `Dundir is gebouwd door bouw- en inkoopexperts, niet door een generieke AI-startup. Ontmoet het team en lees waarom we dit probleem aanpakken.` (141 chars) RECOMMENDED
@@ -557,7 +557,7 @@ Using the three-variant framework (benefit lead, question hook, social proof / s
 
 #### Blog index (/blog/)
 
-**Title:** `Blog — Inkoop en AI in de bouwsector | Dundir` (47 chars)
+**Title:** `Blog - Inkoop en AI in de bouwsector | Dundir` (47 chars)
 
 **Meta description:** `Praktisch inzicht over inkoopdigitalisering, aanbestedingswetgeving en AI in de bouw. Geschreven voor inkoopmanagers en gemeentelijk inkopers in Nederland.` (158 chars)
 
@@ -567,7 +567,7 @@ Using the three-variant framework (benefit lead, question hook, social proof / s
 
 ### Core Web Vitals Targets
 
-A static Hugo site on GitHub Pages, served over Cloudflare (recommended as a CDN layer), should achieve the following with proper implementation. These are targets, not defaults — they require deliberate asset management.
+A static Hugo site on GitHub Pages, served over Cloudflare (recommended as a CDN layer), should achieve the following with proper implementation. These are targets, not defaults; they require deliberate asset management.
 
 | Metric | Google Target | Dundir Target | Notes |
 |---|---|---|---|
@@ -591,7 +591,7 @@ A static Hugo site on GitHub Pages, served over Cloudflare (recommended as a CDN
 
 ### Accessibility: WCAG 2.1 AA
 
-This is not optional. Dutch municipalities are legally required to comply with the Web Content Accessibility Guidelines (WCAG 2.1 AA) under the Tijdelijk besluit digitale toegankelijkheid overheid (Besluit 2018, updated 2022). Any vendor site they evaluate will be scrutinised for accessibility signals — a site with obvious accessibility failures sends the wrong signal to the exact audience being targeted.
+This is not optional. Dutch municipalities are legally required to comply with the Web Content Accessibility Guidelines (WCAG 2.1 AA) under the Tijdelijk besluit digitale toegankelijkheid overheid (Besluit 2018, updated 2022). Any vendor site they evaluate will be scrutinised for accessibility signals; a site with obvious accessibility failures sends the wrong signal to the exact audience being targeted.
 
 **Required from day one:**
 
@@ -605,14 +605,14 @@ This is not optional. Dutch municipalities are legally required to comply with t
 **Keyboard navigation**
 - Every interactive element (navigation, buttons, form fields, the pain scan) must be reachable and operable via keyboard alone
 - Tab order must follow visual reading order
-- Focus indicators must be visible — do not suppress the browser default outline without replacing it with a custom visible focus style
-- The pain scan is the highest-risk element for keyboard accessibility — test it explicitly
+- Focus indicators must be visible: do not suppress the browser default outline without replacing it with a custom visible focus style
+- The pain scan is the highest-risk element for keyboard accessibility: test it explicitly
 
 **Images**
 - Every `<img>` must have an `alt` attribute
 - Decorative images (background, dividers): `alt=""`
 - Informative images (charts, product screenshots): descriptive alt text that conveys the information the image conveys
-- Never use "image of..." or "photo of..." as alt text prefix — screen readers already announce the image type
+- Never use "image of..." or "photo of..." as alt text prefix: screen readers already announce the image type
 
 **Semantic HTML structure**
 - One `<h1>` per page, matching the page's primary topic
@@ -620,7 +620,7 @@ This is not optional. Dutch municipalities are legally required to comply with t
 - Navigation in `<nav>` element with an `aria-label` if multiple nav elements exist
 - Main content in `<main>`
 - Footer in `<footer>`
-- Form fields must have associated `<label>` elements — not placeholder text as a substitute for labels
+- Form fields must have associated `<label>` elements: not placeholder text as a substitute for labels
 
 **Language declaration**
 - `<html lang="nl">` for Dutch pages
@@ -650,8 +650,8 @@ Dutch accessibility law (Besluit digitale toegankelijkheid) requires public sect
 ### Image and Asset Optimisation
 
 **Image format strategy:**
-- WebP for all photographs and complex images — 25-35% smaller than JPEG at equivalent quality
-- SVG for logos, icons, and illustrations — resolution-independent, tiny file size
+- WebP for all photographs and complex images: 25-35% smaller than JPEG at equivalent quality
+- SVG for logos, icons, and illustrations: resolution-independent, tiny file size
 - No PNG for photographs (always larger than WebP for equivalent quality)
 - No GIF for anything (use CSS animation or a lightweight video file if motion is needed)
 
@@ -668,19 +668,19 @@ For below-fold images, use `loading="lazy"` instead of `loading="eager"`.
 - Hero / above-fold image: maximum 120KB
 - In-content images: maximum 80KB
 - Thumbnails / team photos: maximum 40KB
-- Any single image exceeding 200KB is a performance failure — flag and fix before publishing
+- Any single image exceeding 200KB is a performance failure: flag and fix before publishing
 
 **Font strategy:**
 - Use system font stack as the base body font: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`
-- For headings, a single custom typeface (e.g. Inter or DM Sans) self-hosted as WOFF2 adds approximately 15-25KB — acceptable
+- For headings, a single custom typeface (e.g. Inter or DM Sans) self-hosted as WOFF2 adds approximately 15-25KB: acceptable
 - Never load more than one custom typeface family at weights that are not used on the page
 - Preload the primary font file: `<link rel="preload" href="/fonts/inter-bold.woff2" as="font" type="font/woff2" crossorigin>`
 
 **JavaScript budget:**
 - Total JavaScript on the homepage: target under 30KB minified and gzipped
 - The pain scan page can carry more (40-60KB) given the interactive requirement
-- Zero JavaScript on the blog post pages — static content should be purely HTML and CSS
-- No analytics JavaScript that blocks rendering — use Plausible or Fathom (both privacy-first, GDPR-compliant without a cookie banner, Dutch data processing agreements available) loaded asynchronously
+- Zero JavaScript on the blog post pages: static content should be purely HTML and CSS
+- No analytics JavaScript that blocks rendering: use Plausible or Fathom (both privacy-first, GDPR-compliant without a cookie banner, Dutch data processing agreements available) loaded asynchronously
 
 ---
 
@@ -703,7 +703,7 @@ When setting up the Hugo site, work in this order to avoid rework:
 
 ## Notes for Other Planning Agents
 
-- The **scan agent** (03) should be aware that the pain scan page (`/inkoop-pijnscan/`) must have `noindex` on the thank-you confirmation page only, not on the scan entry page. The scan entry page should be indexed — it is a high-intent landing page.
-- The **copy agent** (04) can use the meta title and description variants in this document as the authoritative SEO copy — do not write competing versions without consulting this document.
+- The **scan agent** (03) should be aware that the pain scan page (`/inkoop-pijnscan/`) must have `noindex` on the thank-you confirmation page only, not on the scan entry page. The scan entry page should be indexed: it is a high-intent landing page.
+- The **copy agent** (04) can use the meta title and description variants in this document as the authoritative SEO copy: do not write competing versions without consulting this document.
 - The **structure agent** (02) should note that the URL slug convention is Dutch: `/gemeenten/`, `/aannemers/`, `/over-ons/`, `/inkoop-pijnscan/`, `/blog/`. No English slugs on Dutch-primary pages.
 - The **journey agent** (01) should note that the blog posts mapped to bowtie stages in the Content SEO section of this document are the primary organic entry points for the Awareness and Education stages.

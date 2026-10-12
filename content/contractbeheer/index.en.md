@@ -1,5 +1,5 @@
 ---
 title: "Contract oversight"
 slug: "contract-oversight"
-description: "Dundir tracks not just the selection decision — it monitors whether suppliers actually deliver what they promised. Certifications, delivery timelines, execution audit trail."
+description: "Dundir logs the initial selection and tracks whether suppliers meet their commitments across certifications, delivery timelines, and audit trails."
 ---

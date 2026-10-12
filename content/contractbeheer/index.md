@@ -1,4 +1,4 @@
 ---
 title: "Contractbeheer"
-description: "Dundir legt niet alleen de selectiebeslissing vast — het volgt ook op of leveranciers daadwerkelijk leveren wat ze beloofd hebben. Certificeringen, levertijden, uitvoeringsauditspoor."
+description: "Dundir legt de selectiebeslissing vast en controleert of leveranciers hun afspraken nakomen op het gebied van certificeringen, levertijden en uitvoeringsaudittrails."
 ---
