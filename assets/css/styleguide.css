@@ -70,6 +70,7 @@
   --icon-sm: 16px;
   --icon-md: 20px;
   --icon-lg: 24px;
+  --icon-stroke: 2px;
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --t-fast: 160ms;
@@ -312,7 +313,7 @@ a { color: inherit; }
 .block dt { font: var(--t-xs) var(--f-mono); color: var(--text-dim); }
 .block dd { margin: var(--s-1) 0 0; font-weight: var(--w-semi); }
 
-.icon { width: var(--icon, var(--icon-lg)); height: var(--icon, var(--icon-lg)); stroke-width: var(--stroke); flex: none; }
+.icon { width: var(--icon, var(--icon-lg)); height: var(--icon, var(--icon-lg)); stroke-width: var(--icon-stroke); flex: none; }
 .icon-sizes { display: flex; flex-wrap: wrap; gap: var(--s-6); margin-bottom: var(--s-6); }
 .icon-size { margin: 0; display: flex; align-items: center; gap: var(--s-4); }
 .icon-size figcaption { font: var(--t-xs) var(--f-mono); color: var(--text-dim); }

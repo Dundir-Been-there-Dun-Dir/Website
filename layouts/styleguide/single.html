@@ -269,7 +269,7 @@
     <div class="head">
       <h2 id="icons">Icons</h2>
       <div>
-        <p>Lucide stand-ins for <code>@mui/icons-material</code>. Material icons are filled shapes; a working drawing is lines. Lucide draws on the same 24 grid as Material, line only, in <code>currentColor</code>, so every Material icon has a stand-in that reads like the rest of the sheet. They are set at the stroke weight, never the hair or heavy weight.</p>
+        <p>Lucide stand-ins for <code>@mui/icons-material</code>. Material icons are filled shapes; a working drawing is lines. Lucide draws on the same 24 grid as Material, line only, in <code>currentColor</code>, so every Material icon has a stand-in that reads like the rest of the sheet. They are set at stroke 2, Lucide&#39;s own weight: one step heavier than the drawn lines, so an icon holds next to text and at 16 pixels.</p>
         <span class="ref">Lucide {{ site.Data.icons.version }}, ISC licence, assets/icons/lucide/. Outlined, Rounded, Sharp and TwoTone variants map to the same Lucide icon.</span>
       </div>
     </div>
@@ -283,7 +283,7 @@
     <pre class="icon-code"><code><span class="icon-code__was">import LocalShippingIcon from "@mui/icons-material/LocalShipping";</span>
 import { Truck } from "lucide-react";
 
-&lt;Truck size={24} strokeWidth={1.5} aria-hidden="true" /&gt;</code></pre>
+&lt;Truck size={24} aria-hidden="true" /&gt;</code></pre>
 
     <label class="icon-find"><span>Find a Material name</span><input type="search" id="icon-find" placeholder="LocalShipping, Delete, Warning" autocomplete="off" spellcheck="false"></label>
 
