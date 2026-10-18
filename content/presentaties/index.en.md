@@ -6,17 +6,6 @@ slug: presentations
 lede: Pitch and briefing decks by audience. The decks themselves are in English.
 sections:
 - full: true
-  eyebrow: General
-  cards:
-  - meta: Investors and grants
-    h: The full story
-    p: Problem, product and market, in nine slides.
-    href: presentaties/decks/dundir-investor-pitch/
-    go: View
-    href2: presentaties/decks/dundir-investor-pitch/dundir-pitch.pdf
-    go2: PDF
-- tone: chalk
-  full: true
   eyebrow: For customers
   cards:
   - meta: Segment A
@@ -39,7 +28,8 @@ sections:
     p: For developers steering material procurement across several projects.
     href: presentaties/decks/segment-d-project-developer/
     go: View deck
-- full: true
+- tone: chalk
+  full: true
   eyebrow: For partners
   cards:
   - meta: Segment E

@@ -107,11 +107,15 @@ jobs:
       - name: TEST — No em-dashes in HTML output
         run: |
           echo "Checking for em-dashes (forbidden per copy strategy)..."
-          # Search for em-dash character, &mdash;, and &#8212;
-          if grep -rn --include="*.html" $'—\|&mdash;\|&#8212;' public/; then
-            echo "FAIL  Em-dashes found in output — see matches above"
-            exit 1
-          fi
+          # Em-dash, &mdash; and &#8212; in page text. Script bodies are skipped:
+          # Quarto inlines reveal.js plugins whose code contains the character.
+          python3 - <<'PY'
+          import pathlib, re, sys
+          bad = [str(p) for p in pathlib.Path("public").rglob("*.html")
+                 if re.search("\u2014|&mdash;|&#8212;", re.sub(r"(?is)<script\b.*?</script>", "", p.read_text(errors="ignore")))]
+          print("\n".join(bad))
+          sys.exit(1 if bad else 0)
+          PY
           echo "  OK  No em-dashes found"
 
       - name: TEST — No forbidden marketing phrases
