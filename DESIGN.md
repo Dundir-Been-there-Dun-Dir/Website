@@ -52,8 +52,8 @@ Everything below describes the earlier directions and is kept as history.
 
 **Out of date as of 2026-08-31.** The palette moved to Oranje: navy grounds
 derived from the US, Dutch and Russian flag averages, with `#F36C21` as the
-accent. See `assets/css/palettes/oranje.css` for the derivation and `/ab/` for
-the comparison it came out of. Everything below about layout, type, bands and
+accent. The palette file `oranje.css` and the `/ab/` comparison page were
+removed on 2026-10-18 with the dead fonts; both are in git history. Everything below about layout, type, bands and
 the absence of chrome still holds. The colour sentences do not, and the
 direction needs rewriting to say what navy and Oranje are for the way this
 section said what bitumen and menie were for. That rewrite is a copy job, not a

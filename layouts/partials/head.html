@@ -57,7 +57,7 @@
        file of named colours and nothing else, so switching the site's colours is
        switching which file goes in the middle. */}}
   {{- $fonts := resources.Get "css/fonts.css" -}}
-  {{- $palette := resources.Get (site.Params.palette | default "css/palettes/oranje.css") -}}
+  {{- $palette := resources.Get (site.Params.palette | default "css/palettes/drawing.css") -}}
   {{- $main := resources.Get "css/main.css" -}}
   {{- $figures := resources.Get "css/figures.css" -}}
   {{- $css := slice $fonts $palette $main $figures | resources.Concat "css/dundir.css" | minify | fingerprint -}}
