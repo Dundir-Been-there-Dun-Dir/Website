@@ -1,0 +1,273 @@
+version: 1.59.0
+groups:
+- name: Navigation
+  icons:
+  - mui: Home
+    lucide: house
+    react: House
+  - mui: Menu
+    lucide: menu
+    react: Menu
+  - mui: Close
+    lucide: x
+    react: X
+  - mui: ArrowBack
+    lucide: arrow-left
+    react: ArrowLeft
+  - mui: ArrowForward
+    lucide: arrow-right
+    react: ArrowRight
+  - mui: ArrowUpward
+    lucide: arrow-up
+    react: ArrowUp
+  - mui: ArrowDownward
+    lucide: arrow-down
+    react: ArrowDown
+  - mui: ChevronLeft
+    lucide: chevron-left
+    react: ChevronLeft
+  - mui: ChevronRight
+    lucide: chevron-right
+    react: ChevronRight
+  - mui: ExpandMore
+    lucide: chevron-down
+    react: ChevronDown
+  - mui: ExpandLess
+    lucide: chevron-up
+    react: ChevronUp
+  - mui: OpenInNew
+    lucide: external-link
+    react: ExternalLink
+  - mui: MoreVert
+    lucide: ellipsis-vertical
+    react: EllipsisVertical
+  - mui: MoreHoriz
+    lucide: ellipsis
+    react: Ellipsis
+  - mui: Launch
+    lucide: square-arrow-out-up-right
+    react: SquareArrowOutUpRight
+- name: Actions
+  icons:
+  - mui: Add
+    lucide: plus
+    react: Plus
+  - mui: Remove
+    lucide: minus
+    react: Minus
+  - mui: Edit
+    lucide: pencil
+    react: Pencil
+  - mui: Delete
+    lucide: trash-2
+    react: Trash2
+  - mui: Search
+    lucide: search
+    react: Search
+  - mui: FilterList
+    lucide: list-filter
+    react: ListFilter
+  - mui: Sort
+    lucide: arrow-up-down
+    react: ArrowUpDown
+  - mui: Refresh
+    lucide: refresh-cw
+    react: RefreshCw
+  - mui: ContentCopy
+    lucide: copy
+    react: Copy
+  - mui: Download
+    lucide: download
+    react: Download
+  - mui: Upload
+    lucide: upload
+    react: Upload
+  - mui: Share
+    lucide: share-2
+    react: Share2
+  - mui: Print
+    lucide: printer
+    react: Printer
+  - mui: Save
+    lucide: save
+    react: Save
+  - mui: Send
+    lucide: send
+    react: Send
+  - mui: Logout
+    lucide: log-out
+    react: LogOut
+  - mui: Login
+    lucide: log-in
+    react: LogIn
+  - mui: Settings
+    lucide: settings
+    react: Settings
+- name: Status
+  icons:
+  - mui: Check
+    lucide: check
+    react: Check
+  - mui: CheckCircle
+    lucide: circle-check
+    react: CircleCheck
+  - mui: Error
+    lucide: circle-alert
+    react: CircleAlert
+  - mui: Warning
+    lucide: triangle-alert
+    react: TriangleAlert
+  - mui: Info
+    lucide: info
+    react: Info
+  - mui: HelpOutline
+    lucide: circle-help
+    react: CircleHelp
+  - mui: Block
+    lucide: ban
+    react: Ban
+  - mui: Lock
+    lucide: lock
+    react: Lock
+  - mui: LockOpen
+    lucide: lock-open
+    react: LockOpen
+  - mui: Visibility
+    lucide: eye
+    react: Eye
+  - mui: VisibilityOff
+    lucide: eye-off
+    react: EyeOff
+  - mui: Notifications
+    lucide: bell
+    react: Bell
+  - mui: Schedule
+    lucide: clock
+    react: Clock
+  - mui: HourglassEmpty
+    lucide: hourglass
+    react: Hourglass
+- name: Content
+  icons:
+  - mui: Person
+    lucide: user
+    react: User
+  - mui: Group
+    lucide: users
+    react: Users
+  - mui: Mail
+    lucide: mail
+    react: Mail
+  - mui: Phone
+    lucide: phone
+    react: Phone
+  - mui: CalendarToday
+    lucide: calendar
+    react: Calendar
+  - mui: Description
+    lucide: file-text
+    react: FileText
+  - mui: Folder
+    lucide: folder
+    react: Folder
+  - mui: AttachFile
+    lucide: paperclip
+    react: Paperclip
+  - mui: Image
+    lucide: image
+    react: Image
+  - mui: Link
+    lucide: link
+    react: Link
+  - mui: Language
+    lucide: globe
+    react: Globe
+  - mui: Chat
+    lucide: message-square
+    react: MessageSquare
+  - mui: Dashboard
+    lucide: layout-dashboard
+    react: LayoutDashboard
+  - mui: TableChart
+    lucide: table
+    react: Table
+  - mui: BarChart
+    lucide: chart-column
+    react: ChartColumn
+  - mui: ShowChart
+    lucide: chart-line
+    react: ChartLine
+- name: Construction and procurement
+  icons:
+  - mui: Construction
+    lucide: hard-hat
+    react: HardHat
+  - mui: Engineering
+    lucide: drafting-compass
+    react: DraftingCompass
+  - mui: Handyman
+    lucide: wrench
+    react: Wrench
+  - mui: Business
+    lucide: building-2
+    react: Building2
+  - mui: Factory
+    lucide: factory
+    react: Factory
+  - mui: Apartment
+    lucide: building
+    react: Building
+  - mui: LocalShipping
+    lucide: truck
+    react: Truck
+  - mui: Inventory
+    lucide: package
+    react: Package
+  - mui: Warehouse
+    lucide: warehouse
+    react: Warehouse
+  - mui: Receipt
+    lucide: receipt
+    react: Receipt
+  - mui: RequestQuote
+    lucide: file-spreadsheet
+    react: FileSpreadsheet
+  - mui: Euro
+    lucide: euro
+    react: Euro
+  - mui: Gavel
+    lucide: gavel
+    react: Gavel
+  - mui: Verified
+    lucide: badge-check
+    react: BadgeCheck
+  - mui: Assignment
+    lucide: clipboard-list
+    react: ClipboardList
+  - mui: FactCheck
+    lucide: clipboard-check
+    react: ClipboardCheck
+  - mui: QrCodeScanner
+    lucide: scan-line
+    react: ScanLine
+  - mui: PhotoCamera
+    lucide: camera
+    react: Camera
+  - mui: Straighten
+    lucide: ruler
+    react: Ruler
+  - mui: Map
+    lucide: map
+    react: Map
+  - mui: Place
+    lucide: map-pin
+    react: MapPin
+  - mui: Eco
+    lucide: leaf
+    react: Leaf
+  - mui: Recycling
+    lucide: recycle
+    react: Recycle
+  - mui: Memory
+    lucide: cpu
+    react: Cpu
