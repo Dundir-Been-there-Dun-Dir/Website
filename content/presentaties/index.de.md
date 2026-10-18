@@ -5,17 +5,6 @@ slug: praesentationen
 lede: Pitch- und Briefing-Präsentationen nach Zielgruppe. Die Präsentationen selbst sind auf Englisch.
 sections:
 - full: true
-  eyebrow: Allgemein
-  cards:
-  - meta: Investoren und Fördermittel
-    h: Die ganze Geschichte
-    p: Problem, Produkt und Markt, auf neun Folien.
-    href: presentaties/decks/dundir-investor-pitch/
-    go: Ansehen
-    href2: presentaties/decks/dundir-investor-pitch/dundir-pitch.pdf
-    go2: PDF
-- tone: chalk
-  full: true
   eyebrow: Für Kunden
   cards:
   - meta: Segment A
@@ -38,7 +27,8 @@ sections:
     p: Für Entwickler, die die Materialbeschaffung über mehrere Projekte hinweg steuern.
     href: presentaties/decks/segment-d-project-developer/
     go: Präsentation ansehen
-- full: true
+- tone: chalk
+  full: true
   eyebrow: Für Partner
   cards:
   - meta: Segment E
