@@ -196,3 +196,15 @@ other = "Your report"
 
 [scan_nojs]
 other = "The scan runs in your browser and needs JavaScript."
+
+[scan_eyebrow]
+other = "Procurement scan"
+
+[scan_cta_h]
+other = "Calculate your procurement cost"
+
+[scan_cta_p]
+other = "Five minutes. No registration. Straight away, your own estimate of the time and money your organisation loses to manual procurement."
+
+[lang_aria]
+other = "Language"

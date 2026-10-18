@@ -66,11 +66,11 @@ jobs:
             "public/nl/hoe-het-werkt/index.html"
             "public/nl/over-ons/index.html"
             "public/nl/scan/index.html"
-            "public/sr/index.html"
-            "public/sr/problem/index.html"
-            "public/sr/kako-radi/index.html"
-            "public/sr/o-nama/index.html"
-            "public/sr/skeniranje/index.html"
+            "public/de/index.html"
+            "public/de/das-problem/index.html"
+            "public/de/so-funktioniert-es/index.html"
+            "public/de/ueber-uns/index.html"
+            "public/de/scan/index.html"
           )
           for page in "${pages[@]}"; do
             if [ -f "$page" ]; then
@@ -95,7 +95,7 @@ jobs:
           echo "Checking total HTML file count..."
           count=$(find public/ -name "*.html" | wc -l)
           echo "  Found $count HTML files"
-          [ "$count" -ge 10 ] || { echo "  FAIL  Expected at least 10 HTML files (EN, NL and SR), found $count"; exit 1; }
+          [ "$count" -ge 10 ] || { echo "  FAIL  Expected at least 10 HTML files (EN, NL and DE), found $count"; exit 1; }
           echo "  OK"
 
       - name: TEST — No em-dashes in HTML output
@@ -149,11 +149,11 @@ jobs:
             public/scan/index.html \
             public/nl/index.html \
             public/nl/het-probleem/index.html \
-            public/sr/index.html \
-            public/sr/problem/index.html \
-            public/sr/kako-radi/index.html \
-            public/sr/o-nama/index.html \
-            public/sr/skeniranje/index.html; do
+            public/de/index.html \
+            public/de/das-problem/index.html \
+            public/de/so-funktioniert-es/index.html \
+            public/de/ueber-uns/index.html \
+            public/de/scan/index.html; do
             if grep -qiE 'name="?description"?' "$page"; then
               echo "  OK  $page"
             else
@@ -174,7 +174,7 @@ jobs:
 
           # Links to skip (external, mailto, anchors, privacy placeholder)
           skip_prefixes = ("http://", "https://", "mailto:", "#", "//")
-          skip_exact = {"/privacy/", "/nl/privacy/", "/sr/privacy/"}
+          skip_exact = {"/privacy/", "/nl/privacy/", "/de/datenschutz/"}
 
           for root, dirs, files in os.walk(public_dir):
               dirs.sort()

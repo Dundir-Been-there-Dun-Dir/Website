@@ -14,6 +14,7 @@
         <span class="site-nav__word">Dundir</span>
       </a>
       <span class="tf-count mono" aria-live="polite"></span>
+      {{ partial "langs.html" . }}
       <a href="{{ "/" | relLangURL }}" class="tf-exit" aria-label="{{ i18n "scan_exit" }}">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
       </a>

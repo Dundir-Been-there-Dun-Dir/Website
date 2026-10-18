@@ -196,3 +196,15 @@ other = "Uw rapport"
 
 [scan_nojs]
 other = "De scan draait in uw browser en heeft JavaScript nodig."
+
+[scan_eyebrow]
+other = "Inkoopscan"
+
+[scan_cta_h]
+other = "Bereken uw inkoopkosten"
+
+[scan_cta_p]
+other = "Vijf minuten. Geen registratie. Direct uw persoonlijke schatting van de tijd en kosten die uw organisatie verliest aan handmatige inkoop."
+
+[lang_aria]
+other = "Taal"

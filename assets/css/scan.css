@@ -27,6 +27,7 @@
   background: var(--surface);
 }
 .tf-count { margin-left: auto; }
+.tf-bar .site-nav__langs { order: 0; }
 .tf-exit { display: grid; place-items: center; width: var(--tf-nav); height: var(--tf-nav); color: var(--fg-2); }
 .tf-exit:hover { color: var(--fg); }
 

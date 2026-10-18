@@ -196,3 +196,15 @@ other = "Vaš izveštaj"
 
 [scan_nojs]
 other = "Skeniranje radi u vašem pregledaču i zahteva JavaScript."
+
+[scan_eyebrow]
+other = "Skeniranje nabavke"
+
+[scan_cta_h]
+other = "Izračunajte troškove nabavke"
+
+[scan_cta_p]
+other = "Pet minuta. Bez registracije. Odmah vaša procena vremena i novca koje vaša organizacija gubi na ručnu nabavku."
+
+[lang_aria]
+other = "Jezik"

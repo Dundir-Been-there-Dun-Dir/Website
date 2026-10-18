@@ -1,0 +1,209 @@
+# Dundir copy for DE. Structure lives in the layouts, strings live here.
+
+[nav_aria]
+other = "Hauptnavigation"
+
+[nav_problem]
+other = "Das Problem"
+
+[nav_how]
+other = "So funktioniert es"
+
+[nav_about]
+other = "Über uns"
+
+[nav_usecases]
+other = "Anwendungen"
+
+[nav_decks]
+other = "Präsentationen"
+
+[nav_scan]
+other = "Zum Scan"
+
+[skip]
+other = "Zum Inhalt springen"
+
+[foot_tagline]
+other = "Beschaffungsoptimierung & Baustellensysteme"
+
+[foot_nav]
+other = "Navigation"
+
+[foot_ways]
+other = "Einstiege"
+
+[foot_partners]
+other = "Forschungspartner"
+
+[foot_events]
+other = "Veranstaltungen"
+
+[foot_privacy]
+other = "Datenschutzerklärung"
+
+[partner_wind]
+other = "Hogeschool Windesheim (Fachhochschule, Niederlande)<br>Akademischer Anker für KI-Forschung und Förderprogramme"
+
+[doors_eyebrow]
+other = "Vier Einstiege"
+
+[doors_head]
+other = "Wo Sie einsteigen, hängt davon ab, was Sie brauchen."
+
+[door1_idx]
+other = "Jetzt offen"
+
+[door1_h]
+other = "Forschungspartner werden"
+
+[door1_p]
+other = "Bauunternehmen aus dem Mittelstand steigen in das Forschungsprogramm mit Windesheim ein. Ohne Kosten, mit Mitsprache darüber, was gebaut wird."
+
+[door1_go]
+other = "Was dazugehört"
+
+[door2_idx]
+other = "Einstieg 02"
+
+[door2_h]
+other = "Pilot als Designpartner"
+
+[door2_p]
+other = "Das System ist nicht fertig. Sie entscheiden mit, worauf es kalibriert wird, und das Ergebnis gehört Ihnen."
+
+[door2_go]
+other = "Bedingungen"
+
+[door3_idx]
+other = "Einstieg 03"
+
+[door3_h]
+other = "Beschaffungsscan"
+
+[door3_p]
+other = "Zehn Fragen zu Ihrem heutigen Prozess. Der Bericht erscheint sofort auf dem Bildschirm. Ohne E-Mail-Adresse lesbar."
+
+[door3_go]
+other = "Scan starten"
+
+[door4_idx]
+other = "Einstieg 04"
+
+[door4_h]
+other = "Ein Gespräch von 30 Minuten"
+
+[door4_p]
+other = "Keine Folien, kein Pitch. Wir stellen die Fragen."
+
+[door4_go]
+other = "Gespräch anfragen"
+
+[f_name]
+other = "Name"
+
+[f_org]
+other = "Organisation"
+
+[f_mail]
+other = "E-Mail"
+
+[f_msg]
+other = "Nachricht"
+
+[f_send]
+other = "Nachricht senden"
+
+[f_subject]
+other = "Nachricht über dundir.com"
+
+[scan_submit]
+other = "Meinen Bericht zeigen"
+
+[scan_after_h]
+other = "Möchten Sie das schriftlich?"
+
+[scan_after_p]
+other = "Das Ergebnis haben Sie bereits gesehen. Wenn Sie eine Kopie möchten, und auf Wunsch ein Gespräch dazu, hinterlassen Sie eine Adresse. Wir senden den Bericht und sonst nichts."
+
+[scan_after_send]
+other = "Bericht zusenden"
+
+[scan_mail_subj]
+other = "Ergebnis des Beschaffungsscans"
+
+[scan_eyebrow]
+other = "Beschaffungsscan"
+
+[scan_cta_h]
+other = "Berechnen Sie Ihre Beschaffungskosten"
+
+[scan_cta_p]
+other = "Fünf Minuten. Keine Registrierung. Sofort Ihre persönliche Schätzung der Zeit und Kosten, die Ihre Organisation an manuelle Beschaffung verliert."
+
+# route fragments, so a slug change is one edit per language
+[url_problem]
+other = "de/das-problem/"
+
+[url_how]
+other = "de/so-funktioniert-es/"
+
+[url_about]
+other = "de/ueber-uns/"
+
+[url_usecases]
+other = "de/anwendungen/"
+
+[url_decks]
+other = "de/praesentationen/"
+
+[url_events]
+other = "de/veranstaltungen/"
+
+[url_scan]
+other = "de/scan/"
+
+[url_partner]
+other = "de/forschungspartner/"
+
+[url_pilot]
+other = "de/pilot/"
+
+[url_privacy]
+other = "de/datenschutz/"
+
+[scan_start]
+other = "Scan starten"
+
+[scan_ok]
+other = "OK"
+
+[scan_enter]
+other = "Enter drücken ↵"
+
+[scan_prev]
+other = "Vorherige Frage"
+
+[scan_next]
+other = "Nächste Frage"
+
+[scan_nav]
+other = "Navigation des Scans"
+
+[scan_exit]
+other = "Scan schließen"
+
+[scan_again]
+other = "Neu beginnen"
+
+[scan_step]
+other = "{n} von {total}"
+
+[scan_result]
+other = "Ihr Bericht"
+
+[scan_nojs]
+other = "Der Scan läuft in Ihrem Browser und benötigt JavaScript."
+
+[lang_aria]
+other = "Sprache"
