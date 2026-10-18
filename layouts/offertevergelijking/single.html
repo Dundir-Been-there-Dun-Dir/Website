@@ -2,49 +2,48 @@
 
 <div class="page-hero">
   <div class="container container--narrow">
-    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC1: Offertevergelijking</p>
-    <h1 class="page-hero__headline">Van vijf offertes naar een auditklaar vergelijkingsrapport. In minuten.</h1>
-    <p class="page-hero__subheading">Inkopers in de bouw besteden gemiddeld dertig minuten aan het vergelijken van zes offertes: voor elke aanbesteding, elke week. Dundir vervangt dat handwerk met een deterministisch berekeningsproces dat hetzelfde resultaat geeft bij dezelfde invoer, altijd.</p>
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC1: Offertevergelijking · fase: onderzoek en ontwerp</p>
+    <h1 class="page-hero__headline">Vijf offertes, één vergelijking die je kunt verdedigen.</h1>
+    <p class="page-hero__subheading">Dundir ontwerpt een offertevergelijking die rekent in plaats van genereert: dezelfde offertes geven elke keer dezelfde uitkomst, met de redenen ernaast. Het zit in onderzoek en ontwerp; de pilot test het op uw afgesloten aanbestedingen.</p>
   </div>
 </div>
 
 <section class="section">
   <div class="container container--narrow">
     <h2 class="section-heading">Het probleem</h2>
-    <p>Een inkoper ontvangt vijf offertes voor hetzelfde werk. Elke offerte heeft een andere structuur, andere regelindelingen, andere aannames over materiaal en arbeid. Om ze eerlijk te vergelijken, moet hij ze handmatig normaliseren: prijzen per eenheid uitrekenen, omissies opsporen, levertijden naast elkaar leggen.</p>
-    <p>Dat kost een half uur. En dan is er nog geen rapport geschreven. Schaal dit op naar de gemiddelde inkoper en je verliest wekelijks uren aan werk dat geen beslissingswaarde toevoegt.</p>
-    <p>Generatieve AI lost dit niet op. In een intern experiment bij Skanska gaf een generiek enterprise AI-systeem voor identieke ingevoerde offertes verschillende numerieke uitkomsten: fouten tot &euro;8.354 op &eacute;&eacute;n aanbestedingsregel. Het systeem genereerde antwoorden. Het kon de berekening niet reproduceren.</p>
+    <p>Een inkoper krijgt vijf offertes voor hetzelfde werk. Elke offerte heeft een eigen opbouw, eigen posten, eigen aannames over materiaal en arbeid. Om ze eerlijk te vergelijken moet iemand ze met de hand naast elkaar zetten: eenheidsprijzen, ontbrekende posten, levertijden.</p>
+    <p>In een test bij Skanska kostte het vergelijken van zes offertes met de hand 30 minuten. Een generatieve AI-tool deed het in 2, maar de getallen veranderden per sessie, dus de gewonnen tijd ging op aan het nalopen van fouten.</p>
 
     <div class="proof-block">
       <p class="proof-block__stat">&euro;8.354</p>
-      <p class="proof-block__label">maximale berekeningsfout bij een generiek GenAI-systeem voor offertevergelijking</p>
-      <p class="proof-block__body">Bij identieke invoer gaf het systeem in afzonderlijke sessies verschillende numerieke uitkomsten (tot 28% afwijking op &eacute;&eacute;n regel). Dit is de reden waarom een generatief AI-systeem niet geschikt is voor numerieke offertevergelijking. Dundir's optimalisatie-engine is deterministisch: hetzelfde resultaat bij dezelfde invoer, altijd.</p>
-      <p class="proof-block__source">Hamppi 2025, p. 62: Aalto Universiteit / Skanska Talonrakennus Oy.</p>
+      <p class="proof-block__label">verschil in het totaal van één onderaannemer toen een generatieve AI-tool dezelfde offertes in een nieuwe sessie kreeg</p>
+      <p class="proof-block__body">Tot 28% verschil op één regel, bij identieke invoer. Een tool die zichzelf niet herhaalt, kan de motivering die een publieke gunning vraagt niet geven. Daarom rekent het ontwerp van Dundir de vergelijking met een optimalisatie-engine en houdt het taalmodel bij het lezen van documenten.</p>
+      <p class="proof-block__source">Hamppi 2025, Aalto University / Skanska Talonrakennus Oy: tabel 6, p. 62; tijden van de test p. 64.</p>
     </div>
   </div>
 </section>
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">Hoe Dundir offertevergelijking aanpakt</h2>
+    <h2 class="section-heading">Het ontwerp, in drie stappen</h2>
     {{ partial "fig/bids.html" . }}
     <ol class="step-list">
       <li>
         <div>
-          <p class="step-list__title">Offertes worden genormaliseerd</p>
-          <p class="step-list__body">De AI-laag zet heterogene offertedocumenten (PDF, e-mail, spreadsheet) om naar een gestructureerd vergelijkingsformaat. Prijs per eenheid, levertijd, certificeringsstatus, aannames: alles op &eacute;&eacute;n lijn.</p>
+          <p class="step-list__title">Offertes op één regel</p>
+          <p class="step-list__body">De taallaag moet offertes lezen zoals ze binnenkomen (PDF, e-mail, spreadsheet) en eenheidsprijzen, levertijden, certificaten en aannames naast elkaar zetten. Een inkoper controleert wat er gelezen is.</p>
         </div>
       </li>
       <li>
         <div>
-          <p class="step-list__title">De optimalisatie-engine berekent</p>
-          <p class="step-list__body">Op basis van uw harde eisen (certificeringen, levertijden, budgetlimiet) en gewogen doelstellingen (prijs, betrouwbaarheid, duurzaamheid) berekent de engine de aantoonbaar beste leverancierscombinatie. Deterministisch: hetzelfde resultaat bij dezelfde invoer, altijd.</p>
+          <p class="step-list__title">De engine rekent</p>
+          <p class="step-list__body">Uw harde eisen (certificaten, levervenster, budgetplafond) begrenzen de keuze; uw gewichten voor prijs, betrouwbaarheid en duurzaamheid rangschikken wat overblijft. Zelfde invoer, zelfde antwoord.</p>
         </div>
       </li>
       <li>
         <div>
-          <p class="step-list__title">U beoordeelt. Het systeem documenteert.</p>
-          <p class="step-list__body">U ziet een gerangschikte vergelijking met brongegevens, certificeringsstatus en volledig redeneerproces. U beslist. Het systeem registreert uw beslissing: direct beschikbaar voor interne goedkeuring, externe audit of openbare aanbestedingsbeoordeling.</p>
+          <p class="step-list__title">U beslist, het dossier wordt geschreven</p>
+          <p class="step-list__body">U ziet de rangschikking met de brongegevens en de regel die haar opleverde. U beslist, en de beslissing wordt vastgelegd met de redenen, in de vorm waarin een publieke aanbesteder die moet geven (Aanbestedingswet 2012, art. 2.130).</p>
         </div>
       </li>
     </ol>
@@ -53,19 +52,19 @@
 
 <section class="section">
   <div class="container container--narrow">
-    <h2 class="section-heading">Wat het oplevert</h2>
+    <h2 class="section-heading">Wat de pilot moet laten zien</h2>
     <div class="two-col">
       <div>
-        <p><strong>Tijdsbesparing</strong><br>30 minuten handmatig werk per vergelijking, schaalbaar over elk inkoopvolume zonder extra personeel.</p>
+        <p><strong>Tijd</strong><br>Of de vergelijking van uw afgesloten aanbestedingen minder tijd kost dan uw huidige werkwijze, controle inbegrepen.</p>
       </div>
       <div>
-        <p><strong>Reproduceerbaarheid</strong><br>Dezelfde invoer geeft altijd hetzelfde resultaat. Geen variatie tussen sessies, inkopers of momenten.</p>
+        <p><strong>Reproduceerbaarheid</strong><br>Of dezelfde offertes bij elke run dezelfde uitkomst geven, over inkopers en over tijd heen.</p>
       </div>
       <div>
-        <p><strong>Auditklaar rapport</strong><br>Elke vergelijking levert automatisch documentatie op die geschikt is voor interne goedkeuring, externe audit of openbare aanbestedingsbeoordeling.</p>
+        <p><strong>Het dossier</strong><br>Of de motivering die bij gunning wordt vastgelegd goed genoeg is voor uw interne goedkeuring en voor een audit.</p>
       </div>
       <div>
-        <p><strong>Kennisbehoud</strong><br>Als een senior inkoper vertrekt, blijft de gecalibreerde beslissingslogica beschikbaar voor het hele team.</p>
+        <p><strong>Wat we nog niet beweren</strong><br>Dat de engine beter kiest dan uw beste inkoper. Dat is wat de pilot meet.</p>
       </div>
     </div>
     <p style="margin-top:2rem;"><a href="{{ "nl/toepassingen/" | relURL }}">&larr; Terug naar alle toepassingen</a></p>

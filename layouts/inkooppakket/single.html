@@ -2,47 +2,47 @@
 
 <div class="page-hero">
   <div class="container container--narrow">
-    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC3: Inkooppakket samenstellen</p>
-    <h1 class="page-hero__headline">Van een specificatie in gewoon Nederlands naar gestructureerde inkoopvereisten.</h1>
-    <p class="page-hero__subheading">De kwaliteit van een offertevergelijking is volledig afhankelijk van de kwaliteit van de invoer. Dundir's AI-laag vertaalt ongestructureerde specificaties naar de gestructureerde vereisten die de optimalisatie-engine nodig heeft.</p>
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC3: Inkooppakket · fase: ontwerp</p>
+    <h1 class="page-hero__headline">Van een bestek in gewone taal naar gestructureerde inkoopeisen.</h1>
+    <p class="page-hero__subheading">Een offertevergelijking is zo goed als haar invoer. Dundir ontwerpt een taallaag die een geschreven bestek omzet in de harde eisen en gewichten waarmee de engine rekent, gecontroleerd door een inkoper voordat er iets vergeleken wordt.</p>
   </div>
 </div>
 
 <section class="section">
   <div class="container container--narrow">
     <h2 class="section-heading">Het probleem</h2>
-    <p>Inkoopprofessionals schrijven specificaties in gewoon Nederlands, of ontvangen ze ze zo aangeleverd vanuit het project. "500 m&sup2; tegelwerk, BRL-9010 gecertificeerd, levering voor week 14" is een prima omschrijving voor een mens, maar geen bruikbare invoer voor een vergelijkingsalgoritme.</p>
-    <p>Hamppi's onderzoek bij Skanska toont dit direct aan: bij eenvoudige, gestructureerde offertes presteerde generatieve AI goed. Bij complexe, ongestructureerde offertes faalden de berekeningen. De dominante variabele was de kwaliteit en uniformiteit van de invoerdata, niet het AI-model.</p>
+    <p>Inkopers schrijven bestekken in gewone taal, of krijgen ze zo van het projectteam. "500 m&sup2; tegelwerk, BRL-9010 gecertificeerd, levering voor week 14" is voor een mens een prima omschrijving, maar geen bruikbare invoer voor een vergelijkingsalgoritme.</p>
+    <p>De test van Hamppi bij Skanska wijst dezelfde kant op: de generatieve AI-tool deed het het best op goed gestructureerde offertes. Uniforme invoer telde zwaarder dan het model.</p>
 
     <div class="proof-block">
-      <p class="proof-block__label">Skanska-bevinding: input bepaalt alles</p>
-      <p class="proof-block__body">"Skanska zou moeten overwegen om leveranciers te verplichten hun offertes in een gestandaardiseerd sjabloon in te vullen, omdat dit de nauwkeurigheid van AI-gebaseerde vergelijkingen vergroot." De aanbeveling van Hamppi bevestigt direct dat gestandaardiseerde invoer de kritische schakel is, en niet het model zelf.</p>
-      <p class="proof-block__source">Hamppi 2025, p. 69: Aalto Universiteit / Skanska Talonrakennus Oy.</p>
+      <p class="proof-block__label">Aanbeveling van Hamppi aan Skanska</p>
+      <p class="proof-block__body">"Skanska should look into the possibility of demanding suppliers to fill their bids to a standardized bidding template because this would increase the accuracy of GenAI-based comparisons."</p>
+      <p class="proof-block__source">Hamppi 2025, p. 69: Aalto University / Skanska Talonrakennus Oy.</p>
     </div>
   </div>
 </section>
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">Hoe Dundir inkooppakketten samenstelt</h2>
+    <h2 class="section-heading">Het ontwerp, in drie stappen</h2>
     {{ partial "fig/package.html" . }}
     <ol class="step-list">
       <li>
         <div>
-          <p class="step-list__title">Specificatie inlezen</p>
-          <p class="step-list__body">De AI-laag leest de projectspecificatie in gewoon Nederlands (uit een PDF, ERP-export of e-mail). Relevante inkoopeisen worden geëxtraheerd en gestructureerd.</p>
+          <p class="step-list__title">Het bestek lezen</p>
+          <p class="step-list__body">De taallaag moet het bestek lezen zoals het geschreven is (PDF, ERP-export, e-mail) en eruit halen wat telt voor de inkoop: hoeveelheden, certificaten, data, grenzen.</p>
         </div>
       </li>
       <li>
         <div>
-          <p class="step-list__title">Harde eisen en gewogen doelstellingen definiëren</p>
-          <p class="step-list__body">Het systeem stelt een conceptlijst op: welke certificeringen zijn verplicht? Wat is de maximale levertijd? Welk budget? De inkoper verifieert en past aan waar nodig.</p>
+          <p class="step-list__title">Harde eisen en gewogen doelen vastleggen</p>
+          <p class="step-list__body">Ze stelt een concept voor: welke certificaten verplicht zijn, de uiterste leverdatum, het budgetplafond. De inkoper controleert en corrigeert; er wordt niets vergeleken voordat een mens de lijst heeft goedgekeurd.</p>
         </div>
       </li>
       <li>
         <div>
-          <p class="step-list__title">Gestructureerd inkooppakket exporteren</p>
-          <p class="step-list__body">Het resulterende pakket is de invoer voor offertevergelijking (UC1) en leveranciersevaluatie (UC2). Het kan ook als gestandaardiseerd uitnodigingssjabloon aan leveranciers worden gestuurd.</p>
+          <p class="step-list__title">Het gestructureerde inkooppakket exporteren</p>
+          <p class="step-list__body">Het pakket wordt de invoer voor offertevergelijking (UC1) en leveranciersevaluatie (UC2), en kan als uniform offertesjabloon naar leveranciers, de stap die Hamppi aanbeveelt.</p>
         </div>
       </li>
     </ol>

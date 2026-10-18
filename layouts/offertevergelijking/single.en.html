@@ -2,49 +2,48 @@
 
 <div class="page-hero">
   <div class="container container--narrow">
-    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC1: Bid comparison</p>
-    <h1 class="page-hero__headline">From five bids to an audit-ready comparison report. In minutes.</h1>
-    <p class="page-hero__subheading">Construction procurement teams spend an average of thirty minutes comparing six bids: for every tender, every week. Dundir replaces that manual work with a deterministic calculation process that produces the same result for the same input, every time.</p>
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC1: Bid comparison · stage: research and design</p>
+    <h1 class="page-hero__headline">Five bids, one comparison you can defend.</h1>
+    <p class="page-hero__subheading">Dundir is designing a bid comparison that computes instead of generates: the same bids give the same result, every run, with the reasons written next to it. It is in research and design; the pilot tests it on your closed tenders.</p>
   </div>
 </div>
 
 <section class="section">
   <div class="container container--narrow">
     <h2 class="section-heading">The problem</h2>
-    <p>A procurement manager receives five bids for the same work. Each bid has a different structure, different line item groupings, different assumptions about materials and labour. To compare them fairly, he has to normalise them manually: calculate unit prices, identify omissions, line up delivery timelines.</p>
-    <p>That takes thirty minutes. And no report has been written yet. Scale this across the average procurement team and you lose hours every week to work that adds no decision value.</p>
-    <p>Generative AI does not fix this. In an internal Skanska experiment, a generic enterprise AI system produced different numerical outputs for identical bid inputs: errors up to &euro;8,354 on a single tender line. The system generated answers. It could not reproduce the calculation.</p>
+    <p>A buyer receives five bids for the same work. Each has its own structure, its own grouping of line items, its own assumptions about materials and labour. To compare them fairly, someone has to line them up by hand: unit prices, omissions, delivery dates.</p>
+    <p>In a test at Skanska, comparing six bids by hand took 30 minutes. A generative AI tool did it in 2, but its numbers changed between sessions, so the time saved went into checking its errors.</p>
 
     <div class="proof-block">
       <p class="proof-block__stat">&euro;8,354</p>
-      <p class="proof-block__label">maximum calculation error from a generic GenAI system in bid comparison</p>
-      <p class="proof-block__body">For identical inputs, the system produced different numerical outputs across separate sessions (up to a 28% discrepancy on a single line item). This is why a generative AI system is not suitable for numerical bid comparison. Dundir's optimisation engine is deterministic: the same result for the same input, every time.</p>
-      <p class="proof-block__source">Hamppi 2025, p. 62: Aalto University / Skanska Talonrakennus Oy.</p>
+      <p class="proof-block__label">swing on one subcontractor's total when a generative AI tool was given the same bids in a new session</p>
+      <p class="proof-block__body">Up to a 28% difference on a single line, for identical input. A tool that does not repeat itself cannot give the reasons a public award needs. That is why Dundir's design computes the comparison with an optimisation engine and keeps the language model to reading documents.</p>
+      <p class="proof-block__source">Hamppi 2025, Aalto University / Skanska Talonrakennus Oy: Table 6, p. 62; test timings p. 64.</p>
     </div>
   </div>
 </section>
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">How Dundir handles bid comparison</h2>
+    <h2 class="section-heading">The design, in three steps</h2>
     {{ partial "fig/bids.html" . }}
     <ol class="step-list">
       <li>
         <div>
-          <p class="step-list__title">Bids are normalised</p>
-          <p class="step-list__body">The AI layer converts heterogeneous bid documents (PDF, email, spreadsheet) into a structured comparison format. Unit prices, delivery times, certification status, assumptions: everything on one line.</p>
+          <p class="step-list__title">Bids are put on one line</p>
+          <p class="step-list__body">The language layer is meant to read bids as they arrive (PDF, email, spreadsheet) and put unit prices, delivery times, certificates and assumptions side by side. A buyer checks what it read.</p>
         </div>
       </li>
       <li>
         <div>
-          <p class="step-list__title">The optimisation engine calculates</p>
-          <p class="step-list__body">Based on your hard requirements (certifications, delivery windows, budget ceiling) and weighted objectives (price, reliability, sustainability), the engine calculates the provably optimal supplier combination. Deterministic: the same result for the same input, every time.</p>
+          <p class="step-list__title">The engine computes</p>
+          <p class="step-list__body">Your hard requirements (certificates, delivery window, budget ceiling) bound the choice; your weights for price, reliability and sustainability rank what is left. Same input, same answer.</p>
         </div>
       </li>
       <li>
         <div>
-          <p class="step-list__title">You review. The system documents.</p>
-          <p class="step-list__body">You see a ranked comparison with source data, certification status, and full reasoning trail. You decide. The system records your decision: ready for internal approval, external audit, or public procurement review.</p>
+          <p class="step-list__title">You decide, the record is written</p>
+          <p class="step-list__body">You see the ranking with its source data and the rule that produced it. You decide, and the decision is recorded with its reasons, in the form a public buyer has to give them (Aanbestedingswet 2012, art. 2.130).</p>
         </div>
       </li>
     </ol>
@@ -53,19 +52,19 @@
 
 <section class="section">
   <div class="container container--narrow">
-    <h2 class="section-heading">What it delivers</h2>
+    <h2 class="section-heading">What the pilot has to show</h2>
     <div class="two-col">
       <div>
-        <p><strong>Time saved</strong><br>30 minutes of manual work per comparison, scalable across any procurement volume without additional headcount.</p>
+        <p><strong>Time</strong><br>Whether the comparison of your closed tenders takes less time than your current process, checking included.</p>
       </div>
       <div>
-        <p><strong>Reproducibility</strong><br>The same input always produces the same result. No variation between sessions, buyers, or moments in time.</p>
+        <p><strong>Reproducibility</strong><br>Whether the same bids give the same result on every run, across buyers and over time.</p>
       </div>
       <div>
-        <p><strong>Audit-ready report</strong><br>Every comparison automatically produces documentation suitable for internal approval, external audit, or public procurement review.</p>
+        <p><strong>The record</strong><br>Whether the reasoning written at award is good enough for your internal approval and for an audit.</p>
       </div>
       <div>
-        <p><strong>Knowledge retention</strong><br>When a senior procurement officer leaves, the calibrated decision logic stays available to the whole team.</p>
+        <p><strong>What we do not claim yet</strong><br>That the engine picks better than your best buyer. That is what the pilot measures.</p>
       </div>
     </div>
     <p style="margin-top:2rem;"><a href="{{ "use-cases/" | relURL }}">&larr; Back to all use cases</a></p>
