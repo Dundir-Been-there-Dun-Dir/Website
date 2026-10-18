@@ -15,7 +15,7 @@ The site has no user accounts, no dynamic content, and no backend. Hugo compiles
 We wrote every template from scratch rather than using a Hugo theme. This keeps the CSS naming predictable, allows the CI tests to assert on specific page structure, and means the design is entirely controlled. Themes bring hundreds of unused classes and hidden assumptions.
 
 ### GitHub Actions CI gate
-The deploy pipeline has two jobs: `build-and-test` runs 8 automated checks, then `deploy` only runs if all checks pass. If a commit breaks a test, GitHub Pages keeps the last successful version live. No rollback needed; a failed deploy is simply a no-op.
+The deploy pipeline has two jobs: `build-and-test` runs the styleguide check and 8 automated checks, then `deploy` only runs if all checks pass. If a commit breaks a test, GitHub Pages keeps the last successful version live. No rollback needed; a failed deploy is simply a no-op.
 
 The 8 tests check: required pages exist, CSS was generated, minimum HTML count, no em-dashes, no forbidden marketing phrases, meta descriptions on all pages, internal links resolve, sitemap generated.
 
@@ -79,6 +79,14 @@ After DNS propagates: set custom domain in GitHub Pages settings, GitHub handles
 ```bash
 hugo server --buildDrafts
 ```
+
+Turn on the pre-commit check once per clone:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+It runs `scripts/style-check.py` on the staged files: no raw colours outside the palette, Geist through the font variables only, no em-dashes, banned words or certification claims in copy, no Salesteq, icons through `icon.html`, i18n keys in step across en, nl and de, and no keys or credential files. CI runs the same script on the whole tree, so a commit made without the hook still has to pass it. Exceptions live in `ALLOW` at the top of the script, each with its reason.
 
 Requires Hugo extended (for the CSS asset pipeline). Install via:
 

@@ -37,6 +37,9 @@ jobs:
         with:
           submodules: recursive
 
+      - name: TEST — Styleguide and safety rules (scripts/style-check.py)
+        run: python3 scripts/style-check.py
+
       - name: Setup Hugo (extended, for asset pipeline)
         uses: peaceiris/actions-hugo@v3
         with:
