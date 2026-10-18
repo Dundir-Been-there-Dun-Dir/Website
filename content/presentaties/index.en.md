@@ -20,7 +20,7 @@ sections:
     go: View deck
   - meta: Segment C
     h: Large infrastructure organisations
-    p: For Rijkswaterstaat, water boards and comparable bodies.
+    p: For public infrastructure owners and water boards.
     href: presentaties/decks/segment-c-infrastructure-org/
     go: View deck
   - meta: Segment D
@@ -34,7 +34,7 @@ sections:
   cards:
   - meta: Segment E
     h: Material suppliers
-    p: For suppliers who want to optimise their own procurement.
+    p: For suppliers whose product data a buyer's comparison has to read.
     href: presentaties/decks/segment-e-material-supplier/
     go: View deck
   - meta: Partners
@@ -54,7 +54,7 @@ sections:
     go: View deck
   - meta: Partners
     h: CO2 and sustainability bodies
-    p: For parties steering supply chain emissions reporting.
+    p: For bodies that hold environmental product data.
     href: presentaties/decks/co2-sustainability-bodies/
     go: View deck
 ---

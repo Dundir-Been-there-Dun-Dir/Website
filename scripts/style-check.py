@@ -24,11 +24,9 @@ ALLOW = {
     "hex": {
         "assets/css/palettes/*": "the palette files are where colours are named",
         "assets/css/styleguide.css": "the styleguide sheet names its own palette in :root",
-        "static/presentaties/deck-theme.css": "a copy of the palette: static files cannot import assets/",
         "static/presentaties/decks/*/index.html": "Quarto output; the deck source is in the Company repo",
     },
     "font": {
-        "static/presentaties/deck-theme.css": "sets the reveal.js font variables, which are not ours",
     },
     "secret-file": {
         "credentials/dundir.kdbx": "FIXME: tracked in a public repo, remove it and purge history",
