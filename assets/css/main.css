@@ -273,12 +273,12 @@ strong, b { font-weight: 700; }
 .site-nav__logo {
   display: flex;
   align-items: center;
-  gap: .55rem;
+  gap: .7rem;
   text-decoration: none;
   font-family: var(--disp);
   font-weight: 600;
-  font-size: 1.28rem;
-  letter-spacing: -.04em;
+  font-size: 1.333rem;
+  letter-spacing: -.035em;
 }
 .mark { flex: none; }
 
