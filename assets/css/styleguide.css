@@ -67,6 +67,10 @@
   --heavy: 3px;
   --swatch: 5.5rem;
   --region: 0.1;
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+  --icon-stroke: 2px;
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --t-fast: 160ms;
@@ -308,6 +312,26 @@ a { color: inherit; }
 .block div:last-child { border-right: 0; }
 .block dt { font: var(--t-xs) var(--f-mono); color: var(--text-dim); }
 .block dd { margin: var(--s-1) 0 0; font-weight: var(--w-semi); }
+
+.icon { width: var(--icon, var(--icon-lg)); height: var(--icon, var(--icon-lg)); stroke-width: var(--icon-stroke); flex: none; }
+.icon-sizes { display: flex; flex-wrap: wrap; gap: var(--s-6); margin-bottom: var(--s-6); }
+.icon-size { margin: 0; display: flex; align-items: center; gap: var(--s-4); }
+.icon-size figcaption { font: var(--t-xs) var(--f-mono); color: var(--text-dim); }
+.icon-size--sm { --icon: var(--icon-sm); }
+.icon-size--md { --icon: var(--icon-md); }
+.icon-size--lg { --icon: var(--icon-lg); }
+.icon-code { margin: 0 0 var(--s-6); padding: var(--s-4); background: var(--tint); border: var(--hair) solid var(--line); font: var(--t-xs) / 1.7 var(--f-mono); overflow-x: auto; }
+.icon-code__was { color: var(--text-dim); text-decoration: line-through; }
+.icon-find { display: grid; gap: var(--s-2); max-width: 24rem; margin-bottom: var(--s-6); font-size: var(--t-sm); font-weight: var(--w-semi); }
+.icon-find input { font: inherit; font-weight: var(--w-regular); padding: var(--s-3); border: var(--stroke) solid var(--text-soft); background: var(--ground); color: var(--text); }
+.icon-group + .icon-group { margin-top: var(--s-6); }
+.icon-group h3 { margin: 0 0 var(--s-3); font: var(--w-semi) var(--t-sm) / 1.4 var(--f-body); color: var(--text-soft); }
+.icon-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); border-top: var(--hair) solid var(--line); border-left: var(--hair) solid var(--line); }
+.icon-cell { display: grid; justify-items: start; gap: var(--s-2); padding: var(--s-4); border-right: var(--hair) solid var(--line); border-bottom: var(--hair) solid var(--line); }
+.icon-cell[hidden], .icon-group[hidden] { display: none; }
+.icon-mui { font: var(--w-semi) var(--t-sm) / 1.3 var(--f-body); color: var(--text); overflow-wrap: anywhere; }
+.icon-lucide { font: var(--t-xs) / 1.3 var(--f-mono); color: var(--text-dim); overflow-wrap: anywhere; }
+.icon-none { margin-top: var(--s-4); color: var(--text-soft); }
 
 @media (max-width: 60rem) {
   .hero .wrap, .head, .engines, .motion { grid-template-columns: minmax(0, 1fr); }
