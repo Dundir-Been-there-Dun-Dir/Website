@@ -33,7 +33,7 @@ visitor to whichever of the four ways in fits them.
 
 The site is set as a working drawing: a line means a limit, a number means a
 measurement, a stamp says who checked it. The full reference, with every token
-and measured contrast ratio, is the unlisted page `/werktekening/`.
+and measured contrast ratio, is the unlisted page `/styleguide/`.
 
 - Grounds: warm paper is the page, a tint for the second band, graphite for the
   band where the system shows itself and for the footer. Palette file:

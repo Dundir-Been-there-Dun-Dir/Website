@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/research-partner/"]
 title: Become a research partner
 description: Construction SMEs can join the research track with Windesheim. No cost, and a say in what gets built.
 slug: research-partner
@@ -34,7 +35,7 @@ sections:
     body: You receive the research results, including a comparison of your own procurement process against the other partners. That benchmark alone is not for sale anywhere.
     word: true
   - fig: First refusal
-    body: Research partners get first access to a pilot, on the terms set out on the <a href="/en/pilot/">pilot page</a>.
+    body: Research partners get first access to a pilot, on the terms set out on the <a href="/pilot/">pilot page</a>.
     word: true
   caveat:
     lab: Honest about what this is

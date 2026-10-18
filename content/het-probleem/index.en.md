@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/the-problem/"]
 title: The problem
 description: Construction projects derail in procurement and at the gate, not on the blueprints. The real cost of manual paperwork, WhatsApp chaos, and missing audit records.
 slug: the-problem

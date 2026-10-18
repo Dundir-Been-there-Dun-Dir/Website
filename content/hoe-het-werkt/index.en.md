@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/how-it-works/"]
 title: How it works
 description: From material specification to smart gate inspection and Wkb handover dossier. Designed for local deployment, mathematically grounded, with a full audit trail.
 slug: how-it-works

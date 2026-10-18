@@ -11,7 +11,7 @@ sections:
     body: Hogeschool Windesheim levert de academische verankering, de validatie en de toegang tot onderzoeksfinanciering via RAAK-PRO, KIEM en Horizon Europa.
     word: true
   link:
-    href: /onderzoekspartner/
+    href: /nl/onderzoekspartner/
     label: Zelf onderzoekspartner worden
 - id: contact
   tone: chalk-2

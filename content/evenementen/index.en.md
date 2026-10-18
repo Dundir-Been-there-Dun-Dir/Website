@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/events/"]
 title: Trade fairs and events
 description: Construction and building services fairs we have on the radar.
 slug: events

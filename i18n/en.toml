@@ -135,31 +135,31 @@ other = "Procurement scan result"
 
 # route fragments, so a slug change is one edit per language
 [url_problem]
-other = "en/the-problem/"
+other = "the-problem/"
 
 [url_how]
-other = "en/how-it-works/"
+other = "how-it-works/"
 
 [url_about]
-other = "en/about/"
+other = "about/"
 
 [url_usecases]
-other = "en/use-cases/"
+other = "use-cases/"
 
 [url_decks]
-other = "en/presentations/"
+other = "presentations/"
 
 [url_events]
-other = "en/events/"
+other = "events/"
 
 [url_scan]
-other = "en/scan/"
+other = "scan/"
 
 [url_partner]
-other = "en/research-partner/"
+other = "research-partner/"
 
 [url_pilot]
-other = "en/pilot/"
+other = "pilot/"
 
 [url_privacy]
-other = "en/privacy/"
+other = "privacy/"

@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/privacy/"]
 title: "Privacy policy"
 slug: "privacy"
 description: "What data this website touches, where it goes, and what you can have deleted."

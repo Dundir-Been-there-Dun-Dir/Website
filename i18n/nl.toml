@@ -135,31 +135,31 @@ other = "Inkoopscan resultaat"
 
 # route fragments, so a slug change is one edit per language
 [url_problem]
-other = "het-probleem/"
+other = "nl/het-probleem/"
 
 [url_how]
-other = "hoe-het-werkt/"
+other = "nl/hoe-het-werkt/"
 
 [url_about]
-other = "over-ons/"
+other = "nl/over-ons/"
 
 [url_usecases]
-other = "toepassingen/"
+other = "nl/toepassingen/"
 
 [url_decks]
-other = "presentaties/"
+other = "nl/presentaties/"
 
 [url_events]
-other = "evenementen/"
+other = "nl/evenementen/"
 
 [url_scan]
-other = "scan/"
+other = "nl/scan/"
 
 [url_partner]
-other = "onderzoekspartner/"
+other = "nl/onderzoekspartner/"
 
 [url_pilot]
-other = "pilot/"
+other = "nl/pilot/"
 
 [url_privacy]
-other = "privacy/"
+other = "nl/privacy/"

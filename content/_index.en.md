@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/"]
 title: Dundir
 description: AI-driven procurement decisions and jobsite systems for construction, designed for local deployment and an auditable trail. In development with design partners.
 headline: Seventy percent of your project is <span class="cut">procurement.</span>

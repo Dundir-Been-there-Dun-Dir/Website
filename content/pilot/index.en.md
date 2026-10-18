@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/pilot/"]
 title: Pilot as a design partner
 description: The system is not finished. You decide what it gets calibrated on, and it runs inside your own network.
 slug: pilot
