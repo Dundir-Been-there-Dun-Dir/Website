@@ -7,6 +7,7 @@ sections:
   heading: Een generiek model kent uw bouwplaats niet.
   body: 'De werkelijke kracht van dit systeem is niet een algemeen algoritme. Het is de operationele kalibratie: weten welke certificeringen bij u hard zijn, welke leverancier ondanks een hogere eenheidsprijs stipt levert aan de poort, en welke afwijking in het bestek in de praktijk acceptabel is. Dat staat in geen enkel handboek; het zit in uw inkoophistorie en poortdata.
 
+
     Daarom werken wij in deze fase met een select aantal ontwerppartners in plaats van met zoveel mogelijk licentiekopers. Wie nu instapt, stapt in op het moment dat de architectuur nog direct aan te passen is aan uw werf- en kantoorprocessen.'
 - tone: chalk
   eyebrow: Het 10-weken traject

@@ -36,11 +36,15 @@ sections:
   lede: 'Een taalmodel schrijft een antwoord op. Een optimalisatie-engine rekent er een uit. Dundir wordt gebouwd om wiskundige inkoopoptimalisatie te verbinden met verificatie aan de poort en een lerend contractgeheugen.'
   body: 'Het ontwerp bestaat uit drie onderling verbonden modules, bedoeld om lokaal op uw eigen infrastructuur te draaien. Elk staat in een eigen fase:
 
+
     <strong>1. Deterministic Procurement Engine (onderzoek en ontwerp):</strong> Combinatorische optimalisatie over prijs, levertijd, transportkilometers en CO2. Deterministisch ontworpen: dezelfde invoer moet altijd exact dezelfde uitkomst geven, zonder de numerieke afwijkingen van generatieve AI (tot 8.354 euro fout per regel in Hamppi 2025).
+
 
     <strong>2. Jobsite Digital Twin & Slimme Poort (labprototype):</strong> Het doel: OCR aan de poort leest vrachtbrieven en kentekens bij aankomst, matcht bestelbon, leveringsbon en factuur, en bouwt het Dossier Bevoegd Gezag onder de Wet kwaliteitsborging voor het bouwen (Wkb) mee op. Vandaag draait de eerste edge-hardware op de werkbank: twee gekoppelde bordjes met een klein taalmodel op de chip, zonder internet. Camera en slimme bril volgen.
 
+
     <strong>3. Forecasting & Institutioneel Geheugen (ontwerp):</strong> Werkelijke leverbetrouwbaarheid, levertijden en afwijkingen moeten terugvloeien naar de scoringsparameters voor volgende aanbestedingen, zodat operationele kennis blijft wanneer personeel vertrekt.
+
 
     <strong>Uw data blijft in uw netwerk.</strong> Het systeem wordt ontworpen om on-premise te draaien, zodat een overheid binnen haar eigen kaders (zoals de BIO) kan blijven. Uw data traint nooit modellen van anderen.'
 - tone: chalk-2
@@ -48,7 +52,9 @@ sections:
   heading: Nog niet af, en dat zeggen wij liever zelf.
   body: 'Dundir is een onderzoekstraject met een bedrijf eromheen, niet een afgerond product met een onderzoeksverhaaltje eromheen. De optimalisatietheorie is niet nieuw, de toepassing op Nederlandse bouwinkoop en bouwplaatslogistiek wel.
 
+
     De kernvraag staat nog open: wat betekent <em>optimaal</em> precies wanneer prijs, levertijd, certificering, poortlogistiek en duurzaamheid gelijktijdig worden afgewogen, en vanaf hoeveel data verslaat die aanpak een ervaren inkoper en uitvoerder?
+
 
     Dat is precies waarom wij nu partners zoeken en geen licenties verkopen. Wie in deze fase meedoet als ontwerppartner, bepaalt mee waarop het systeem gekalibreerd wordt en wat er eerst gebouwd wordt.'
   caveat:

@@ -9,4 +9,3 @@
 
 [params]
   palette  = "css/palettes/massa.css"
-  tokenset = "tokens_massa"

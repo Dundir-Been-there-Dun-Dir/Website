@@ -1,5 +1,5 @@
 baseURL = "https://dundir.com/"
-defaultContentLanguage = "nl"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 title = "Dundir"
 
@@ -14,6 +14,7 @@ pluralizeListTitles = false
       unsafe = true
 
 [params]
+  palette = "css/palettes/werktekening.css"
   email = "christiaan.verhoef@dundir.com,milan.jelisavcic@dundir.com"
   linkedIn = "https://www.linkedin.com/company/dundir"
 
@@ -35,7 +36,7 @@ pluralizeListTitles = false
   [languages.nl]
     languageName = "NL"
     languageCode = "nl"
-    weight = 1
+    weight = 2
     title = "Dundir"
     [languages.nl.params]
       description = "AI-gedreven inkoopbeslissingen voor de bouw. Lokaal geïmplementeerd. Wiskundig onderbouwd. Audit-klaar."
@@ -43,7 +44,7 @@ pluralizeListTitles = false
   [languages.en]
     languageName = "EN"
     languageCode = "en"
-    weight = 2
+    weight = 1
     title = "Dundir"
     [languages.en.params]
       description = "AI-driven procurement decisions for construction. Locally deployed. Mathematically grounded. Audit-ready."
