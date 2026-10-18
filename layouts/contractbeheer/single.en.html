@@ -2,36 +2,45 @@
 
 <div class="page-hero">
   <div class="container container--narrow">
-    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC4: Contract oversight</p>
-    <h1 class="page-hero__headline">The contract is signed. The work isn't done.</h1>
-    <p class="page-hero__subheading">Dundir records the award decision and monitors supplier performance against commitments: certification expiry dates, delivery variances, and an audit trail covering both execution and selection.</p>
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC4: Smart Gate &amp; Jobsite Inspection / Wkb</p>
+    <h1 class="page-hero__headline">The contract only matters when the materials pass the gate.</h1>
+    <p class="page-hero__subheading">Dundir connects contract commitments directly to physical verification at the jobsite gate: mobile edge OCR, automated 3-way matching, and a real-time Wkb Handover Dossier.</p>
   </div>
 </div>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2 class="section-heading">The problem</h2>
-    <p>A contractor awards a contract to supplier X on the basis of a certified bid, a promised delivery window, and a sustainability score. Three months later: the delivery is two weeks late, the KOMO certificate has lapsed, and the material specification diverges from the bid.</p>
-    <p>Who tracked this? In most construction companies: nobody systematically. The buyer remembers, or records disappear into email threads. When an audit arrives or a defect surfaces, there is no verifiable trail.</p>
-    <p>For municipalities, this is not an inconvenience. It is legal exposure. The Aanbestedingswet requires demonstrable documentation of supplier selection. EU CPR 2024 and CSRD Scope 3 impose traceability requirements on materials through the supply chain. That traceability starts at the contract and extends through physical delivery.</p>
+    <h2 class="section-heading">The Reality at the Jobsite Gate</h2>
+    <p>A contractor signs a competitive contract with supplier X: certified reinforcing steel, KOMO-certified facade elements, and delivery scheduled precisely at 07:00 AM. Three months later the truck arrives: delivery is two weeks delayed, the KOMO certificate is missing from the paper ticket, and delivered steel grade diverges from the purchase order.</p>
+    <p>Today, field verification relies on handwritten scribbles on paper clipboards and unorganized photos in WhatsApp groups. The empirical consequences:</p>
+    <div class="proof-block" style="margin: 1.5rem 0;">
+      <p class="proof-block__label">Jobsite Gate Bottlenecks</p>
+      <p class="proof-block__body">
+        &bull; <strong>70% of material delivery trucks</strong> wait up to 50 minutes at the site gate due to manual checking (Aldeeb 2024).<br>
+        &bull; <strong>95% of paper delivery tickets</strong> contain discrepancies, incomplete records, or missing certificates (Qflow 2025).<br>
+        &bull; <strong>8% to 25% of scheduled jobsite tasks</strong> are halted by material and delivery failures (Tserng et al. 2006).<br>
+        &bull; <strong>4 to 6 week handover blockades</strong> under the Dutch Quality Assurance Act (Wkb) when inspection dossiers have to be reconstructed retroactively (VNG 2024).
+      </p>
+      <p class="proof-block__source">Aldeeb 2024 &middot; Qflow 2025 &middot; Tserng et al. 2006 &middot; VNG 2024 &middot; Rockx 2023</p>
+    </div>
   </div>
 </section>
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">What contract oversight means in practice</h2>
+    <h2 class="section-heading">Four Functions of the Smart Gate</h2>
     <div class="two-col">
       <div>
-        <p><strong>Certification monitoring</strong><br>KOMO, SKG-IKOB, and other certifications have expiry dates. Dundir tracks validity per supplier and per contract, issuing alerts before certifications lapse during the execution of an assignment.</p>
+        <p><strong>1. Edge OCR &amp; License Plate Logging</strong><br>A smartphone or fixed gate camera scans paper delivery tickets and license plates immediately upon arrival. Recognition runs locally on edge hardware: zero latency and full operational capability without reliable site internet.</p>
       </div>
       <div>
-        <p><strong>Delivery time tracking</strong><br>Promised delivery windows are compared against actual deliveries. Deviations are logged per assignment and per supplier, and feed into supplier scores for future tenders.</p>
+        <p><strong>2. Automated 3-Way Matching</strong><br>The system instantly reconciles original purchase orders (PO), scanned delivery orders (DO), and incoming vendor invoices. Quantity, dimension, or specification discrepancies are flagged before unloading commences.</p>
       </div>
       <div>
-        <p><strong>Specification conformance</strong><br>Does the delivered material conform to the specification in the procurement package? Deviations are documented. When a technical inspection or audit arrives, the trail is already there.</p>
+        <p><strong>3. Physical Chain of Custody &amp; ADR</strong><br>Immediate validation of environmental product declarations (EPD), KOMO quality marks, and ADR transport compliance for hazardous materials. Each delivery receives an immutable digital timestamp, weight record, and inspector ID.</p>
       </div>
       <div>
-        <p><strong>Execution audit trail</strong><br>Every contract phase (award, delivery, inspection, payment) is logged with date, responsible party, and any deviation. The file the auditor or procurement supervisor asks for already exists.</p>
+        <p><strong>4. Real-Time Wkb Handover Dossier</strong><br>Photos of inspection points, quality stamps, and delivery tickets are archived directly into the mandatory Dossier Bevoegd Gezag under the Wkb regulation. No missing documentation during final municipal commissioning.</p>
       </div>
     </div>
   </div>
@@ -39,24 +48,25 @@
 
 <section class="section">
   <div class="container container--narrow">
-    <h2 class="section-heading">Why this is a legal requirement for municipalities</h2>
-    <p>For a mid-size contractor, contract oversight is a matter of efficiency and knowledge retention. For a municipality, it is a legal requirement.</p>
-    <p>The Aanbestedingswet requires that every award decision be demonstrably defensible to internal leadership, municipal councils, the audit chamber, and the Authority for Consumers and Markets. That defensibility does not stop at the award. If a municipality selects a supplier on the basis of a sustainability score and that supplier does not perform to that score, the documentation of the deviation is as important as the original selection documentation.</p>
-    <p>There are 342 Dutch municipalities with near-identical procurement processes and near-identical compliance challenges. Dundir produces the required audit trail across each contract phase automatically, without manual administrative overhead.</p>
+    <h2 class="section-heading">Why This Is a Legal Mandate</h2>
+    <p>For a general contractor, gate verification halts failure costs and idle trades. For public buyers and municipalities, it is a strict legal obligation.</p>
+    <p>Under the <strong>Dutch Quality Assurance Act (Wkb)</strong>, a building cannot receive an occupancy permit without a certified Dossier Bevoegd Gezag. If delivered construction products fail to demonstrably satisfy building codes, the quality controller halts commissioning.</p>
+    <p>Under <strong>CPR 2024 (EU Construction Products Regulation 2024/3110)</strong>, Digital Product Passports (DPP) and environmental declarations are legally required through the entire chain of custody. And under <strong>Public Procurement Act Article 2.130</strong>, public entities must prove that delivered reality matches the original award criteria.</p>
 
     <div class="proof-block">
-      <p class="proof-block__label">Regulatory context</p>
-      <p class="proof-block__body">EU CPR 2024 requires demonstrable documentation of construction product performance through the supply chain. CSRD Directive 2022/2464/EU requires large organisations to report their Scope 3 emissions, including those of purchased materials and services. Aanbestedingswet article 2.130 requires a reasoned award decision that is verifiable. None of these requirements stop at supplier selection. They apply to contract execution as well.</p>
-      <p class="proof-block__source">EU CPR 2024 &middot; CSRD Directive 2022/2464/EU &middot; Aanbestedingswet 2012, art. 2.130</p>
+      <p class="proof-block__label">Regulatory Mandates</p>
+      <p class="proof-block__body">Wet kwaliteitsborging voor het bouwen (Wkb) &middot; CPR 2024/3110 Digital Product Passport &middot; Aanbestedingswet 2012 art. 2.130 &middot; CSRD Scope 3 Supply Chain Emissions</p>
+      <p class="proof-block__source">Staatsblad 2023/340 &middot; Official Journal of the European Union 2024 &middot; Ministry of the Interior</p>
     </div>
   </div>
 </section>
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">Contract oversight closes the procurement loop</h2>
-    <p>The four use cases form a closed loop together: procurement package formation (UC3) &rarr; bid comparison (UC1) &rarr; supplier evaluation (UC2) &rarr; contract oversight (UC4). Every execution data point from UC4 improves the supplier scores in UC2, which in turn inform the next bid comparison in UC1.</p>
-    <p>A system that becomes more accurate after every project. That retains the knowledge of departing buyers. And that documents every phase of every tender: from initial specification through final delivery.</p>
+    <h2 class="section-heading">Closing the Procurement Loop</h2>
+    <p>The four modules operate as an integrated feedback system:</p>
+    <p><strong>Procurement Package (UC3)</strong> structures requirements &rarr; <strong>Bid Comparison (UC1)</strong> computes the optimal allocation &rarr; <strong>Smart Gate (UC4)</strong> inspects physical deliveries and compiles the Wkb file &rarr; <strong>Supplier Evaluation (UC2)</strong> updates vendor performance metrics.</p>
+    <p>Every gate discrepancy recalibrates scoring parameters in institutional memory for the next tender. Commercial intelligence stays within your organization, immune to personnel turnover.</p>
     <p style="margin-top:1.5rem;"><a href="{{ "en/use-cases/" | relURL }}">&larr; Back to all use cases</a></p>
   </div>
 </section>

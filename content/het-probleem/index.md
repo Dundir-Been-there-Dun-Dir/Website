@@ -1,59 +1,57 @@
 ---
 title: Het probleem
-description: Nederlandse bouwbedrijven verliezen gemiddeld 49.500 euro per inkoper per jaar aan handmatig vergelijkingswerk. En de regelgeving maakt het dringender.
-lede: Nederlandse bouwbedrijven besteden gemiddeld elf uur per week per inkoper aan handmatig vergelijkingswerk. Dit is wat dat betekent.
+description: Bouwprojecten ontsporen niet op de bouwtekening, maar in de inkoopketen en aan de poort. De rekeningen van handmatig werk, WhatsApp-chaos en ontbrekende documentatie.
+lede: Een bouwproject faalt zelden op constructieberekeningen. Het faalt omdat 70% van de projectkosten in materiaal zit, terwijl inkoopbeslissingen en poortcontroles worden afgehandeld met Excel, WhatsApp en papieren bonnen.
 sections:
-- eyebrow: Wat het kost aan tijd
-  heading: Elf uur, elke week, per persoon.
-  proof:
-    fig: 11 uur
-    label: per week per inkoper aan vergelijkingswerk
-    src: Remarcable / BuildMate 2025
-  body: 'Drie inkopers, 46 werkweken, 65 euro per uur. Dat is 148.500 euro per jaar aan niet-productieve tijd, alleen voor het naast elkaar leggen van leveranciers. Exclusief de kosten van de verkeerde beslissing.
-
-
-    Die beslissing kost ook geld. In een intern Skanska-experiment produceerde een generiek enterprise AI-systeem fouten tot 8.354 euro op een enkele aanbestedingsregel. Handmatig vergelijken in Excel biedt geen garantie. Een systeem dat antwoorden genereert ook niet.'
-- tone: chalk
-  eyebrow: Wat er weglekt
-  heading: De kennis zit in een hoofd, niet in een systeem.
-  proof:
-    fig: <5%
-    label: van de staf maakt een infraproject van 500 tot 600 miljoen euro van begin tot eind mee
-    src: Rockx 2023, TU Delft
-  body: 'De meeste inkoopkennis staat nergens vastgelegd. Ze zit in het hoofd van de inkoper die al twintig jaar weet welke leverancier betrouwbaar is, welke certificeringen kloppen, en welke offerte er goed uitziet maar niet deugt.
-
-
-    Dat maakt het verlies structureel in plaats van ongelukkig. Acht van de tien Nederlandse aannemers hebben al te maken met personeelstekort. Als die inkoper vertrekt, vertrekt de kennis mee, en er is geen systeem dat haar vasthoudt.
-
-
-    Rockx interviewde Nederlandse praktijkmensen met tientallen jaren ervaring. Meerderen gaven aan nooit een systematische risicobeoordeling te zijn tegengekomen. Niet dat zij die hadden afgewezen. Zij hadden er nooit een gezien.'
-  source: NL Times / Euroconstruct 2025 · Rockx 2023, TU Delft
-- eyebrow: Waarom nu
-  heading: De regelgeving maakt het dringender.
-  body: 'De documentatieverplichting bestond al. Maar drie ontwikkelingen maken haar nu concreet en afdwingbaar:'
-  after: <strong>De spreadsheet is geen juridisch antwoord meer.</strong>
+- eyebrow: Historische lessen
+  heading: Wanneer de keten breekt.
   claims:
-  - fig: Aanbestedingswet
-    body: Elke leveranciersbeslissing van een gemeente moet gedocumenteerd, consistent en verdedigbaar zijn bij de ACM.
+  - fig: '€900M'
+    body: <strong>Fyra HSL (2013).</strong> Volledig afgeschreven na een aanbesteding die puur op de laagste aanschafprijs werd gegund. Fysieke winterbestendigheid en materiaalspecificaties werden niet structureel geverifieerd; de treinen stonden na zes weken definitief stil.
+  - fig: '€435M'
+    body: <strong>Afsluitdijk (2024).</strong> Budgetoverschrijding veroorzaakt door afwijkende materiaalspecificaties en een ontbrekend digitaal verificatiedossier. Wat op de bouwplaats werd geleverd en verwerkt, sloot niet aan op wat contractueel was overeengekomen.
+  source: Parlementaire Enquêtecommissie Fyra 2015 · Algemene Rekenkamer 2024
+- tone: chalk
+  eyebrow: De drievoudige crisis
+  heading: Kantoor, poort en archief.
+  body: 'Het faillement van traditioneel inkoopbeheer manifesteert zich in drie opeenvolgende fasen van elk bouwproject:
+
+    <strong>1. De pre-constructie flessenhals:</strong> Calculators besteden 31,7% van hun werktijd aan administratieve invoer in plaats van kostenoptimalisatie. Een enkele formele offertecalculatie kost gemiddeld 42 arbeidsuren. Terwijl netto aannemersmarges schommelen tussen 1,0% en 2,0%, bedragen faalkosten in de bouw 5% tot 11% van de totale omzet.
+
+    <strong>2. Bouwplaats- en poortchaos:</strong> 70% van de leverende vrachtwagens wacht gemiddeld 50 minuten bij de poort door handmatige controle. 95% van de papieren leverbonnen bevat fouten of ontbrekende certificaten. Leveringsfouten leggen 8% tot 25% van de geplande taken op de bouwplaats stil.
+
+    <strong>3. Institutionele amnesie:</strong> 78% van de materiaalinkoop verloopt via losse e-mails en WhatsApp. Minder dan 50% van de werfbestellingen volgt de overeengekomen raamcontracten. Na tien jaar is 95% van historische ERP-data corrupt of onbruikbaar, terwijl minder dan 5% van het personeel een groot project van begin tot oplevering meemaakt.'
+  source: Donyavi e.a. 2024 · Aldeeb 2024 · Qflow 2025 · Rockx 2023, TU Delft
+- eyebrow: Waarom nu
+  heading: De wet dwingt verantwoording af.
+  body: 'Vrijblijvendheid in de keten is juridisch voorbij. Vier bindende kaders sluiten de spreadsheet af als verdedigbare werkwijze:'
+  after: <strong>De spreadsheet en het klembord zijn juridisch niet langer houdbaar.</strong>
+  claims:
+  - fig: Wkb
+    body: <strong>Wet kwaliteitsborging voor het bouwen.</strong> Het Dossier Bevoegd Gezag vereist een sluitend as-built bewijs van alle verwerkte materialen en keuringen. Ontbrekende certificaten leiden tot 4 tot 6 weken vertraging bij oplevering.
     word: true
-  - fig: CPR 2024/3110
-    body: Per januari 2026 gelden nieuwe certificeringseisen voor bouwproducten. De verplichting bestaat. Het gereedschap om het bij te houden ontbreekt bij de meeste organisaties.
+  - fig: CPR 2024
+    body: <strong>Bouwproductenverordening (EU 2024/3110).</strong> Digitaal Productpaspoort (DPP) en Environmental Product Declarations (EPD) worden verplicht gesteld bij de poort voor traceerbaarheid door de hele keten.
     word: true
-  - fig: CSRD Scope 3
-    body: Toenemende rapportage-eisen voor uitstoot in de toeleveringsketen vereisen gestructureerde leveranciersdata.
+  - fig: Art. 2.130
+    body: <strong>Aanbestedingswet 2012.</strong> Elke gunningsbeslissing van publieke opdrachtgevers vereist een objectief, toetsbaar en reproduceerbaar auditspoor voor de ACM en de gemeenteraad.
+    word: true
+  - fig: AI Act
+    body: <strong>EU AI Act (High-Risk).</strong> Systemen die inkoop- en selectiebeslissingen ondersteunen vallen onder strenge transparantie-, documentatie- en determinisme-eisen vanaf december 2027.
     word: true
 - tone: chalk-2
   eyebrow: Precisie
-  heading: Generieke AI lost dit niet op.
+  heading: Generieke AI rekent niet reproduceerbaar.
   proof:
-    fig: 8.354 euro
+    fig: '€8.354'
     label: fout op een enkele aanbestedingsregel bij gebruik van een generieke enterprise AI-tool
     src: Hamppi 2025, Aalto Universiteit. Casestudie op basis van een intern Skanska-experiment.
-  body: 'In dat experiment produceerde een generiek enterprise AI-systeem voor identieke aanbestedingsinvoer verschillende numerieke uitkomsten. Dat is geen randgeval. Dat is de huidige stand van generatieve AI in inkoop: het systeem genereert een antwoord, maar kan de berekening niet reproduceren.
+  body: 'In een gecontroleerd experiment bij Skanska Talonrakennus Oy produceerde een generiek enterprise taalmodel bij identieke aanbestedingsinvoer verschillende numerieke uitkomsten, met afwijkingen tot 28%. Dat is geen uitzondering, maar de intrinsieke werking van probabilistische taalmodellen (Atil e.a. 2025).
 
+    Een taalmodel voorspelt het meest waarschijnlijke volgende woord; een optimalisatie-engine berekent het wiskundig optimum. Inkoopbeslissingen met contractuele aansprakelijkheid vereisen harde wiskunde, geen statistische gissingen.
 
-    Een systeem dat antwoorden genereert is iets anders dan een systeem dat ze berekent. Dundir gebruikt een wiskundige optimalisatie-engine. Elke aanbeveling is deterministisch, reproduceerbaar en met volledig redeneerproces.'
+    Dundir scheidt taal van wiskunde: de AI-laag structureert specificaties, de deterministische solver berekent de optimale toewijzing.'
   caveat:
     lab: Wat dit niet aantoont
-    text: Het experiment toont aan dat een generiek systeem niet reproduceerbaar rekent. Het toont niet aan dat onze optimalisatie-engine in de praktijk goedkoper inkoopt dan een ervaren inkoper. Die validatie moet uit pilotdata komen, en die hebben wij nog niet.
+    text: Het experiment bewijst dat generieke taalmodellen ongeschikt zijn voor betrouwbare calculaties. Het bewijst niet dat onze solver in de praktijk per definitie goedkoper inkoopt dan een ervaren hoofdinkoper. Die validatie leveren wij samen met ontwerppartners in de praktijk.
 ---

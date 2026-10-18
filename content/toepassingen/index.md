@@ -1,4 +1,4 @@
 ---
 title: "Toepassingen"
-description: "Vier wetenschappelijk onderbouwde inkoopfases waar Dundir direct waarde toevoegt: offertevergelijking, leveranciersevaluatie, inkooppakket samenstellen en contractbeheer."
+description: "Vier operationele modules die de levenscyclus van bouwprojecten dekken: specificatiestructurering, deterministische offertevergelijking, lerende leveranciersevaluatie en slimme poortcontrole met Wkb-opleverdossier."
 ---

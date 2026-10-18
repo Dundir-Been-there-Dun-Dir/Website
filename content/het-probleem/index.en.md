@@ -1,60 +1,58 @@
 ---
 title: The problem
-description: Dutch construction companies lose an average of 49,500 euro per buyer per year to manual comparison work. And regulation is making it more urgent.
+description: Construction projects derail in procurement and at the gate, not on the blueprints. The real cost of manual paperwork, WhatsApp chaos, and missing audit records.
 slug: the-problem
-lede: Dutch construction companies spend an average of eleven hours a week per buyer on manual comparison work. This is what that means.
+lede: Construction projects rarely fail because of structural calculations. They fail because 70% of project costs reside in materials, while procurement awards and gate deliveries are handled via spreadsheets, WhatsApp messages, and paper receipts.
 sections:
-- eyebrow: What it costs in time
-  heading: Eleven hours, every week, per person.
-  proof:
-    fig: 11 hrs
-    label: a week per buyer on comparison work
-    src: Remarcable / BuildMate 2025
-  body: 'Three buyers, 46 working weeks, 65 euro an hour. That is 148,500 euro a year of unproductive time, spent only on laying suppliers side by side. Before the cost of the wrong decision.
-
-
-    That decision costs money too. In an internal Skanska experiment a generic enterprise AI system produced errors of up to 8,354 euro on a single tender line. Comparing by hand in Excel offers no guarantee either. Neither does a system that generates answers.'
-- tone: chalk
-  eyebrow: What leaks away
-  heading: The knowledge sits in a head, not in a system.
-  proof:
-    fig: <5%
-    label: of staff see an infrastructure project of 500 to 600 million euro through from start to finish
-    src: Rockx 2023, TU Delft
-  body: 'Most procurement knowledge is written down nowhere. It sits with the buyer who has known for twenty years which supplier is reliable, which certificates hold up, and which quote looks good but is not.
-
-
-    That makes the loss structural rather than unlucky. Eight in ten Dutch contractors already face staff shortages. When that buyer leaves, the knowledge leaves too, and no system holds on to it.
-
-
-    Rockx interviewed Dutch practitioners with decades of experience. Several reported never having encountered a systematic risk assessment approach. Not that they had rejected one. They had never seen one.'
-  source: NL Times / Euroconstruct 2025 · Rockx 2023, TU Delft
-- eyebrow: Why now
-  heading: Regulation is making it urgent.
-  body: 'The documentation obligation already existed. Three developments are making it concrete and enforceable:'
-  after: <strong>The spreadsheet is no longer a legal answer.</strong>
+- eyebrow: Historical disasters
+  heading: When the supply chain fractures.
   claims:
-  - fig: Aanbestedingswet
-    body: Every supplier decision by a municipality must be documented, consistent and defensible before the ACM.
+  - fig: '€900M'
+    body: <strong>Fyra HSL (2013).</strong> Written off entirely after a public tender awarded strictly on lowest purchase price. Physical winter durability and material performance were never verified; the fleet was permanently grounded within six weeks.
+  - fig: '€435M'
+    body: <strong>Afsluitdijk (2024).</strong> Massive cost overrun caused by material specifications diverging from contract terms without an auditable verification trail. What was delivered to the site failed to match what was contracted.
+  source: Parliamentary Inquiry Fyra 2015 · Netherlands Court of Audit 2024
+- tone: chalk
+  eyebrow: The triple crisis
+  heading: Office, gate, and memory.
+  body: 'The breakdown of traditional construction procurement unfolds across three consecutive operational stages:
+
+    <strong>1. Pre-construction clerical bottleneck:</strong> Estimators spend 31.7% of working hours on administrative data entry instead of value analysis. Calculating a single formal tender quotation consumes 42 labor hours. While contractor margins remain compressed between 1.0% and 2.0%, construction failure costs run between 5% and 11% of turnover.
+
+    <strong>2. Jobsite and gate breakdown:</strong> 70% of delivery trucks wait an average of 50 minutes at the site gate due to manual checking. 95% of paper delivery tickets contain discrepancies or missing certifications. Delivery failures halt 8% to 25% of scheduled tasks on site.
+
+    <strong>3. Institutional amnesia:</strong> 78% of material procurement relies on informal emails and WhatsApp chats. Less than 50% of field purchases comply with negotiated master agreements. After ten years, 95% of legacy ERP records are corrupted or unusable, while fewer than 5% of personnel remain from tender to completion on large projects.'
+  source: Donyavi et al. 2024 · Aldeeb 2024 · Qflow 2025 · Rockx 2023, TU Delft
+- eyebrow: Why now
+  heading: Regulation demands auditable proof.
+  body: 'Informal processes are legally closed. Four binding frameworks make spreadsheets and paper clipboards indefensible:'
+  after: <strong>The spreadsheet and clipboard are no longer legally compliant.</strong>
+  claims:
+  - fig: Wkb
+    body: <strong>Dutch Quality Assurance Act (Wkb).</strong> The Dossier Bevoegd Gezag demands as-built proof of all installed materials and inspections. Missing certificates cause 4 to 6 week handover delays before municipal occupancy permits are granted.
     word: true
-  - fig: CPR 2024/3110
-    body: From January 2026 new certification requirements apply to construction products. The obligation exists. Most organisations lack the tooling to keep up with it.
+  - fig: CPR 2024
+    body: <strong>Construction Products Regulation (EU 2024/3110).</strong> Digital Product Passports (DPP) and Environmental Product Declarations (EPD) are mandatory at the gate for supply chain traceability.
     word: true
-  - fig: CSRD Scope 3
-    body: Rising reporting requirements for supply chain emissions demand structured supplier data.
+  - fig: Art. 2.130
+    body: <strong>Public Procurement Act 2012.</strong> Every public award decision requires an objective, verifiable, and reproducible audit trail for municipal review and regulatory scrutiny.
+    word: true
+  - fig: AI Act
+    body: <strong>EU AI Act (High-Risk).</strong> Systems supporting procurement and supplier selection face strict transparency, documentation, and determinism mandates by December 2027.
     word: true
 - tone: chalk-2
   eyebrow: Precision
-  heading: Generic AI does not solve this.
+  heading: Generic AI fails to calculate reliably.
   proof:
-    fig: 8,354 euro
-    label: of error on a single tender line using a generic enterprise AI tool
+    fig: '€8,354'
+    label: error on a single tender line when using a generic enterprise AI tool
     src: Hamppi 2025, Aalto University. Case study based on an internal Skanska experiment.
-  body: 'In that experiment a generic enterprise AI system produced different numerical outputs for identical tender inputs. That is not an edge case. That is the current state of generative AI in procurement: the system generates an answer but cannot reproduce the calculation.
+  body: 'In an internal Skanska experiment, a generic enterprise language model returned different numerical outputs for identical procurement inputs, with deviations up to 28%. This is the inherent nature of probabilistic language models (Atil et al. 2025).
 
+    A language model predicts the most probable next word; an optimization engine calculates the mathematical optimum. Procurement decisions involving contract liabilities require exact mathematics, not statistical approximations.
 
-    A system that generates answers is a different thing from a system that computes them. Dundir uses a mathematical optimisation engine. Every recommendation is deterministic, reproducible and carries its full reasoning trail.'
+    Dundir decouples language from computation: the AI layer structures specifications, while the deterministic solver calculates the optimal allocation.'
   caveat:
     lab: What this does not prove
-    text: The experiment shows that a generic system does not compute reproducibly. It does not show that our optimisation engine buys more cheaply in practice than an experienced buyer. That validation has to come from pilot data, and we do not have it yet.
+    text: The experiment proves that generic language models are unsuitable for reliable numerical comparisons. It does not prove that our solver buys more cheaply in practice than an experienced chief estimator. That validation requires empirical pilot data gathered on active projects.
 ---

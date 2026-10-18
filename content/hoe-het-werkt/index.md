@@ -1,58 +1,57 @@
 ---
 title: Hoe het werkt
-description: Van materiaalspecificatie naar auditklaar vergelijkingsrapport. Lokaal geimplementeerd, wiskundig onderbouwd, met volledig redeneerproces.
-lede: Dundir verwijdert het administratieve handwerk voor de beslissing en documenteert het redeneerproces erna. De inkoper beoordeelt en beslist. Het systeem rekent en legt vast.
+description: Van materiaalspecificatie tot poortcontrole en Wkb-opleverdossier. Lokaal geimplementeerd, wiskundig onderbouwd, met volledig redeneerproces.
+lede: Dundir koppelt wiskundige inkoopoptimalisatie aan fysieke controle aan de poort en een lerend contractgeheugen. De professional oordeelt en beslist. Het systeem berekent, controleert en archiveert.
 sections:
 - eyebrow: De keten
-  heading: Vijf stappen, één rapport.
+  heading: Vijf stappen van bestek tot oplevering.
   steps:
-  - h: U voert een materiaalspecificatie in
-    p: In gewoon Nederlands, dezelfde manier waarop u het nu ook zou omschrijven. Geen invulformulier, geen aparte notatie.
-  - h: De AI-laag vertaalt de specificatie
-    p: 'Het systeem zet de specificatie om naar gestructureerde inkoopeisen: vereiste certificeringen, levertijden, budgetlimieten en gewogen doelstellingen. Dit is de enige plek in de keten waar een taalmodel aan het werk is.'
-  - h: De optimalisatie-engine berekent de beste combinatie
-    p: Het systeem draait op uw leveranciersdatabase en vindt de wiskundig aantoonbaar beste combinatie op basis van uw harde eisen en gewogen doelstellingen. Geen suggestie. Een berekend antwoord met volledig redeneerproces.
-  - h: U beoordeelt de uitvoer en beslist
-    p: U ziet een gerangschikte vergelijking met bronvermelding, certificeringsstatus en volledig redeneerproces. U beslist. Het systeem registreert uw beslissing en de reden.
-  - h: Het auditklare rapport wordt automatisch gegenereerd
-    p: Klaar voor interne goedkeuring, externe audit of openbare aanbestedingsbeoordeling. Geen extra werk achteraf.
+  - h: Specificatie structureren
+    p: 'De AI-taallaag leest uw bestek of offerteaanvraag in gewoon Nederlands. Het systeem extraheert harde randvoorwaarden, leveringsvensters, budgetlimieten en CPR 2024 certificeringseisen. Dit is het enige punt waar een taalmodel actief is.'
+  - h: Deterministische solver berekent het optimum
+    p: 'De optimalisatie-engine berekent de wiskundig beste toewijzing over prijs, levertijd, transportkilometers en CO2. Harde wiskunde: dezelfde invoer geeft altijd exact dezelfde uitkomst, met een auditklaar redeneerproces.'
+  - h: Slimme poortcontrole en drieweg-matching
+    p: 'Bij aankomst op de bouwplaats scant mobiele of vaste edge OCR de vrachtbrief en het kenteken. Het systeem voert direct een automatische drieweg-matching uit tussen inkooporder, fysieke leverbon en inkomende factuur.'
+  - h: Realtime Wkb-dossieropbouw
+    p: 'Keuringscertificaten, vrachtbrieven en kwaliteitsstempels worden automatisch gekoppeld aan het Dossier Bevoegd Gezag conform de Wet kwaliteitsborging voor het bouwen (Wkb). Geen ontbrekende papieren bij oplevering.'
+  - h: Terugkoppeling naar contractgeheugen
+    p: 'Werkelijke leverbetrouwbaarheid, kwaliteitsafwijkingen en levertijden worden automatisch geregistreerd. Deze data kalibreert de scoringsparameters voor de volgende aanbesteding.'
 - tone: chalk
-  eyebrow: Lokaal
-  heading: Waarom het op uw eigen server draait.
-  body: 'Drie gevolgen van lokale implementatie die voor gemeenten en bouwbedrijven direct relevant zijn:'
-  after: Dit is geen voorkeur van ons. Het is wat de praktijk oplegt. In een onderzoek bij architectenbureau Cedervall werd GPT-4 geprototypeerd en afgewezen op kosten en afhankelijkheid van derden; cloud-Llama-3 viel af op twintig seconden latentie en de eis dat data op het interne netwerk bleef. On-premise was de enige acceptabele uitkomst, en dat was in een architectenbureau, niet in een gemeente.
+  eyebrow: Data-soevereiniteit
+  heading: Waarom het lokaal op uw eigen server draait.
+  body: 'Bouwdata, calculaties en contractafspraken zijn commercieel vertrouwelijk en strategisch gevoelig. Dundir draait 100% on-premise op uw eigen infrastructuur of lokale edge-hardware:'
+  after: 'Lokale implementatie is geen voorkeur, maar een harde operationele eis. In onderzoek bij Cedervall bleken publieke cloudmodellen onbruikbaar door hoge abonnementskosten, afhankelijkheid van externe API''s en strikte interne databescherming. Voor Nederlandse overheden en bouwers geldt de Baseline Informatiebeveiliging Overheid (BIO 2019): data mag het eigen netwerk simpelweg niet verlaten.'
   claims:
-  - fig: Data
-    body: Uw inkoopdata verlaat uw eigen server nooit. Prijzen, leveranciersafspraken en contractgegevens blijven waar ze horen.
+  - fig: Soevereiniteit
+    body: Uw inkoopdata en leveranciersprijzen verlaten uw interne netwerk nooit. Er vindt geen datadoorgifte plaats naar externe cloudproviders, en uw bedrijfsdata traint nooit andermans modellen.
     word: true
   - fig: Continuïteit
-    body: Er is geen afhankelijkheid van externe APIs of cloudproviders. Het systeem stopt niet als een leverancier zijn prijzen of voorwaarden verandert.
+    body: Volledige werking zonder internetverbinding aan de bouwplaatspoort. Het systeem blijft operationeel bij netwerkstoringen en is immuun voor prijswijzigingen of beleidswijzigingen van derden.
     word: true
-  - fig: Naleving
-    body: Het systeem voldoet aan GDPR en aan het IT-beleid van gemeenten, zonder dat daar een uitzondering voor aangevraagd hoeft te worden.
+  - fig: Compliance
+    body: Voldoet direct aan BIO 2019 overheidsnormen, ISO 27001 en AVG-richtlijnen, zonder dat er complexe uitzonderingsprocedures voor clouddiensten doorlopen hoeven te worden.
     word: true
-  source: Friðriksson 2025, KTH · van Duuren 2025, TU Delft
+  source: Friðriksson 2025, KTH · Van Duuren 2025, TU Delft · BIO 2019
 - eyebrow: Uitlegbaarheid
-  heading: Elke uitvoer laat het redeneerproces zien.
+  heading: Elke beslissing en controle is wiskundig controleerbaar.
   proof:
-    fig: Identiek
-    label: Dezelfde invoer geeft dezelfde uitkomst. Een generiek AI-systeem gaf bij identieke invoer verschillende uitkomsten, met fouten tot 8.354 euro op een enkele regel.
-    src: Hamppi 2025, Aalto Universiteit
-  body: 'Welke databronnen zijn gebruikt, hoe elke leverancier is beoordeeld, waarom de ene leverancier hoger staat dan de andere. Het systeem legt het expliciet vast.
+    fig: Deterministisch
+    label: Dezelfde invoer geeft exact dezelfde uitkomst. Generieke AI gaf bij identieke aanbestedingsinvoer afwijkingen tot 8.354 euro op een enkele regel.
+    src: Hamppi 2025, Aalto Universiteit · Atil e.a. 2025
+  body: 'Welke randvoorwaarden zijn gehanteerd, welke afweging is gemaakt tussen transportafstand en materiaalkosten, en waarom een leverancier is geselecteerd: het systeem documenteert de exacte rekenformule en wegingsfactoren.
 
+    Aan de poort geldt hetzelfde: elke vrachtbriefscan en matchingsbeslissing wordt gelogd met tijdstempel, referentienummer en afwijkingspercentage.
 
-    Voor gemeenten is dit een wettelijke vereiste. Voor bouwbedrijven is het het verschil tussen een rapport dat een manager ondertekent en een rapport dat hij terugstuurt.'
+    Voor gemeenten voldoet dit direct aan Aanbestedingswet artikel 2.130. Voor aannemers levert het een sluitend juridisch dossier op bij geschillen over meerwerk of ondeugdelijke leveringen.'
 - tone: chalk-2
   eyebrow: Grenzen
   heading: Wat het systeem niet doet.
-  body: 'Dundir neemt geen inkoopbeslissingen. De inkoper beoordeelt de uitvoer en beslist. Het systeem vervangt de inkoper niet.
+  body: 'Dundir neemt geen beslissingen en vervangt de professional niet. De calculator, inkoper en uitvoerder behouden de regie.
 
+    Het systeem elimineert het handmatige zoek- en invoerwerk zodat de specialist zich kan richten op onderhandeling, kwaliteitsbeoordeling en relatiebeheer. De formele beslissing en contractuele verantwoordelijkheid blijven altijd bij uw organisatie.
 
-    Het verwijdert het administratieve handwerk zodat de inkoper het eigenlijke werk kan doen: oordelen, relaties onderhouden en escaleren. De beslissing en de verantwoordelijkheid blijven bij u.
-
-
-    Het systeem wordt getraind op uw eigen inkoopgeschiedenis, niet op een generiek model. Het resultaat kent uw voorkeursleveranciers, uw certificeringseisen en uw eerdere beslissingen. Als een senior inkoper vertrekt, blijft die kennis beschikbaar voor het hele team.'
+    Het systeem kalibreert op uw eigen inkoophistorie en leverprestaties. Als een ervaren hoofdinkoper vertrekt, blijft de opgebouwde leveranciersintelligentie bewaard binnen het bedrijf.'
   caveat:
     lab: Eerlijk over de fase
-    text: Deze keten is ontworpen en deels gebouwd, niet in productie bij een klant. Wie nu instapt doet dat als ontwerppartner en bepaalt mee waarop het systeem gekalibreerd wordt.
+    text: De drie modules zijn ontworpen en functioneren in afgebakende validatie-opstellingen, niet als gestandaardiseerd massaproduct. Wie nu instapt, doet dat als ontwerppartner en stuurt direct de kalibratie en integratie aan.
 ---
