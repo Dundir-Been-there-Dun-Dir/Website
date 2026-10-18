@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 # Grant only what each job needs
@@ -12,10 +15,10 @@ permissions:
   pages: write
   id-token: write
 
-# Only one deploy can run at a time; never cancel a running deploy
+# Deploys queue and never cancel; a newer push to a PR cancels its older check
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.ref) || 'pages' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
 
@@ -225,6 +228,7 @@ jobs:
       # This artifact is exactly what was tested — no second build.
 
       - name: Upload Pages artifact (tested build only)
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
@@ -236,7 +240,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build-and-test
-    if: success()
+    if: success() && github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
