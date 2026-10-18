@@ -1,4 +1,4 @@
 ---
 title: "Slimme Poort & Bouwplaatsinspectie"
-description: "Dundir automatiseert poortcontroles met edge OCR, drieweg-matching en realtime opbouw van het Wkb Dossier Bevoegd Gezag om faalkosten en opleververtragingen te voorkomen."
+description: "Dundir ontwikkelt een slimme poort: edge OCR, drieweg-matching en opbouw van het Wkb Dossier Bevoegd Gezag tegen faalkosten en opleververtragingen. Nu een labprototype."
 ---

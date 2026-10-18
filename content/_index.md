@@ -1,8 +1,8 @@
 ---
 title: Dundir
-description: AI-gedreven inkoopbeslissingen en bouwplaatssystemen. Lokaal geimplementeerd. Wiskundig onderbouwd. Audit-klaar.
+description: AI-gedreven inkoopbeslissingen en bouwplaatssystemen, ontworpen voor lokale installatie en een controleerbaar auditspoor. In ontwikkeling met ontwerppartners.
 headline: Zeventig procent van uw project is <span class="cut">inkoop.</span>
-sub: De prijs is geoptimaliseerd. Dat is zelden het grootste probleem. Waar is het materiaal, wanneer komt het aan, en is het gecertificeerd? Dundir combineert een wiskundige inkoop-solver met een digitale tweeling van uw bouwplaats.
+sub: De prijs is geoptimaliseerd. Dat is zelden het grootste probleem. Waar is het materiaal, wanneer komt het aan, en is het gecertificeerd? Dundir bouwt aan een wiskundige inkoop-solver en een digitale tweeling van uw bouwplaats.
 stack:
   label: Eén euro projectkosten, verdeeld
   source: Donyavi e.a. 2024, in Hamppi 2025
@@ -24,25 +24,25 @@ sections:
   heading: De rekening staat er al.
   claims:
   - fig: 31,7%
-    body: van de tijd van calculators en inkopers gaat verloren aan administratieve data-invoer in plaats van analyse. Een enkele offertecalculatie kost gemiddeld 42 arbeidsuren.
+    body: van de tijd van calculators en inkopers gaat verloren aan administratieve data-invoer in plaats van analyse. Een enkele offertecalculatie kost mediaan 42 arbeidsuren.
   - fig: 50 min
     body: wachttijd bij de bouwplaatspoort voor 70% van de materiaalvrachtwagens. 95% van de papieren leverbonnen bevat fouten of ontbrekende certificaten, met opleververtragingen van 4 tot 6 weken onder de Wkb tot gevolg.
   - fig: <5%
-    body: van de staf maakt een groot infraproject van begin tot eind mee. Inkoopkennis verdwijnt bij personeelsverloop, terwijl 95% van historische ERP-transacties na tien jaar corrupt of onbruikbaar blijkt.
-  source: Rockx 2023, TU Delft · Hamppi 2025 · Aldeeb 2024 · Qflow 2025 · VNG 2024
+    body: van de staf maakt een groot infraproject van begin tot eind mee. Inkoopkennis verdwijnt bij personeelsverloop. Bij een onderzochte aannemer bleven na opschoning van ruim 1.000 historische projecten er 54 bruikbaar over.
+  source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · VNG 2024 · Rockx 2023, TU Delft · Steuer e.a. 2023
 - tone: chalk
   eyebrow: Het platform
   heading: Drie complementaire engines.
-  lede: 'Een taalmodel schrijft een antwoord op. Een optimalisatie-engine rekent er een uit. Dundir verbindt wiskundige inkoopoptimalisatie met realtime verificatie aan de poort en een lerend contractgeheugen.'
-  body: 'Het platform bestaat uit drie onderling verbonden modules die lokaal op uw eigen infrastructuur draaien:
+  lede: 'Een taalmodel schrijft een antwoord op. Een optimalisatie-engine rekent er een uit. Dundir wordt gebouwd om wiskundige inkoopoptimalisatie te verbinden met verificatie aan de poort en een lerend contractgeheugen.'
+  body: 'Het ontwerp bestaat uit drie onderling verbonden modules, bedoeld om lokaal op uw eigen infrastructuur te draaien. Elk staat in een eigen fase:
 
-    <strong>1. Deterministic Procurement Engine:</strong> Wiskundige combinatorische optimalisatie over prijs, levertijd, transportkilometers en CO2. Harde deterministische berekeningen: dezelfde invoer geeft altijd exact dezelfde uitkomst, zonder de numerieke afwijkingen van generatieve AI (tot 8.354 euro fout per regel in Hamppi 2025).
+    <strong>1. Deterministic Procurement Engine (onderzoek en ontwerp):</strong> Combinatorische optimalisatie over prijs, levertijd, transportkilometers en CO2. Deterministisch ontworpen: dezelfde invoer moet altijd exact dezelfde uitkomst geven, zonder de numerieke afwijkingen van generatieve AI (tot 8.354 euro fout per regel in Hamppi 2025).
 
-    <strong>2. Jobsite Digital Twin & Slimme Poort:</strong> Mobiele en vaste OCR scant vrachtbrieven en kentekens bij aankomst. Automatische drieweg-matching tussen bestelbon, leveringsbon en factuur. Realtime samenstelling van het Dossier Bevoegd Gezag conform de Wet kwaliteitsborging voor het bouwen (Wkb).
+    <strong>2. Jobsite Digital Twin & Slimme Poort (labprototype):</strong> Het doel: OCR aan de poort leest vrachtbrieven en kentekens bij aankomst, matcht bestelbon, leveringsbon en factuur, en bouwt het Dossier Bevoegd Gezag onder de Wet kwaliteitsborging voor het bouwen (Wkb) mee op. Vandaag draait de eerste edge-hardware op de werkbank: twee gekoppelde bordjes met een klein taalmodel op de chip, zonder internet. Camera en slimme bril volgen.
 
-    <strong>3. Forecasting & Institutioneel Geheugen:</strong> Werkelijke leverbetrouwbaarheid, levertijden en afwijkingen worden direct teruggekoppeld naar de scoringsparameters voor toekomstige aanbestedingen. Uw operationele kennis blijft behouden wanneer personeel vertrekt.
+    <strong>3. Forecasting & Institutioneel Geheugen (ontwerp):</strong> Werkelijke leverbetrouwbaarheid, levertijden en afwijkingen moeten terugvloeien naar de scoringsparameters voor volgende aanbestedingen, zodat operationele kennis blijft wanneer personeel vertrekt.
 
-    <strong>Data verlaat uw netwerk niet.</strong> Het systeem draait on-premise conform de Baseline Informatiebeveiliging Overheid (BIO 2019). Geen afhankelijkheid van externe cloud-API''s.'
+    <strong>Uw data blijft in uw netwerk.</strong> Het systeem wordt ontworpen om on-premise te draaien, zodat een overheid binnen haar eigen kaders (zoals de BIO) kan blijven. Uw data traint nooit modellen van anderen.'
 - tone: chalk-2
   eyebrow: Waar wij staan
   heading: Nog niet af, en dat zeggen wij liever zelf.
@@ -50,7 +50,7 @@ sections:
 
     De kernvraag staat nog open: wat betekent <em>optimaal</em> precies wanneer prijs, levertijd, certificering, poortlogistiek en duurzaamheid gelijktijdig worden afgewogen, en vanaf hoeveel data verslaat die aanpak een ervaren inkoper en uitvoerder?
 
-    Dat is precies waarom wij nu partners zoeken en geen licenties verkopen. Wie in deze fase meedoet als ontwerppartner, bepaalt mee waarop het systeem gekalibreerd wordt en houdt wat er gebouwd is.'
+    Dat is precies waarom wij nu partners zoeken en geen licenties verkopen. Wie in deze fase meedoet als ontwerppartner, bepaalt mee waarop het systeem gekalibreerd wordt en wat er eerst gebouwd wordt.'
   caveat:
     lab: Wat het onderzoek niet aantoont
     text: De literatuur onderbouwt het probleem en het lokale implementatiemodel. Zij bewijst niet dat onze specifieke optimalisatie-aanpak in de praktijk goedkoper inkoopt dan een ervaren inkoper. Die validatie moet uit pilotdata komen, en die hebben wij nog niet.
@@ -58,9 +58,9 @@ sections:
   heading: Twee kopers, één keten.
   claims:
   - fig: 50 tot 500
-    body: <strong>Middelgrote aannemers.</strong> Stop urenverlies aan handmatige administratie en voorkom faalkosten aan de poort. Wkb-dossieropbouw en CPR 2024-certificaten worden direct bij ontvangst geborgd.
+    body: <strong>Middelgrote aannemers.</strong> Stop urenverlies aan handmatige administratie en voorkom faalkosten aan de poort. Het doel is om Wkb-dossier en CPR 2024-certificaten vast te leggen op het moment van ontvangst.
   - fig: '342'
-    body: <strong>Nederlandse gemeenten.</strong> Elke inkoopbeslissing moet aantoonbaar verdedigbaar zijn onder Aanbestedingswet artikel 2.130. Dundir levert het wiskundige auditspoor bij selectie en bewaakt de naleving bij fysieke oplevering.
+    body: <strong>Nederlandse gemeenten.</strong> Elke inkoopbeslissing moet aantoonbaar verdedigbaar zijn onder Aanbestedingswet artikel 2.130. Dundir wordt ontworpen om bij selectie een rekenkundig auditspoor te leveren en bij levering de naleving te toetsen.
   chipslabel: Regelgeving die dit afdwingt
   chips:
   - label: Aanbestedingswet art. 2.130

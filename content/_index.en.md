@@ -1,8 +1,8 @@
 ---
 title: Dundir
-description: AI-driven procurement decisions and jobsite systems for construction. Locally deployed. Mathematically grounded. Audit-ready.
+description: AI-driven procurement decisions and jobsite systems for construction, designed for local deployment and an auditable trail. In development with design partners.
 headline: Seventy percent of your project is <span class="cut">procurement.</span>
-sub: The unit price is optimized. That is rarely the biggest issue. Where is the material, when will it arrive, and is it certified? Dundir combines a mathematical procurement solver with a jobsite digital twin.
+sub: The unit price is optimized. That is rarely the biggest issue. Where is the material, when will it arrive, and is it certified? Dundir is building a mathematical procurement solver and a jobsite digital twin.
 stack:
   label: One euro of project cost, divided
   source: Donyavi et al. 2024, in Hamppi 2025
@@ -24,25 +24,25 @@ sections:
   heading: The bill is already running.
   claims:
   - fig: 31.7%
-    body: of estimator working hours lost to clerical data entry rather than cost analysis. Calculating a single formal quotation consumes 42 labor hours on average.
+    body: of estimator working hours lost to clerical data entry rather than cost analysis. Calculating a single formal quotation takes a median of 42 labor hours.
   - fig: 50 min
     body: idle wait time at the jobsite gate for 70% of material delivery trucks. 95% of paper delivery tickets contain errors or missing certificates, causing 4 to 6 week handover blockades under the Dutch Quality Assurance Act (Wkb).
   - fig: <5%
-    body: of personnel remain on major infrastructure projects from inception to closeout. Procurement intelligence evaporates with staff turnover, while 95% of legacy ERP records are corrupted after ten years.
-  source: Rockx 2023, TU Delft · Hamppi 2025 · Aldeeb 2024 · Qflow 2025 · VNG 2024
+    body: of personnel remain on major infrastructure projects from inception to closeout. Procurement intelligence evaporates with staff turnover. At one contractor studied, cleansing more than 1,000 historical projects left 54 usable.
+  source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · VNG 2024 · Rockx 2023, TU Delft · Steuer et al. 2023
 - tone: chalk
   eyebrow: The platform
   heading: Three complementary engines.
-  lede: 'A language model writes an answer. An optimization engine calculates one. Dundir connects mathematical procurement optimization with real-time verification at the gate and an accumulated contract memory.'
-  body: 'The platform consists of three interconnected modules running locally on your own infrastructure:
+  lede: 'A language model writes an answer. An optimization engine calculates one. Dundir is being built to connect mathematical procurement optimization with verification at the gate and an accumulated contract memory.'
+  body: 'The design has three interconnected modules, meant to run locally on your own infrastructure. Each is at its own stage:
 
-    <strong>1. Deterministic Procurement Engine:</strong> Mathematical combinatorial optimization across unit price, delivery schedule, transit miles, and carbon intensity. Pure determinism: identical inputs yield identical outputs every single time, without the numerical drift of generative AI (up to 8,354 euro error per line in Hamppi 2025).
+    <strong>1. Deterministic Procurement Engine (research and design):</strong> Combinatorial optimization across unit price, delivery schedule, transit miles, and carbon intensity. Deterministic by design: identical inputs must yield identical outputs every time, without the numerical drift of generative AI (up to 8,354 euro error per line in Hamppi 2025).
 
-    <strong>2. Jobsite Digital Twin & Smart Gate:</strong> Mobile and fixed edge OCR scans delivery tickets and license plates upon arrival. Automated 3-way matching reconciles purchase orders, delivery receipts, and invoices. Real-time compilation of the Dossier Bevoegd Gezag under the Dutch Wkb regulation.
+    <strong>2. Jobsite Digital Twin & Smart Gate (lab prototype):</strong> The goal: OCR at the gate reads delivery tickets and license plates on arrival, matches purchase orders, delivery receipts, and invoices, and builds the Dossier Bevoegd Gezag under the Dutch Wkb as it goes. Today the first edge hardware runs on the bench: two linked boards with a small language model on the chip, no internet needed. Camera and smart glasses come next.
 
-    <strong>3. Forecasting & Institutional Memory:</strong> Actual delivery punctuality, defect rates, and schedule variances feed forward into scoring parameters for future tenders. Operational knowledge remains within your enterprise when staff departs.
+    <strong>3. Forecasting & Institutional Memory (design):</strong> Actual delivery punctuality, defect rates, and schedule variances are meant to feed the scoring parameters for future tenders, so operational knowledge stays when staff leave.
 
-    <strong>Your data never leaves your network.</strong> The platform runs on-premise in compliance with the Dutch Government Information Security Baseline (BIO 2019). Zero dependency on third-party cloud APIs.'
+    <strong>Your data stays in your network.</strong> The system is designed to run on-premise, so a public body can stay inside its own security frameworks (such as the Dutch BIO). Your data never trains anyone else''s models.'
 - tone: chalk-2
   eyebrow: Where we stand
   heading: Not finished, and we would rather say so ourselves.
@@ -50,7 +50,7 @@ sections:
 
     The fundamental question remains open: what does <em>optimal</em> mean when balancing price, delivery time, certification, gate logistics, and carbon footprint simultaneously, and at what data volume does this approach outperform an experienced buyer and jobsite superintendent?
 
-    That is why we seek design partners rather than software buyers. Partners who join at this stage help determine how the system is calibrated and own what gets deployed.'
+    That is why we seek design partners rather than software buyers. Partners who join at this stage help determine how the system is calibrated and what gets built first.'
   caveat:
     lab: What the research does not claim
     text: Academic literature establishes the problem and the local deployment model. It does not prove that our solver buys more cheaply in practice than your senior estimator. That validation requires empirical pilot data, which we gather together.
@@ -58,9 +58,9 @@ sections:
   heading: Two buyers, one supply chain.
   claims:
   - fig: 50 to 500
-    body: <strong>Mid-size contractors.</strong> Eliminate manual data entry and halt jobsite delays. Wkb handover compliance and CPR 2024 certifications are captured immediately upon gate arrival.
+    body: <strong>Mid-size contractors.</strong> Eliminate manual data entry and halt jobsite delays. The goal is to capture the Wkb handover record and CPR 2024 certificates at the moment of delivery.
   - fig: '342'
-    body: <strong>Dutch municipalities.</strong> Every public award decision must be demonstrably defensible under Aanbestedingswet Article 2.130. Dundir provides a mathematical audit trail during selection and verifies physical contract compliance upon delivery.
+    body: <strong>Dutch municipalities.</strong> Every public award decision must be demonstrably defensible under Aanbestedingswet Article 2.130. Dundir is designed to give a mathematical audit trail at selection and to check contract compliance on delivery.
   chipslabel: Regulatory drivers enforcing this
   chips:
   - label: Aanbestedingswet art. 2.130
