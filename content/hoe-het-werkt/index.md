@@ -40,7 +40,9 @@ sections:
     src: Hamppi 2025, Aalto Universiteit · Atil e.a. 2025
   body: 'Welke randvoorwaarden zijn gehanteerd, welke afweging is gemaakt tussen transportafstand en materiaalkosten, en waarom een leverancier is geselecteerd: het systeem is zo ontworpen dat het de exacte rekenformule en wegingsfactoren vastlegt.
 
+
     Aan de poort geldt hetzelfde: elke vrachtbriefscan en matchingsbeslissing moet worden gelogd met tijdstempel, referentienummer en afwijkingspercentage.
+
 
     Voor gemeenten ondersteunt dit de motivering onder Aanbestedingswet artikel 2.130. Voor aannemers levert het een onderbouwd dossier op bij geschillen over meerwerk of ondeugdelijke leveringen.'
 - tone: chalk-2
@@ -48,7 +50,9 @@ sections:
   heading: Wat het systeem niet doet.
   body: 'Dundir neemt geen beslissingen en vervangt de professional niet. De calculator, inkoper en uitvoerder behouden de regie.
 
+
     Het systeem elimineert het handmatige zoek- en invoerwerk zodat de specialist zich kan richten op onderhandeling, kwaliteitsbeoordeling en relatiebeheer. De formele beslissing en contractuele verantwoordelijkheid blijven altijd bij uw organisatie.
+
 
     Het systeem kalibreert op uw eigen inkoophistorie en leverprestaties. Als een ervaren hoofdinkoper vertrekt, blijft de opgebouwde leveranciersintelligentie bewaard binnen het bedrijf.'
   caveat:

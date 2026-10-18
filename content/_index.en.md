@@ -36,11 +36,15 @@ sections:
   lede: 'A language model writes an answer. An optimization engine calculates one. Dundir is being built to connect mathematical procurement optimization with verification at the gate and an accumulated contract memory.'
   body: 'The design has three interconnected modules, meant to run locally on your own infrastructure. Each is at its own stage:
 
+
     <strong>1. Deterministic Procurement Engine (research and design):</strong> Combinatorial optimization across unit price, delivery schedule, transit miles, and carbon intensity. Deterministic by design: identical inputs must yield identical outputs every time, without the numerical drift of generative AI (up to 8,354 euro error per line in Hamppi 2025).
+
 
     <strong>2. Jobsite Digital Twin & Smart Gate (lab prototype):</strong> The goal: OCR at the gate reads delivery tickets and license plates on arrival, matches purchase orders, delivery receipts, and invoices, and builds the Dossier Bevoegd Gezag under the Dutch Wkb as it goes. Today the first edge hardware runs on the bench: two linked boards with a small language model on the chip, no internet needed. Camera and smart glasses come next.
 
+
     <strong>3. Forecasting & Institutional Memory (design):</strong> Actual delivery punctuality, defect rates, and schedule variances are meant to feed the scoring parameters for future tenders, so operational knowledge stays when staff leave.
+
 
     <strong>Your data stays in your network.</strong> The system is designed to run on-premise, so a public body can stay inside its own security frameworks (such as the Dutch BIO). Your data never trains anyone else''s models.'
 - tone: chalk-2
@@ -48,7 +52,9 @@ sections:
   heading: Not finished, and we would rather say so ourselves.
   body: 'Dundir is a research initiative with a company around it, not a finished off-the-shelf product with a marketing story around it. The optimization theory is established; its application to Dutch construction procurement and jobsite logistics is new.
 
+
     The fundamental question remains open: what does <em>optimal</em> mean when balancing price, delivery time, certification, gate logistics, and carbon footprint simultaneously, and at what data volume does this approach outperform an experienced buyer and jobsite superintendent?
+
 
     That is why we seek design partners rather than software buyers. Partners who join at this stage help determine how the system is calibrated and what gets built first.'
   caveat:

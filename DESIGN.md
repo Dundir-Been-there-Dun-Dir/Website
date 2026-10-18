@@ -29,7 +29,26 @@ argument before they need the time saving argument.
 The page's job: make the cost visible, make the determinism credible, and route the
 visitor to whichever of the four ways in fits them.
 
-## Direction: massa
+## Direction: Werktekening (since 2026-10-18)
+
+The site is set as a working drawing: a line means a limit, a number means a
+measurement, a stamp says who checked it. The full reference, with every token
+and measured contrast ratio, is the unlisted page `/werktekening/`.
+
+- Grounds: warm paper is the page, a tint for the second band, graphite for the
+  band where the system shows itself and for the footer. Palette file:
+  `assets/css/palettes/werktekening.css`, selected in `hugo.toml`.
+- One accent, brick: the optimum and the action. Figures and headlines are ink,
+  not brick.
+- Type: Geist for headlines and text, Geist Mono for figures, sources and
+  traces. Normal width, semibold headlines, sentence case everywhere. The
+  second part of a headline steps down in tone, not in colour.
+- Tone mapping in content: no tone is paper, `chalk` is the tint, `chalk-2` and
+  `zinc` are graphite.
+
+Everything below describes the earlier directions and is kept as history.
+
+## Direction: massa (history)
 
 **Out of date as of 2026-08-31.** The palette moved to Oranje: navy grounds
 derived from the US, Dutch and Russian flag averages, with `#F36C21` as the

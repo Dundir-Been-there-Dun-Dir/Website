@@ -20,6 +20,7 @@ sections:
   heading: A focused thirty-minute discussion.
   body: 'Want to speak with us? Send a message. No sales deck, no marketing slides: thirty minutes examining your procurement and jobsite processes, where we ask the questions.
 
+
     If you manage procurement or site logistics for a contractor or municipality, your field experience is worth more to us right now than a quick contract signature.'
   form: contact
 ---

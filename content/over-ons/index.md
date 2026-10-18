@@ -19,6 +19,7 @@ sections:
   heading: Gesprek van dertig minuten.
   body: 'Wilt u ons spreken? Stuur een bericht. Geen verkooppraatje en geen voorbereide verkoopdia''s: een gesprek van dertig minuten over uw inkoop- en bouwplaatsprocessen, waarin wij vooral vragen stellen.
 
+
     Als u inkoop of werflogistiek leidt in de bouw of bij een gemeente, is uw praktijkervaring op dit moment waardevoller voor ons dan een snelle handtekening.'
   form: contact
 ---

@@ -123,7 +123,7 @@
       </div>
       {{ end }}
 
-      {{ with $s.chipslabel }}<p class="mono mt-2" style="color:var(--concrete-dim)">{{ . }}</p>{{ end }}
+      {{ with $s.chipslabel }}<p class="mono mt-2" style="color:var(--fg-3)">{{ . }}</p>{{ end }}
       {{ with $s.chips }}
       <div class="chips">
         {{ range . }}<span class="chip{{ if .live }} chip--live{{ end }}">{{ .label }}</span>{{ end }}

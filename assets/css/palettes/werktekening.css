@@ -1,0 +1,38 @@
+/* Werktekening: warm paper, graphite, brick. The system and its ratios are
+   documented on /werktekening/. Same names as the other palettes, so the role
+   layer in main.css reads them unchanged. */
+
+:root {
+  --bitumen: #1C1B19;
+  --zinc:    #2A2925;
+  --zinc-2:  #3D3A35;
+
+  --chalk:   #F8F6F1;
+  --chalk-2: #EFEBE3;
+  --field:   #FFFFFF;
+
+  --concrete:     #BDB6A9;
+  --concrete-dim: #A39C8F;
+
+  --ink:       #1C1B19;
+  --ink-soft:  #5C574F;
+  --ink-quiet: #6B655C;
+  --rule-lt:   #DCD6CA;
+
+  --menie:      #B4492A;
+  --menie-lt:   #E38361;
+  --menie-dk:   #963A1E;
+  --menie-wash: #F5E6DE;
+  --menie-deep: #7A2E17;
+  --menie-glow: rgba(180, 73, 42, .25);
+
+  --on-menie:      #FFFFFF;
+  --on-menie-soft: #F8F6F1;
+
+  --neutral-fill:    #BDB6A9;
+  --on-neutral:      #1C1B19;
+  --on-neutral-soft: #3A3732;
+
+  --mark-region: #B4492A;
+  --mark-dot:    #F8F6F1;
+}

@@ -20,6 +20,7 @@ sections:
   heading: Razgovor od trideset minuta.
   body: 'Želite da razgovarate sa nama? Pošaljite poruku. Bez prodajnih prezentacija i marketinških slajdova: trideset minuta analize vaših procesa nabavke i gradilišta, gde mi postavljamo pitanja.
 
+
     Ako vodite nabavku ili gradilišnu logistiku u građevinskom preduzeću ili lokalnoj samoupravi, vaše iskustvo sa terena nam vredi više od brzog potpisa.'
   form: contact
 ---
