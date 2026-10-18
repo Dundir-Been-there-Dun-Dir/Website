@@ -1,4 +1,4 @@
-{{- $css := slice (resources.Get "css/fonts.css") (resources.Get "css/werktekening.css") | resources.Concat "css/werktekening.bundle.css" | minify | fingerprint -}}
+{{- $css := resources.Get "css/werktekening.css" | minify | fingerprint -}}
 {{- $js := resources.Get "js/werktekening.js" | minify | fingerprint -}}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,8 +10,8 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="preload" href="/fonts/anybody-03.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/chivo-03.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/geist-mono.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
 </head>
@@ -65,8 +65,8 @@
         <g class="best">
           <circle class="halo" cx="170" cy="100" r="6"/>
           <circle cx="170" cy="100" r="5"/>
-          <text x="160" y="62" text-anchor="end">optimum: staal B, gevel C</text>
-          <text x="160" y="76" text-anchor="end">€ 398.400</text>
+          <text x="180" y="40">optimum: staal B, gevel C</text>
+          <text x="180" y="54">€ 398.400</text>
         </g>
       </svg>
       <pre class="trace" aria-label="Rekenspoor"><span class="cmd" style="--i:0">$ dundir bereken bestek-031</span><span style="--i:1">12 offertes, 4 harde eisen</span><span style="--i:2">5 haalbare combinaties</span><span style="--i:3">optimum: staal B, gevel C</span><span style="--i:4">totaal € 398.400</span><span class="ok" style="--i:5">2e run: identiek, sha256 9f2c41e0…e07a</span></pre>
@@ -89,7 +89,7 @@
     <ul class="rules">
       <li><strong>The drawing is the hero.</strong><p>The most characteristic thing in this trade is a constraint drawn on a plan. Pages open with a drawing that does the work: limits, the feasible area, the chosen point.</p></li>
       <li><strong>One brick point.</strong><p>Brick marks the optimum and the action, nothing else. If two unrelated things on a screen are brick, one of them is wrong.</p></li>
-      <li><strong>Width is the voice.</strong><p>Anybody runs from narrow to wide inside one headline: narrow for the statement, wide for the consequence. Body text stays quiet in Chivo.</p></li>
+      <li><strong>Quiet type, exact figures.</strong><p>One family in two cuts. Geist sets everything people read; Geist Mono prints what a drawing would stamp: measurements, limits and the trace. Weight does the work, never size alone.</p></li>
     </ul>
   </div>
 </section>
@@ -143,21 +143,21 @@
     <div class="head">
       <h2 id="type">Type</h2>
       <div>
-        <p>Three faces, all self-hosted, each with one job. Anybody carries headlines and uses its width axis as part of the message. Chivo sets everything people read at length. Space Mono is only for what a drawing would print in a stencil: measurements, coordinates and the solver's trace.</p>
-        <span class="ref">Scale steps by a perfect fourth, 1.333, with fluid display sizes</span>
+        <p>One family, self-hosted: Geist for headlines and text, Geist Mono for figures. Headlines are semibold with tight tracking and stay at reading size rather than poster size; hierarchy comes from weight and tone. The second line of a headline steps down to the soft tone instead of growing.</p>
+        <span class="ref">Scale steps by a perfect fourth, 1.333; fonts under the SIL Open Font License</span>
       </div>
     </div>
     <div class="specimen" lang="nl">
-      <div class="spec"><span>hero, Anybody 850, width 75 to 150</span><p class="d-hero">Dezelfde invoer.</p></div>
-      <div class="spec"><span>section, Anybody 800, width 125</span><p class="d-3xl">Drie modules, drie fasen.</p></div>
-      <div class="spec"><span>panel, Anybody 800, width 125</span><p class="d-2xl">Slimme poort</p></div>
-      <div class="spec"><span>lede, Chivo 400, 1.333</span><p class="d-lg">Inkoop is geen backoffice-functie. Het is de kostenstructuur van uw project.</p></div>
-      <div class="spec"><span>body, Chivo 400, 1.0625, 64 characters</span><p class="d-body">Een calculator besteedt bijna een derde van zijn tijd aan invoer en briefwerk in plaats van aan kostenanalyse. Dat is geen gebrek aan vakmanschap; het is hoe het proces nu is ingericht.</p></div>
-      <div class="spec"><span>measure, Space Mono 400</span><p class="d-mono">levertijd ≤ 14 d &nbsp; budget ≤ € 412.000 &nbsp; 42 u mediaan</p></div>
+      <div class="spec"><span>hero, Geist 600, tracking -0.035em</span><p class="d-hero">Dezelfde invoer.</p></div>
+      <div class="spec"><span>section, Geist 600</span><p class="d-3xl">Drie modules, drie fasen.</p></div>
+      <div class="spec"><span>panel, Geist 600, tracking -0.025em</span><p class="d-2xl">Slimme poort</p></div>
+      <div class="spec"><span>lede, Geist 400, 1.333</span><p class="d-lg">Inkoop is geen backoffice-functie. Het is de kostenstructuur van uw project.</p></div>
+      <div class="spec"><span>body, Geist 400, 1.0625, 64 characters</span><p class="d-body">Een calculator besteedt bijna een derde van zijn tijd aan invoer en briefwerk in plaats van aan kostenanalyse. Dat is geen gebrek aan vakmanschap; het is hoe het proces nu is ingericht.</p></div>
+      <div class="spec"><span>measure, Geist Mono 400</span><p class="d-mono">levertijd ≤ 14 d &nbsp; budget ≤ € 412.000 &nbsp; 42 u mediaan</p></div>
     </div>
-    <div class="stretch" lang="nl">
-      <output id="stretch-out" style="--w:100%">Zeventig procent is inkoop.</output>
-      <label for="stretch">width <input id="stretch" type="range" min="50" max="150" step="1" value="100"> <span id="stretch-val">100</span></label>
+    <div class="axis-demo" lang="nl">
+      <output id="weight-out" style="--wt:600">Zeventig procent is inkoop.</output>
+      <label for="weight">weight <input id="weight" type="range" min="300" max="700" step="10" value="600"> <span id="weight-val">600</span></label>
     </div>
   </div>
 </section>
