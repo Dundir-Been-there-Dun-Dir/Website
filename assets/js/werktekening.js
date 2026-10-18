@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const range = document.getElementById("stretch");
-  const out = document.getElementById("stretch-out");
-  const val = document.getElementById("stretch-val");
+  const range = document.getElementById("weight");
+  const out = document.getElementById("weight-out");
+  const val = document.getElementById("weight-val");
   range.addEventListener("input", () => {
-    out.style.setProperty("--w", `${range.value}%`);
+    out.style.setProperty("--wt", range.value);
     val.textContent = range.value;
   });
 });
