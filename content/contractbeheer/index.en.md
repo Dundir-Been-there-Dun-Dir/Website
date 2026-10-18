@@ -1,5 +1,5 @@
 ---
 title: "Smart Gate & Jobsite Inspection"
 slug: "contract-oversight"
-description: "Dundir automates gate checks with edge OCR, 3-way matching, and real-time compilation of the Wkb Handover Dossier to eliminate failure costs and delivery delays."
+description: "Dundir is developing a smart gate: edge OCR, 3-way matching, and compilation of the Wkb Handover Dossier against failure costs and delivery delays. A lab prototype today."
 ---

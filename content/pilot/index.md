@@ -1,7 +1,7 @@
 ---
 title: Pilot als ontwerppartner
-description: Het systeem is nog niet af. U bepaalt mee waarop het gekalibreerd wordt, en na de overdracht bezit u wat er staat.
-lede: 'Het systeem is nog niet af. Dat is geen kleine lettertjes, dat is het aanbod: u bepaalt mee waarop het gekalibreerd wordt, en na de overdracht bezit u wat er staat.'
+description: Het systeem is nog niet af. U bepaalt mee waarop het gekalibreerd wordt, en het draait binnen uw eigen netwerk.
+lede: 'Het systeem is nog niet af. Dat is geen kleine lettertjes, dat is het aanbod: u bepaalt mee waarop het gekalibreerd wordt, en het draait binnen uw eigen netwerk.'
 sections:
 - eyebrow: Waarom ontwerppartner
   heading: Een generiek model kent uw bouwplaats niet.
@@ -10,29 +10,29 @@ sections:
     Daarom werken wij in deze fase met een select aantal ontwerppartners in plaats van met zoveel mogelijk licentiekopers. Wie nu instapt, stapt in op het moment dat de architectuur nog direct aan te passen is aan uw werf- en kantoorprocessen.'
 - tone: chalk
   eyebrow: Het 10-weken traject
-  heading: Vier fasen en een harde 7-daagse mijlpaal.
+  heading: Vier fasen en een eerste resultaat binnen 7 dagen.
   steps:
-  - h: 'Week 1: Lokale installatie en ERP-inname'
-    p: 'Wij installeren het systeem 100% on-premise op uw eigen infrastructuur of lokale edge-server. Uw historische inkoopdata, catalogi en leveranciersbestanden worden lokaal ingelezen conform de Baseline Informatiebeveiliging Overheid (BIO 2019).'
-  - h: 'Week 2: Eerste poortscan binnen 7 dagen (TTFV)'
-    p: 'Binnen zeven werkdagen draait de eerste mobiele edge OCR aan uw bouwplaatspoort: een papieren vrachtbrief wordt gescand, gekoppeld aan de inkooporder en gecontroleerd via automatische drieweg-matching.'
-  - h: 'Weken 3 tot 8: Schaduwdraaien op werf en kantoor'
-    p: 'Dundir draait parallel aan uw bestaande werkwijze. De solver berekent actieve aanbestedingen en de slimme poort registreert leveringen en bouwt realtime het Wkb Dossier Bevoegd Gezag op. Alle ontdekte prijs- en kwaliteitsafwijkingen worden gelogd.'
-  - h: 'Weken 9 en 10: Auditreview en definitieve overdracht'
-    p: 'Gezamenlijke evaluatie van de faalkostenbesparing, administratieve tijdswinst en volledigheid van het Wkb-opleverdossier. Na overdracht bezit u het systeem volledig, zonder verplicht terugkerend abonnement.'
+  - h: 'Week 1: Intake en afgeronde aanbestedingen'
+    p: 'U levert drie tot vijf afgeronde aanbestedingen met de ontvangen offertes en uw gunningscriteria. Alles blijft lokaal binnen uw netwerk en valt onder een NDA.'
+  - h: 'Binnen 7 dagen: uw eigen aanbestedingen teruggerekend'
+    p: 'Binnen zeven werkdagen ziet u uw afgeronde aanbestedingen terug: offertes gestructureerd, vergeleken op uw criteria, met het volledige redeneerspoor naast de keuze die u destijds maakte. Geen hardware en geen ERP-koppeling nodig.'
+  - h: 'Weken 3 tot 8: Meedraaien met lopende aanbestedingen'
+    p: 'Dundir rekent mee met uw lopende aanbestedingen, naast uw bestaande werkwijze. Wij kalibreren samen op wat uw inkopers en calculators zwaar laten wegen. Elke afwijking tussen het advies en uw keuze wordt gelogd en besproken. De slimme poort kan als optionele fase op één bouwplaats worden getest zodra het prototype daar klaar voor is.'
+  - h: 'Weken 9 en 10: Evaluatie en besluit'
+    p: 'Gezamenlijke evaluatie van tijdswinst, kwaliteit van het advies en de gelogde afwijkingen. Daarna besluit u over een licentie met jaarlijks onderhoud.'
 - eyebrow: Commercieel model
-  heading: Vaste projectlicentie, geen omzetbelasting.
+  heading: Licentie plus jaarlijks onderhoud, geen percentage van uw bouwsom.
   claims:
-  - fig: Vaste prijs
-    body: <strong>Transparant per project of bouwplaats.</strong> U betaalt voor de software en de implementatie, niet voor het succes van uw bouwvolume.
+  - fig: Licentie
+    body: <strong>Eenmalig licentie en implementatie, per locatie en per module.</strong> U betaalt voor de software en de installatie, niet voor het succes van uw bouwvolume.
+    word: true
+  - fig: Onderhoud
+    body: <strong>Jaarlijks onderhoud als vast deel van de licentie.</strong> Updates, herkalibratie op nieuwe data en ondersteuning. Voorspelbaar, en los van uw omzet.
     word: true
   - fig: Geen omzettaks
-    body: <strong>Geen percentage van uw bouwsom.</strong> Traditionele software-aanbieders heffen een Annual Contract Value (ACV) volume-belasting van 0,15% tot 0,35% op uw totale omzet. Dundir rekent een vaste, voorspelbare projectvergoeding.
+    body: <strong>Geen percentage van uw bouwsom.</strong> Gangbare bouwsoftware rekent naar het jaarlijkse bouwvolume dat over het platform loopt. Dundir rekent naar locatie en module, niet naar uw omzet.
     word: true
-  - fig: Eigenaarschap
-    body: <strong>Volledig eigendom na overdracht.</strong> U zit niet vast aan een vendor lock-in. Het systeem blijft lokaal draaien op uw eigen servers, ook als u besluit de samenwerking niet te verlengen.
-    word: true
-  source: Software Pricing Benchmarks 2024 · Hamppi 2025
+  source: Procore Form 10-K 2024
 - tone: chalk-2
   eyebrow: Voorwaarden
   heading: Wat er van beide kanten op tafel ligt.
@@ -41,7 +41,7 @@ sections:
     body: Toegang tot inkoopdossiers, poortprocessen en de calculators en uitvoerders die het dagelijkse werk doen, niet alleen hun leidinggevenden. Enkele uren per maand aan feedback. En de bereidheid om direct te melden wanneer een berekening of scan niet klopt.
     word: true
   - fig: Wij leveren
-    body: Lokale implementatie, integratie met uw ERP-data en de overdracht waarna u het systeem bezit. Een strikte geheimhoudingsverklaring (NDA) vóórdat er één megabyte beweegt, en een vastgelegde databegrenzing.
+    body: Lokale implementatie op uw eigen infrastructuur en de koppeling met uw inkoopdata. Een strikte geheimhoudingsverklaring (NDA) vóórdat er één megabyte beweegt, en een vastgelegde databegrenzing.
     word: true
   - fig: U beslist
     body: Het systeem berekent en registreert; de professional controleert en tekent. De juridische verantwoordelijkheid voor inkoopbeslissingen en opleveringen blijft te allen tijde bij uw organisatie.
