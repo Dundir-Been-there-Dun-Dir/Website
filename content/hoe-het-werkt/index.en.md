@@ -7,6 +7,7 @@ lede: Dundir is being designed to connect mathematical procurement optimization 
 sections:
 - eyebrow: The lifecycle
   heading: The design in five steps, from specification to handover.
+  figure: cycle
   steps:
   - h: Structuring the specification
     p: 'The AI language layer reads your specification or tender document in plain language. The system extracts hard constraints, delivery schedules, budget ceilings, and CPR 2024 certification criteria. This is the sole stage where a language model operates.'

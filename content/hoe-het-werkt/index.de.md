@@ -6,6 +6,7 @@ lede: Dundir wird entwickelt, um mathematische Beschaffungsoptimierung mit der p
 sections:
 - eyebrow: Der Ablauf
   heading: Der Entwurf in fünf Schritten, von der Spezifikation bis zur Übergabe.
+  figure: cycle
   steps:
   - h: Die Spezifikation strukturieren
     p: 'Die KI-Sprachschicht liest Ihre Spezifikation oder Ihre Ausschreibungsunterlagen in normaler Sprache. Das System extrahiert harte Vorgaben, Lieferpläne, Budgetobergrenzen und Zertifizierungskriterien nach CPR 2024. Dies ist die einzige Stufe, in der ein Sprachmodell arbeitet.'

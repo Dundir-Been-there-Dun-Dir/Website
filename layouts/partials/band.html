@@ -18,6 +18,7 @@
        form     "contact" | "scan"
        scanside true                             render the steps as a sticky rail
        full     true                             single column instead of two
+       figure   name                             a drawing from partials/fig/, above the steps
        id                                        anchor
 */}}
 {{ $s := .section }}
@@ -68,6 +69,8 @@
       </div>
       {{ end }}
       {{ end }}
+
+      {{ with $s.figure }}{{ partial (printf "fig/%s.html" .) $page }}{{ end }}
 
       {{ with $s.steps }}
       <div class="steps">

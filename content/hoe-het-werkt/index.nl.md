@@ -5,6 +5,7 @@ lede: Dundir wordt ontworpen om wiskundige inkoopoptimalisatie te koppelen aan f
 sections:
 - eyebrow: De keten
   heading: Het ontwerp in vijf stappen, van bestek tot oplevering.
+  figure: cycle
   steps:
   - h: Specificatie structureren
     p: 'De AI-taallaag leest uw bestek of offerteaanvraag in gewoon Nederlands. Het systeem extraheert harde randvoorwaarden, leveringsvensters, budgetlimieten en CPR 2024 certificeringseisen. Dit is het enige punt waar een taalmodel actief is.'

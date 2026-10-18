@@ -207,3 +207,65 @@ other = "Der Scan läuft in Ihrem Browser und benötigt JavaScript."
 
 [lang_aria]
 other = "Sprache"
+
+# Figures
+
+[fig_plan_alt]
+other = "Skizze des Solvers: vier Anforderungen begrenzen die zulässigen Angebote, und das Optimum liegt auf einer Ecke dieses Bereichs."
+
+[fig_price]
+other = "Preis"
+
+[fig_reliability]
+other = "Zuverlässigkeit"
+
+[fig_lim_delivery]
+other = "Liefertermin"
+
+[fig_lim_cert]
+other = "CPR-zertifiziert"
+
+[fig_lim_budget]
+other = "Budgetgrenze"
+
+[fig_lim_co2]
+other = "CO₂-Grenze"
+
+[fig_optimum]
+other = "Optimum"
+
+[fig_plan_cap]
+other = "Skizze des Entwurfs, keine Daten"
+
+[fig_stage_solver]
+other = "Solver: Forschung und Entwurf"
+
+[fig_stage_design]
+other = "Entwurf"
+
+[fig_stage_research]
+other = "Forschung und Entwurf"
+
+[fig_stage_lab]
+other = "Laborprototyp"
+
+[fig_cycle_1]
+other = "Spezifikation"
+
+[fig_cycle_2]
+other = "Solver"
+
+[fig_cycle_3]
+other = "Torkontrolle"
+
+[fig_cycle_4]
+other = "Wkb-Dossier"
+
+[fig_cycle_5]
+other = "Vertragsgedächtnis"
+
+[fig_cycle_loop]
+other = "fließt in die nächste Ausschreibung"
+
+[fig_cycle_cap]
+other = "Der Entwurf in fünf Schritten. Nur Schritt 03 gibt es heute, als Prototyp auf dem Labortisch."

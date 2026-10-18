@@ -208,3 +208,65 @@ other = "Vijf minuten. Geen registratie. Direct uw persoonlijke schatting van de
 
 [lang_aria]
 other = "Taal"
+
+# Figures
+
+[fig_plan_alt]
+other = "Schets van de solver: vier eisen begrenzen de haalbare offertes, en het optimum ligt op een hoek van dat gebied."
+
+[fig_price]
+other = "prijs"
+
+[fig_reliability]
+other = "betrouwbaarheid"
+
+[fig_lim_delivery]
+other = "leverdatum"
+
+[fig_lim_cert]
+other = "CPR-gecertificeerd"
+
+[fig_lim_budget]
+other = "budgetplafond"
+
+[fig_lim_co2]
+other = "CO₂-grens"
+
+[fig_optimum]
+other = "optimum"
+
+[fig_plan_cap]
+other = "Schets van het ontwerp, geen data"
+
+[fig_stage_solver]
+other = "solver: onderzoek en ontwerp"
+
+[fig_stage_design]
+other = "ontwerp"
+
+[fig_stage_research]
+other = "onderzoek en ontwerp"
+
+[fig_stage_lab]
+other = "labprototype"
+
+[fig_cycle_1]
+other = "Bestek"
+
+[fig_cycle_2]
+other = "Solver"
+
+[fig_cycle_3]
+other = "Poortcontrole"
+
+[fig_cycle_4]
+other = "Wkb-dossier"
+
+[fig_cycle_5]
+other = "Contractgeheugen"
+
+[fig_cycle_loop]
+other = "voedt de volgende aanbesteding"
+
+[fig_cycle_cap]
+other = "Het ontwerp in vijf stappen. Alleen stap 03 bestaat vandaag, als prototype op de werkbank."

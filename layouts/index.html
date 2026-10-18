@@ -4,14 +4,18 @@
        Copy comes from content/_index.<lang>.md, structure lives here once. */}}
   <section class="hero">
     <div class="container">
-      <h1>{{ .Params.headline | safeHTML }}</h1>
-
-      <div class="hero__sub">
-        <p>{{ .Params.sub }}</p>
-        <div class="hero__actions">
-          <a href="{{ i18n "url_scan" | relURL }}" class="btn btn--primary">{{ i18n "nav_scan" }}</a>
-          <a href="{{ i18n "url_how" | relURL }}" class="btn btn--secondary">{{ i18n "nav_how" }}</a>
+      <div class="hero__grid">
+        <div>
+          <h1>{{ .Params.headline | safeHTML }}</h1>
+          <div class="hero__sub">
+            <p>{{ .Params.sub }}</p>
+            <div class="hero__actions">
+              <a href="{{ i18n "url_scan" | relURL }}" class="btn btn--primary">{{ i18n "nav_scan" }}</a>
+              <a href="{{ i18n "url_how" | relURL }}" class="btn btn--secondary">{{ i18n "nav_how" }}</a>
+            </div>
+          </div>
         </div>
+        {{ partial "fig/plan.html" . }}
       </div>
 
       {{ with .Params.stack }}

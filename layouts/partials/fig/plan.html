@@ -1,0 +1,37 @@
+{{/* The plan: four requirements bound the feasible bids, the cost line touches
+     the region at one corner, and that corner is the optimum. The same idea as
+     the mark. Schematic only: no values, no supplier names. */}}
+<figure class="fig fig--plan" data-draw>
+  <svg viewBox="0 0 480 360" role="img" aria-label="{{ i18n "fig_plan_alt" }}">
+    <g class="grid">
+      {{ range seq 80 40 440 }}<line x1="{{ . }}" y1="20" x2="{{ . }}" y2="320"/>{{ end }}
+      {{ range seq 20 40 300 }}<line x1="40" y1="{{ . }}" x2="460" y2="{{ . }}"/>{{ end }}
+    </g>
+    <line class="axis" x1="40" y1="320" x2="460" y2="320"/>
+    <line class="axis" x1="40" y1="20" x2="40" y2="320"/>
+    <text class="label" x="460" y="340" text-anchor="end">{{ i18n "fig_price" }} →</text>
+    <text class="label" x="48" y="34">↑ {{ i18n "fig_reliability" }}</text>
+
+    <polygon class="region" points="110,280 170,100 380,140 320,300"/>
+
+    {{ range $i, $p := slice "80,150" "120,60" "262,64" "420,90" "446,276" "390,300" "60,300" "66,236" }}
+    {{ $xy := split $p "," }}<circle class="bid" cx="{{ index $xy 0 }}" cy="{{ index $xy 1 }}" r="4" style="--i:{{ $i }}"/>
+    {{ end }}
+    {{ range $i, $p := slice "200,180" "250,222" "300,172" "182,250" "330,250" "262,280" }}
+    {{ $xy := split $p "," }}<circle class="bid bid--in" cx="{{ index $xy 0 }}" cy="{{ index $xy 1 }}" r="4" style="--i:{{ add $i 8 }}"/>
+    {{ end }}
+
+    <g class="limit" style="--i:0"><line x1="101" y1="307" x2="185" y2="55" pathLength="1"/><text transform="translate(116 262) rotate(-71.6)" dy="-7">{{ i18n "fig_lim_delivery" }}</text></g>
+    <g class="limit" style="--i:1"><line x1="117" y1="90" x2="422" y2="148" pathLength="1"/><text x="300" y="114">{{ i18n "fig_lim_cert" }}</text></g>
+    <g class="limit" style="--i:2"><line x1="392" y1="108" x2="313" y2="319" pathLength="1"/><text transform="translate(331 270) rotate(-69.5)" dy="16">{{ i18n "fig_lim_budget" }}</text></g>
+    <g class="limit" style="--i:3"><line x1="341" y1="302" x2="79" y2="277" pathLength="1"/><text x="150" y="310">{{ i18n "fig_lim_co2" }}</text></g>
+
+    <line class="cost" x1="40" y1="126" x2="460" y2="42"/>
+    <g class="best">
+      <circle class="halo" cx="170" cy="100" r="6"/>
+      <circle cx="170" cy="100" r="6"/>
+      <text x="182" y="80">{{ i18n "fig_optimum" }}</text>
+    </g>
+  </svg>
+  <figcaption><span>{{ i18n "fig_plan_cap" }}</span><span>{{ i18n "fig_stage_solver" }}</span></figcaption>
+</figure>

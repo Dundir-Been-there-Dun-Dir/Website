@@ -6,6 +6,7 @@ lede: Dundir se projektuje da pove탑e matemati훾ku optimizaciju nabavke sa fizi�
 sections:
 - eyebrow: Lanac procesa
   heading: Dizajn u pet koraka, od tehni훾kog opisa do primopredaje.
+  figure: cycle
   steps:
   - h: Strukturiranje specifikacije
     p: 'AI jezi훾ki sloj analizira va큄 tehni훾ki opis ili tendersku dokumentaciju na standardnom jeziku. Sistem izdvaja tvrda ograni훾enja, rokove isporuke, bud탑etske limite i CPR 2024 zahteve za sertifikaciju. Ovo je jedina faza u kojoj je jezi훾ki model aktivan.'
