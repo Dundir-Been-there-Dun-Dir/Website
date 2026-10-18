@@ -84,6 +84,10 @@ which read as competent but landed on a well worn look rather than a chosen one.
 - Any claim the research does not actually support. Where the evidence stops, the
   page says so in a caveat block.
 
+## Checks
+
+The rules on this page and on /styleguide/ that a machine can hold are in `scripts/style-check.py`: the pre-commit hook (`git config core.hooksPath .githooks`) runs it on staged files, CI on the whole tree. Colour, type, copy and icon rules live there; judgement (stage wording, figure content) stays with review.
+
 ## Tokens
 
 ### Colour

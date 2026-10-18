@@ -1,0 +1,4 @@
+#!/bin/sh
+# Styleguide and safety rules on what is about to be committed.
+# Enable once per clone:  git config core.hooksPath .githooks
+exec python3 scripts/style-check.py --staged
