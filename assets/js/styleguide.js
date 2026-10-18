@@ -31,6 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const find = document.getElementById("icon-find");
+  const cells = [...document.querySelectorAll(".icon-cell")];
+  const groups = [...document.querySelectorAll(".icon-group")];
+  const none = document.querySelector(".icon-none");
+  find.addEventListener("input", () => {
+    const q = find.value.trim().toLowerCase();
+    for (const c of cells) c.hidden = q && !c.dataset.names.includes(q);
+    for (const g of groups) g.hidden = !g.querySelector(".icon-cell:not([hidden])");
+    none.hidden = cells.some((c) => !c.hidden);
+  });
+
   const range = document.getElementById("weight");
   const out = document.getElementById("weight-out");
   const val = document.getElementById("weight-val");

@@ -264,6 +264,47 @@
   </div>
 </section>
 
+<section class="band" aria-labelledby="icons">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="icons">Icons</h2>
+      <div>
+        <p>Lucide stand-ins for <code>@mui/icons-material</code>. Material icons are filled shapes; a working drawing is lines. Lucide draws on the same 24 grid as Material, line only, in <code>currentColor</code>, so every Material icon has a stand-in that reads like the rest of the sheet. They are set at the stroke weight, never the hair or heavy weight.</p>
+        <span class="ref">Lucide {{ site.Data.icons.version }}, ISC licence, assets/icons/lucide/. Outlined, Rounded, Sharp and TwoTone variants map to the same Lucide icon.</span>
+      </div>
+    </div>
+
+    <div class="icon-sizes">
+      {{ range slice "sm" "md" "lg" }}
+      <figure class="icon-size icon-size--{{ . }}">{{ partial "icon.html" "truck" }}{{ partial "icon.html" "hard-hat" }}{{ partial "icon.html" "receipt" }}{{ partial "icon.html" "circle-check" }}<figcaption>{{ . }}</figcaption></figure>
+      {{ end }}
+    </div>
+
+    <pre class="icon-code"><code><span class="icon-code__was">import LocalShippingIcon from "@mui/icons-material/LocalShipping";</span>
+import { Truck } from "lucide-react";
+
+&lt;Truck size={24} strokeWidth={1.5} aria-hidden="true" /&gt;</code></pre>
+
+    <label class="icon-find"><span>Find a Material name</span><input type="search" id="icon-find" placeholder="LocalShipping, Delete, Warning" autocomplete="off" spellcheck="false"></label>
+
+    {{ range site.Data.icons.groups }}
+    <div class="icon-group">
+      <h3>{{ .name }}</h3>
+      <ul class="icon-grid">
+        {{ range .icons }}
+        <li class="icon-cell" data-names="{{ lower .mui }} {{ .lucide }} {{ lower .react }}">
+          {{ partial "icon.html" .lucide }}
+          <span class="icon-mui">{{ .mui }}</span>
+          <span class="icon-lucide">{{ .react }}</span>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+    <p class="icon-none" hidden>No stand-in yet. Pick the closest Lucide icon at lucide.dev and add it to data/icons.yaml.</p>
+  </div>
+</section>
+
 <section class="band dark" aria-labelledby="engines">
   <div class="wrap">
     <div class="head">
