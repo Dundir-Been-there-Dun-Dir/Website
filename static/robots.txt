@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /styleguide/
+Disallow: /werktekening/
 
 Sitemap: https://dundir.com/sitemap.xml
