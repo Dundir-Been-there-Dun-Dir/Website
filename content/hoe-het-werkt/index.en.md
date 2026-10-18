@@ -1,59 +1,58 @@
 ---
 title: How it works
-description: From material specification to audit-ready comparison report. Locally deployed, mathematically grounded, with a full reasoning trail.
+description: From material specification to smart gate inspection and Wkb handover dossier. Locally deployed, mathematically grounded, with a full audit trail.
 slug: how-it-works
-lede: Dundir removes the administrative work before the decision and documents the reasoning after it. The buyer reviews and decides. The system computes and records.
+lede: Dundir connects mathematical procurement optimization with physical verification at the gate and an accumulated contract memory. The professional evaluates and decides. The system computes, verifies, and archives.
 sections:
-- eyebrow: The chain
-  heading: Five steps, one report.
+- eyebrow: The lifecycle
+  heading: Five steps from specification to handover.
   steps:
-  - h: You enter a material specification
-    p: In plain language, the same way you would describe it today. No form to fill in, no separate notation.
-  - h: The AI layer translates the specification
-    p: 'The system turns it into structured procurement requirements: required certifications, delivery windows, budget limits and weighted objectives. This is the only place in the chain where a language model is at work.'
-  - h: The optimisation engine computes the best combination
-    p: It runs on your supplier database and finds the mathematically demonstrable best combination given your hard requirements and weighted objectives. Not a suggestion. A computed answer with a full reasoning trail.
-  - h: You review the output and decide
-    p: You see a ranked comparison with sources, certification status and the full reasoning trail. You decide. The system records your decision and the reason for it.
-  - h: The audit-ready report is generated automatically
-    p: Ready for internal approval, external audit or public procurement review. No extra work afterwards.
+  - h: Structuring the specification
+    p: 'The AI language layer reads your specification or tender document in plain language. The system extracts hard constraints, delivery schedules, budget ceilings, and CPR 2024 certification criteria. This is the sole stage where a language model operates.'
+  - h: Deterministic solver calculates the optimum
+    p: 'The optimization engine evaluates unit price, delivery schedules, freight miles, and carbon intensity. Pure mathematics: identical inputs yield identical outputs every single time, accompanied by an audit-ready reasoning trail.'
+  - h: Smart gate verification and 3-way matching
+    p: 'Upon arrival at the site gate, mobile or fixed edge OCR scans delivery tickets and truck license plates. The system performs instantaneous 3-way matching across purchase orders, physical delivery receipts, and vendor invoices.'
+  - h: Real-time Wkb handover dossier compilation
+    p: 'Inspection records, delivery receipts, and quality stamps are automatically linked into the statutory Dossier Bevoegd Gezag under the Dutch Wkb regulation. No missing documentation during final municipal commissioning.'
+  - h: Feedback to accumulated contract memory
+    p: 'Actual supplier delivery punctuality, defect frequencies, and unit price variances are logged automatically. This data recalibrates scoring parameters for the next tender bid.'
 - tone: chalk
-  eyebrow: Local
-  heading: Why it runs on your own server.
-  body: 'Three consequences of local deployment that matter directly to municipalities and construction firms:'
-  after: This is not our preference. It is what practice imposes. In a study at the architecture firm Cedervall, GPT-4 was prototyped and rejected on cost and third party dependency; cloud Llama-3 was rejected on twenty second latency and the requirement that data stay on the internal network. On-premise was the only acceptable outcome, and that was an architecture practice, not a municipality.
+  eyebrow: Data sovereignty
+  heading: Why it runs locally on your own infrastructure.
+  body: 'Construction data, cost estimates, and commercial terms are strategically sensitive. Dundir runs 100% on-premises on your enterprise servers or local jobsite edge hardware:'
+  after: 'Local deployment is an operational necessity rather than a preference. Research at Cedervall showed that public cloud models were unusable due to high subscription costs, third-party API dependencies, and mandatory internal data isolation. For Dutch authorities and general contractors, the Dutch Government Information Security Baseline (BIO 2019) mandates that data remains on internal networks.'
   claims:
-  - fig: Data
-    body: Your procurement data never leaves your own server. Prices, supplier agreements and contract details stay where they belong.
+  - fig: Sovereignty
+    body: Your procurement data and pricing history never leave your internal network. No data egress to commercial cloud providers occurs, and proprietary records never train external models.
     word: true
   - fig: Continuity
-    body: There is no dependency on external APIs or cloud providers. The system does not stop when a vendor changes its pricing or its terms.
+    body: Fully operational without active internet connectivity at the jobsite gate. The system continues running through network outages and remains immune to third-party vendor policy changes.
     word: true
   - fig: Compliance
-    body: The system satisfies GDPR and municipal IT policy without anyone having to request an exception for it.
+    body: Satisfies BIO 2019 government standards, ISO 27001, and GDPR guidelines without requiring special cloud exception waivers.
     word: true
-  source: Friðriksson 2025, KTH · van Duuren 2025, TU Delft
+  source: Friðriksson 2025, KTH · Van Duuren 2025, TU Delft · BIO 2019
 - eyebrow: Explainability
-  heading: Every output shows its reasoning.
+  heading: Every calculation and gate inspection is verifiable.
   proof:
-    fig: Identical
-    label: The same input gives the same output. A generic AI system returned different outputs for identical inputs, with errors of up to 8,354 euro on a single line.
-    src: Hamppi 2025, Aalto University
-  body: 'Which data sources were used, how each supplier was assessed, why one ranks above another. The system records it explicitly.
+    fig: Deterministic
+    label: Identical inputs yield identical outputs. Generic enterprise AI returned errors up to 8,354 euro on a single tender line for identical inputs.
+    src: Hamppi 2025, Aalto University · Atil et al. 2025
+  body: 'Which constraints were enforced, what trade-offs were balanced between freight transit distance and material unit costs, and why a supplier was selected: the system records the exact formula and parameter weights.
 
+    The same rigor applies at the gate: every delivery ticket scan and 3-way match decision is logged with timestamps, reference IDs, and variance percentages.
 
-    For municipalities this is a legal requirement. For construction firms it is the difference between a report a manager signs and a report he sends back.'
+    For municipalities, this satisfies Public Procurement Act Article 2.130. For contractors, it provides an airtight legal file during subcontractor disputes or claims.'
 - tone: chalk-2
-  eyebrow: Limits
+  eyebrow: Boundaries
   heading: What the system does not do.
-  body: 'Dundir does not make procurement decisions. The buyer reviews the output and decides. The system does not replace the buyer.
+  body: 'Dundir does not make autonomous business decisions and does not replace human experts. The estimator, buyer, and site superintendent maintain full control.
 
+    The platform eliminates clerical data entry and manual matching so professionals can focus on negotiations, quality inspections, and strategic vendor management. Formal sign-off and legal accountability remain with your organization.
 
-    It removes the administrative work so the buyer can do the actual job: judging, maintaining relationships and escalating. The decision and the responsibility stay with you.
-
-
-    The system is trained on your own procurement history, not on a generic model. The result knows your preferred suppliers, your certification requirements and your earlier decisions. When a senior buyer leaves, that knowledge stays available to the whole team.'
+    The system calibrates against your proprietary transaction history. When experienced staff departs, accumulated vendor intelligence stays preserved within your firm.'
   caveat:
     lab: Honest about the stage
-    text: This chain is designed and partly built, not in production at a customer. Anyone joining now does so as a design partner and helps decide what the system is calibrated on.
+    text: The three modules are engineered and validated in controlled environments, not sold as a standardized mass-market commodity. Design partners joining now directly direct parameter calibration and operational integration.
 ---

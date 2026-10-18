@@ -1,25 +1,49 @@
 ---
 title: About
-description: Dundir builds a locally deployed procurement optimisation system for construction, anchored in research at Windesheim University of Applied Sciences.
+description: Dundir develops deterministic procurement and jobsite software, engineered by specialists and anchored in academic research at Windesheim and University of Belgrade.
 slug: about
-lede: Procurement optimisation in construction is not a software problem you solve by hiring clever generalists. It needs knowledge of how Dutch construction certification actually works, experience with optimisation systems that run in production, and an understanding of how Dutch municipalities buy. Dundir is built around that.
+lede: Procurement optimization and jobsite verification are not generic software problems. They demand deep understanding of European construction certifications (KOMO, CPR 2024, Wkb), practical experience with deterministic optimization solvers in production, and knowledge of how municipalities and contractors execute purchasing.
 sections:
 - tone: chalk
-  eyebrow: Research partner
-  heading: Anchored in research.
+  eyebrow: The team
+  heading: Engineers, domain specialists, and public procurement leaders.
+  people:
+  - name: Christiaan Verhoef
+    role: CEO & Academic Anchor
+    body: Founder of Dundir. Researcher at Windesheim University of Applied Sciences, anchoring applied AI research and grant frameworks (RAAK-PRO, KIEM) with mid-sized construction firms.
+  - name: Dr. Milan Jelisavčić
+    role: CTO & Optimization Architect
+    body: PhD in Evolutionary Robotics from Vrije Universiteit Amsterdam. Expert in mathematical optimization algorithms, edge computing architectures, and deterministic solvers.
+  - name: Kirsten Coppoolse
+    role: Operational Scaling & Supply Chains
+    body: Former COO of Open Food Chain (scaled from 0 to 20 personnel, 6x revenue expansion). Specialist in supply chain traceability, enterprise operations, and governance.
+  - name: Dr. Nina Gluhović
+    role: Civil Engineering & Regulatory Standards
+    body: Assistant Professor of Civil Engineering at the University of Belgrade. Specialist in construction materials, jobsite logistics, and CPR 2024 compliance.
+  - name: Gerard Tunteler
+    role: Public Sector & Municipal Channel
+    body: 19 years as Head of Local Government Sales at Hewlett Packard Enterprise (HPE). Founder of the HPE Roundtable for Municipalities; connects Dundir directly with public buyers.
+- eyebrow: Ecosystem
+  heading: Anchored in industry and academic research.
   claims:
-  - fig: Windesheim
-    body: Windesheim University of Applied Sciences provides the academic anchor, the validation and access to research funding through RAAK-PRO, KIEM and Horizon Europe.
+  - fig: Züblin
+    body: <strong>ED. Züblin AG (STRABAG Group).</strong> Enterprise validation partner for large-scale construction projects, gate logistics, and procurement workflows.
+    word: true
+  - fig: '342'
+    body: <strong>342 Dutch Municipalities.</strong> Direct channel access via the Roundtable for Municipalities for Public Procurement Act Article 2.130 compliance.
+    word: true
+  - fig: Research
+    body: <strong>Windesheim &amp; University of Belgrade.</strong> Academic validation, deterministic algorithm research, and RAAK-PRO research frameworks.
     word: true
   link:
     href: /en/research-partner/
-    label: Become a research partner yourself
+    label: Become a research partner
 - id: contact
+  tone: chalk-2
   eyebrow: Contact
-  heading: Request a conversation.
-  body: 'Want to speak to us? Send a message. No pitch, no prepared presentation. Thirty minutes about your situation, in which we mostly ask the questions.
+  heading: A focused thirty-minute discussion.
+  body: 'Want to speak with us? Send a message. No sales deck, no marketing slides: thirty minutes examining your procurement and jobsite processes, where we ask the questions.
 
-
-    We are in the middle of our customer conversations. If you buy for a construction firm or a municipality, your experience is worth more to us right now than your signature.'
+    If you manage procurement or site logistics for a contractor or municipality, your field experience is worth more to us right now than a quick contract signature.'
   form: contact
 ---

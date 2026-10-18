@@ -1,8 +1,8 @@
 ---
 title: Dundir
-description: AI-driven procurement decisions for construction. Locally deployed. Mathematically grounded. Audit-ready.
+description: AI-driven procurement decisions and jobsite systems for construction. Locally deployed. Mathematically grounded. Audit-ready.
 headline: Seventy percent of your project is <span class="cut">procurement.</span>
-sub: Not the planning, not the supervision, not the office overhead. Materials. And that seventy percent is still decided in a spreadsheet, by a buyer who spends eleven hours a week comparing.
+sub: The unit price is optimized. That is rarely the biggest issue. Where is the material, when will it arrive, and is it certified? Dundir combines a mathematical procurement solver with a jobsite digital twin.
 stack:
   label: One euro of project cost, divided
   source: Donyavi et al. 2024, in Hamppi 2025
@@ -10,7 +10,7 @@ stack:
   segments:
   - kind: material
     pct: 70%
-    name: Materials · where Dundir computes
+    name: Materials · where Dundir computes and verifies
   - kind: labour
     pct: 18%
     name: Labour
@@ -20,50 +20,57 @@ stack:
   footLeft: Procurement is not a back office function
   footRight: It is the cost structure
 sections:
-- eyebrow: What it costs
+- eyebrow: The triple crisis
   heading: The bill is already running.
   claims:
-  - fig: 11 hrs
-    body: a week, per buyer, comparing suppliers in Excel and email. With three buyers that is 148,500 euro a year of unproductive time, before the cost of a wrong choice.
-  - fig: 8,354
-    body: euro of error on a single tender line. A generic enterprise AI system returned different numerical outputs for identical inputs. That is not an edge case, that is how generative AI works.
+  - fig: 31.7%
+    body: of estimator working hours lost to clerical data entry rather than cost analysis. Calculating a single formal quotation consumes 42 labor hours on average.
+  - fig: 50 min
+    body: idle wait time at the jobsite gate for 70% of material delivery trucks. 95% of paper delivery tickets contain errors or missing certificates, causing 4 to 6 week handover blockades under the Dutch Quality Assurance Act (Wkb).
   - fig: <5%
-    body: of staff see a Dutch infrastructure project of 500 to 600 million euro through from start to finish. Procurement knowledge walks out between two project phases, and no system holds on to it.
-  source: Rockx 2023, TU Delft
+    body: of personnel remain on major infrastructure projects from inception to closeout. Procurement intelligence evaporates with staff turnover, while 95% of legacy ERP records are corrupted after ten years.
+  source: Rockx 2023, TU Delft · Hamppi 2025 · Aldeeb 2024 · Qflow 2025 · VNG 2024
 - tone: chalk
-  eyebrow: The difference
-  heading: Computing, not generating.
-  lede: 'A language model writes an answer. An optimisation engine works one out. That difference is not academic: it is the difference between advice you cannot defend and a decision an accountant, an auditor or a procurement board will accept.'
-  body: 'Dundir fixes your hard constraints, KOMO certification, delivery window and budget ceiling, and weighs price, reliability and CO2 inside them according to weights you set yourself. What remains is one supplier combination, with the rule that chose it underneath. The AI layer reads the specification and writes the report. The optimiser makes the decision.
+  eyebrow: The platform
+  heading: Three complementary engines.
+  lede: 'A language model writes an answer. An optimization engine calculates one. Dundir connects mathematical procurement optimization with real-time verification at the gate and an accumulated contract memory.'
+  body: 'The platform consists of three interconnected modules running locally on your own infrastructure:
 
+    <strong>1. Deterministic Procurement Engine:</strong> Mathematical combinatorial optimization across unit price, delivery schedule, transit miles, and carbon intensity. Pure determinism: identical inputs yield identical outputs every single time, without the numerical drift of generative AI (up to 8,354 euro error per line in Hamppi 2025).
 
-    The system runs on your own server. Your prices, your supplier agreements and your contract data never leave your network. For a municipality that is not a preference but a precondition.
+    <strong>2. Jobsite Digital Twin & Smart Gate:</strong> Mobile and fixed edge OCR scans delivery tickets and license plates upon arrival. Automated 3-way matching reconciles purchase orders, delivery receipts, and invoices. Real-time compilation of the Dossier Bevoegd Gezag under the Dutch Wkb regulation.
 
+    <strong>3. Forecasting & Institutional Memory:</strong> Actual delivery punctuality, defect rates, and schedule variances feed forward into scoring parameters for future tenders. Operational knowledge remains within your enterprise when staff departs.
 
-    <strong>The same input gives the same output. Every time.</strong>'
+    <strong>Your data never leaves your network.</strong> The platform runs on-premise in compliance with the Dutch Government Information Security Baseline (BIO 2019). Zero dependency on third-party cloud APIs.'
 - tone: chalk-2
-  eyebrow: Where we are
+  eyebrow: Where we stand
   heading: Not finished, and we would rather say so ourselves.
-  body: 'Dundir is a research track with a company around it, not a finished product with a research story around it. The optimisation theory is not new. Its application to Dutch construction procurement is, and the core question is still open: what does <em>optimal</em> mean exactly, weighed across price, delivery time, certification and sustainability, and at what data volume does that approach beat an experienced buyer.
+  body: 'Dundir is a research initiative with a company around it, not a finished off-the-shelf product with a marketing story around it. The optimization theory is established; its application to Dutch construction procurement and jobsite logistics is new.
 
+    The fundamental question remains open: what does <em>optimal</em> mean when balancing price, delivery time, certification, gate logistics, and carbon footprint simultaneously, and at what data volume does this approach outperform an experienced buyer and jobsite superintendent?
 
-    That is precisely why we are looking for partners rather than customers. Whoever joins at this stage helps decide what the system is calibrated on, and keeps what gets built.'
+    That is why we seek design partners rather than software buyers. Partners who join at this stage help determine how the system is calibrated and own what gets deployed.'
   caveat:
-    lab: What the research does not prove
-    text: The literature supports the problem and the local deployment model. It does not prove that our particular optimisation approach buys more cheaply in practice than an experienced buyer. That validation has to come from pilot data, and we do not have it yet.
+    lab: What the research does not claim
+    text: Academic literature establishes the problem and the local deployment model. It does not prove that our solver buys more cheaply in practice than your senior estimator. That validation requires empirical pilot data, which we gather together.
 - eyebrow: Who it is for
-  heading: Two buyers, one problem.
+  heading: Two buyers, one supply chain.
   claims:
   - fig: 50 to 500
-    body: <strong>Mid-size contractors.</strong> Procurement admin costs time that is better spent elsewhere, and the return is directly measurable in hours recovered. CPR 2024 adds new demands on procurement documentation on top of that. Dundir produces that documentation as a by-product.
+    body: <strong>Mid-size contractors.</strong> Eliminate manual data entry and halt jobsite delays. Wkb handover compliance and CPR 2024 certifications are captured immediately upon gate arrival.
   - fig: '342'
-    body: <strong>Dutch municipalities.</strong> Every procurement decision has to be demonstrably defensible. The Aanbestedingswet requires documented evaluation of supplier selection, and 342 municipalities do that with near identical processes. Dundir produces the required audit trail with every decision.
-  chipslabel: Regulation forcing this
+    body: <strong>Dutch municipalities.</strong> Every public award decision must be demonstrably defensible under Aanbestedingswet Article 2.130. Dundir provides a mathematical audit trail during selection and verifies physical contract compliance upon delivery.
+  chipslabel: Regulatory drivers enforcing this
   chips:
-  - label: Aanbestedingswet
+  - label: Aanbestedingswet art. 2.130
     live: true
   - label: CPR 2024/3110
     live: true
+  - label: Wkb Handover Dossier
+    live: true
+  - label: EU AI Act Dec 2027
+    live: false
   - label: CSRD Scope 3
     live: false
 ---

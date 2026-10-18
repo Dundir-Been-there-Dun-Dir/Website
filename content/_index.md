@@ -1,8 +1,8 @@
 ---
 title: Dundir
-description: AI-gedreven inkoopbeslissingen voor de bouw. Lokaal geimplementeerd. Wiskundig onderbouwd. Audit-klaar.
+description: AI-gedreven inkoopbeslissingen en bouwplaatssystemen. Lokaal geimplementeerd. Wiskundig onderbouwd. Audit-klaar.
 headline: Zeventig procent van uw project is <span class="cut">inkoop.</span>
-sub: Niet de planning, niet het toezicht, niet de kantoorkosten. Materiaal. En die zeventig procent wordt nog altijd bepaald in een spreadsheet, door een inkoper die elf uur per week zit te vergelijken.
+sub: De prijs is geoptimaliseerd. Dat is zelden het grootste probleem. Waar is het materiaal, wanneer komt het aan, en is het gecertificeerd? Dundir combineert een wiskundige inkoop-solver met een digitale tweeling van uw bouwplaats.
 stack:
   label: Eén euro projectkosten, verdeeld
   source: Donyavi e.a. 2024, in Hamppi 2025
@@ -10,7 +10,7 @@ stack:
   segments:
   - kind: material
     pct: 70%
-    name: Materiaal · hier rekent Dundir
+    name: Materiaal · hier rekent en toetst Dundir
   - kind: labour
     pct: 18%
     name: Arbeid
@@ -20,50 +20,57 @@ stack:
   footLeft: Inkoop is geen backoffice-functie
   footRight: Het is de kostenstructuur
 sections:
-- eyebrow: Wat het kost
+- eyebrow: De drievoudige crisis
   heading: De rekening staat er al.
   claims:
-  - fig: 11 uur
-    body: per week, per inkoper, aan het vergelijken van leveranciers in Excel en e-mail. Bij drie inkopers is dat 148.500 euro per jaar aan niet-productieve tijd, nog voor de kosten van een verkeerde keuze.
-  - fig: '8.354'
-    body: euro fout op een enkele aanbestedingsregel. Een generiek enterprise AI-systeem gaf bij identieke invoer verschillende numerieke uitkomsten. Dat is geen randgeval, dat is hoe generatieve AI werkt.
+  - fig: 31,7%
+    body: van de tijd van calculators en inkopers gaat verloren aan administratieve data-invoer in plaats van analyse. Een enkele offertecalculatie kost gemiddeld 42 arbeidsuren.
+  - fig: 50 min
+    body: wachttijd bij de bouwplaatspoort voor 70% van de materiaalvrachtwagens. 95% van de papieren leverbonnen bevat fouten of ontbrekende certificaten, met opleververtragingen van 4 tot 6 weken onder de Wkb tot gevolg.
   - fig: <5%
-    body: van de staf maakt een Nederlands infraproject van 500 tot 600 miljoen euro van begin tot eind mee. De inkoopkennis loopt tussen twee projectfases de deur uit, en er is geen systeem dat haar vasthoudt.
-  source: Rockx 2023, TU Delft
+    body: van de staf maakt een groot infraproject van begin tot eind mee. Inkoopkennis verdwijnt bij personeelsverloop, terwijl 95% van historische ERP-transacties na tien jaar corrupt of onbruikbaar blijkt.
+  source: Rockx 2023, TU Delft · Hamppi 2025 · Aldeeb 2024 · Qflow 2025 · VNG 2024
 - tone: chalk
-  eyebrow: Het verschil
-  heading: Rekenen, niet genereren.
-  lede: 'Een taalmodel schrijft een antwoord op. Een optimalisatie-engine rekent er een uit. Dat verschil is niet academisch: het is het verschil tussen een advies dat u niet kunt verdedigen en een beslissing die een accountant, een auditor of een aanbestedingskamer accepteert.'
-  body: 'Dundir zet uw harde randvoorwaarden vast, KOMO-certificering, levertijdvenster en budgetplafond, en weegt daarbinnen prijs, betrouwbaarheid en CO2 volgens gewichten die u zelf bepaalt. Wat overblijft is één leverancierscombinatie, met de rekenregel die haar koos eronder. De AI-laag leest de specificatie en schrijft het rapport. De optimalisatie neemt de beslissing.
+  eyebrow: Het platform
+  heading: Drie complementaire engines.
+  lede: 'Een taalmodel schrijft een antwoord op. Een optimalisatie-engine rekent er een uit. Dundir verbindt wiskundige inkoopoptimalisatie met realtime verificatie aan de poort en een lerend contractgeheugen.'
+  body: 'Het platform bestaat uit drie onderling verbonden modules die lokaal op uw eigen infrastructuur draaien:
 
+    <strong>1. Deterministic Procurement Engine:</strong> Wiskundige combinatorische optimalisatie over prijs, levertijd, transportkilometers en CO2. Harde deterministische berekeningen: dezelfde invoer geeft altijd exact dezelfde uitkomst, zonder de numerieke afwijkingen van generatieve AI (tot 8.354 euro fout per regel in Hamppi 2025).
 
-    Het systeem draait op uw eigen server. Uw prijzen, uw leveranciersafspraken en uw contractgegevens verlaten uw netwerk niet. Voor een gemeente is dat geen wens maar een voorwaarde.
+    <strong>2. Jobsite Digital Twin & Slimme Poort:</strong> Mobiele en vaste OCR scant vrachtbrieven en kentekens bij aankomst. Automatische drieweg-matching tussen bestelbon, leveringsbon en factuur. Realtime samenstelling van het Dossier Bevoegd Gezag conform de Wet kwaliteitsborging voor het bouwen (Wkb).
 
+    <strong>3. Forecasting & Institutioneel Geheugen:</strong> Werkelijke leverbetrouwbaarheid, levertijden en afwijkingen worden direct teruggekoppeld naar de scoringsparameters voor toekomstige aanbestedingen. Uw operationele kennis blijft behouden wanneer personeel vertrekt.
 
-    <strong>Dezelfde invoer geeft dezelfde uitkomst. Elke keer.</strong>'
+    <strong>Data verlaat uw netwerk niet.</strong> Het systeem draait on-premise conform de Baseline Informatiebeveiliging Overheid (BIO 2019). Geen afhankelijkheid van externe cloud-API''s.'
 - tone: chalk-2
   eyebrow: Waar wij staan
   heading: Nog niet af, en dat zeggen wij liever zelf.
-  body: 'Dundir is een onderzoekstraject met een bedrijf eromheen, niet een afgerond product met een onderzoeksverhaaltje eromheen. De optimalisatietheorie is niet nieuw, de toepassing op Nederlandse bouwinkoop wel, en de kernvraag staat nog open: wat betekent <em>optimaal</em> precies, afgewogen over prijs, levertijd, certificering en duurzaamheid, en vanaf hoeveel data verslaat die aanpak een ervaren inkoper.
+  body: 'Dundir is een onderzoekstraject met een bedrijf eromheen, niet een afgerond product met een onderzoeksverhaaltje eromheen. De optimalisatietheorie is niet nieuw, de toepassing op Nederlandse bouwinkoop en bouwplaatslogistiek wel.
 
+    De kernvraag staat nog open: wat betekent <em>optimaal</em> precies wanneer prijs, levertijd, certificering, poortlogistiek en duurzaamheid gelijktijdig worden afgewogen, en vanaf hoeveel data verslaat die aanpak een ervaren inkoper en uitvoerder?
 
-    Dat is precies waarom wij nu partners zoeken en geen klanten. Wie in deze fase meedoet, bepaalt mee waarop het systeem gekalibreerd wordt en houdt wat er gebouwd is.'
+    Dat is precies waarom wij nu partners zoeken en geen licenties verkopen. Wie in deze fase meedoet als ontwerppartner, bepaalt mee waarop het systeem gekalibreerd wordt en houdt wat er gebouwd is.'
   caveat:
     lab: Wat het onderzoek niet aantoont
     text: De literatuur onderbouwt het probleem en het lokale implementatiemodel. Zij bewijst niet dat onze specifieke optimalisatie-aanpak in de praktijk goedkoper inkoopt dan een ervaren inkoper. Die validatie moet uit pilotdata komen, en die hebben wij nog niet.
 - eyebrow: Voor wie
-  heading: Twee kopers, één probleem.
+  heading: Twee kopers, één keten.
   claims:
   - fig: 50 tot 500
-    body: <strong>Middelgrote aannemers.</strong> De inkoopadministratie kost tijd die beter besteed kan worden, en de winst is direct meetbaar in teruggewonnen uren. CPR 2024 stelt daar bovenop nieuwe eisen aan inkoopdocumentatie. Dundir levert die documentatie automatisch mee.
+    body: <strong>Middelgrote aannemers.</strong> Stop urenverlies aan handmatige administratie en voorkom faalkosten aan de poort. Wkb-dossieropbouw en CPR 2024-certificaten worden direct bij ontvangst geborgd.
   - fig: '342'
-    body: <strong>Nederlandse gemeenten.</strong> Elke inkoopbeslissing moet aantoonbaar verdedigbaar zijn. De Aanbestedingswet vereist gedocumenteerde evaluatie van leveranciersselectie, en 342 gemeenten doen dat met vrijwel identieke processen. Dundir produceert bij elke beslissing het benodigde auditspoor.
+    body: <strong>Nederlandse gemeenten.</strong> Elke inkoopbeslissing moet aantoonbaar verdedigbaar zijn onder Aanbestedingswet artikel 2.130. Dundir levert het wiskundige auditspoor bij selectie en bewaakt de naleving bij fysieke oplevering.
   chipslabel: Regelgeving die dit afdwingt
   chips:
-  - label: Aanbestedingswet
+  - label: Aanbestedingswet art. 2.130
     live: true
   - label: CPR 2024/3110
     live: true
+  - label: Wkb Opleverdossier
+    live: true
+  - label: EU AI Act Dec 2027
+    live: false
   - label: CSRD Scope 3
     live: false
 ---
