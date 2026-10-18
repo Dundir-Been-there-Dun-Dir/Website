@@ -5,17 +5,6 @@ slug: prezentacije
 lede: Prezentacije po ciljnoj grupi. Same prezentacije su na engleskom.
 sections:
 - full: true
-  eyebrow: Opšte
-  cards:
-  - meta: Investitori i grantovi
-    h: Cela priča
-    p: Problem, proizvod i tržište, u devet slajdova.
-    href: presentaties/decks/dundir-investor-pitch/
-    go: Pogledajte
-    href2: presentaties/decks/dundir-investor-pitch/dundir-pitch.pdf
-    go2: PDF
-- tone: chalk
-  full: true
   eyebrow: Za klijente
   cards:
   - meta: Segment A
@@ -38,7 +27,8 @@ sections:
     p: Za investitore koji vode nabavku materijala kroz više projekata
     href: presentaties/decks/segment-d-project-developer/
     go: Pogledajte prezentaciju
-- full: true
+- tone: chalk
+  full: true
   eyebrow: Za partnere
   cards:
   - meta: Segment E

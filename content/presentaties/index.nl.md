@@ -4,17 +4,6 @@ description: Pitch- en informatiepresentaties per doelgroep.
 lede: Pitch- en informatiepresentaties per doelgroep. De presentaties zelf zijn in het Engels.
 sections:
 - full: true
-  eyebrow: Algemeen
-  cards:
-  - meta: Investeerders en subsidies
-    h: Het volledige verhaal
-    p: Probleem, product en markt, in negen slides.
-    href: presentaties/decks/dundir-investor-pitch/
-    go: Bekijk
-    href2: presentaties/decks/dundir-investor-pitch/dundir-pitch.pdf
-    go2: PDF
-- tone: chalk
-  full: true
   eyebrow: Voor klanten
   cards:
   - meta: Segment A
@@ -37,7 +26,8 @@ sections:
     p: Voor ontwikkelaars die materiaalinkoop over meerdere projecten sturen.
     href: presentaties/decks/segment-d-project-developer/
     go: Bekijk presentatie
-- full: true
+- tone: chalk
+  full: true
   eyebrow: Voor partners
   cards:
   - meta: Segment E
