@@ -2,26 +2,25 @@
 
 <div class="page-hero">
   <div class="container container--narrow">
-    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC4: Smart Gate &amp; Jobsite Inspection / Wkb</p>
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC4: Smart gate and Wkb dossier · stage: lab prototype</p>
     <h1 class="page-hero__headline">The contract only matters when the materials pass the gate.</h1>
-    <p class="page-hero__subheading">Dundir is developing the link between contract commitments and physical verification at the jobsite gate: mobile edge OCR, automated 3-way matching, and a Wkb Handover Dossier that builds up as deliveries arrive. Today this is a lab prototype on the bench; we are looking for a design partner to test it at a real gate.</p>
+    <p class="page-hero__subheading">Dundir is designing the link between what was bought and what arrives at the gate: the ticket read on arrival, a three-way match of order, ticket and invoice, and a Wkb dossier that builds up with each delivery. Today it is a lab prototype on the bench; we are looking for a design partner to test it at a real gate.</p>
   </div>
 </div>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2 class="section-heading">The Reality at the Jobsite Gate</h2>
-    <p>A contractor signs a competitive contract with supplier X: certified reinforcing steel, KOMO-certified facade elements, and delivery scheduled precisely at 07:00 AM. Three months later the truck arrives: delivery is two weeks delayed, the KOMO certificate is missing from the paper ticket, and delivered steel grade diverges from the purchase order.</p>
-    <p>Today, field verification relies on handwritten scribbles on paper clipboards and unorganized photos in WhatsApp groups. The empirical consequences:</p>
+    <h2 class="section-heading">The gate today</h2>
+    <p>A contractor buys certified reinforcing steel and KOMO-certified facade elements, delivery at 07:00. Months later a truck arrives late, the certificate is not on the paper ticket, and the steel grade on the ticket differs from the order. Nobody at the gate can see that from the paper alone.</p>
+    <p>What the studies measured:</p>
     <div class="proof-block" style="margin: 1.5rem 0;">
-      <p class="proof-block__label">Jobsite Gate Bottlenecks</p>
+      <p class="proof-block__label">At the gate</p>
       <p class="proof-block__body">
-        &bull; <strong>70% of material delivery trucks</strong> wait up to 50 minutes at the site gate due to manual checking (Aldeeb 2024).<br>
-        &bull; <strong>95% of paper delivery tickets</strong> contain discrepancies, incomplete records, or missing certificates (Qflow 2025).<br>
-        &bull; <strong>8% to 25% of scheduled jobsite tasks</strong> are halted by material and delivery failures (Tserng et al. 2006).<br>
-        &bull; <strong>4 to 6 week handover blockades</strong> under the Dutch Quality Assurance Act (Wkb) when inspection dossiers have to be reconstructed retroactively (VNG 2024).
+        &bull; <strong>About 70% of trucks</strong> waited up to 50 minutes before unloading on a site without delivery booking (Aldeeb 2024).<br>
+        &bull; <strong>95% of delivery tickets</strong> failed data quality criteria in an audit of 831,206 records (Qflow 2025).<br>
+                &bull; <strong>4 to 6 weeks of handover delay</strong> on completed homes under the Wkb when the dossier is incomplete (Arcadis 2026, for the Ministry of the Interior).
       </p>
-      <p class="proof-block__source">Aldeeb 2024 &middot; Qflow 2025 &middot; Tserng et al. 2006 &middot; VNG 2024 &middot; Rockx 2023</p>
+      <p class="proof-block__source">Aldeeb 2024, TU Wien &middot; Qflow 2025 &middot; Arcadis 2026</p>
     </div>
   </div>
 </section>
@@ -32,16 +31,16 @@
     {{ partial "fig/match.html" . }}
     <div class="two-col">
       <div>
-        <p><strong>1. Edge OCR &amp; License Plate Logging</strong><br>A smartphone or fixed gate camera scans paper delivery tickets and license plates on arrival. Recognition is designed to run locally on edge hardware, so the gate keeps working without reliable site internet.</p>
+        <p><strong>1. Reading the ticket at the gate</strong><br>A phone or a fixed camera is meant to read the delivery ticket and the licence plate on arrival. Recognition is designed to run locally on edge hardware, so the gate keeps working without reliable site internet.</p>
       </div>
       <div>
-        <p><strong>2. Automated 3-Way Matching</strong><br>The system instantly reconciles original purchase orders (PO), scanned delivery orders (DO), and incoming vendor invoices. Quantity, dimension, or specification discrepancies are flagged before unloading commences.</p>
+        <p><strong>2. Three-way match</strong><br>Order, delivery ticket and invoice are checked against each other, so a difference in quantity, size or specification shows before unloading starts.</p>
       </div>
       <div>
-        <p><strong>3. Physical Chain of Custody &amp; ADR</strong><br>Immediate validation of environmental product declarations (EPD), KOMO quality marks, and ADR transport compliance for hazardous materials. Each delivery receives an immutable digital timestamp, weight record, and inspector ID.</p>
+        <p><strong>3. Certificates with the delivery</strong><br>The product declaration (EPD) and KOMO mark are checked against what was bought, and each delivery is logged with time, weight and who accepted it.</p>
       </div>
       <div>
-        <p><strong>4. Wkb Handover Dossier</strong><br>Photos of inspection points, quality stamps, and delivery tickets are archived directly into the mandatory Dossier Bevoegd Gezag under the Wkb regulation. No missing documentation during final municipal commissioning.</p>
+        <p><strong>4. The Wkb dossier as you build</strong><br>Photos, quality marks and tickets go into the dossier for the competent authority as deliveries arrive, instead of being collected at the end.</p>
       </div>
     </div>
   </div>
@@ -49,25 +48,25 @@
 
 <section class="section">
   <div class="container container--narrow">
-    <h2 class="section-heading">Why This Is a Legal Mandate</h2>
-    <p>For a general contractor, gate verification halts failure costs and idle trades. For public buyers and municipalities, it is a strict legal obligation.</p>
-    <p>Under the <strong>Dutch Quality Assurance Act (Wkb)</strong>, a building cannot receive an occupancy permit without a certified Dossier Bevoegd Gezag. If delivered construction products fail to demonstrably satisfy building codes, the quality controller halts commissioning.</p>
-    <p>Under <strong>CPR 2024 (EU Construction Products Regulation 2024/3110)</strong>, Digital Product Passports (DPP) and environmental declarations are legally required through the entire chain of custody. And under <strong>Public Procurement Act Article 2.130</strong>, public entities must prove that delivered reality matches the original award criteria.</p>
+    <h2 class="section-heading">The rules around the gate</h2>
+    <p>For a contractor, checking at the gate is about failure costs and crews waiting. For the building, it is also about the paperwork the law asks for.</p>
+    <p>Under the <strong>Wkb</strong> (Dutch Quality Assurance Act), a building may not be taken into use without a complete completion notice and dossier; the municipality can stop it (VNG 2024).</p>
+    <p>The <strong>EU Construction Products Regulation 2024/3110</strong> introduces digital product passports and machine-readable declarations for construction products. And under <strong>Aanbestedingswet 2012, art. 2.130</strong>, a public buyer must give the reasons for an award, which is where the record of the procurement side starts.</p>
 
     <div class="proof-block">
-      <p class="proof-block__label">Regulatory Mandates</p>
-      <p class="proof-block__body">Wet kwaliteitsborging voor het bouwen (Wkb) &middot; CPR 2024/3110 Digital Product Passport &middot; Aanbestedingswet 2012 art. 2.130 &middot; CSRD Scope 3 Supply Chain Emissions</p>
-      <p class="proof-block__source">Staatsblad 2023/340 &middot; Official Journal of the European Union 2024 &middot; Ministry of the Interior</p>
+      <p class="proof-block__label">The rules</p>
+      <p class="proof-block__body">Wet kwaliteitsborging voor het bouwen (Wkb) &middot; CPR 2024/3110 digital product passport &middot; Aanbestedingswet 2012 art. 2.130</p>
+      <p class="proof-block__source">Staatsblad 2023/340 &middot; Official Journal of the European Union 2024 &middot; VNG 2024</p>
     </div>
   </div>
 </section>
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">Closing the Procurement Loop</h2>
-    <p>The four modules operate as an integrated feedback system:</p>
-    <p><strong>Procurement Package (UC3)</strong> structures requirements &rarr; <strong>Bid Comparison (UC1)</strong> computes the optimal allocation &rarr; <strong>Smart Gate (UC4)</strong> inspects physical deliveries and compiles the Wkb file &rarr; <strong>Supplier Evaluation (UC2)</strong> updates vendor performance metrics.</p>
-    <p>Every gate discrepancy is meant to recalibrate the scoring parameters for the next tender, so commercial intelligence stays within your organization when people leave.</p>
+    <h2 class="section-heading">Closing the loop</h2>
+    <p>In the design, the four use cases feed each other:</p>
+    <p><strong>Procurement package (UC3)</strong> structures the requirements &rarr; <strong>Bid comparison (UC1)</strong> computes the award &rarr; <strong>Smart gate (UC4)</strong> checks deliveries and builds the Wkb dossier &rarr; <strong>Supplier evaluation (UC2)</strong> records how each supplier delivered.</p>
+    <p>Each difference found at the gate is meant to feed the scores for the next tender, so what your people learn stays when they leave.</p>
     <p style="margin-top:1.5rem;"><a href="{{ "use-cases/" | relURL }}">&larr; Back to all use cases</a></p>
   </div>
 </section>

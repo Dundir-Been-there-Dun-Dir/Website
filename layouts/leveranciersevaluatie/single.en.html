@@ -2,44 +2,44 @@
 
 <div class="page-hero">
   <div class="container container--narrow">
-    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC2: Supplier evaluation</p>
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC2: Supplier evaluation · stage: design</p>
     <h1 class="page-hero__headline">Qualify your suppliers on data. Not on memory.</h1>
-    <p class="page-hero__subheading">In most construction companies, supplier knowledge lives in one experienced buyer's head. When that person leaves, it goes with them. Dundir builds a structured, searchable supplier database from your own procurement history.</p>
+    <p class="page-hero__subheading">Supplier knowledge often lives in the head of one experienced buyer, and leaves with them. Dundir is designing a supplier record built from your own procurement history, so that knowledge stays.</p>
   </div>
 </div>
 
 <section class="section">
   <div class="container container--narrow">
     <h2 class="section-heading">The problem</h2>
-    <p>Certifications expire. A KOMO certificate is valid for three years, an SKG-IKOB assessment for two. In a normal procurement process, nobody tracks this systematically. The buyer remembers, until that buyer goes on holiday, falls ill, or leaves.</p>
-    <p>On large infrastructure projects, fewer than 5% of staff experience the project from start to finish. Institutional knowledge about supplier performance disappears systematically. Every new tender starts from zero.</p>
+    <p>Certificates expire, and their dates sit in emails and folders. Someone remembers them, until that person is on holiday, ill, or gone.</p>
+    <p>On large Dutch infrastructure projects, fewer than 5% of staff see the project through from start to finish, a TU Delft study reports. What they knew about suppliers goes with them.</p>
 
     <div class="proof-block">
       <p class="proof-block__stat">&lt;5%</p>
       <p class="proof-block__label">of staff on a large infrastructure project experience it from start to finish</p>
-      <p class="proof-block__body">Knowledge about supplier performance, certification status, and past collaborations disappears systematically. A qualified supplier database replaces institutional memory with structured data that stays when people leave.</p>
-      <p class="proof-block__source">Rockx 2023, TU Delft: Complexity and risk assessment in Dutch infrastructure projects.</p>
+      <p class="proof-block__body">An interview statement in the study, not a measured rate. It is why the design keeps supplier performance and certificate status as data rather than memory.</p>
+      <p class="proof-block__source">Rockx 2023, TU Delft, p. 44: Complexity and risk assessment in Dutch infrastructure projects.</p>
     </div>
   </div>
 </section>
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">How Dundir handles supplier evaluation</h2>
+    <h2 class="section-heading">The design</h2>
     {{ partial "fig/score.html" . }}
     <ul>
-      <li><strong>Certification management</strong>: The system registers KOMO, SKG-IKOB, Kiwa, and other relevant certifications per supplier, including expiry dates and alert moments before they lapse.</li>
-      <li><strong>Performance history</strong>: Every completed assignment adds data: was the delivery on time? Did the specification match? What deviations were documented?</li>
-      <li><strong>Structured scoring</strong>: Suppliers are scored on price, reliability, certification status, and sustainability performance. Scores are transparent and exportable.</li>
-      <li><strong>Pre-qualification</strong>: For a new tender, the buyer immediately sees which suppliers meet the minimum requirements, without manually requesting certifications.</li>
+      <li><strong>Certification management</strong>: KOMO, SKG-IKOB, Kiwa and other certificates per supplier, with their expiry dates and a warning before they lapse.</li>
+      <li><strong>Performance history</strong>: Each finished order is meant to add a line: on time or not, to specification or not, which deviations were recorded.</li>
+      <li><strong>Structured scoring</strong>: Price, reliability, certificate status and sustainability, with the data behind each score visible and exportable.</li>
+      <li><strong>Pre-qualification</strong>: For a new tender, a shortlist of suppliers that meet the hard requirements, before certificates are requested by hand.</li>
     </ul>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2 class="section-heading">What it delivers</h2>
-    <p>A structured supplier database that grows with every procurement decision. No more knowledge that walks out the door when a person leaves. Certification status always current. And a pre-qualification shortlist that accelerates the starting point of every tender.</p>
+    <h2 class="section-heading">What the pilot has to show</h2>
+    <p>Whether a record built from your past orders and certificates gives your buyers a better starting point for the next tender than memory and email do. The record grows with each order; nothing is in it until your history is.</p>
     <p style="margin-top:1.5rem;"><a href="{{ "use-cases/" | relURL }}">&larr; Back to all use cases</a></p>
   </div>
 </section>

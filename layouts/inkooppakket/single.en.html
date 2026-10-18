@@ -2,9 +2,9 @@
 
 <div class="page-hero">
   <div class="container container--narrow">
-    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC3: Procurement package formation</p>
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC3: Procurement package · stage: design</p>
     <h1 class="page-hero__headline">From a plain-language specification to structured procurement requirements.</h1>
-    <p class="page-hero__subheading">The quality of a bid comparison depends entirely on the quality of the input. Dundir's AI layer translates unstructured specifications into the structured requirements the optimisation engine needs.</p>
+    <p class="page-hero__subheading">A bid comparison is only as good as its input. Dundir is designing a language layer that turns a written specification into the hard requirements and weights the engine computes with, checked by a buyer before anything is compared.</p>
   </div>
 </div>
 
@@ -12,11 +12,11 @@
   <div class="container container--narrow">
     <h2 class="section-heading">The problem</h2>
     <p>Procurement professionals write specifications in plain language, or receive them that way from the project team. "500 m&sup2; of tiling, BRL-9010 certified, delivery before week 14" is a perfectly adequate description for a human, but not usable input for a comparison algorithm.</p>
-    <p>Hamppi's research at Skanska demonstrates this directly: for simple, structured bids, generative AI performed well. For complex, unstructured bids, the calculations failed. The dominant variable was the quality and uniformity of the input data, rather than the model itself.</p>
+    <p>Hamppi's test at Skanska points the same way: the generative AI tool did best on well-structured bids. Uniform input mattered more than the model.</p>
 
     <div class="proof-block">
-      <p class="proof-block__label">Skanska finding: input determines everything</p>
-      <p class="proof-block__body">"Skanska should look into the possibility of demanding suppliers to fill their bids into a standardised bidding template, because this would increase the accuracy of GenAI-based comparisons." Hamppi's recommendation directly confirms that standardised input is the critical operational dependency, rather than the model alone.</p>
+      <p class="proof-block__label">Hamppi's recommendation to Skanska</p>
+      <p class="proof-block__body">"Skanska should look into the possibility of demanding suppliers to fill their bids to a standardized bidding template because this would increase the accuracy of GenAI-based comparisons."</p>
       <p class="proof-block__source">Hamppi 2025, p. 69: Aalto University / Skanska Talonrakennus Oy.</p>
     </div>
   </div>
@@ -24,25 +24,25 @@
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">How Dundir forms procurement packages</h2>
+    <h2 class="section-heading">The design, in three steps</h2>
     {{ partial "fig/package.html" . }}
     <ol class="step-list">
       <li>
         <div>
           <p class="step-list__title">Read the specification</p>
-          <p class="step-list__body">The AI layer reads the project specification in plain language (from a PDF, ERP export, or email). Relevant procurement requirements are extracted and structured.</p>
+          <p class="step-list__body">The language layer is meant to read the specification as written (PDF, ERP export, email) and pick out what matters for buying: quantities, certificates, dates, limits.</p>
         </div>
       </li>
       <li>
         <div>
           <p class="step-list__title">Define hard requirements and weighted objectives</p>
-          <p class="step-list__body">The system produces a draft list: which certifications are mandatory? What is the maximum delivery window? What is the budget ceiling? The buyer verifies and adjusts where needed.</p>
+          <p class="step-list__body">It proposes a draft: which certificates are mandatory, the latest delivery date, the budget ceiling. The buyer checks and corrects it; nothing is compared until a person has signed off the list.</p>
         </div>
       </li>
       <li>
         <div>
           <p class="step-list__title">Export the structured procurement package</p>
-          <p class="step-list__body">The resulting package is the input for bid comparison (UC1) and supplier evaluation (UC2). It can also be sent to suppliers as a standardised invitation template.</p>
+          <p class="step-list__body">The package becomes the input for bid comparison (UC1) and supplier evaluation (UC2), and can go to suppliers as a uniform bid template, the step Hamppi recommends.</p>
         </div>
       </li>
     </ol>
