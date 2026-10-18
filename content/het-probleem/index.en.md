@@ -17,12 +17,12 @@ sections:
   heading: Office, gate, and memory.
   body: 'The breakdown of traditional construction procurement unfolds across three consecutive operational stages:
 
-    <strong>1. Pre-construction clerical bottleneck:</strong> Estimators spend 31.7% of working hours on administrative data entry instead of value analysis. Calculating a single formal tender quotation consumes 42 labor hours. While contractor margins remain compressed between 1.0% and 2.0%, construction failure costs run between 5% and 11% of turnover.
+    <strong>1. Pre-construction clerical bottleneck:</strong> Estimators spend 31.7% of working hours on administrative data entry instead of value analysis. Calculating a single formal tender quotation takes a median of 42 labor hours. While contractor margins remain compressed between 1.0% and 2.0%, construction failure costs run between 5% and 11% of turnover.
 
-    <strong>2. Jobsite and gate breakdown:</strong> 70% of delivery trucks wait an average of 50 minutes at the site gate due to manual checking. 95% of paper delivery tickets contain discrepancies or missing certifications. Delivery failures halt 8% to 25% of scheduled tasks on site.
+    <strong>2. Jobsite and gate breakdown:</strong> 70% of delivery trucks wait up to 50 minutes at the site gate due to manual checking. 95% of paper delivery tickets contain discrepancies or missing certifications. Delivery failures halt 8% to 25% of scheduled tasks on site.
 
-    <strong>3. Institutional amnesia:</strong> 78% of material procurement relies on informal emails and WhatsApp chats. Less than 50% of field purchases comply with negotiated master agreements. After ten years, 95% of legacy ERP records are corrupted or unusable, while fewer than 5% of personnel remain from tender to completion on large projects.'
-  source: Donyavi et al. 2024 · Aldeeb 2024 · Qflow 2025 · Rockx 2023, TU Delft
+    <strong>3. Institutional amnesia:</strong> 78% of material procurement relies on informal emails and WhatsApp chats. Less than 50% of field purchases comply with negotiated master agreements. At one contractor studied, cleansing more than 1,000 historical projects left 54 usable, while fewer than 5% of personnel remain from tender to completion on large projects.'
+  source: Donyavi et al. 2024 · Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · Rockx 2023, TU Delft · Steuer et al. 2023
 - eyebrow: Why now
   heading: Regulation demands auditable proof.
   body: 'Informal processes are legally closed. Four binding frameworks make spreadsheets and paper clipboards indefensible:'

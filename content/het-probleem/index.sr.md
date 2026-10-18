@@ -17,12 +17,12 @@ sections:
   heading: Kancelarija, kapija i zaborav.
   body: 'Kolaps tradicionalnog upravljanja nabavkom manifestuje se kroz tri uzastopne faze svakog građevinskog projekta:
 
-    <strong>1. Administrativno usko grlo u pripremi:</strong> Kalkulanti troše 31,7% radnog vremena na unos podataka umesto na analizu ponuda. Priprema jedne formalne tenderske ponude u proseku zahteva 42 radna sata. Dok su neto marže izvođača stisnute između 1,0% i 2,0%, troškovi grešaka i propusta iznose između 5% i 11% ukupnog prometa.
+    <strong>1. Administrativno usko grlo u pripremi:</strong> Kalkulanti troše 31,7% radnog vremena na unos podataka umesto na analizu ponuda. Priprema jedne formalne tenderske ponude zahteva medijanu od 42 radna sata. Dok su neto marže izvođača stisnute između 1,0% i 2,0%, troškovi grešaka i propusta iznose između 5% i 11% ukupnog prometa.
 
-    <strong>2. Haos na kapiji gradilišta:</strong> 70% kamiona koji dovoze materijal čeka u proseku 50 minuta na kapiji zbog ručne provere. Čak 95% papirnih otpremnica sadrži greške, neprecizne podatke ili sertifikate koji nedostaju. Zastoji u isporuci obustavljaju 8% do 25% planiranih dnevnih radova.
+    <strong>2. Haos na kapiji gradilišta:</strong> 70% kamiona koji dovoze materijal čeka do 50 minuta na kapiji zbog ručne provere. Čak 95% papirnih otpremnica sadrži greške, neprecizne podatke ili sertifikate koji nedostaju. Zastoji u isporuci obustavljaju 8% do 25% planiranih dnevnih radova.
 
-    <strong>3. Institucionalna amnezija:</strong> 78% nabavke materijala odvija se preko neformalne elektronske pošte i WhatsApp komunikacije. Manje od 50% porudžbina sa gradilišta poštuje ugovorene okvirne sporazume. Posle deset godina, 95% istorijskih ERP zapisa je neupotrebljivo, dok manje od 5% inženjera ostane na velikom projektu od tendera do predaje objekta.'
-  source: Donyavi i dr. 2024 · Aldeeb 2024 · Qflow 2025 · Rockx 2023, TU Delft
+    <strong>3. Institucionalna amnezija:</strong> 78% nabavke materijala odvija se preko neformalne elektronske pošte i WhatsApp komunikacije. Manje od 50% porudžbina sa gradilišta poštuje ugovorene okvirne sporazume. Kod jednog ispitanog izvođača, od preko 1.000 istorijskih projekata posle čišćenja ostalo je 54 upotrebljivih, dok manje od 5% inženjera ostane na velikom projektu od tendera do predaje objekta.'
+  source: Donyavi i dr. 2024 · Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · Rockx 2023, TU Delft · Steuer i dr. 2023
 - eyebrow: Zašto sada
   heading: Zakoni zahtevaju proverljive dokaze.
   body: 'Improvizacija u lancu snabdevanja je zakonski zatvorena. Četiri obavezujuća pravna okvira čine tabelarne proračune i papirne sveske neodbranjivim:'

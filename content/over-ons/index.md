@@ -1,38 +1,14 @@
 ---
 title: Over ons
-description: Dundir bouwt deterministische inkoop- en bouwplaatssoftware, ontwikkeld door ingenieurs en verankerd in onderzoek bij Hogeschool Windesheim en Universiteit Belgrado.
-lede: Inkoopoptimalisatie en bouwplaatsverificatie zijn geen generieke softwareproblemen. Het vereist diepgaande kennis van Nederlandse bouwcertificeringen (KOMO, Wkb), wiskundige ervaring met optimalisatiesystemen in productie, en inzicht in hoe Nederlandse overheden en aannemers inkopen.
+description: Dundir ontwikkelt deterministische inkoop- en bouwplaatssoftware, verankerd in onderzoek bij Hogeschool Windesheim.
+lede: Inkoopoptimalisatie en bouwplaatsverificatie zijn geen generieke softwareproblemen. Het vereist diepgaande kennis van Nederlandse bouwcertificeringen (KOMO, Wkb), wiskundige ervaring met optimalisatiesystemen, en inzicht in hoe Nederlandse overheden en aannemers inkopen.
 sections:
 - tone: chalk
-  eyebrow: Het team
-  heading: Ingenieurs, domeinexperts en publieke inkoop.
-  people:
-  - name: Christiaan Verhoef
-    role: CEO & Academische Verankering
-    body: Oprichter Dundir. Onderzoeker bij Hogeschool Windesheim, verankert AI-onderzoek en validatietrajecten (RAAK-PRO, KIEM) met het Nederlandse mkb.
-  - name: Dr. Milan Jelisavčić
-    role: CTO & Optimalisatie Architect
-    body: Gepromoveerd in Evolutionaire Robotica aan de Vrije Universiteit Amsterdam. Specialist in wiskundige optimalisatie, edge computing en deterministische solvers.
-  - name: Kirsten Coppoolse
-    role: Operationele Opschaling
-    body: Voormalig COO Open Food Chain (geschaald van 0 naar 20 personen, 6x omzet). Specialist in toeleveringsketens, traceerbaarheid en enterprise governance.
-  - name: Dr. Nina Gluhović
-    role: Civiele Techniek & Regelgeving
-    body: Universitair docent Civiele Techniek aan de Universiteit van Belgrado. Specialist in bouwmaterialen, bouwplaatslogistiek en Europese CPR 2024-normering.
-  - name: Gerard Tunteler
-    role: Publieke Sector & Gemeenten
-    body: 19 jaar Head of Local Government Sales bij Hewlett Packard Enterprise (HPE). Oprichter van de Ronde Tafel voor Gemeenten; verbindt Dundir met publieke opdrachtgevers.
-- eyebrow: Ecosysteem
-  heading: Verankerd in praktijk en wetenschap.
+  eyebrow: Onderzoekspartner
+  heading: Verankerd in onderzoek.
   claims:
-  - fig: Züblin
-    body: <strong>ED. Züblin AG (STRABAG Group).</strong> Industriële validatiepartner voor grootschalige projecten, poortlogistiek en enterprise inkoopworkflows.
-    word: true
-  - fig: '342'
-    body: <strong>Nederlandse gemeenten.</strong> Direct institutioneel bereik via de Ronde Tafel voor Gemeenten voor Aanbestedingswet art. 2.130 verantwoording.
-    word: true
-  - fig: Wetenschap
-    body: <strong>Hogeschool Windesheim &amp; Universiteit Belgrado.</strong> Academische verankering, deterministische algoritmen en RAAK-PRO financiering.
+  - fig: Windesheim
+    body: Hogeschool Windesheim levert de academische verankering, de validatie en de toegang tot onderzoeksfinanciering via RAAK-PRO, KIEM en Horizon Europa.
     word: true
   link:
     href: /onderzoekspartner/

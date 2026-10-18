@@ -16,12 +16,12 @@ sections:
   heading: Kantoor, poort en archief.
   body: 'Het faillement van traditioneel inkoopbeheer manifesteert zich in drie opeenvolgende fasen van elk bouwproject:
 
-    <strong>1. De pre-constructie flessenhals:</strong> Calculators besteden 31,7% van hun werktijd aan administratieve invoer in plaats van kostenoptimalisatie. Een enkele formele offertecalculatie kost gemiddeld 42 arbeidsuren. Terwijl netto aannemersmarges schommelen tussen 1,0% en 2,0%, bedragen faalkosten in de bouw 5% tot 11% van de totale omzet.
+    <strong>1. De pre-constructie flessenhals:</strong> Calculators besteden 31,7% van hun werktijd aan administratieve invoer in plaats van kostenoptimalisatie. Een enkele formele offertecalculatie kost mediaan 42 arbeidsuren. Terwijl netto aannemersmarges schommelen tussen 1,0% en 2,0%, bedragen faalkosten in de bouw 5% tot 11% van de totale omzet.
 
-    <strong>2. Bouwplaats- en poortchaos:</strong> 70% van de leverende vrachtwagens wacht gemiddeld 50 minuten bij de poort door handmatige controle. 95% van de papieren leverbonnen bevat fouten of ontbrekende certificaten. Leveringsfouten leggen 8% tot 25% van de geplande taken op de bouwplaats stil.
+    <strong>2. Bouwplaats- en poortchaos:</strong> 70% van de leverende vrachtwagens wacht tot 50 minuten bij de poort door handmatige controle. 95% van de papieren leverbonnen bevat fouten of ontbrekende certificaten. Leveringsfouten leggen 8% tot 25% van de geplande taken op de bouwplaats stil.
 
-    <strong>3. Institutionele amnesie:</strong> 78% van de materiaalinkoop verloopt via losse e-mails en WhatsApp. Minder dan 50% van de werfbestellingen volgt de overeengekomen raamcontracten. Na tien jaar is 95% van historische ERP-data corrupt of onbruikbaar, terwijl minder dan 5% van het personeel een groot project van begin tot oplevering meemaakt.'
-  source: Donyavi e.a. 2024 · Aldeeb 2024 · Qflow 2025 · Rockx 2023, TU Delft
+    <strong>3. Institutionele amnesie:</strong> 78% van de materiaalinkoop verloopt via losse e-mails en WhatsApp. Minder dan 50% van de werfbestellingen volgt de overeengekomen raamcontracten. Bij een onderzochte aannemer bleven na opschoning van ruim 1.000 historische projecten er 54 bruikbaar over, terwijl minder dan 5% van het personeel een groot project van begin tot oplevering meemaakt.'
+  source: Donyavi e.a. 2024 · Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · Rockx 2023, TU Delft · Steuer e.a. 2023
 - eyebrow: Waarom nu
   heading: De wet dwingt verantwoording af.
   body: 'Vrijblijvendheid in de keten is juridisch voorbij. Vier bindende kaders sluiten de spreadsheet af als verdedigbare werkwijze:'

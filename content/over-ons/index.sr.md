@@ -1,43 +1,19 @@
 ---
 title: O nama
-description: Dundir razvija deterministički softver za nabavku i gradilišta, koji razvijaju inženjeri i koji je utemeljen u naučnom istraživanju na univerzitetima Windesheim i Beograd.
+description: Dundir razvija deterministički softver za nabavku i gradilišta, utemeljen u istraživanju na Hogeschool Windesheim.
 slug: o-nama
-lede: Optimizacija nabavke i gradilišna verifikacija nisu generički IT problemi. Oni zahtevaju temeljno razumevanje evropskih građevinskih propisa (KOMO, CPR 2024, Wkb), praktično iskustvo sa determinističkim matematičkim algoritmima u produkciji i poznavanje procedura javnih i privatnih naručilaca.
+lede: Optimizacija nabavke i gradilišna verifikacija nisu generički IT problemi. Oni zahtevaju temeljno razumevanje evropskih građevinskih propisa (KOMO, CPR 2024, Wkb), praktično iskustvo sa optimizacionim algoritmima i poznavanje procedura javnih i privatnih naručilaca.
 sections:
 - tone: chalk
-  eyebrow: Naš tim
-  heading: Inženjeri, stručnjaci iz prakse i lideri javnih nabavki.
-  people:
-  - name: Christiaan Verhoef
-    role: CEO & Akademsko sidro
-    body: Osnivač Dundira. Istraživač na Univerzitetu primenjenih nauka Windesheim, vodi primenjena istraživanja veštačke inteligencije i grantove (RAAK-PRO, KIEM) sa građevinskim sektorom.
-  - name: Dr Milan Jelisavčić
-    role: CTO & Arhitekta optimizacije
-    body: Doktorirao evolucionu robotiku na Vrije Universiteit Amsterdam. Ekspert za matematičke optimizacione algoritme, edge računarske sisteme i determinističke solvere.
-  - name: Kirsten Coppoolse
-    role: Operativno skaliranje i lanci snabdevanja
-    body: Nekadašnja COO kompanije Open Food Chain (skalirala tim sa 0 na 20 ljudi, uz šestostruki rast prihoda). Stručnjak za sledljivost u lancima snabdevanja i enterprise upravljanje.
-  - name: Dr Nina Gluhović
-    role: Građevinarstvo i regulativa
-    body: Docent Građevinskog fakulteta Univerziteta u Beogradu. Ekspert za građevinske materijale, gradilišnu logistiku i evropske standarde CPR 2024.
-  - name: Gerard Tunteler
-    role: Javni sektor i lokalne samouprave
-    body: 19 godina na čelu prodaje za lokalne samouprave u kompaniji Hewlett Packard Enterprise (HPE). Osnivač Okruglog stola za opštine; povezuje Dundir sa 342 holandske opštine.
-- eyebrow: Ekosistem
-  heading: Utemeljeno u industrijskoj praksi i nauci.
+  eyebrow: Istraživački partner
+  heading: Utemeljeno u istraživanju.
   claims:
-  - fig: Züblin
-    body: <strong>ED. Züblin AG (STRABAG Group).</strong> Industrijski partner za validaciju sistema na velikim građevinskim projektima, logistici kapije i tokovima nabavke.
-    word: true
-  - fig: '342'
-    body: <strong>342 holandske opštine.</strong> Direktan institucionalni kanal kroz Okrugli sto za opštine za dokazivanje usklađenosti sa Zakonom o javnim nabavkama.
-    word: true
-  - fig: Nauka
-    body: <strong>Windesheim i Univerzitet u Beogradu.</strong> Akademska validacija, razvoj determinističkih algoritama i RAAK-PRO istraživački projekti.
+  - fig: Windesheim
+    body: Hogeschool Windesheim daje akademsko sidro, validaciju i pristup istraživačkom finansiranju kroz RAAK-PRO, KIEM i Horizon Europe.
     word: true
   link:
     href: /sr/istrazivacki-partner/
-    label: Postanite istraživački partner
+    label: Postanite i sami istraživački partner
 - id: contact
   tone: chalk-2
   eyebrow: Kontakt
