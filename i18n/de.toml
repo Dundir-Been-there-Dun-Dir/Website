@@ -207,3 +207,149 @@ other = "Der Scan läuft in Ihrem Browser und benötigt JavaScript."
 
 [lang_aria]
 other = "Sprache"
+
+# Figures
+
+[fig_plan_alt]
+other = "Skizze des Solvers: vier Anforderungen begrenzen die zulässigen Angebote, und das Optimum liegt auf einer Ecke dieses Bereichs."
+
+[fig_price]
+other = "Preis"
+
+[fig_reliability]
+other = "Zuverlässigkeit"
+
+[fig_lim_delivery]
+other = "Liefertermin"
+
+[fig_lim_cert]
+other = "CPR-zertifiziert"
+
+[fig_lim_budget]
+other = "Budgetgrenze"
+
+[fig_lim_co2]
+other = "CO₂-Grenze"
+
+[fig_optimum]
+other = "Optimum"
+
+[fig_plan_cap]
+other = "Skizze des Entwurfs, keine Daten"
+
+[fig_stage_solver]
+other = "Solver: Forschung und Entwurf"
+
+[fig_stage_design]
+other = "Entwurf"
+
+[fig_stage_research]
+other = "Forschung und Entwurf"
+
+[fig_stage_lab]
+other = "Laborprototyp"
+
+[fig_cycle_1]
+other = "Spezifikation"
+
+[fig_cycle_2]
+other = "Solver"
+
+[fig_cycle_3]
+other = "Torkontrolle"
+
+[fig_cycle_4]
+other = "Wkb-Dossier"
+
+[fig_cycle_5]
+other = "Vertragsgedächtnis"
+
+[fig_cycle_loop]
+other = "fließt in die nächste Ausschreibung"
+
+[fig_cycle_cap]
+other = "Der Entwurf in fünf Schritten. Nur Schritt 03 gibt es heute, als Prototyp auf dem Labortisch."
+
+[fig_sov_net]
+other = "Ihr Netzwerk"
+
+[fig_sov_office]
+other = "Büro"
+
+[fig_sov_server]
+other = "eigener Server"
+
+[fig_sov_gate]
+other = "Tor-Edge"
+
+[fig_sov_cloud]
+other = "Public Cloud"
+
+[fig_sov_out]
+other = "nichts nach außen"
+
+[fig_sov_cap]
+other = "Entwurf des Betriebs: Daten und Modelle bleiben in Ihrem Netzwerk"
+
+[fig_gate_wait]
+other = "bis 50 min"
+
+[fig_gate_gate]
+other = "Tor"
+
+[fig_gate_ticket]
+other = "Papierschein"
+
+[fig_gate_cap]
+other = "Das Tor heute: 70% der Lkw warten bis zu 50 Minuten, 95% der Scheine enthalten Fehler"
+
+[fig_bids_n]
+other = "5 Angebote"
+
+[fig_bids_line]
+other = "je eine Zeile"
+
+[fig_bids_cap]
+other = "Fünf Angebote, je auf eine Zeile gebracht, dann gelöst"
+
+[fig_pkg_req]
+other = "harte Anforderungen"
+
+[fig_pkg_out]
+other = "Paket"
+
+[fig_pkg_cap]
+other = "Eine Spezifikation hinein, harte Anforderungen heraus, verpackt für den Vergleich"
+
+[fig_cert]
+other = "Zertifizierung"
+
+[fig_supplier_a]
+other = "Lieferant A"
+
+[fig_supplier_b]
+other = "Lieferant B"
+
+[fig_expiry]
+other = "Ablauf"
+
+[fig_score_cap]
+other = "Lieferanten nach vier Kriterien, Zertifikate mit ihrem Ablaufdatum"
+
+[fig_match_po]
+other = "Bestellung"
+
+[fig_match_do]
+other = "Lieferschein"
+
+[fig_match_inv]
+other = "Rechnung"
+
+[fig_match]
+other = "3-Wege-Abgleich"
+
+[fig_match_ocr]
+other = "Edge-OCR"
+
+[fig_match_cap]
+other = "Bestellung, Lieferschein und Rechnung am Tor gegeneinander geprüft"

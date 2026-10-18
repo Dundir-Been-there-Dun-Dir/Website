@@ -32,6 +32,7 @@ sections:
     body: of personnel remain on major infrastructure projects from inception to closeout. Procurement intelligence evaporates with staff turnover. At one contractor studied, cleansing more than 1,000 historical projects left 54 usable.
   source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · VNG 2024 · Rockx 2023, TU Delft · Steuer et al. 2023
 - tone: chalk
+  figure: cycle
   eyebrow: The platform
   heading: Three complementary engines.
   lede: 'A language model writes an answer. An optimization engine calculates one. Dundir is being built to connect mathematical procurement optimization with verification at the gate and an accumulated contract memory.'

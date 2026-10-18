@@ -5,6 +5,7 @@ lede: Dundir wordt ontworpen om wiskundige inkoopoptimalisatie te koppelen aan f
 sections:
 - eyebrow: De keten
   heading: Het ontwerp in vijf stappen, van bestek tot oplevering.
+  figure: cycle
   steps:
   - h: Specificatie structureren
     p: 'De AI-taallaag leest uw bestek of offerteaanvraag in gewoon Nederlands. Het systeem extraheert harde randvoorwaarden, leveringsvensters, budgetlimieten en CPR 2024 certificeringseisen. Dit is het enige punt waar een taalmodel actief is.'
@@ -17,6 +18,7 @@ sections:
   - h: Terugkoppeling naar contractgeheugen
     p: 'Werkelijke leverbetrouwbaarheid, kwaliteitsafwijkingen en levertijden worden automatisch geregistreerd. Deze data kalibreert de scoringsparameters voor de volgende aanbesteding.'
 - tone: chalk
+  figure: sovereignty
   eyebrow: Data-soevereiniteit
   heading: Waarom het lokaal op uw eigen server draait.
   body: 'Bouwdata, calculaties en contractafspraken zijn commercieel vertrouwelijk en strategisch gevoelig. Dundir wordt ontworpen om volledig on-premise te draaien, op uw eigen infrastructuur of lokale edge-hardware:'

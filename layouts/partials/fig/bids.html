@@ -1,0 +1,30 @@
+{{/* UC1: five bids in five shapes, one line each, then the plan. */}}
+<figure class="fig">
+  <svg viewBox="0 0 480 200" role="img" aria-label="{{ i18n "fig_bids_cap" }}">
+    {{ range $i, $h := slice 70 84 62 90 76 }}
+    <rect class="ln" x="{{ add 20 (mul $i 9) }}" y="{{ add 28 (mul $i 9) }}" width="54" height="{{ $h }}" style="fill: var(--figure)"/>
+    {{ end }}
+    <path class="hl" d="M62 74 H96 M62 82 H90 M62 90 H96 M62 98 H84"/>
+    <text class="tag" x="66" y="186" text-anchor="middle">{{ i18n "fig_bids_n" }}</text>
+
+    <path class="hl" d="M120 100 H150"/><path class="ln" d="M144 95 L150 100 L144 105"/>
+
+    <path class="hl" d="M166 40 H306 M166 160 H306 M212 40 V160 M258 40 V160"/>
+    {{ range seq 60 24 156 }}<line class="ln" x1="166" y1="{{ . }}" x2="306" y2="{{ . }}"/>{{ end }}
+    {{ range $i, $y := slice 52 76 100 124 148 }}
+    <circle class="tag-dot" cx="189" cy="{{ $y }}" r="2.5"/><circle class="tag-dot" cx="235" cy="{{ $y }}" r="2.5"/><circle class="tag-dot" cx="281" cy="{{ $y }}" r="2.5"/>
+    {{ end }}
+    <text class="tag" x="236" y="186" text-anchor="middle">{{ i18n "fig_bids_line" }}</text>
+
+    <path class="hl" d="M318 100 H348"/><path class="ln" d="M342 95 L348 100 L342 105"/>
+
+    <path class="hl" d="M364 160 H468 M364 160 V40"/>
+    <polygon class="shade" points="384,140 398,68 450,82 436,148"/>
+    <path class="ln" d="M384 140 L398 68 L450 82 L436 148 Z"/>
+    <path class="cost" d="M364 76 L468 52"/>
+    <circle class="hot" cx="398" cy="68" r="5"/>
+    <text class="tag tag--hot" x="372" y="44">{{ i18n "fig_optimum" }}</text>
+    <text class="tag" x="416" y="186" text-anchor="middle">{{ i18n "fig_cycle_2" }}</text>
+  </svg>
+  <figcaption><span>{{ i18n "fig_bids_cap" }}</span><span>{{ i18n "fig_stage_solver" }}</span></figcaption>
+</figure>

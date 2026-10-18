@@ -1,0 +1,29 @@
+{{/* UC2: two suppliers on four criteria, and a certificate with its expiry. No scores. */}}
+<figure class="fig">
+  <svg viewBox="0 0 480 220" role="img" aria-label="{{ i18n "fig_score_cap" }}">
+    {{ range slice 0.34 0.67 1.0 }}
+    {{ $r := mul 76 . }}
+    <polygon class="hl" points="150,{{ sub 110 $r }} {{ add 150 $r }},110 150,{{ add 110 $r }} {{ sub 150 $r }},110"/>
+    {{ end }}
+    <path class="hl" d="M150 30 V190 M70 110 H230"/>
+    <text class="tag" x="150" y="22" text-anchor="middle">{{ i18n "fig_price" }}</text>
+    <text class="tag" x="236" y="114">{{ i18n "fig_reliability" }}</text>
+    <text class="tag" x="150" y="206" text-anchor="middle">{{ i18n "fig_cert" }}</text>
+    <text class="tag" x="64" y="114" text-anchor="end">CO₂</text>
+    <polygon class="ln" points="150,52 210,110 150,172 98,110" style="fill: var(--fg-2); fill-opacity: var(--region)"/>
+    <polygon class="hl" points="150,74 186,110 150,150 120,110" stroke-dasharray="4 3"/>
+
+    <path class="ln" d="M340 34 H366"/>
+    <path class="hl" d="M340 52 H366" stroke-dasharray="4 3"/>
+    <text class="tag" x="374" y="38">{{ i18n "fig_supplier_a" }}</text>
+    <text class="tag" x="374" y="56">{{ i18n "fig_supplier_b" }}</text>
+
+    <path class="hl" d="M340 168 H466"/>
+    <path class="ln" d="M340 168 H436"/>
+    <path class="hl" d="M340 162 V174 M436 160 V176"/>
+    <circle class="hot" cx="436" cy="168" r="4.5"/>
+    <text class="tag" x="340" y="154">KOMO</text>
+    <text class="tag tag--hot" x="436" y="194" text-anchor="middle">{{ i18n "fig_expiry" }}</text>
+  </svg>
+  <figcaption><span>{{ i18n "fig_score_cap" }}</span><span>{{ i18n "fig_stage_design" }}</span></figcaption>
+</figure>

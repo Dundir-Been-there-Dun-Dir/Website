@@ -1,0 +1,31 @@
+{{/* The gate today: a queue of trucks, a closed barrier, a paper ticket. Only
+     the cited figures: up to 50 minutes for 70% of trucks (Aldeeb 2024). */}}
+<figure class="fig">
+  <svg viewBox="0 0 480 214" role="img" aria-label="{{ i18n "fig_gate_cap" }}">
+    <line class="axis" x1="8" y1="176" x2="472" y2="176"/>
+    {{ range slice 16 100 184 268 }}
+    <g>
+      <rect class="ln" x="{{ . }}" y="126" width="52" height="38"/>
+      <path class="ln" d="M{{ add . 54 }} 164 V142 H{{ add . 64 }} L{{ add . 72 }} 152 V164 Z"/>
+      <circle class="ln" cx="{{ add . 12 }}" cy="168" r="6"/>
+      <circle class="ln" cx="{{ add . 62 }}" cy="168" r="6"/>
+    </g>
+    {{ end }}
+    <path class="hl" d="M16 112 V96 M342 112 V96 M16 104 H342"/>
+    <path class="ln" d="M10 110 L22 98 M336 110 L348 98"/>
+    <text class="tag" x="179" y="94" text-anchor="middle">{{ i18n "fig_gate_wait" }}</text>
+
+    <path class="ln" d="M372 176 V116 M372 122 H352"/>
+    <path class="hl" d="M356 122 L360 118 M364 122 L368 118"/>
+    <rect class="ln" x="392" y="122" width="44" height="54"/>
+    <rect class="hl" x="400" y="132" width="28" height="16"/>
+    <text class="tag" x="414" y="198" text-anchor="middle">{{ i18n "fig_gate_gate" }}</text>
+
+    <path class="ln" d="M424 30 H450 L458 38 V76 H424 Z"/>
+    <path class="hl" d="M430 46 H452 M430 54 H452 M430 62 H444"/>
+    <circle class="hot" cx="450" cy="66" r="3.5"/>
+    <path class="hl" d="M436 76 L420 132"/>
+    <text class="tag" x="416" y="46" text-anchor="end">{{ i18n "fig_gate_ticket" }}</text>
+  </svg>
+  <figcaption><span>{{ i18n "fig_gate_cap" }}</span><span>Aldeeb 2024 · Qflow 2025</span></figcaption>
+</figure>

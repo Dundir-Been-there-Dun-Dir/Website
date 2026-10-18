@@ -1,0 +1,28 @@
+{{/* The lifecycle as five stations. HTML, not one SVG, so the labels wrap in
+     every language and the row turns into a column on a phone. */}}
+<figure class="fig cycle">
+  <ol>
+    <li>
+      <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M15 6 H35 L43 14 V50 H15 Z"/><path d="M35 6 V14 H43"/><path class="soft" d="M21 24 H37 M21 30 H37 M21 36 H31"/><circle class="hot" cx="37" cy="36" r="3"/></svg>
+      <div><span class="cycle__n">01</span><span class="cycle__h">{{ i18n "fig_cycle_1" }}</span><span class="cycle__stage">{{ i18n "fig_stage_design" }}</span></div>
+    </li>
+    <li>
+      <svg viewBox="0 0 56 56" aria-hidden="true"><path class="soft" d="M6 50 H50 M6 50 V6"/><path d="M14 40 L20 16 L44 21 L38 44 Z"/><path class="soft" d="M8 22 L50 12" stroke-dasharray="3 3"/><circle class="hot" cx="20" cy="16" r="3.5"/></svg>
+      <div><span class="cycle__n">02</span><span class="cycle__h">{{ i18n "fig_cycle_2" }}</span><span class="cycle__stage">{{ i18n "fig_stage_research" }}</span></div>
+    </li>
+    <li>
+      <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M8 50 V18"/><rect x="5" y="14" width="6" height="4"/><path d="M11 17 H48"/><path class="soft" d="M18 17 L22 13 M26 17 L30 13 M34 17 L38 13 M42 17 L46 13"/><path d="M20 46 V30 H38 L46 38 V46 Z"/><circle cx="26" cy="47" r="3"/><circle cx="40" cy="47" r="3"/><circle class="hot" cx="31" cy="36" r="2.5"/></svg>
+      <div><span class="cycle__n">03</span><span class="cycle__h">{{ i18n "fig_cycle_3" }}</span><span class="cycle__stage cycle__stage--lab">{{ i18n "fig_stage_lab" }}</span></div>
+    </li>
+    <li>
+      <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M8 16 H20 L24 20 H48 V48 H8 Z"/><path class="soft" d="M12 12 H22 L26 16 M16 8 H26 L30 12 H52 V44"/><path d="M18 32 L24 38 L36 26"/></svg>
+      <div><span class="cycle__n">04</span><span class="cycle__h">{{ i18n "fig_cycle_4" }}</span><span class="cycle__stage">{{ i18n "fig_stage_design" }}</span></div>
+    </li>
+    <li>
+      <svg viewBox="0 0 56 56" aria-hidden="true"><ellipse cx="28" cy="12" rx="16" ry="5"/><path d="M12 12 V44 C12 47 19 49 28 49 C37 49 44 47 44 44 V12"/><path class="soft" d="M12 23 C12 26 19 28 28 28 C37 28 44 26 44 23 M12 34 C12 37 19 39 28 39 C37 39 44 37 44 34"/><circle class="hot" cx="28" cy="44" r="2.5"/></svg>
+      <div><span class="cycle__n">05</span><span class="cycle__h">{{ i18n "fig_cycle_5" }}</span><span class="cycle__stage">{{ i18n "fig_stage_design" }}</span></div>
+    </li>
+  </ol>
+  <div class="cycle__loop" aria-hidden="true"><span>↺ {{ i18n "fig_cycle_loop" }}</span></div>
+  <figcaption><span>{{ i18n "fig_cycle_cap" }}</span></figcaption>
+</figure>

@@ -1,4 +1,4 @@
-{{- $css := resources.Get "css/styleguide.css" | minify | fingerprint -}}
+{{- $css := slice (resources.Get "css/styleguide.css") (resources.Get "css/figures.css") | resources.Concat "css/styleguide-all.css" | minify | fingerprint -}}
 {{- $js := resources.Get "js/styleguide.js" | minify | fingerprint -}}
 <!DOCTYPE html>
 <html lang="en">
@@ -212,6 +212,34 @@
         <figcaption><strong>Limit and optimum.</strong> Constraints are plain strokes; the chosen point is the only filled mark.</figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<section class="band figs" aria-labelledby="figures">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="figures">Figures</h2>
+      <div>
+        <p>The site explains itself in drawings, not in photos or screens. A figure is a line drawing in the grammar above: limits as strokes, references as hair, the one point that matters in brick. It shows the design, so it never shows a dashboard, a result or a tick that says verified.</p>
+        <span class="ref">layouts/partials/fig/, assets/css/figures.css, section key figure: name in a band</span>
+      </div>
+    </div>
+    <ul class="rules">
+      <li><strong>Schematic, no invented values.</strong><p>Axes carry names, not numbers. A figure prints a value only when the page cites it, such as the 70/18/12 split.</p></li>
+      <li><strong>Every figure carries its stage or its source.</strong><p>A drawing of the design says how far that part is: design, research and design, lab prototype. A drawing of today's problem names the study its figures come from.</p></li>
+      <li><strong>Short labels, all languages.</strong><p>One or two words inside a drawing, set in Geist Mono from i18n. A label that needs a sentence goes into the caption, where it can wrap.</p></li>
+    </ul>
+    <div class="fig-samples">
+      {{ partial "fig/plan.html" . }}
+      <p class="ref">The plan, on the home page. Four requirements bound the bids; the cost line touches the feasible area at one corner. Draws itself once when it comes into view; with reduced motion it stands drawn.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band dark figs" aria-label="Figure on graphite">
+  <div class="wrap">
+    {{ partial "fig/cycle.html" . }}
+    <p class="ref">The lifecycle, on How it works. HTML stations with drawn glyphs, so labels wrap in German and the row turns into a column on a phone. The same roles put it on graphite unchanged.</p>
   </div>
 </section>
 

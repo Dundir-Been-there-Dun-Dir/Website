@@ -13,6 +13,7 @@ sections:
     body: <strong>Afsluitdijk (2024).</strong> Massive Kostenüberschreitung, weil Materialspezifikationen ohne prüfbaren Nachweis von den Vertragsbedingungen abwichen. Was auf die Baustelle geliefert wurde, entsprach nicht dem, was vertraglich vereinbart war.
   source: Parliamentary Inquiry Fyra 2015 · Netherlands Court of Audit 2024
 - tone: chalk
+  figure: gate
   eyebrow: Die dreifache Krise
   heading: Büro, Tor und Gedächtnis.
   body: 'Das Versagen der klassischen Baubeschaffung verläuft über drei aufeinanderfolgende operative Stufen:

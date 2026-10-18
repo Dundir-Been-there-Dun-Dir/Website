@@ -31,6 +31,7 @@ sections:
     body: des Personals bleibt bei großen Infrastrukturprojekten vom Start bis zum Abschluss dabei. Beschaffungswissen geht mit jedem Personalwechsel verloren. Bei einem untersuchten Bauunternehmen blieben nach der Bereinigung von mehr als 1.000 historischen Projekten 54 verwertbare übrig.
   source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · VNG 2024 · Rockx 2023, TU Delft · Steuer et al. 2023
 - tone: chalk
+  figure: cycle
   eyebrow: Die Plattform
   heading: Drei Module, die sich ergänzen.
   lede: 'Ein Sprachmodell schreibt eine Antwort. Ein Optimierungsverfahren berechnet eine. Dundir wird entwickelt, um mathematische Beschaffungsoptimierung mit der Prüfung am Tor und einem wachsenden Vertragsgedächtnis zu verbinden.'

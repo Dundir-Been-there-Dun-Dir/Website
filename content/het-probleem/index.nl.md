@@ -12,6 +12,7 @@ sections:
     body: <strong>Afsluitdijk (2024).</strong> Budgetoverschrijding veroorzaakt door afwijkende materiaalspecificaties en een ontbrekend digitaal verificatiedossier. Wat op de bouwplaats werd geleverd en verwerkt, sloot niet aan op wat contractueel was overeengekomen.
   source: Parlementaire Enquêtecommissie Fyra 2015 · Algemene Rekenkamer 2024
 - tone: chalk
+  figure: gate
   eyebrow: De drievoudige crisis
   heading: Kantoor, poort en archief.
   body: 'Het faillement van traditioneel inkoopbeheer manifesteert zich in drie opeenvolgende fasen van elk bouwproject:

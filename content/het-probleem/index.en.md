@@ -14,6 +14,7 @@ sections:
     body: <strong>Afsluitdijk (2024).</strong> Massive cost overrun caused by material specifications diverging from contract terms without an auditable verification trail. What was delivered to the site failed to match what was contracted.
   source: Parliamentary Inquiry Fyra 2015 · Netherlands Court of Audit 2024
 - tone: chalk
+  figure: gate
   eyebrow: The triple crisis
   heading: Office, gate, and memory.
   body: 'The breakdown of traditional construction procurement unfolds across three consecutive operational stages:

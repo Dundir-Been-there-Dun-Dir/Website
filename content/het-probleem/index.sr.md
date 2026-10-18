@@ -13,6 +13,7 @@ sections:
     body: <strong>Afsluitdijk (2024).</strong> Masovno prekoračenje budžeta uzrokovano odstupanjem ugrađenog materijala od projektnih uslova bez revizorskog traga. Ono što je isporučeno na gradilište nije odgovaralo onome što je ugovoreno.
   source: Parlamentarna istraga Fyra 2015 · Državni revizorski sud Holandije 2024
 - tone: chalk
+  figure: gate
   eyebrow: Trostruka kriza
   heading: Kancelarija, kapija i zaborav.
   body: 'Kolaps tradicionalnog upravljanja nabavkom manifestuje se kroz tri uzastopne faze svakog građevinskog projekta:
