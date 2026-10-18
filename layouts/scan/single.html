@@ -1,0 +1,112 @@
+{{- $d := index .Site.Data.scan .Lang -}}
+{{- if not $d }}{{ $d = .Site.Data.scan.en }}{{ end -}}
+{{- $side := dict -}}
+{{- range .Params.sections }}{{ if .sidesteps }}{{ $side = . }}{{ end }}{{ end -}}
+{{- $keys := slice "A" "B" "C" "D" "E" "F" -}}
+{{- $total := len $d.questions -}}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body class="tf">
+    <header class="tf-bar">
+      <a href="{{ "/" | relLangURL }}" class="site-nav__logo" aria-label="Dundir">
+        {{ partial "mark.html" . }}
+        <span class="site-nav__word">Dundir</span>
+      </a>
+      <span class="tf-count mono" aria-live="polite"></span>
+      <a href="{{ "/" | relLangURL }}" class="tf-exit" aria-label="{{ i18n "scan_exit" }}">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      </a>
+    </header>
+    <div class="tf-line" aria-hidden="true"><span></span></div>
+
+    <main class="tf-stage" id="scan"
+      data-step="{{ i18n "scan_step" }}" data-total="{{ $total }}">
+
+      <section class="tf-screen tf-welcome is-on" data-screen="0" aria-labelledby="tf-title">
+        <div class="tf-inner">
+          <h1 id="tf-title">{{ .Title }}</h1>
+          {{ with .Params.lede }}<p class="tf-lede">{{ . }}</p>{{ end }}
+          <div class="tf-act">
+            <button type="button" class="btn btn--primary tf-go" data-go="1">{{ i18n "scan_start" }}</button>
+            <span class="tf-key">{{ i18n "scan_enter" }}</span>
+          </div>
+          {{ with $side.sidesteps }}
+          <ul class="tf-gets">
+            {{ range . }}<li><strong>{{ .h }}</strong> {{ .p }}</li>{{ end }}
+          </ul>
+          {{ end }}
+          {{ with $side.sidenote }}<p class="tf-note mono">{{ . }}</p>{{ end }}
+          <noscript><p class="tf-note">{{ i18n "scan_nojs" }}</p></noscript>
+        </div>
+      </section>
+
+      <form class="tf-form" novalidate>
+        {{ range $i, $q := $d.questions }}
+        <fieldset class="tf-screen tf-q" data-screen="{{ add $i 1 }}">
+          <div class="tf-inner">
+            <legend class="tf-ask"><span class="tf-num">{{ add $i 1 }}</span>{{ $q.ask }}</legend>
+            {{ with $q.hint }}<p class="tf-hint">{{ . }}</p>{{ end }}
+            <div class="tf-opts">
+              {{ range $v, $opt := $q.opts }}
+              <label class="tf-opt">
+                <input type="radio" name="{{ $q.id }}" value="{{ $v }}" data-label="{{ $opt }}" data-key="{{ index $keys $v }}">
+                <span class="tf-letter" aria-hidden="true">{{ index $keys $v }}</span>
+                <span>{{ $opt }}</span>
+              </label>
+              {{ end }}
+            </div>
+            <div class="tf-act">
+              {{ if eq (add $i 1) $total }}
+              <button type="submit" class="btn btn--primary tf-ok" disabled>{{ i18n "scan_submit" }}</button>
+              {{ else }}
+              <button type="button" class="btn btn--primary tf-ok" data-go="{{ add $i 2 }}" disabled>{{ i18n "scan_ok" }}</button>
+              {{ end }}
+              <span class="tf-key">{{ i18n "scan_enter" }}</span>
+            </div>
+          </div>
+        </fieldset>
+        {{ end }}
+      </form>
+
+      <section class="tf-screen tf-result" data-screen="{{ add $total 1 }}" aria-labelledby="tf-result-h">
+        <div class="tf-inner">
+          <h2 id="tf-result-h">{{ i18n "scan_result" }}</h2>
+          <div class="scan__report"></div>
+
+          <div class="tf-copy">
+            <h3>{{ i18n "scan_after_h" }}</h3>
+            <p>{{ i18n "scan_after_p" }}</p>
+            <form action="https://formsubmit.co/christiaan.verhoef@dundir.com" method="POST">
+              <input type="hidden" name="_subject" value="{{ i18n "scan_mail_subj" }}">
+              <input type="hidden" name="_cc" value="milan.jelisavcic@dundir.com">
+              <input type="hidden" name="_next" value="{{ "success.html" | absURL }}">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off">
+              <textarea id="scan-summary" name="resultaat" class="visually-hidden" tabindex="-1" aria-hidden="true"></textarea>
+              <div class="field"><label for="scan-name">{{ i18n "f_name" }}</label><input id="scan-name" type="text" name="naam" autocomplete="name"></div>
+              <div class="field"><label for="scan-org">{{ i18n "f_org" }}</label><input id="scan-org" type="text" name="organisatie" autocomplete="organization"></div>
+              <div class="field"><label for="scan-mail">{{ i18n "f_mail" }}</label><input id="scan-mail" type="email" name="email" required autocomplete="email"></div>
+              <button type="submit" class="btn btn--primary">{{ i18n "scan_after_send" }}</button>
+            </form>
+          </div>
+
+          <p class="tf-end">
+            <button type="button" class="btn btn--secondary tf-go" data-go="1" data-reset>{{ i18n "scan_again" }}</button>
+            <a class="btn btn--secondary" href="{{ "/" | relLangURL }}">{{ i18n "scan_exit" }}</a>
+          </p>
+        </div>
+      </section>
+
+      <nav class="tf-nav" aria-label="{{ i18n "scan_nav" }}">
+        <button type="button" class="tf-prev" aria-label="{{ i18n "scan_prev" }}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 15 L12 9 L18 15" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></button>
+        <button type="button" class="tf-next" aria-label="{{ i18n "scan_next" }}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></button>
+      </nav>
+
+      <script type="application/json" id="scan-data">{{ $d | jsonify | safeJS }}</script>
+    </main>
+
+    {{- $js := resources.Get "js/scan.js" | minify | fingerprint -}}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  </body>
+</html>

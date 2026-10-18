@@ -163,3 +163,36 @@ other = "nl/pilot/"
 
 [url_privacy]
 other = "nl/privacy/"
+
+[scan_start]
+other = "Start de scan"
+
+[scan_ok]
+other = "OK"
+
+[scan_enter]
+other = "druk op Enter ↵"
+
+[scan_prev]
+other = "Vorige vraag"
+
+[scan_next]
+other = "Volgende vraag"
+
+[scan_nav]
+other = "Navigatie van de scan"
+
+[scan_exit]
+other = "Scan sluiten"
+
+[scan_again]
+other = "Opnieuw beginnen"
+
+[scan_step]
+other = "{n} van {total}"
+
+[scan_result]
+other = "Uw rapport"
+
+[scan_nojs]
+other = "De scan draait in uw browser en heeft JavaScript nodig."

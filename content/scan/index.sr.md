@@ -24,5 +24,5 @@ sections:
     p: Najviše četiri nalaza, svaki sa izvorom na kome ga zasnivamo.
   sidenote: Deset pitanja, oko dva minuta.
   form: scan
-scanjs: true
+pagecss: css/scan.css
 ---
