@@ -1,8 +1,13 @@
 # Website Planning Index
-> 5 planning documents complete | Last updated: 2026-05-14
-> Methodology: Winning by Design Bowtie | Audience: Dutch construction procurement managers
+> 7 planning documents complete | Last updated: 2026-10-18
+> Methodology: Winning by Design Bowtie | Audience: Dutch construction procurement managers & municipality buyers
 
 Read this index first in any working session. Open individual planning files only when you need the full detail.
+
+### Latest Architecture & CTO Review (October 2026):
+* [CTO Review Brief for Dr. Milan Jelisavcic](CTO-REVIEW-MILAN.md) (also in root: [`CTO-REVIEW-MILAN.md`](../CTO-REVIEW-MILAN.md))
+* [07: Use Case & Three-Engine Platform Adoption Specification](07-usecase-platform-adoption-design.md)
+
 
 ---
 
