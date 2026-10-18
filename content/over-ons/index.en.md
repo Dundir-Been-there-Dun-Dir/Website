@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/about/"]
 title: About
 description: Dundir develops deterministic procurement and jobsite software, anchored in research at Windesheim University of Applied Sciences.
 slug: about
@@ -12,13 +13,14 @@ sections:
     body: Windesheim University of Applied Sciences provides the academic anchor, the validation and access to research funding through RAAK-PRO, KIEM and Horizon Europe.
     word: true
   link:
-    href: /en/research-partner/
+    href: /research-partner/
     label: Become a research partner yourself
 - id: contact
   tone: chalk-2
   eyebrow: Contact
   heading: A focused thirty-minute discussion.
   body: 'Want to speak with us? Send a message. No sales deck, no marketing slides: thirty minutes examining your procurement and jobsite processes, where we ask the questions.
+
 
     If you manage procurement or site logistics for a contractor or municipality, your field experience is worth more to us right now than a quick contract signature.'
   form: contact

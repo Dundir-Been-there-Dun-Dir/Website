@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/pilot/"]
 title: Pilot as a design partner
 description: The system is not finished. You decide what it gets calibrated on, and it runs inside your own network.
 slug: pilot
@@ -7,6 +8,7 @@ sections:
 - eyebrow: Why a design partner
   heading: A generic model does not know your jobsite.
   body: 'The true operational strength of this platform is not an abstract algorithm. It is the real-world calibration: knowing which certifications are non-negotiable for you, which supplier delivers reliably despite a higher unit price, and which deviation from the specification is acceptable in practice. That knowledge exists in no general textbook; it resides in your procurement history and gate logs.
+
 
     At this stage we work with a select group of design partners rather than mass-market buyers. Whoever joins now joins while the architecture can still be tailored directly to your operational workflows.'
 - tone: chalk

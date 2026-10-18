@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/presentations/"]
 title: Presentations
 description: Pitch and briefing decks by audience.
 slug: presentations

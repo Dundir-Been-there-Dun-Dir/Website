@@ -36,11 +36,15 @@ sections:
   lede: 'Jezički model napiše tekstualni odgovor. Optimizaciona mašina izračuna egzaktno rešenje. Dundir se razvija da poveže matematičku optimizaciju nabavke sa verifikacijom na kapiji gradilišta i trajnom ugovornom memorijom.'
   body: 'Dizajn čine tri međusobno povezana modula, namenjena da rade lokalno na vašoj infrastrukturi. Svaki je u svojoj fazi:
 
+
     <strong>1. Deterministički solver za nabavku (istraživanje i dizajn):</strong> Kombinatorna optimizacija cene, rokova isporuke, transportnih kilometara i CO2 emisija. Deterministički po dizajnu: isti unos mora uvek da da identičan rezultat, bez numeričkih grešaka generativnog AI-ja (do 8.354 evra greške po stavci u istraživanju Hamppi 2025).
+
 
     <strong>2. Digitalni blizanac gradilišta i Pametna kapija (laboratorijski prototip):</strong> Cilj: OCR na kapiji čita otpremnice i registarske tablice pri dolasku, uparuje narudžbenicu, otpremnicu i fakturu i usput formira zakonski dosije o primopredaji. Danas na radnom stolu radi prvi edge hardver: dve povezane pločice sa malim jezičkim modelom na čipu, bez interneta. Kamera i pametne naočare slede.
 
+
     <strong>3. Predviđanje i institucionalna memorija (dizajn):</strong> Stvarna pouzdanost isporuka, vremenska odstupanja i reklamacije treba da ažuriraju parametre za ocenjivanje budućih tenderskih ponuda, kako bi znanje ostalo u preduzeću.
+
 
     <strong>Vaši podaci ostaju u vašoj mreži.</strong> Sistem se projektuje za lokalni rad, kako bi javna uprava ostala u okviru svojih bezbednosnih pravila. Vaši podaci nikada ne treniraju tuđe modele.'
 - tone: chalk-2
@@ -48,7 +52,9 @@ sections:
   heading: Nije gotovo, i to radije otvoreno kažemo sami.
   body: 'Dundir je istraživački program sa preduzećem oko njega, a ne standardizovani komercijalni softver sa marketinškom pričom. Teorija optimizacije je dokazana; njena primena na građevinsku nabavku i logistiku gradilišta predstavlja inovaciju.
 
+
     Ključno pitanje ostaje otvoreno: šta tačno znači <em>optimalno</em> kada se istovremeno mere cena, rok isporuke, sertifikati, logistika kapije i CO2 otisak, i pri kojoj količini podataka algoritam nadmašuje iskusnog šefa nabavke i poslovođu?
+
 
     Zato tražimo projektne partnere, a ne pasivne kupce licenci. Partneri koji se uključe u ovoj fazi direktno utiču na kalibraciju sistema i na to šta se prvo gradi.'
   caveat:

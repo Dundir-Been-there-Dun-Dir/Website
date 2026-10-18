@@ -8,6 +8,7 @@ sections:
   heading: Generički model ne poznaje vaše gradilište.
   body: 'Stvarna operativna snaga ovog sistema nije apstraktan algoritam. To je kalibracija prema realnosti: saznanje koji su sertifikati kod vas eliminacioni, koji dobavljač uprkos višoj ceni tačno stiže na kapiju, i koje odstupanje u specifikaciji je u praksi prihvatljivo. To ne piše u udžbenicima; to se nalazi u vašoj istoriji nabavke i evidenciji na kapiji.
 
+
     Zato u ovoj fazi sarađujemo sa odabranim krugom razvojnih partnera, a ne sa masovnim kupcima licenci. Ko se sada uključi, ulazi dok se arhitektura još uvek prilagođava vašim radnim tokovima.'
 - tone: chalk
   eyebrow: Protokol od 10 nedelja

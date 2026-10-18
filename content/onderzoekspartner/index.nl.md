@@ -33,7 +33,7 @@ sections:
     body: U krijgt de onderzoeksresultaten, inclusief de vergelijking van uw eigen inkoopproces met dat van de andere partners. Dat alleen al is een benchmark die nergens te koop is.
     word: true
   - fig: Voorrang
-    body: Onderzoekspartners krijgen als eerste toegang tot een pilot, tegen de voorwaarden die op de <a href="/pilot/">pilotpagina</a> staan.
+    body: Onderzoekspartners krijgen als eerste toegang tot een pilot, tegen de voorwaarden die op de <a href="/nl/pilot/">pilotpagina</a> staan.
     word: true
   caveat:
     lab: Eerlijk over wat dit is

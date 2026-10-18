@@ -41,7 +41,9 @@ sections:
     src: Hamppi 2025, Univerzitet Aalto · Atil i dr. 2025
   body: 'Koja su ograničenja primenjena, kako je izbalansiran odnos cene i udaljenosti transporta, i zašto je izabran određeni dobavljač: sistem je projektovan da beleži tačnu matematičku formulu i težinske faktore.
 
+
     Isti princip važi na kapiji gradilišta: svako skeniranje otpremnice i uparivanje treba da se beleži sa vremenskim žigom, brojem narudžbine i procentom odstupanja.
+
 
     Za javne naručioce ovo podržava obrazloženje po članu 2.130 holandskog Zakona o javnim nabavkama. Za izvođače radova stvara dokumentovan dosije pri sporovima oko naknadnih radova ili neadekvatnog materijala.'
 - tone: chalk-2
@@ -49,7 +51,9 @@ sections:
   heading: Šta sistem ne radi.
   body: 'Dundir ne donosi samostalne poslovne odluke i ne zamenjuje stručnjake. Kalkulant, inženjer nabavke i poslovođa zadržavaju punu kontrolu.
 
+
     Sistem eliminiše ručni unos i proveru papira kako bi se profesionalci posvetili pregovorima, kontroli kvaliteta i strateškim odnosima. Formalna odluka i ugovorna odgovornost uvek ostaju na vašoj organizaciji.
+
 
     Sistem se kalibriše na bazi vaše stvarne istorije poslovanja. Kada iskusan inženjer ode, prikupljeno znanje o dobavljačima ostaje sačuvano u preduzeću.'
   caveat:

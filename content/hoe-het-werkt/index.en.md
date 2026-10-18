@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/how-it-works/"]
 title: How it works
 description: From material specification to smart gate inspection and Wkb handover dossier. Designed for local deployment, mathematically grounded, with a full audit trail.
 slug: how-it-works
@@ -41,7 +42,9 @@ sections:
     src: Hamppi 2025, Aalto University · Atil et al. 2025
   body: 'Which constraints were enforced, what trade-offs were balanced between freight transit distance and material unit costs, and why a supplier was selected: the system is designed to record the exact formula and parameter weights.
 
+
     The same rigor applies at the gate: every delivery ticket scan and 3-way match decision is to be logged with timestamps, reference IDs, and variance percentages.
+
 
     For municipalities, this supports the reasoning required under Public Procurement Act Article 2.130. For contractors, it provides a documented file during subcontractor disputes or claims.'
 - tone: chalk-2
@@ -49,7 +52,9 @@ sections:
   heading: What the system does not do.
   body: 'Dundir does not make autonomous business decisions and does not replace human experts. The estimator, buyer, and site superintendent maintain full control.
 
+
     The platform eliminates clerical data entry and manual matching so professionals can focus on negotiations, quality inspections, and strategic vendor management. Formal sign-off and legal accountability remain with your organization.
+
 
     The system calibrates against your proprietary transaction history. When experienced staff departs, accumulated vendor intelligence stays preserved within your firm.'
   caveat:
