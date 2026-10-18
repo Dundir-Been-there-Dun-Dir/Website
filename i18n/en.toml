@@ -270,3 +270,87 @@ other = "feeds the next tender"
 
 [fig_cycle_cap]
 other = "The design in five steps. Only step 03 exists today, as a bench prototype."
+
+[fig_sov_net]
+other = "your network"
+
+[fig_sov_office]
+other = "office"
+
+[fig_sov_server]
+other = "site server"
+
+[fig_sov_gate]
+other = "gate edge"
+
+[fig_sov_cloud]
+other = "public cloud"
+
+[fig_sov_out]
+other = "no egress"
+
+[fig_sov_cap]
+other = "Deployment design: data and models stay inside your network"
+
+[fig_gate_wait]
+other = "up to 50 min"
+
+[fig_gate_gate]
+other = "gate"
+
+[fig_gate_ticket]
+other = "paper ticket"
+
+[fig_gate_cap]
+other = "The gate today: 70% of trucks wait up to 50 minutes, 95% of tickets have errors"
+
+[fig_bids_n]
+other = "5 bids"
+
+[fig_bids_line]
+other = "one line each"
+
+[fig_bids_cap]
+other = "Five bids, put on one line each, then solved"
+
+[fig_pkg_req]
+other = "hard requirements"
+
+[fig_pkg_out]
+other = "package"
+
+[fig_pkg_cap]
+other = "A specification in, hard requirements out, packed for comparison"
+
+[fig_cert]
+other = "certification"
+
+[fig_supplier_a]
+other = "supplier A"
+
+[fig_supplier_b]
+other = "supplier B"
+
+[fig_expiry]
+other = "expiry"
+
+[fig_score_cap]
+other = "Suppliers on four criteria, certificates with their expiry"
+
+[fig_match_po]
+other = "order"
+
+[fig_match_do]
+other = "delivery ticket"
+
+[fig_match_inv]
+other = "invoice"
+
+[fig_match]
+other = "3-way match"
+
+[fig_match_ocr]
+other = "edge OCR"
+
+[fig_match_cap]
+other = "Order, delivery ticket and invoice checked against each other at the gate"

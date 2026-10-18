@@ -18,6 +18,7 @@ sections:
   - h: Terugkoppeling naar contractgeheugen
     p: 'Werkelijke leverbetrouwbaarheid, kwaliteitsafwijkingen en levertijden worden automatisch geregistreerd. Deze data kalibreert de scoringsparameters voor de volgende aanbesteding.'
 - tone: chalk
+  figure: sovereignty
   eyebrow: Data-soevereiniteit
   heading: Waarom het lokaal op uw eigen server draait.
   body: 'Bouwdata, calculaties en contractafspraken zijn commercieel vertrouwelijk en strategisch gevoelig. Dundir wordt ontworpen om volledig on-premise te draaien, op uw eigen infrastructuur of lokale edge-hardware:'

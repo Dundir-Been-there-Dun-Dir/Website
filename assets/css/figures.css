@@ -49,6 +49,18 @@
 .fig .best .halo { fill: none; stroke: var(--accent-fill); stroke-width: var(--hair); opacity: 0; }
 .fig .best text { font: var(--svg-label) var(--data); fill: var(--accent-text); }
 
+.fig .ln { fill: none; stroke: var(--fg); stroke-width: var(--stroke); stroke-linejoin: round; stroke-linecap: round; }
+.fig .hl { fill: none; stroke: var(--fg-3); stroke-width: var(--hair); }
+.fig .edge { fill: none; stroke: var(--fg-2); stroke-width: var(--stroke); stroke-dasharray: 6 4; }
+.fig .shade { fill: var(--fg-2); fill-opacity: var(--region); stroke: none; }
+.fig .hot { fill: var(--accent-fill); stroke: none; }
+.fig .tag { font: var(--svg-label) var(--data); fill: var(--fg-2); }
+.fig .tag--hot { fill: var(--accent-text); }
+.fig .tag-dot { fill: var(--fg-2); }
+.fig:not(.cycle):not(.fig--plan) { max-width: 46rem; }
+.fig + * { margin-top: 1.75rem; }
+* + .fig { margin-top: 1.75rem; }
+
 /* The draw-in runs only when site.js adds .fig--anim (motion allowed, JS on),
    so without either the figure simply stands drawn. */
 .fig--anim .limit line { stroke-dasharray: 1; stroke-dashoffset: 1; }
@@ -82,7 +94,7 @@
 .hero__grid .hero__sub { display: block; }
 .hero__grid .hero__sub p { margin-bottom: 1.5rem; }
 @media (max-width: 900px) { .hero__grid { grid-template-columns: 1fr; } }
-@media (max-width: 640px) { .fig--plan { --svg-label: 15px; } }
+@media (max-width: 640px) { .fig { --svg-label: 14px; } }
 
 /* Lifecycle: five stations and the loop back to the next tender */
 .cycle { margin: 0 0 2rem; }

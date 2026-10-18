@@ -19,6 +19,7 @@ sections:
   - h: Povratna sprega u ugovornu memoriju
     p: 'Stvarna tačnost isporuka, uočena odstupanja i odstupanja u cenama automatski se evidentiraju. Ovi podaci rekalibrišu parametre ocenjivanja za naredne tendere.'
 - tone: chalk
+  figure: sovereignty
   eyebrow: Suverenitet podataka
   heading: Zašto sistem radi lokalno na vašem serveru.
   body: 'Građevinski proračuni, cene i ugovorni uslovi predstavljaju poslovnu tajnu najvišeg nivoa. Dundir se projektuje da radi potpuno lokalno, na vašoj infrastrukturi ili namenskom hardveru na gradilištu:'

@@ -19,6 +19,7 @@ sections:
   - h: Rückfluss in das wachsende Vertragsgedächtnis
     p: 'Tatsächliche Liefertreue der Lieferanten, Mängelhäufigkeit und Abweichungen beim Einheitspreis werden automatisch protokolliert. Diese Daten kalibrieren die Bewertungsparameter für die nächste Ausschreibung neu.'
 - tone: chalk
+  figure: sovereignty
   eyebrow: Datensouveränität
   heading: Warum es lokal auf Ihrer eigenen Infrastruktur läuft.
   body: 'Baudaten, Kostenschätzungen und Konditionen sind strategisch sensibel. Dundir ist für den vollständigen Betrieb vor Ort ausgelegt, auf Ihren Unternehmensservern oder auf lokaler Edge-Hardware auf der Baustelle:'

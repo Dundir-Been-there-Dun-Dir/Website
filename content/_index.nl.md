@@ -31,6 +31,7 @@ sections:
     body: van de staf maakt een groot infraproject van begin tot eind mee. Inkoopkennis verdwijnt bij personeelsverloop. Bij een onderzochte aannemer bleven na opschoning van ruim 1.000 historische projecten er 54 bruikbaar over.
   source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · VNG 2024 · Rockx 2023, TU Delft · Steuer e.a. 2023
 - tone: chalk
+  figure: cycle
   eyebrow: Het platform
   heading: Drie complementaire engines.
   lede: 'Een taalmodel schrijft een antwoord op. Een optimalisatie-engine rekent er een uit. Dundir wordt gebouwd om wiskundige inkoopoptimalisatie te verbinden met verificatie aan de poort en een lerend contractgeheugen.'

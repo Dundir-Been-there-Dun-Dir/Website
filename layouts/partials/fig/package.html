@@ -1,0 +1,24 @@
+{{/* UC3: a specification in, hard requirements out, packed for UC1 and UC2. */}}
+<figure class="fig">
+  <svg viewBox="0 0 480 200" role="img" aria-label="{{ i18n "fig_pkg_cap" }}">
+    <path class="ln" d="M28 30 H78 L94 46 V156 H28 Z M78 30 V46 H94"/>
+    <path class="hl" d="M38 62 H84 M38 72 H84 M38 82 H76 M38 92 H84 M38 102 H70 M38 112 H84 M38 122 H80 M38 132 H62"/>
+    <text class="tag" x="61" y="182" text-anchor="middle">{{ i18n "fig_cycle_1" }}</text>
+
+    <path class="hl" d="M110 94 H140"/><path class="ln" d="M134 89 L140 94 L134 99"/>
+
+    {{ range $i, $k := slice "fig_lim_cert" "fig_lim_delivery" "fig_lim_budget" "fig_lim_co2" }}
+    {{ $y := add 50 (mul $i 32) }}
+    <text class="tag" x="160" y="{{ sub $y 8 }}">{{ i18n $k }}</text>
+    <path class="ln" d="M160 {{ $y }} H316"/><path class="hl" d="M160 {{ sub $y 4 }} V{{ add $y 4 }} M316 {{ sub $y 4 }} V{{ add $y 4 }}"/>
+    {{ end }}
+    <text class="tag" x="238" y="182" text-anchor="middle">{{ i18n "fig_pkg_req" }}</text>
+
+    <path class="hl" d="M332 94 H362"/><path class="ln" d="M356 89 L362 94 L356 99"/>
+
+    <path class="ln" d="M380 72 L416 56 L452 72 V128 L416 144 L380 128 Z M380 72 L416 88 L452 72 M416 88 V144"/>
+    <circle class="hot" cx="416" cy="72" r="4"/>
+    <text class="tag" x="416" y="182" text-anchor="middle">{{ i18n "fig_pkg_out" }}</text>
+  </svg>
+  <figcaption><span>{{ i18n "fig_pkg_cap" }}</span><span>{{ i18n "fig_stage_design" }}</span></figcaption>
+</figure>

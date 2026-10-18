@@ -20,6 +20,7 @@ sections:
   - h: Feedback to accumulated contract memory
     p: 'Actual supplier delivery punctuality, defect frequencies, and unit price variances are logged automatically. This data recalibrates scoring parameters for the next tender bid.'
 - tone: chalk
+  figure: sovereignty
   eyebrow: Data sovereignty
   heading: Why it runs locally on your own infrastructure.
   body: 'Construction data, cost estimates, and commercial terms are strategically sensitive. Dundir is designed to run fully on-premises, on your enterprise servers or local jobsite edge hardware:'
