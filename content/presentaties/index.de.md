@@ -19,7 +19,7 @@ sections:
     go: Präsentation ansehen
   - meta: Segment C
     h: Große Infrastrukturorganisationen
-    p: Für Rijkswaterstaat, Wasserverbände und vergleichbare Stellen.
+    p: Für öffentliche Infrastrukturbetreiber und Wasserverbände.
     href: presentaties/decks/segment-c-infrastructure-org/
     go: Präsentation ansehen
   - meta: Segment D
@@ -33,7 +33,7 @@ sections:
   cards:
   - meta: Segment E
     h: Baustofflieferanten
-    p: Für Lieferanten, die ihre eigene Beschaffung optimieren möchten.
+    p: Für Lieferanten, deren Produktdaten ein Vergleich lesen können muss.
     href: presentaties/decks/segment-e-material-supplier/
     go: Präsentation ansehen
   - meta: Partner
@@ -53,7 +53,7 @@ sections:
     go: Präsentation ansehen
   - meta: Partner
     h: CO2- und Nachhaltigkeitsorganisationen
-    p: Für Stellen, die die Emissionsberichterstattung in der Lieferkette steuern.
+    p: Für Stellen, die Umweltdaten von Produkten verwalten.
     href: presentaties/decks/co2-sustainability-bodies/
     go: Präsentation ansehen
 ---
