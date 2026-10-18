@@ -18,7 +18,7 @@ sections:
     go: Bekijk presentatie
   - meta: Segment C
     h: Grote infrastructuurorganisaties
-    p: Voor Rijkswaterstaat, waterschappen en vergelijkbare organisaties.
+    p: Voor publieke infrabeheerders en waterschappen.
     href: presentaties/decks/segment-c-infrastructure-org/
     go: Bekijk presentatie
   - meta: Segment D
@@ -32,7 +32,7 @@ sections:
   cards:
   - meta: Segment E
     h: Materiaalleveranciers
-    p: Voor leveranciers die hun eigen inkoop willen optimaliseren.
+    p: Voor leveranciers van wie de productdata in een vergelijking gelezen moet worden.
     href: presentaties/decks/segment-e-material-supplier/
     go: Bekijk presentatie
   - meta: Partners
@@ -52,7 +52,7 @@ sections:
     go: Bekijk presentatie
   - meta: Partners
     h: CO2 en duurzaamheidsinstanties
-    p: Voor partijen die uitstootrapportage in de toeleveringsketen sturen.
+    p: Voor organisaties die milieudata van producten beheren.
     href: presentaties/decks/co2-sustainability-bodies/
     go: Bekijk presentatie
 ---

@@ -19,7 +19,7 @@ sections:
     go: Pogledajte prezentaciju
   - meta: Segment C
     h: Velike infrastrukturne organizacije
-    p: Za Rijkswaterstaat, vodoprivredne uprave i slične organizacije
+    p: Za javne upravljače infrastrukturom i vodoprivredne uprave
     href: presentaties/decks/segment-c-infrastructure-org/
     go: Pogledajte prezentaciju
   - meta: Segment D
@@ -33,7 +33,7 @@ sections:
   cards:
   - meta: Segment E
     h: Dobavljači materijala
-    p: Za dobavljače koji žele da optimizuju sopstvenu nabavku
+    p: Za dobavljače čije podatke o proizvodima poređenje mora da pročita
     href: presentaties/decks/segment-e-material-supplier/
     go: Pogledajte prezentaciju
   - meta: Partneri
@@ -53,7 +53,7 @@ sections:
     go: Pogledajte prezentaciju
   - meta: Partneri
     h: CO2 i tela za održivost
-    p: Za one koji vode izveštavanje o emisijama u lancu snabdevanja
+    p: Za organizacije koje upravljaju ekološkim podacima o proizvodima
     href: presentaties/decks/co2-sustainability-bodies/
     go: Pogledajte prezentaciju
 ---
