@@ -92,6 +92,7 @@
   align-items: center;
 }
 .hero__grid .hero__sub { display: block; }
+.hero__grid .fig { margin-top: 0; }
 .hero__grid .hero__sub p { margin-bottom: 1.5rem; }
 @media (max-width: 900px) { .hero__grid { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .fig { --svg-label: 14px; } }
