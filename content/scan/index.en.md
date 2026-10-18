@@ -25,5 +25,5 @@ sections:
     p: At most four findings, each with the source we base it on.
   sidenote: Ten questions, about two minutes.
   form: scan
-scanjs: true
+pagecss: css/scan.css
 ---

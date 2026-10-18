@@ -1,0 +1,76 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC1: Angebotsvergleich</p>
+    <h1 class="page-hero__headline">Von fünf Angeboten zu einem prüfungsbereiten Vergleichsbericht. In Minuten.</h1>
+    <p class="page-hero__subheading">Einkaufsteams im Bauwesen brauchen im Durchschnitt dreißig Minuten, um sechs Angebote zu vergleichen: bei jeder Ausschreibung, jede Woche. Dundir ersetzt diese manuelle Arbeit durch einen deterministischen Berechnungsprozess, der bei gleicher Eingabe jedes Mal dasselbe Ergebnis liefert.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Das Problem</h2>
+    <p>Ein Einkaufsleiter erhält fünf Angebote für dieselbe Leistung. Jedes Angebot hat einen anderen Aufbau, andere Gruppierungen der Positionen, andere Annahmen zu Material und Arbeit. Um sie fair zu vergleichen, muss er sie manuell normalisieren: Einheitspreise berechnen, Auslassungen erkennen, Lieferzeiten nebeneinanderlegen.</p>
+    <p>Das dauert dreißig Minuten. Und es ist noch kein Bericht geschrieben. Hochgerechnet auf ein durchschnittliches Einkaufsteam verlieren Sie jede Woche Stunden an Arbeit, die keinen Entscheidungswert hinzufügt.</p>
+    <p>Generative KI löst das nicht. In einem internen Experiment bei Skanska lieferte ein generisches Enterprise-KI-System für identische Angebotsdaten unterschiedliche Zahlenwerte: Fehler von bis zu 8.354 &euro; bei einer einzigen Ausschreibungsposition. Das System erzeugte Antworten. Die Berechnung konnte es nicht reproduzieren.</p>
+
+    <div class="proof-block">
+      <p class="proof-block__stat">8.354 &euro;</p>
+      <p class="proof-block__label">maximaler Rechenfehler eines generischen GenAI-Systems beim Angebotsvergleich</p>
+      <p class="proof-block__body">Bei identischen Eingaben lieferte das System in getrennten Sitzungen unterschiedliche Zahlenwerte (bis zu 28 % Abweichung bei einer einzigen Position). Deshalb eignet sich ein generatives KI-System nicht für den numerischen Angebotsvergleich. Die Optimierungs-Engine von Dundir ist deterministisch: bei gleicher Eingabe jedes Mal dasselbe Ergebnis.</p>
+      <p class="proof-block__source">Hamppi 2025, S. 62: Aalto University / Skanska Talonrakennus Oy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">So geht Dundir beim Angebotsvergleich vor</h2>
+    <ol class="step-list">
+      <li>
+        <div>
+          <p class="step-list__title">Angebote werden normalisiert</p>
+          <p class="step-list__body">Die KI-Schicht wandelt unterschiedliche Angebotsdokumente (PDF, E-Mail, Tabellenkalkulation) in ein strukturiertes Vergleichsformat um. Einheitspreise, Lieferzeiten, Zertifizierungsstatus, Annahmen: alles in einer Zeile.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Die Optimierungs-Engine rechnet</p>
+          <p class="step-list__body">Auf Grundlage Ihrer harten Anforderungen (Zertifizierungen, Lieferfenster, Budgetobergrenze) und gewichteten Ziele (Preis, Zuverlässigkeit, Nachhaltigkeit) berechnet die Engine die nachweislich optimale Lieferantenkombination. Deterministisch: bei gleicher Eingabe jedes Mal dasselbe Ergebnis.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p class="step-list__title">Sie prüfen. Das System dokumentiert.</p>
+          <p class="step-list__body">Sie sehen einen Vergleich mit Rangfolge, Quelldaten, Zertifizierungsstatus und vollständiger Begründungskette. Sie entscheiden. Das System hält Ihre Entscheidung fest: bereit für die interne Freigabe, eine externe Prüfung oder die Überprüfung einer öffentlichen Vergabe.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Was es bringt</h2>
+    <div class="two-col">
+      <div>
+        <p><strong>Zeitersparnis</strong><br>30 Minuten manuelle Arbeit pro Vergleich, skalierbar auf jedes Beschaffungsvolumen ohne zusätzliches Personal.</p>
+      </div>
+      <div>
+        <p><strong>Reproduzierbarkeit</strong><br>Dieselbe Eingabe führt immer zum selben Ergebnis. Keine Abweichungen zwischen Sitzungen, Einkäufern oder Zeitpunkten.</p>
+      </div>
+      <div>
+        <p><strong>Prüfungsbereiter Bericht</strong><br>Jeder Vergleich erzeugt automatisch eine Dokumentation, die sich für die interne Freigabe, eine externe Prüfung oder die Überprüfung einer öffentlichen Vergabe eignet.</p>
+      </div>
+      <div>
+        <p><strong>Wissenssicherung</strong><br>Wenn ein erfahrener Einkäufer das Unternehmen verlässt, bleibt die kalibrierte Entscheidungslogik für das gesamte Team verfügbar.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem;"><a href="{{ "de/anwendungen/" | relURL }}">&larr; Zurück zu allen Anwendungen</a></p>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}

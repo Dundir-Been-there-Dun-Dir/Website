@@ -14,7 +14,7 @@ pluralizeListTitles = false
       unsafe = true
 
 [params]
-  palette = "css/palettes/werktekening.css"
+  palette = "css/palettes/drawing.css"
   email = "christiaan.verhoef@dundir.com,milan.jelisavcic@dundir.com"
   linkedIn = "https://www.linkedin.com/company/dundir"
 
@@ -34,25 +34,34 @@ pluralizeListTitles = false
 
 [languages]
   [languages.nl]
-    languageName = "NL"
+    languageName = "Nederlands"
     languageCode = "nl"
     weight = 2
     title = "Dundir"
     [languages.nl.params]
-      description = "AI-gedreven inkoopbeslissingen voor de bouw. Lokaal geïmplementeerd. Wiskundig onderbouwd. Audit-klaar."
+      description = "AI-gedreven inkoopbeslissingen en bouwplaatssystemen, ontworpen voor lokale installatie en een controleerbaar auditspoor."
 
   [languages.en]
-    languageName = "EN"
+    languageName = "English"
     languageCode = "en"
     weight = 1
     title = "Dundir"
     [languages.en.params]
-      description = "AI-driven procurement decisions for construction. Locally deployed. Mathematically grounded. Audit-ready."
+      description = "AI-driven procurement decisions and jobsite systems for construction, designed for local deployment and an auditable trail."
+
+  [languages.de]
+    languageName = "Deutsch"
+    languageCode = "de"
+    weight = 3
+    title = "Dundir"
+    [languages.de.params]
+      description = "KI-gestützte Beschaffungsentscheidungen und Baustellensysteme für den Bau, entworfen für den lokalen Betrieb und eine prüfbare Nachvollziehbarkeit."
 
   [languages.sr]
-    languageName = "SR"
+    disabled = true
+    languageName = "Srpski"
     languageCode = "sr"
-    weight = 3
+    weight = 4
     title = "Dundir"
     [languages.sr.params]
       description = "AI sistem za optimizaciju nabavke u građevinarstvu. Lokalna implementacija. Matematički utemeljen. Spreman za reviziju."

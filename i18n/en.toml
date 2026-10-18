@@ -163,3 +163,48 @@ other = "pilot/"
 
 [url_privacy]
 other = "privacy/"
+
+[scan_start]
+other = "Start the scan"
+
+[scan_ok]
+other = "OK"
+
+[scan_enter]
+other = "press Enter ↵"
+
+[scan_prev]
+other = "Previous question"
+
+[scan_next]
+other = "Next question"
+
+[scan_nav]
+other = "Scan navigation"
+
+[scan_exit]
+other = "Close the scan"
+
+[scan_again]
+other = "Start again"
+
+[scan_step]
+other = "{n} of {total}"
+
+[scan_result]
+other = "Your report"
+
+[scan_nojs]
+other = "The scan runs in your browser and needs JavaScript."
+
+[scan_eyebrow]
+other = "Procurement scan"
+
+[scan_cta_h]
+other = "Calculate your procurement cost"
+
+[scan_cta_p]
+other = "Five minutes. No registration. Straight away, your own estimate of the time and money your organisation loses to manual procurement."
+
+[lang_aria]
+other = "Language"

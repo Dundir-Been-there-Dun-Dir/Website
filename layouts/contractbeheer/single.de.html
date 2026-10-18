@@ -1,0 +1,76 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC4: Smart Gate &amp; Baustellenkontrolle / Wkb</p>
+    <h1 class="page-hero__headline">Der Vertrag zählt erst, wenn das Material das Tor passiert.</h1>
+    <p class="page-hero__subheading">Dundir entwickelt die Verbindung zwischen vertraglichen Zusagen und der physischen Prüfung am Baustellentor: mobile Edge-OCR, automatisierter 3-Wege-Abgleich und ein Wkb-Übergabedossier (Wkb: niederländisches Gesetz zur Qualitätssicherung im Bau), das sich mit jeder eintreffenden Lieferung aufbaut. Heute ist dies ein Laborprototyp im Testaufbau; wir suchen einen Designpartner, um ihn an einem echten Tor zu testen.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Die Realität am Baustellentor</h2>
+    <p>Ein Generalunternehmer schließt mit Lieferant X einen wettbewerbsfähigen Vertrag: zertifizierter Betonstahl, KOMO-zertifizierte Fassadenelemente und eine Lieferung, die genau für 07:00 Uhr geplant ist. Drei Monate später kommt der Lkw: Die Lieferung ist zwei Wochen zu spät, das KOMO-Zertifikat fehlt auf dem Papierlieferschein, und die gelieferte Stahlgüte weicht von der Bestellung ab.</p>
+    <p>Heute beruht die Prüfung vor Ort auf handschriftlichen Notizen auf Klemmbrettern und ungeordneten Fotos in WhatsApp-Gruppen. Die empirischen Folgen:</p>
+    <div class="proof-block" style="margin: 1.5rem 0;">
+      <p class="proof-block__label">Engpässe am Baustellentor</p>
+      <p class="proof-block__body">
+        &bull; <strong>70 % der Materiallieferungen per Lkw</strong> warten wegen manueller Kontrolle bis zu 50 Minuten am Baustellentor (Aldeeb 2024).<br>
+        &bull; <strong>95 % der Papierlieferscheine</strong> enthalten Abweichungen, unvollständige Angaben oder fehlende Zertifikate (Qflow 2025).<br>
+        &bull; <strong>8 % bis 25 % der geplanten Baustellenarbeiten</strong> werden durch Material- und Lieferausfälle gestoppt (Tserng et al. 2006).<br>
+        &bull; <strong>4 bis 6 Wochen Übergabeblockade</strong> nach dem niederländischen Gesetz zur Qualitätssicherung im Bau (Wkb), wenn Prüfdossiers nachträglich rekonstruiert werden müssen (VNG 2024).
+      </p>
+      <p class="proof-block__source">Aldeeb 2024 &middot; Qflow 2025 &middot; Tserng et al. 2006 &middot; VNG 2024 &middot; Rockx 2023</p>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Der Entwurf: vier Funktionen des Smart Gate</h2>
+    <div class="two-col">
+      <div>
+        <p><strong>1. Edge-OCR &amp; Kennzeichenerfassung</strong><br>Ein Smartphone oder eine fest installierte Torkamera erfasst bei der Ankunft Papierlieferscheine und Kennzeichen. Die Erkennung ist so ausgelegt, dass sie lokal auf Edge-Hardware läuft, damit das Tor auch ohne zuverlässiges Internet auf der Baustelle funktioniert.</p>
+      </div>
+      <div>
+        <p><strong>2. Automatisierter 3-Wege-Abgleich</strong><br>Das System gleicht ursprüngliche Bestellungen (PO), gescannte Lieferscheine (DO) und eingehende Lieferantenrechnungen sofort ab. Abweichungen bei Menge, Abmessung oder Spezifikation werden markiert, bevor mit dem Abladen begonnen wird.</p>
+      </div>
+      <div>
+        <p><strong>3. Physische Nachweiskette &amp; ADR</strong><br>Sofortige Prüfung von Umweltproduktdeklarationen (EPD), KOMO-Gütezeichen und ADR-Konformität beim Transport gefährlicher Güter. Jede Lieferung erhält einen unveränderlichen digitalen Zeitstempel, einen Gewichtsnachweis und eine Prüfer-ID.</p>
+      </div>
+      <div>
+        <p><strong>4. Wkb-Übergabedossier</strong><br>Fotos von Prüfpunkten, Gütestempel und Lieferscheine werden direkt im verpflichtenden Dossier Bevoegd Gezag (Übergabedossier für die Baubehörde) nach der Wkb archiviert. Keine fehlenden Unterlagen bei der abschließenden Abnahme durch die Gemeinde.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Warum dies eine gesetzliche Pflicht ist</h2>
+    <p>Für einen Generalunternehmer stoppt die Prüfung am Tor Fehlerkosten und Stillstand der Gewerke. Für öffentliche Auftraggeber und Gemeinden ist sie eine strikte gesetzliche Pflicht.</p>
+    <p>Nach dem <strong>niederländischen Gesetz zur Qualitätssicherung im Bau (Wkb)</strong> kann ein Gebäude ohne ein bestätigtes Dossier Bevoegd Gezag keine Nutzungsgenehmigung erhalten. Wenn gelieferte Bauprodukte die Bauvorschriften nicht nachweislich erfüllen, stoppt der Qualitätsprüfer die Abnahme.</p>
+    <p>Nach der <strong>CPR 2024 (EU-Bauproduktenverordnung 2024/3110)</strong> sind digitale Produktpässe (DPP) und Umweltdeklarationen entlang der gesamten Nachweiskette gesetzlich vorgeschrieben. Und nach <strong>Aanbestedingswet art. 2.130 (niederländisches Vergabegesetz)</strong> müssen öffentliche Stellen nachweisen, dass die gelieferte Realität den ursprünglichen Zuschlagskriterien entspricht.</p>
+
+    <div class="proof-block">
+      <p class="proof-block__label">Regulatorische Vorgaben</p>
+      <p class="proof-block__body">Wet kwaliteitsborging voor het bouwen (Wkb) &middot; CPR 2024/3110 Digitaler Produktpass &middot; Aanbestedingswet 2012 art. 2.130 &middot; CSRD Scope 3 Emissionen der Lieferkette</p>
+      <p class="proof-block__source">Staatsblad 2023/340 &middot; Amtsblatt der Europäischen Union 2024 &middot; Innenministerium</p>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Den Beschaffungskreislauf schließen</h2>
+    <p>Die vier Module arbeiten als integriertes Rückkopplungssystem:</p>
+    <p><strong>Beschaffungspaket (UC3)</strong> strukturiert die Anforderungen &rarr; <strong>Angebotsvergleich (UC1)</strong> berechnet die optimale Zuteilung &rarr; <strong>Smart Gate (UC4)</strong> prüft physische Lieferungen und stellt die Wkb-Übergabedossier zusammen &rarr; <strong>Lieferantenbewertung (UC2)</strong> aktualisiert die Leistungskennzahlen der Lieferanten.</p>
+    <p>Jede Abweichung am Tor soll die Bewertungsparameter für die nächste Ausschreibung neu kalibrieren, damit das kaufmännische Wissen in Ihrer Organisation bleibt, wenn Mitarbeitende gehen.</p>
+    <p style="margin-top:1.5rem;"><a href="{{ "de/anwendungen/" | relURL }}">&larr; Zurück zu allen Anwendungen</a></p>
+  </div>
+</section>
+
+{{ partial "scan-cta.html" . }}
+
+{{ end }}
