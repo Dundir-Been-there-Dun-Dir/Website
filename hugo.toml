@@ -14,7 +14,7 @@ pluralizeListTitles = false
       unsafe = true
 
 [params]
-  palette = "css/palettes/werktekening.css"
+  palette = "css/palettes/drawing.css"
   email = "christiaan.verhoef@dundir.com,milan.jelisavcic@dundir.com"
   linkedIn = "https://www.linkedin.com/company/dundir"
 

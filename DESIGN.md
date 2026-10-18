@@ -29,7 +29,7 @@ argument before they need the time saving argument.
 The page's job: make the cost visible, make the determinism credible, and route the
 visitor to whichever of the four ways in fits them.
 
-## Direction: Werktekening (since 2026-10-18)
+## Direction: Working drawing (since 2026-10-18)
 
 The site is set as a working drawing: a line means a limit, a number means a
 measurement, a stamp says who checked it. The full reference, with every token
@@ -37,7 +37,7 @@ and measured contrast ratio, is the unlisted page `/styleguide/`.
 
 - Grounds: warm paper is the page, a tint for the second band, graphite for the
   band where the system shows itself and for the footer. Palette file:
-  `assets/css/palettes/werktekening.css`, selected in `hugo.toml`.
+  `assets/css/palettes/drawing.css`, selected in `hugo.toml`.
 - One accent, brick: the optimum and the action. Figures and headlines are ink,
   not brick.
 - Type: Geist for headlines and text, Geist Mono for figures, sources and
