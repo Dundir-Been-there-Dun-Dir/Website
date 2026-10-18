@@ -16,11 +16,7 @@
       <a href="{{ i18n "url_scan" | relURL }}" class="btn btn--primary site-nav__cta">{{ i18n "nav_scan" }}</a>
     </nav>
 
-    <div class="site-nav__langs">
-      {{ range .Translations }}
-      <a href="{{ .RelPermalink }}" class="btn--lang" lang="{{ .Lang }}" title="{{ .Language.LanguageName }}">{{ .Lang | upper }}</a>
-      {{ end }}
-    </div>
+    {{ partial "langs.html" . }}
 
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main">
       <span></span><span></span><span></span>

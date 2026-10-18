@@ -163,3 +163,48 @@ other = "sr/pilot/"
 
 [url_privacy]
 other = "sr/privatnost/"
+
+[scan_start]
+other = "Započnite skeniranje"
+
+[scan_ok]
+other = "OK"
+
+[scan_enter]
+other = "pritisnite Enter ↵"
+
+[scan_prev]
+other = "Prethodno pitanje"
+
+[scan_next]
+other = "Sledeće pitanje"
+
+[scan_nav]
+other = "Navigacija skeniranja"
+
+[scan_exit]
+other = "Zatvorite skeniranje"
+
+[scan_again]
+other = "Počnite ponovo"
+
+[scan_step]
+other = "{n} od {total}"
+
+[scan_result]
+other = "Vaš izveštaj"
+
+[scan_nojs]
+other = "Skeniranje radi u vašem pregledaču i zahteva JavaScript."
+
+[scan_eyebrow]
+other = "Skeniranje nabavke"
+
+[scan_cta_h]
+other = "Izračunajte troškove nabavke"
+
+[scan_cta_p]
+other = "Pet minuta. Bez registracije. Odmah vaša procena vremena i novca koje vaša organizacija gubi na ručnu nabavku."
+
+[lang_aria]
+other = "Jezik"

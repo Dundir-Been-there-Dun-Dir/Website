@@ -1,0 +1,12 @@
+{{ $page := . }}
+<nav class="site-nav__langs" aria-label="{{ i18n "lang_aria" }}">
+  {{ range site.Languages }}
+  {{ $t := index (where $page.AllTranslations "Lang" .Lang) 0 }}
+  {{ if not $t }}{{ $t = index (where site.Home.AllTranslations "Lang" .Lang) 0 }}{{ end }}
+  {{ if eq .Lang $page.Lang }}
+  <span class="btn--lang" aria-current="true" lang="{{ .Lang }}" title="{{ .LanguageName }}">{{ .Lang | upper }}</span>
+  {{ else if $t }}
+  <a href="{{ $t.RelPermalink }}" class="btn--lang" lang="{{ .Lang }}" hreflang="{{ .Lang }}" title="{{ .LanguageName }}">{{ .Lang | upper }}</a>
+  {{ end }}
+  {{ end }}
+</nav>

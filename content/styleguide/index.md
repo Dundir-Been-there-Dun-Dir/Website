@@ -1,6 +1,6 @@
 ---
 title: Styleguide
-description: "Werktekening, the visual system of dundir.com: palette, type, line, components and motion. Internal, unlisted."
+description: "Working drawing, the visual system of dundir.com: palette, type, line, components and motion. Internal, unlisted."
 aliases: ["/werktekening/"]
 noindex: true
 build:

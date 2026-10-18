@@ -23,5 +23,5 @@ sections:
     p: Maximaal vier bevindingen, met de bron waar wij die op baseren.
   sidenote: Tien vragen, ongeveer twee minuten.
   form: scan
-scanjs: true
+pagecss: css/scan.css
 ---

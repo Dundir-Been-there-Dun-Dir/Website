@@ -1,0 +1,194 @@
+{
+  "currency": "EUR",
+  "rate": 65,
+  "buyerCount": [
+    1,
+    3,
+    7,
+    12
+  ],
+  "hourCount": [
+    3,
+    6,
+    11,
+    17
+  ],
+  "locale": "de-DE",
+  "progress": "{n} von {total} beantwortet",
+  "scoreLabel": "Risikowert",
+  "costLabel": "pro Jahr an Verwaltungszeit im Einkauf, nach Ihren eigenen Zahlen",
+  "costSource": "Ihre Antworten x 46 Arbeitswochen x 65 EUR pro Stunde. Benchmark: Remarcable / BuildMate 2025",
+  "bands": [
+    {
+      "upTo": 25,
+      "name": "Begrenzt",
+      "text": "Ihr Prozess ist robuster als die meisten. Das verbleibende Risiko ist konzentriert, und das macht es günstig, die Lücke zu schließen."
+    },
+    {
+      "upTo": 50,
+      "name": "Erhöht",
+      "text": "Die Arbeit wird erledigt, aber die Spur dahinter ist dünn. Das ist so lange in Ordnung, bis jemand nach dem Warum fragt, und dann nicht mehr."
+    },
+    {
+      "upTo": 75,
+      "name": "Hoch",
+      "text": "Zeit fließt in Vergleichsarbeit, die nichts Wiederverwendbares hervorbringt, und die Dokumentationspflicht kommt, ob Sie darauf vorbereitet sind oder nicht."
+    },
+    {
+      "upTo": 100,
+      "name": "Kritisch",
+      "text": "Fast jede Lieferantenentscheidung, die Sie derzeit treffen, wäre bei einer Prüfung schwer zu verteidigen, und das Wissen, das alles zusammenhält, steckt im Kopf einer einzelnen Person."
+    }
+  ],
+  "clean": {
+    "head": "Nichts Dringendes gefunden",
+    "text": "Bei diesen zehn Fragen steht Ihr Prozess besser da als der Branchendurchschnitt. Ein Gespräch lohnt sich trotzdem: Die regulatorische Last steigt für alle, und der günstigste Zeitpunkt, einen Prozess zu dokumentieren, ist, bevor Sie dazu verpflichtet sind."
+  },
+  "questions": [
+    {
+      "id": "buyers",
+      "ask": "Wie viele Personen in Ihrer Organisation vergleichen Lieferanten?",
+      "hint": "Alle, die Angebote zu einem Vergleich zusammenstellen, unabhängig davon, ob Einkauf in ihrer Stellenbezeichnung steht.",
+      "opts": [
+        "Eine",
+        "Zwei oder drei",
+        "Vier bis zehn",
+        "Mehr als zehn"
+      ]
+    },
+    {
+      "id": "tool",
+      "ask": "Wo findet der Vergleich tatsächlich statt?",
+      "hint": "Nicht dort, wo die Daten liegen sollten. Dort, wo tatsächlich verglichen wird.",
+      "opts": [
+        "Auf einer Beschaffungsplattform",
+        "In einem Modul unseres ERP",
+        "In Excel",
+        "Per E-Mail und auf Papier"
+      ]
+    },
+    {
+      "id": "hours",
+      "ask": "Wie viele Stunden pro Woche verbringt ein Einkäufer mit Vergleichsarbeit?",
+      "hint": "Angebote einholen, Zertifikate prüfen, den Vergleich erstellen. Nicht verhandeln, nicht entscheiden.",
+      "scores": true,
+      "opts": [
+        "Unter vier",
+        "Vier bis acht",
+        "Acht bis fünfzehn",
+        "Mehr als fünfzehn"
+      ],
+      "findings": {
+        "head": "Vergleichsarbeit ist inzwischen die eigentliche Arbeit",
+        "text": "Bei diesem Umfang ist das Vergleichen keine Vorbereitung der Entscheidung mehr, sondern die Arbeit selbst. Das ist der größte einzelne Block an Zeit im Prozess, der sich zurückgewinnen lässt."
+      }
+    },
+    {
+      "id": "cycle",
+      "ask": "Wie lange dauert ein vollständiger Lieferantenvergleich, vom Start bis zur Freigabe?",
+      "hint": "Von der Leistungsbeschreibung auf dem Schreibtisch bis zur Genehmigung der Wahl durch eine Führungskraft.",
+      "scores": true,
+      "opts": [
+        "Unter einer Stunde",
+        "Einen halben Tag",
+        "Ein bis zwei Tage",
+        "Länger"
+      ],
+      "findings": {
+        "head": "Der Zyklus ist so lang, dass er die Entscheidung prägt",
+        "text": "Wenn ein Vergleich Tage kostet, verkürzen Einkäufer die Auswahlliste, damit er bezahlbar bleibt. Der Kreis der Lieferanten wird aus Gründen kleiner, die nichts mit den Lieferanten zu tun haben."
+      }
+    },
+    {
+      "id": "doc",
+      "ask": "Gibt es nach der Entscheidung eine dokumentierte Begründung?",
+      "hint": "Etwas, das ein Kollege lesen und nachvollziehen kann, ohne Sie zu fragen.",
+      "scores": true,
+      "opts": [
+        "Immer",
+        "Meistens",
+        "Manchmal",
+        "Nein"
+      ],
+      "findings": {
+        "head": "Die Begründung wird nicht festgehalten",
+        "text": "Die Vergleichsarbeit wird erledigt und dann verworfen. Jede Entscheidung kostet den vollen Preis und hinterlässt nichts, worauf die nächste aufbauen kann."
+      }
+    },
+    {
+      "id": "recon",
+      "ask": "Könnten Sie rekonstruieren, warum Sie vor zwei Jahren einen bestimmten Lieferanten gewählt haben?",
+      "hint": "Nicht, wen Sie gewählt haben. Warum, nach welchen Kriterien, gegenüber welchen Alternativen.",
+      "scores": true,
+      "opts": [
+        "Vollständig",
+        "Größtenteils",
+        "Nur mit Mühe",
+        "Nein"
+      ],
+      "findings": {
+        "head": "Frühere Entscheidungen lassen sich nicht rekonstruieren",
+        "text": "Genau dieses Risiko prüft ein Auditor zuerst, und es macht auch eine angefochtene Vergabe teuer. Der Nachweis muss existieren, bevor die Frage gestellt wird."
+      }
+    },
+    {
+      "id": "keyman",
+      "ask": "Was passiert, wenn Ihr erfahrenster Einkäufer geht?",
+      "hint": "Zwanzig Jahre Wissen darüber, welcher Lieferant tatsächlich liefert.",
+      "scores": true,
+      "opts": [
+        "Alles ist festgehalten",
+        "Größtenteils festgehalten",
+        "Viel Wissen geht verloren",
+        "Es wäre ein ernstes Problem"
+      ],
+      "findings": {
+        "head": "Das Wissen steckt in einer Person, nicht in einem System",
+        "text": "Weniger als fünf Prozent der Mitarbeitenden begleiten ein großes Projekt von Anfang bis Ende, daher ist dieser Verlust strukturell und kein Pech. Rockx 2023, TU Delft."
+      }
+    },
+    {
+      "id": "reg",
+      "ask": "Welche Pflicht trifft Sie zuerst?",
+      "hint": "Die Pflicht, die Ihre Organisation am frühesten erfüllen muss.",
+      "scores": true,
+      "opts": [
+        "Keine davon trifft zu",
+        "Noch nicht sicher",
+        "CSRD-Berichterstattung zu Scope 3",
+        "Aanbestedingswet oder CPR 2024/3110"
+      ],
+      "findings": {
+        "head": "Eine Dokumentationspflicht gilt bereits",
+        "text": "Diese Vorschriften verlangen nicht, dass Sie anders einkaufen. Sie verlangen, dass Sie zeigen, wie Sie eingekauft haben, einheitlich und in jeder Akte. Das ist ein Dokumentationsproblem, bevor es ein Beschaffungsproblem ist."
+      }
+    },
+    {
+      "id": "audit",
+      "ask": "Wurde Ihre Beschaffungsdokumentation im vergangenen Jahr geprüft?",
+      "hint": "Interne Revision, externe Prüfung oder ein Lieferant, der einen Zuschlag anficht.",
+      "scores": true,
+      "opts": [
+        "Ja, ohne Beanstandungen",
+        "Ja, mit Beanstandungen",
+        "Nein",
+        "Nicht sicher"
+      ],
+      "findings": {
+        "head": "Ungeprüfte Dokumentation",
+        "text": "Dokumentation, die nie von einer externen Person gelesen wurde, funktioniert meist nur für die Person, die sie geschrieben hat. Die erste echte Prüfung ist der falsche Moment, um das herauszufinden."
+      }
+    },
+    {
+      "id": "decide",
+      "ask": "Wer entscheidet über Beschaffungssoftware?",
+      "hint": "Damit wir wissen, wer an dem Gespräch beteiligt sein sollte.",
+      "opts": [
+        "Ich",
+        "Die Geschäftsführung",
+        "Die IT",
+        "Einkauf und IT gemeinsam"
+      ]
+    }
+  ]
+}
