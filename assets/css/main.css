@@ -63,6 +63,7 @@
   --panel:        var(--chalk);
   --panel-hover:  var(--chalk-2);
   --rule:         var(--rule-lt);
+  --figure:       var(--chalk-2);
 
   --fg:           var(--ink);
   --fg-prose:     var(--ink-soft);
@@ -89,6 +90,7 @@
   --surface:     var(--chalk-2);
   --panel:       var(--chalk-2);
   --panel-hover: var(--chalk);
+  --figure:      var(--chalk);
   --fg-3:        var(--ink-soft);
 }
 
@@ -99,6 +101,7 @@
   --panel:       var(--bitumen);
   --panel-hover: var(--zinc);
   --rule:        var(--zinc-2);
+  --figure:      var(--zinc);
 
   --fg:       var(--chalk);
   --fg-prose: var(--concrete);

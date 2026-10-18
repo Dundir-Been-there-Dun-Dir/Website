@@ -7,6 +7,7 @@ lede: Dundir is being designed to connect mathematical procurement optimization 
 sections:
 - eyebrow: The lifecycle
   heading: The design in five steps, from specification to handover.
+  figure: cycle
   steps:
   - h: Structuring the specification
     p: 'The AI language layer reads your specification or tender document in plain language. The system extracts hard constraints, delivery schedules, budget ceilings, and CPR 2024 certification criteria. This is the sole stage where a language model operates.'
@@ -19,6 +20,7 @@ sections:
   - h: Feedback to accumulated contract memory
     p: 'Actual supplier delivery punctuality, defect frequencies, and unit price variances are logged automatically. This data recalibrates scoring parameters for the next tender bid.'
 - tone: chalk
+  figure: sovereignty
   eyebrow: Data sovereignty
   heading: Why it runs locally on your own infrastructure.
   body: 'Construction data, cost estimates, and commercial terms are strategically sensitive. Dundir is designed to run fully on-premises, on your enterprise servers or local jobsite edge hardware:'

@@ -1,0 +1,28 @@
+{{/* UC4: order, delivery ticket and invoice meet at the gate. */}}
+<figure class="fig">
+  <svg viewBox="0 0 480 214" role="img" aria-label="{{ i18n "fig_match_cap" }}">
+    {{ range $i, $k := slice "fig_match_po" "fig_match_do" "fig_match_inv" }}
+    {{ $y := add 24 (mul $i 60) }}
+    <path class="ln" d="M24 {{ $y }} H52 L62 {{ add $y 10 }} V{{ add $y 44 }} H24 Z"/>
+    <path class="hl" d="M30 {{ add $y 18 }} H56 M30 {{ add $y 26 }} H56 M30 {{ add $y 34 }} H48"/>
+    <text class="tag" x="72" y="{{ add $y 26 }}">{{ i18n $k }}</text>
+    <path class="hl" d="M{{ if eq $i 1 }}196{{ else }}190{{ end }} {{ add $y 22 }} L254 106"/>
+    {{ end }}
+    <circle class="ln" cx="268" cy="106" r="16"/>
+    <circle class="hot" cx="268" cy="106" r="5"/>
+    <text class="tag tag--hot" x="268" y="166" text-anchor="middle">{{ i18n "fig_match" }}</text>
+
+    <path class="hl" d="M284 106 H330"/>
+    <path class="ln" d="M346 176 V106 M346 112 H400"/>
+    <path class="hl" d="M354 112 L358 108 M366 112 L370 108 M378 112 L382 108 M390 112 L394 108"/>
+    <rect class="ln" x="336" y="80" width="20" height="14"/>
+    <path class="hl" d="M356 87 L388 128"/>
+    <text class="tag" x="362" y="72">{{ i18n "fig_match_ocr" }}</text>
+    <rect class="ln" x="396" y="132" width="44" height="36"/>
+    <path class="ln" d="M442 168 V146 H454 L464 156 V168 Z"/>
+    <circle class="ln" cx="410" cy="172" r="6"/><circle class="ln" cx="454" cy="172" r="6"/>
+    <line class="axis" x1="320" y1="178" x2="472" y2="178"/>
+    <text class="tag" x="346" y="200" text-anchor="middle">{{ i18n "fig_gate_gate" }}</text>
+  </svg>
+  <figcaption><span>{{ i18n "fig_match_cap" }}</span><span>{{ i18n "fig_stage_lab" }}</span></figcaption>
+</figure>

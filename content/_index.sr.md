@@ -31,6 +31,7 @@ sections:
     body: zaposlenih ostaje na velikom infrastrukturnom projektu od početka do završetka. Znanje o nabavci nestaje sa odlascima kadrova. Kod jednog ispitanog izvođača, od preko 1.000 istorijskih projekata posle čišćenja podataka ostalo je 54 upotrebljivih.
   source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · VNG 2024 · Rockx 2023, TU Delft · Steuer i dr. 2023
 - tone: chalk
+  figure: cycle
   eyebrow: Platforma
   heading: Tri komplementarna modula.
   lede: 'Jezički model napiše tekstualni odgovor. Optimizaciona mašina izračuna egzaktno rešenje. Dundir se razvija da poveže matematičku optimizaciju nabavke sa verifikacijom na kapiji gradilišta i trajnom ugovornom memorijom.'

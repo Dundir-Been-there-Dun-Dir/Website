@@ -348,3 +348,17 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; }
 }
+
+/* Figures borrow the site's role names; here they map onto the sheet's own */
+.figs {
+  --figure: var(--tint);
+  --rule: var(--line);
+  --fg: var(--text);
+  --fg-2: var(--text-soft);
+  --fg-3: var(--text-dim);
+  --accent-fill: var(--accent);
+  --data: var(--f-mono);
+}
+.figs .rules { margin-bottom: var(--s-7); }
+.fig-samples { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--s-6); align-items: end; }
+@media (max-width: 860px) { .fig-samples { grid-template-columns: 1fr; } }

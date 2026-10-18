@@ -6,6 +6,7 @@ lede: Dundir se projektuje da poveže matematičku optimizaciju nabavke sa fizi�
 sections:
 - eyebrow: Lanac procesa
   heading: Dizajn u pet koraka, od tehničkog opisa do primopredaje.
+  figure: cycle
   steps:
   - h: Strukturiranje specifikacije
     p: 'AI jezički sloj analizira vaš tehnički opis ili tendersku dokumentaciju na standardnom jeziku. Sistem izdvaja tvrda ograničenja, rokove isporuke, budžetske limite i CPR 2024 zahteve za sertifikaciju. Ovo je jedina faza u kojoj je jezički model aktivan.'
@@ -18,6 +19,7 @@ sections:
   - h: Povratna sprega u ugovornu memoriju
     p: 'Stvarna tačnost isporuka, uočena odstupanja i odstupanja u cenama automatski se evidentiraju. Ovi podaci rekalibrišu parametre ocenjivanja za naredne tendere.'
 - tone: chalk
+  figure: sovereignty
   eyebrow: Suverenitet podataka
   heading: Zašto sistem radi lokalno na vašem serveru.
   body: 'Građevinski proračuni, cene i ugovorni uslovi predstavljaju poslovnu tajnu najvišeg nivoa. Dundir se projektuje da radi potpuno lokalno, na vašoj infrastrukturi ili namenskom hardveru na gradilištu:'

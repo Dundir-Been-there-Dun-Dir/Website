@@ -49,4 +49,18 @@
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
 
   for (var k = 0; k < targets.length; k++) io.observe(targets[k]);
+
+  /* --- figures draw themselves once, when they come into view --- */
+  var figs = document.querySelectorAll('.fig[data-draw]');
+  var fo = new IntersectionObserver(function (entries) {
+    for (var e = 0; e < entries.length; e++) {
+      if (!entries[e].isIntersecting) continue;
+      entries[e].target.classList.add('run');
+      fo.unobserve(entries[e].target);
+    }
+  }, { threshold: 0.35 });
+  for (var f = 0; f < figs.length; f++) {
+    figs[f].classList.add('fig--anim');
+    fo.observe(figs[f]);
+  }
 })();

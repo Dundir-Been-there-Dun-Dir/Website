@@ -6,6 +6,7 @@ lede: Dundir wird entwickelt, um mathematische Beschaffungsoptimierung mit der p
 sections:
 - eyebrow: Der Ablauf
   heading: Der Entwurf in fünf Schritten, von der Spezifikation bis zur Übergabe.
+  figure: cycle
   steps:
   - h: Die Spezifikation strukturieren
     p: 'Die KI-Sprachschicht liest Ihre Spezifikation oder Ihre Ausschreibungsunterlagen in normaler Sprache. Das System extrahiert harte Vorgaben, Lieferpläne, Budgetobergrenzen und Zertifizierungskriterien nach CPR 2024. Dies ist die einzige Stufe, in der ein Sprachmodell arbeitet.'
@@ -18,6 +19,7 @@ sections:
   - h: Rückfluss in das wachsende Vertragsgedächtnis
     p: 'Tatsächliche Liefertreue der Lieferanten, Mängelhäufigkeit und Abweichungen beim Einheitspreis werden automatisch protokolliert. Diese Daten kalibrieren die Bewertungsparameter für die nächste Ausschreibung neu.'
 - tone: chalk
+  figure: sovereignty
   eyebrow: Datensouveränität
   heading: Warum es lokal auf Ihrer eigenen Infrastruktur läuft.
   body: 'Baudaten, Kostenschätzungen und Konditionen sind strategisch sensibel. Dundir ist für den vollständigen Betrieb vor Ort ausgelegt, auf Ihren Unternehmensservern oder auf lokaler Edge-Hardware auf der Baustelle:'
