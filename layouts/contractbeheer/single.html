@@ -2,46 +2,45 @@
 
 <div class="page-hero">
   <div class="container container--narrow">
-    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC4: Slimme Poort &amp; Bouwplaatsinspectie / Wkb</p>
-    <h1 class="page-hero__headline">Het contract telt pas wanneer het materiaal de poort passeert.</h1>
-    <p class="page-hero__subheading">Dundir ontwikkelt de koppeling tussen contractafspraken en fysieke verificatie aan de bouwplaatspoort: mobiele edge OCR, automatische drieweg-matching en een Wkb Dossier Bevoegd Gezag dat meegroeit. Vandaag is dit een labprototype op de werkbank; wij zoeken een ontwerppartner om het aan een echte poort te testen.</p>
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC4: Slimme poort en Wkb-dossier · fase: labprototype</p>
+    <h1 class="page-hero__headline">Het contract telt pas als het materiaal de poort passeert.</h1>
+    <p class="page-hero__subheading">Dundir ontwerpt de koppeling tussen wat is ingekocht en wat aan de poort aankomt: de vrachtbrief gelezen bij aankomst, een driewegcontrole van order, vrachtbrief en factuur, en een Wkb-dossier dat met elke levering groeit. Nu is het een labprototype op de werkbank; we zoeken een ontwerppartner om het aan een echte poort te testen.</p>
   </div>
 </div>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2 class="section-heading">De werkelijkheid aan de bouwplaatspoort</h2>
-    <p>Een aannemer sluit op kantoor een scherp contract met leverancier X: gecertificeerd betonstaal, KOMO-gecertificeerde gevelelementen en levering stipt om 07:00 uur. Drie maanden later arriveert de vrachtwagen: de levering is twee weken vertraagd, het KOMO-certificaat ontbreekt op de papieren vrachtbrief, en de geleverde staalkwaliteit wijkt af van de inkooporder.</p>
-    <p>Vandaag de dag verloopt de controle ter plekke via handgeschreven krabbels op een klembord en foto's in WhatsApp-groepen. Het resultaat:</p>
+    <h2 class="section-heading">De poort vandaag</h2>
+    <p>Een aannemer koopt gecertificeerd wapeningsstaal en KOMO-gecertificeerde gevelelementen in, levering om 07:00. Maanden later komt een vrachtwagen te laat, het certificaat staat niet op de papieren vrachtbrief en de staalkwaliteit op de bon wijkt af van de order. Aan de poort ziet niemand dat op papier alleen.</p>
+    <p>Wat de studies maten:</p>
     <div class="proof-block" style="margin: 1.5rem 0;">
-      <p class="proof-block__label">Knelpunten aan de poort</p>
+      <p class="proof-block__label">Aan de poort</p>
       <p class="proof-block__body">
-        &bull; <strong>70% van de materiaalvrachtwagens</strong> wacht tot 50 minuten bij de poort door handmatige administratie (Aldeeb 2024).<br>
-        &bull; <strong>95% van papieren leverbonnen</strong> bevat fouten, onvolledige data of ontbrekende certificeringen (Qflow 2025).<br>
-        &bull; <strong>8% tot 25% van de geplande taken</strong> op de bouwplaats loopt vertraging op door materiaal- en leveringsfouten (Tserng e.a. 2006).<br>
-        &bull; <strong>4 tot 6 weken opleververtraging</strong> onder de Wet kwaliteitsborging voor het bouwen (Wkb) wanneer keuringsdossiers achteraf gereconstrueerd moeten worden (VNG 2024).
+        &bull; <strong>Ongeveer 70% van de vrachtwagens</strong> wachtte tot 50 minuten voor het lossen op een bouwplaats zonder leveringsplanning (Aldeeb 2024).<br>
+        &bull; <strong>95% van de vrachtbrieven</strong> voldeed niet aan de kwaliteitscriteria in een audit van 831.206 records (Qflow 2025).<br>
+                &bull; <strong>4 tot 6 weken vertraging bij oplevering</strong> van opgeleverde woningen onder de Wkb als het dossier onvolledig is (Arcadis 2026, voor het ministerie van BZK).
       </p>
-      <p class="proof-block__source">Aldeeb 2024 &middot; Qflow 2025 &middot; Tserng e.a. 2006 &middot; VNG 2024 &middot; Rockx 2023</p>
+      <p class="proof-block__source">Aldeeb 2024, TU Wien &middot; Qflow 2025 &middot; Arcadis 2026</p>
     </div>
   </div>
 </section>
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">Het ontwerp: vier functies van de Slimme Poort</h2>
+    <h2 class="section-heading">Het ontwerp: vier functies van de slimme poort</h2>
     {{ partial "fig/match.html" . }}
     <div class="two-col">
       <div>
-        <p><strong>1. Edge OCR &amp; Kentekenregistratie</strong><br>Een smartphone of vaste camera bij de poort scant de papieren vrachtbrief en het kenteken. De herkenning is ontworpen om lokaal op edge-hardware te draaien, zodat de poort ook zonder stabiele internetverbinding werkt.</p>
+        <p><strong>1. De vrachtbrief lezen aan de poort</strong><br>Een telefoon of een vaste camera moet de vrachtbrief en het kenteken bij aankomst lezen. De herkenning is ontworpen om lokaal op edge-hardware te draaien, zodat de poort blijft werken zonder betrouwbaar internet op de bouwplaats.</p>
       </div>
       <div>
-        <p><strong>2. Automatische Drieweg-Matching</strong><br>Het systeem vergelijkt de originele inkooporder (PO), de gescande leveringsbon (DO) en de inkomende factuur. Afwijkingen in hoeveelheden, afmetingen of specificaties worden direct gesignaleerd vóórdat het lossen begint.</p>
+        <p><strong>2. Driewegcontrole</strong><br>Order, vrachtbrief en factuur worden tegen elkaar gecontroleerd, zodat een verschil in hoeveelheid, maat of specificatie zichtbaar is voordat het lossen begint.</p>
       </div>
       <div>
-        <p><strong>3. Fysieke Chain of Custody &amp; ADR</strong><br>Directe verificatie van milieucertificaten (EPD), KOMO-borging en ADR-veiligheidsvoorschriften voor gevaarlijke stoffen. Elke vracht krijgt een digitale stempel met tijdstip, gewicht en inspecteur.</p>
+        <p><strong>3. Certificaten bij de levering</strong><br>De productverklaring (EPD) en het KOMO-keur worden gecontroleerd tegen wat is ingekocht, en elke levering wordt vastgelegd met tijd, gewicht en wie haar accepteerde.</p>
       </div>
       <div>
-        <p><strong>4. Wkb Dossier Bevoegd Gezag</strong><br>Foto's van inspecties, keuringsstempels en vrachtbrieven gaan direct naar het verplichte Wkb-opleverdossier. Geen zoektochten naar kwijtgeraakte bonnen bij de eindoplevering aan de gemeente of kwaliteitsborger.</p>
+        <p><strong>4. Het Wkb-dossier terwijl u bouwt</strong><br>Foto's, keurmerken en vrachtbrieven gaan het dossier bevoegd gezag in zodra leveringen binnenkomen, in plaats van aan het eind te worden verzameld.</p>
       </div>
     </div>
   </div>
@@ -49,25 +48,25 @@
 
 <section class="section">
   <div class="container container--narrow">
-    <h2 class="section-heading">Waarom dit wettelijk verplicht is</h2>
-    <p>Voor een hoofdaannemer voorkomt poortcontrole faalkosten en stilstand. Voor publieke opdrachtgevers en gemeenten is het een dwingende juridische verplichting.</p>
-    <p>Onder de <strong>Wet kwaliteitsborging voor het bouwen (Wkb)</strong> mag een bouwwerk niet in gebruik worden genomen zonder een goedgekeurd Dossier Bevoegd Gezag. Als geleverde bouwproducten niet aantoonbaar voldoen aan het Bouwbesluit, legt de kwaliteitsborger het werk stil.</p>
-    <p>Onder <strong>CPR 2024 (EU Bouwproductenverordening 2024/3110)</strong> worden Digitale Productpaspoorten (DPP) en milieuprestatieverklaringen verplicht door de hele keten. En onder <strong>Aanbestedingswet artikel 2.130</strong> moet elke overheidsinkoper kunnen aantonen dat de geleverde prestatie overeenstemt met de oorspronkelijke gunningscriteria.</p>
+    <h2 class="section-heading">De regels rond de poort</h2>
+    <p>Voor een aannemer gaat controle aan de poort over faalkosten en wachtende ploegen. Voor het gebouw gaat het ook om de papieren die de wet vraagt.</p>
+    <p>Onder de <strong>Wkb</strong> (Wet kwaliteitsborging voor het bouwen) mag een gebouw niet in gebruik worden genomen zonder volledige gereedmelding en dossier; de gemeente kan dat tegenhouden (VNG 2024).</p>
+    <p>De <strong>EU-Bouwproductenverordening 2024/3110</strong> voert digitale productpaspoorten en machineleesbare verklaringen voor bouwproducten in. En onder <strong>Aanbestedingswet 2012, art. 2.130</strong> moet een publieke aanbesteder de redenen voor een gunning geven; daar begint het dossier aan de inkoopkant.</p>
 
     <div class="proof-block">
-      <p class="proof-block__label">Regelgevend kader</p>
-      <p class="proof-block__body">Wet kwaliteitsborging voor het bouwen (Wkb) &middot; CPR 2024/3110 Digitaal Productpaspoort &middot; Aanbestedingswet 2012 art. 2.130 &middot; CSRD Scope 3 ketenemissies</p>
-      <p class="proof-block__source">Staatsblad 2023/340 &middot; Publicatieblad EU 2024 &middot; Ministerie van BZK</p>
+      <p class="proof-block__label">De regels</p>
+      <p class="proof-block__body">Wet kwaliteitsborging voor het bouwen (Wkb) &middot; CPR 2024/3110 digitaal productpaspoort &middot; Aanbestedingswet 2012 art. 2.130</p>
+      <p class="proof-block__source">Staatsblad 2023/340 &middot; Publicatieblad van de Europese Unie 2024 &middot; VNG 2024</p>
     </div>
   </div>
 </section>
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">De gesloten leercyclus</h2>
-    <p>De vier modules van Dundir werken niet op eilanden, maar vormen een continu lerend systeem:</p>
-    <p><strong>Inkooppakket (UC3)</strong> structureert de eisen &rarr; <strong>Offertevergelijking (UC1)</strong> berekent de optimale toewijzing &rarr; <strong>Slimme Poort (UC4)</strong> controleert de fysieke levering en bouwt het Wkb-dossier &rarr; <strong>Leveranciersevaluatie (UC2)</strong> registreert de werkelijke prestaties.</p>
-    <p>Elke leveringsafwijking aan de poort moet de scoringsparameters bijstellen in het geheugen voor de volgende aanbesteding. Bedrijfskennis blijft behouden binnen de organisatie, ongeacht personeelswisselingen.</p>
+    <h2 class="section-heading">De kring sluiten</h2>
+    <p>In het ontwerp voeden de vier toepassingen elkaar:</p>
+    <p><strong>Inkooppakket (UC3)</strong> structureert de eisen &rarr; <strong>Offertevergelijking (UC1)</strong> rekent de gunning &rarr; <strong>Slimme poort (UC4)</strong> controleert leveringen en bouwt het Wkb-dossier &rarr; <strong>Leveranciersevaluatie (UC2)</strong> legt vast hoe elke leverancier leverde.</p>
+    <p>Elk verschil dat aan de poort wordt gevonden, moet de scores voor de volgende aanbesteding voeden, zodat wat uw mensen leren blijft als zij vertrekken.</p>
     <p style="margin-top:1.5rem;"><a href="{{ "nl/toepassingen/" | relURL }}">&larr; Terug naar alle toepassingen</a></p>
   </div>
 </section>

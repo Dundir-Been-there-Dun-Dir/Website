@@ -2,47 +2,47 @@
 
 <div class="page-hero">
   <div class="container container--narrow">
-    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC3: Bildung von Beschaffungspaketen</p>
+    <p class="text-small text-muted" style="margin-bottom:0.5rem;">UC3: Beschaffungspaket · Stand: Entwurf</p>
     <h1 class="page-hero__headline">Von einer Leistungsbeschreibung in Alltagssprache zu strukturierten Beschaffungsanforderungen.</h1>
-    <p class="page-hero__subheading">Die Qualität eines Angebotsvergleichs hängt vollständig von der Qualität der Eingabe ab. Die KI-Schicht von Dundir übersetzt unstrukturierte Leistungsbeschreibungen in die strukturierten Anforderungen, die die Optimierungs-Engine benötigt.</p>
+    <p class="page-hero__subheading">Ein Angebotsvergleich ist nur so gut wie seine Eingabe. Dundir entwirft eine Sprachschicht, die eine geschriebene Leistungsbeschreibung in die harten Anforderungen und Gewichte übersetzt, mit denen die Engine rechnet, geprüft von einem Einkäufer, bevor etwas verglichen wird.</p>
   </div>
 </div>
 
 <section class="section">
   <div class="container container--narrow">
     <h2 class="section-heading">Das Problem</h2>
-    <p>Einkaufsfachleute schreiben Leistungsbeschreibungen in Alltagssprache oder erhalten sie so vom Projektteam. &bdquo;500 m&sup2; Fliesenarbeiten, BRL-9010-zertifiziert, Lieferung vor Kalenderwoche 14&ldquo; ist für einen Menschen eine völlig ausreichende Beschreibung, aber keine verwertbare Eingabe für einen Vergleichsalgorithmus.</p>
-    <p>Hamppis Forschung bei Skanska zeigt das direkt: Bei einfachen, strukturierten Angeboten schnitt generative KI gut ab. Bei komplexen, unstrukturierten Angeboten scheiterten die Berechnungen. Die entscheidende Variable war die Qualität und Einheitlichkeit der Eingabedaten, nicht das Modell selbst.</p>
+    <p>Einkäufer schreiben Leistungsbeschreibungen in Alltagssprache oder bekommen sie so vom Projektteam. "500 m&sup2; Fliesenarbeiten, BRL-9010-zertifiziert, Lieferung vor KW 14" ist für einen Menschen eine gute Beschreibung, aber keine brauchbare Eingabe für einen Vergleichsalgorithmus.</p>
+    <p>Hamppis Test bei Skanska zeigt in dieselbe Richtung: Das generative KI-Werkzeug schnitt bei gut strukturierten Angeboten am besten ab. Einheitliche Eingaben zählten mehr als das Modell.</p>
 
     <div class="proof-block">
-      <p class="proof-block__label">Befund bei Skanska: Die Eingabe entscheidet alles</p>
-      <p class="proof-block__body">&bdquo;Skanska sollte prüfen, ob sich Lieferanten verpflichten lassen, ihre Angebote in eine standardisierte Angebotsvorlage einzutragen, weil dies die Genauigkeit GenAI-gestützter Vergleiche erhöhen würde.&ldquo; Hamppis Empfehlung bestätigt direkt, dass standardisierte Eingaben die kritische betriebliche Abhängigkeit sind, nicht das Modell allein.</p>
-      <p class="proof-block__source">Hamppi 2025, S. 69, eigene Übersetzung: Aalto University / Skanska Talonrakennus Oy.</p>
+      <p class="proof-block__label">Hamppis Empfehlung an Skanska</p>
+      <p class="proof-block__body">"Skanska should look into the possibility of demanding suppliers to fill their bids to a standardized bidding template because this would increase the accuracy of GenAI-based comparisons."</p>
+      <p class="proof-block__source">Hamppi 2025, S. 69: Aalto University / Skanska Talonrakennus Oy.</p>
     </div>
   </div>
 </section>
 
 <section class="section--alt">
   <div class="container container--narrow">
-    <h2 class="section-heading">So bildet Dundir Beschaffungspakete</h2>
+    <h2 class="section-heading">Der Entwurf, in drei Schritten</h2>
     {{ partial "fig/package.html" . }}
     <ol class="step-list">
       <li>
         <div>
-          <p class="step-list__title">Leistungsbeschreibung lesen</p>
-          <p class="step-list__body">Die KI-Schicht liest die Projektbeschreibung in Alltagssprache (aus einem PDF, einem ERP-Export oder einer E-Mail). Relevante Beschaffungsanforderungen werden extrahiert und strukturiert.</p>
+          <p class="step-list__title">Die Leistungsbeschreibung lesen</p>
+          <p class="step-list__body">Die Sprachschicht soll die Leistungsbeschreibung so lesen, wie sie geschrieben ist (PDF, ERP-Export, E-Mail), und herausziehen, was für den Einkauf zählt: Mengen, Zertifikate, Termine, Grenzen.</p>
         </div>
       </li>
       <li>
         <div>
           <p class="step-list__title">Harte Anforderungen und gewichtete Ziele festlegen</p>
-          <p class="step-list__body">Das System erstellt eine Entwurfsliste: Welche Zertifizierungen sind Pflicht? Wie groß ist das maximale Lieferfenster? Wo liegt die Budgetobergrenze? Der Einkäufer prüft und passt bei Bedarf an.</p>
+          <p class="step-list__body">Sie schlägt einen Entwurf vor: welche Zertifikate Pflicht sind, der späteste Liefertermin, die Budgetobergrenze. Der Einkäufer prüft und korrigiert; verglichen wird erst, wenn ein Mensch die Liste freigegeben hat.</p>
         </div>
       </li>
       <li>
         <div>
           <p class="step-list__title">Das strukturierte Beschaffungspaket exportieren</p>
-          <p class="step-list__body">Das resultierende Paket ist die Eingabe für den Angebotsvergleich (UC1) und die Lieferantenbewertung (UC2). Es kann auch als standardisierte Angebotsvorlage an Lieferanten gesendet werden.</p>
+          <p class="step-list__body">Das Paket wird zur Eingabe für den Angebotsvergleich (UC1) und die Lieferantenbewertung (UC2) und kann als einheitliche Angebotsvorlage an Lieferanten gehen, der Schritt, den Hamppi empfiehlt.</p>
         </div>
       </li>
     </ol>
