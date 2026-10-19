@@ -16,3 +16,7 @@ node_modules/
 .quarto/
 .swarm/
 ruvector.db
+
+# secrets never live in this public repo
+*.kdbx
+credentials/

@@ -29,7 +29,6 @@ ALLOW = {
     "font": {
     },
     "secret-file": {
-        "credentials/dundir.kdbx": "FIXME: tracked in a public repo, remove it and purge history",
     },
 }
 
