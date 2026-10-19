@@ -123,7 +123,7 @@ When working on this project, load and apply the following skills as relevant to
 
 ## Credentials
 
-Website-related passwords are stored in `credentials/dundir.kdbx` (KeePass vault, committed to repo). Master password held by Christiaan Verhoef; do not store it here or anywhere in the repo.
+Website-related passwords live in a KeePass vault held by Christiaan Verhoef, outside this repo. This repo is public: never commit a vault, key or password file (`*.kdbx` and `credentials/` are gitignored, and the style check blocks secret files).
 
 ### Zoho Mail server config (dundir.com)
 
