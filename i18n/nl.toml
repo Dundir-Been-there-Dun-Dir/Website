@@ -241,6 +241,21 @@ other = "Schets van het ontwerp, geen data"
 [fig_stage_solver]
 other = "solver: onderzoek en ontwerp"
 
+[hero_field_what]
+other = "Evolutionaire zoekers jagen op het beste bod terwijl vier grenzen verschuiven. Willekeurige grenzen, geen data."
+
+[hero_field_pop]
+other = "zoekers"
+
+[hero_field_gen]
+other = "gen"
+
+[hero_field_in]
+other = "binnen de grenzen"
+
+[hero_field_hint]
+other = "de cursor bepaalt de weging"
+
 [fig_stage_design]
 other = "ontwerp"
 

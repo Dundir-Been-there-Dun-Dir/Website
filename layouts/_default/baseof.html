@@ -10,6 +10,10 @@
     {{ partial "footer.html" . }}
     {{- $site := resources.Get "js/site.js" | minify | fingerprint -}}
     <script src="{{ $site.RelPermalink }}" integrity="{{ $site.Data.Integrity }}" crossorigin="anonymous" defer></script>
+    {{ if .IsHome }}
+      {{- $field := resources.Get "js/field.js" | minify | fingerprint -}}
+      <script src="{{ $field.RelPermalink }}" integrity="{{ $field.Data.Integrity }}" crossorigin="anonymous" defer></script>
+    {{ end }}
     {{ if .Params.scanjs }}
       {{- $scan := resources.Get "js/scan.js" | minify | fingerprint -}}
       <script src="{{ $scan.RelPermalink }}" integrity="{{ $scan.Data.Integrity }}" crossorigin="anonymous" defer></script>

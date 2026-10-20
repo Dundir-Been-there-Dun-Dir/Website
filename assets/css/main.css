@@ -377,20 +377,92 @@ strong, b { font-weight: 700; }
 /* ============================================================
    06 Hero and the cost stack
    ============================================================ */
-.hero { padding: clamp(2.5rem, 6vw, 5rem) 0 0; }
+.hero { padding: 0; }
 .hero h1 { max-width: 15ch; }
 
-.hero__sub {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--gut);
-  margin-top: clamp(1.5rem, 3vw, 2.5rem);
-  align-items: end;
+/* The ground the hero stands on: graph paper, and on it field.js runs a live
+   search. Both reach behind the claim only faintly, so it sits on clean paper. */
+.hero__top {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(560px, 82vh, 860px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: clamp(2.5rem, 6vw, 5rem) 0;
 }
-.hero__sub p { margin: 0; color: var(--fg-2); font-size: 1.12rem; max-width: 46ch; }
-@media (max-width: 820px) { .hero__sub { grid-template-columns: 1fr; } }
+.hero__top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: linear-gradient(100deg, rgba(0, 0, 0, .35) 20%, black 70%), linear-gradient(to bottom, transparent, black 10%, black 80%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(100deg, rgba(0, 0, 0, .35) 20%, black 70%), linear-gradient(to bottom, transparent, black 10%, black 80%, transparent);
+  mask-composite: intersect;
+}
+.hero__field {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-mask-image: linear-gradient(100deg, rgba(0, 0, 0, .22) 30%, black 62%), linear-gradient(to bottom, transparent, black 8%, black 84%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(100deg, rgba(0, 0, 0, .22) 30%, black 62%), linear-gradient(to bottom, transparent, black 8%, black 84%, transparent);
+  mask-composite: intersect;
+}
+.hero__top > .container { width: 100%; }
+.hero__in > * { max-width: 36rem; }
+
+.hero__sub { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+.hero__sub p { margin: 0 0 1.5rem; color: var(--fg-2); font-size: 1.12rem; max-width: 46ch; }
 
 .hero__actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+
+.hero__readout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem 1.2rem;
+  margin: clamp(2rem, 5vw, 3.5rem) auto 0;
+  padding-block: .9rem 0;
+  font-size: .72rem;
+  color: var(--fg-3);
+}
+.hero__readout b { color: var(--fg-2); font-weight: 500; font-variant-numeric: tabular-nums; }
+.hero__readout[hidden] { display: none; }
+.hero__led {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .6rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-fill);
+  animation: led 2.4s ease-in-out infinite;
+}
+@keyframes led { 50% { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .hero__led { animation: none; } }
+
+.hero__hint { display: none; }
+@media (hover: hover) and (pointer: fine) { .hero__hint { display: inline; } }
+
+@media (max-width: 820px) {
+  .hero__top { min-height: 0; justify-content: flex-start; padding-bottom: 0; }
+  .hero__top::before,
+  .hero__field {
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .16) 0%, rgba(0, 0, 0, .16) 50%, black 60%, black 76%, rgba(0, 0, 0, .14) 84%, transparent);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .16) 0%, rgba(0, 0, 0, .16) 50%, black 60%, black 76%, rgba(0, 0, 0, .14) 84%, transparent);
+  }
+  .hero__readout { margin-top: clamp(300px, 80vw, 380px); }
+}
 
 /* the signature: one euro of project cost, divided */
 .stack { margin-top: clamp(2.5rem, 6vw, 4.5rem); }

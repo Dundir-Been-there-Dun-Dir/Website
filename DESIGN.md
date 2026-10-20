@@ -190,14 +190,44 @@ other in zinc, labelled in mono, sourced under the bar. The material block carri
 the line "hier rekent Dundir".
 
 It is the argument and the diagram at the same time, it costs no JavaScript, and it
-is the one object on the site that a reader will still remember in a week.
+is the one object on the site that a reader will still remember in a week. It sits
+under the hero, below the search.
+
+### Ground: the search
+
+Behind the hero claim, graph paper, and on it a canvas that runs a search in the
+visitor's browser (`assets/js/field.js`, home page only). Four limits (delivery
+date, CPR certification, budget ceiling, CO2) drift slowly, so the feasible
+region and its best corner keep moving. Ninety searchers, each a (1+1)
+evolution strategy, glide toward that corner as plain dots; the exact corner is
+computed every frame and ringed, and dashed iso-cost lines in the accent flow
+toward it. With a mouse, the weighting follows the cursor and the corner facing
+it wins; idle, the weighting drifts. Searchers that have settled respawn
+elsewhere and fade in. No trails: a dot is a candidate, nothing more.
+
+It shows the method, not the product. The readout under the hero says so in the
+same line: random limits, no data, and the solver's stage. It never shows a
+figure that could read as a result.
+
+- Colours and type come from the role layer (`--rule`, `--fg-2`, `--fg-3`,
+  `--accent-fill`, `--data`), read once with `getComputedStyle`. The graph
+  paper is a CSS background on `.hero__top::before`.
+- Both layers reach behind the claim only faintly (masked to under a quarter
+  strength on the left), so the headline and the sub sit on clean paper. Under
+  820px the field sits in the gap between the buttons and the readout.
+- Labels come from the `fig_*` and `hero_field_*` i18n keys through data
+  attributes. The cursor hint shows only on devices with a fine pointer.
 
 ### Motion
 
 - Bands rise 10px and fade in on first view, staggered by 60ms.
+- The search on the home hero runs continuously (limits drift, searchers
+  glide, cost lines flow), and pauses when the hero is off screen or the tab is
+  hidden.
 - Nothing else moves. No parallax, no scroll-jacking, no carousel.
-- All of it is disabled under `prefers-reduced-motion`, and the reveal class is
-  added by script, so with JavaScript off nothing is ever hidden.
+- All of it is disabled under `prefers-reduced-motion`: the search is drawn once,
+  already settled. The reveal class is added by script, so with JavaScript off
+  nothing is ever hidden, and the hero reads without the canvas.
 
 ## Components
 
@@ -253,7 +283,8 @@ copy around it promised a report on screen with no email required.
 - Focus rings are `--menie-lt` at 2px with 3px offset, visible on both grounds.
 - Body copy 17px minimum, 1.62 line height.
 - Fonts self-hosted, `font-display: swap`, subset to the three languages.
-- One stylesheet, one 2 kB site script, one 3 kB scan script. No framework.
+- One stylesheet, one 2 kB site script, one 3 kB scan script, one 6 kB search
+  script on the home page. No framework.
 
 ## Known issues
 

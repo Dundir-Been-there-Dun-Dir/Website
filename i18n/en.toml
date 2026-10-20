@@ -241,6 +241,21 @@ other = "Schematic of the design, no data"
 [fig_stage_solver]
 other = "solver: research and design"
 
+[hero_field_what]
+other = "Evolutionary searchers chase the best bid while four limits shift. Random limits, no data."
+
+[hero_field_pop]
+other = "searchers"
+
+[hero_field_gen]
+other = "gen"
+
+[hero_field_in]
+other = "inside limits"
+
+[hero_field_hint]
+other = "the cursor sets the weighting"
+
 [fig_stage_design]
 other = "design"
 

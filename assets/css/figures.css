@@ -84,17 +84,6 @@
 @keyframes sweep { from { opacity: 1; transform: translate(var(--sweep-x), var(--sweep-y)); } to { opacity: 1; transform: translate(0, 0); } }
 @keyframes ping { from { transform: scale(.4); opacity: 1; } to { transform: scale(2.6); opacity: 0; } }
 
-/* Hero: the claim on the left, the plan on the right */
-.hero__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--gut);
-  align-items: center;
-}
-.hero__grid .hero__sub { display: block; }
-.hero__grid .fig { margin-top: 0; }
-.hero__grid .hero__sub p { margin-bottom: 1.5rem; }
-@media (max-width: 900px) { .hero__grid { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .fig { --svg-label: 14px; } }
 
 /* Lifecycle: five stations and the loop back to the next tender */

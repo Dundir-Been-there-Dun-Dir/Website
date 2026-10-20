@@ -3,21 +3,32 @@
   {{/* 01 HERO: the claim, and the cost stack that carries it.
        Copy comes from content/_index.<lang>.md, structure lives here once. */}}
   <section class="hero">
-    <div class="container">
-      <div class="hero__grid">
-        <div>
-          <h1>{{ .Params.headline | safeHTML }}</h1>
-          <div class="hero__sub">
-            <p>{{ .Params.sub }}</p>
-            <div class="hero__actions">
-              <a href="{{ i18n "url_scan" | relURL }}" class="btn btn--primary">{{ i18n "nav_scan" }}</a>
-              <a href="{{ i18n "url_how" | relURL }}" class="btn btn--secondary">{{ i18n "nav_how" }}</a>
-            </div>
+    <div class="hero__top">
+      {{/* The ground: an evolution strategy searching a random instance, see assets/js/field.js */}}
+      <canvas class="hero__field" data-field aria-hidden="true"
+        data-x="{{ i18n "fig_price" }}" data-y="{{ i18n "fig_reliability" }}" data-optimum="{{ i18n "fig_optimum" }}"
+        data-limits="{{ i18n "fig_lim_delivery" }}|{{ i18n "fig_lim_cert" }}|{{ i18n "fig_lim_budget" }}|{{ i18n "fig_lim_co2" }}"></canvas>
+      <div class="container hero__in">
+        <h1>{{ .Params.headline | safeHTML }}</h1>
+        <div class="hero__sub">
+          <p>{{ .Params.sub }}</p>
+          <div class="hero__actions">
+            <a href="{{ i18n "url_scan" | relURL }}" class="btn btn--primary">{{ i18n "nav_scan" }}</a>
+            <a href="{{ i18n "url_how" | relURL }}" class="btn btn--secondary">{{ i18n "nav_how" }}</a>
           </div>
         </div>
-        {{ partial "fig/plan.html" . }}
       </div>
+      <p class="container hero__readout mono" data-field-readout hidden>
+        <span class="hero__what"><span class="hero__led" aria-hidden="true"></span>{{ i18n "hero_field_what" }}</span>
+        <span>{{ i18n "hero_field_pop" }} <b data-out="pop">260</b></span>
+        <span>{{ i18n "hero_field_gen" }} <b data-out="gen">00000</b></span>
+        <span>{{ i18n "hero_field_in" }} <b data-out="in">0/260</b></span>
+        <span class="hero__hint">{{ i18n "hero_field_hint" }}</span>
+        <span>{{ i18n "fig_stage_solver" }}</span>
+      </p>
+    </div>
 
+    <div class="container">
       {{ with .Params.stack }}
       <div class="stack">
         <div class="stack__hd">
