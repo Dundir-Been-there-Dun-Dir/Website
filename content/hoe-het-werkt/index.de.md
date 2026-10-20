@@ -21,12 +21,12 @@ sections:
 - tone: chalk
   figure: sovereignty
   eyebrow: Datensouveränität
-  heading: Warum es lokal auf Ihrer eigenen Infrastruktur läuft.
+  heading: Warum es für den Betrieb auf Ihrer eigenen Infrastruktur ausgelegt ist.
   body: 'Baudaten, Kostenschätzungen und Konditionen sind strategisch sensibel. Dundir ist für den vollständigen Betrieb vor Ort ausgelegt, auf Ihren Unternehmensservern oder auf lokaler Edge-Hardware auf der Baustelle:'
   after: 'Der lokale Betrieb ist eine betriebliche Notwendigkeit, keine Vorliebe. Forschung bei Cedervall zeigte, dass Modelle aus der Public Cloud wegen hoher Abokosten, Abhängigkeiten von Drittanbieter-APIs und verpflichtender interner Datentrennung unbrauchbar waren. Niederländische öffentliche Stellen arbeiten innerhalb der BIO (Baseline Informatiebeveiliging Overheid, Grundschutz für die Informationssicherheit der Verwaltung). Ein lokales System passt in diesen Rahmen ohne Cloud-Ausnahme.'
   claims:
   - fig: Souveränität
-    body: Ihre Beschaffungsdaten und Ihre Preishistorie bleiben in Ihrem internen Netzwerk. Der Entwurf sieht keinen Datenabfluss zu kommerziellen Cloud-Anbietern vor, und mit Ihren eigenen Daten werden nie externe Modelle trainiert.
+    body: Ausgelegt, um Ihre Beschaffungsdaten und Ihre Preishistorie in Ihrem internen Netzwerk zu halten. Der Entwurf sieht keinen Datenabfluss zu kommerziellen Cloud-Anbietern und kein Training externer Modelle mit Ihren Daten vor.
     word: true
   - fig: Kontinuität
     body: Ausgelegt für den Betrieb am Baustellentor ohne Internetverbindung, damit Netzausfälle und Preis- oder Richtlinienänderungen von Drittanbietern die Arbeit nicht stoppen.

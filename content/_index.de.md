@@ -47,7 +47,7 @@ sections:
     <strong>3. Prognose und institutionelles Gedächtnis (Entwurf):</strong> Tatsächliche Liefertreue, Mängelquoten und Terminabweichungen sollen in die Bewertungsparameter künftiger Ausschreibungen einfließen, damit operatives Wissen bleibt, wenn Mitarbeitende gehen.
 
 
-    <strong>Ihre Daten bleiben in Ihrem Netzwerk.</strong> Das System ist für den Betrieb vor Ort ausgelegt, damit eine öffentliche Stelle innerhalb ihrer eigenen Sicherheitsrahmen bleiben kann (etwa der niederländischen BIO). Mit Ihren Daten werden keine Modelle anderer trainiert.'
+    <strong>Ausgelegt, um Ihre Daten in Ihrem Netzwerk zu halten.</strong> Das System ist für den Betrieb vor Ort ausgelegt, damit eine öffentliche Stelle innerhalb ihrer eigenen Sicherheitsrahmen bleiben kann (etwa der niederländischen BIO). Der Entwurf sieht vor, dass mit Ihren Daten keine Modelle anderer trainiert werden.'
 - tone: chalk-2
   eyebrow: Wo wir stehen
   heading: Nicht fertig, und das sagen wir lieber selbst.

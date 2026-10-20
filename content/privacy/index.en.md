@@ -5,7 +5,7 @@ slug: "privacy"
 description: "What data this website touches, where it goes, and what you can have deleted."
 ---
 
-We sell a system whose entire point is that data never leaves the client's own server. So this page should be short and checkable.
+Dundir is designing a system meant to run on the client's own servers, so that its data stays there. A website that tracks its visitors would undercut that, so this page is short and checkable.
 
 ## What we do not do
 
@@ -43,4 +43,4 @@ You have the right to access, correct and delete your data. Send a request to <a
 
 Dundir, reachable by email at <a href="mailto:info@dundir.com">info@dundir.com</a>.
 
-Last updated 21 August 2026.
+Last updated 20 October 2026.
