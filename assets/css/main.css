@@ -505,10 +505,8 @@ strong, b { font-weight: 700; }
 }
 .seg--material { background: var(--accent-fill); color: var(--on-accent); flex: 70; }
 .seg--material .seg__nm { color: var(--on-accent-soft); }
-.seg--labour { background: var(--neutral-fill); color: var(--on-neutral); flex: 18; }
-.seg--labour .seg__nm { color: var(--on-neutral-soft); }
-.seg--other { background: var(--rule); color: var(--fg-2); flex: 12; }
-.seg--other .seg__nm { color: var(--fg-3); }
+.seg--rest { background: var(--neutral-fill); color: var(--on-neutral); flex: 30; }
+.seg--rest .seg__nm { color: var(--on-neutral-soft); }
 
 /* page hero for inner pages: no stack, just the claim */
 .page-hero {

@@ -2,7 +2,7 @@
 title: Das Problem
 description: Bauprojekte scheitern in der Beschaffung und am Tor, nicht an den Plänen. Die echten Kosten von Papierkram, WhatsApp-Chaos und fehlenden Prüfnachweisen.
 slug: das-problem
-lede: Bauprojekte scheitern selten an der Statik. Sie scheitern, weil 70 % der Projektkosten im Material liegen, während Vergaben und Anlieferungen am Tor über Tabellen, WhatsApp-Nachrichten und Papierbelege laufen.
+lede: Bauprojekte scheitern selten an der Statik. Sie scheitern, weil bis zu 70 % der Projektkosten im Material liegen, während Vergaben und Anlieferungen am Tor über Tabellen, WhatsApp-Nachrichten und Papierbelege laufen.
 sections:
 - eyebrow: Historische Fehlschläge
   heading: Wenn die Lieferkette bricht.

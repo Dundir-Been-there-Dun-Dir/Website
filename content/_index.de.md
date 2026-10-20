@@ -1,22 +1,19 @@
 ---
 title: Dundir
 description: KI-gestützte Beschaffungsentscheidungen und Baustellensysteme für die Bauwirtschaft, ausgelegt für den lokalen Betrieb und eine prüfbare Dokumentation. In Entwicklung mit Designpartnern.
-headline: Siebzig Prozent Ihres Projekts sind <span class="cut">Beschaffung.</span>
+headline: Bis zu siebzig Prozent Ihres Projekts sind <span class="cut">Beschaffung.</span>
 sub: Der Einheitspreis ist optimiert. Das ist selten das größte Problem. Wo ist das Material, wann kommt es an, und ist es zertifiziert? Dundir entwickelt einen mathematischen Beschaffungs-Solver und einen digitalen Zwilling der Baustelle.
 stack:
   label: Ein Euro Projektkosten, aufgeteilt
   source: Donyavi et al. 2024, in Hamppi 2025
-  alt: 'Aufteilung der Projektkosten: 70 Prozent Material, 18 Prozent Arbeit, 12 Prozent Sonstiges.'
+  alt: 'Aufteilung der Projektkosten: bis zu 70 Prozent Material, der Rest Arbeit und sonstige Kosten.'
   segments:
   - kind: material
-    pct: 70 %
+    pct: bis zu 70 %
     name: Material · hier rechnet und prüft Dundir
-  - kind: labour
-    pct: 18 %
-    name: Arbeit
-  - kind: other
-    pct: 12 %
-    name: Sonstiges
+  - kind: rest
+    pct: der Rest
+    name: Arbeit und Sonstiges
   footLeft: Beschaffung ist keine Backoffice-Funktion
   footRight: Sie ist die Kostenstruktur
 sections:

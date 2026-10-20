@@ -1,7 +1,7 @@
 ---
 title: Het probleem
 description: Bouwprojecten ontsporen niet op de bouwtekening, maar in de inkoopketen en aan de poort. De rekeningen van handmatig werk, WhatsApp-chaos en ontbrekende documentatie.
-lede: Een bouwproject faalt zelden op constructieberekeningen. Het faalt omdat 70% van de projectkosten in materiaal zit, terwijl inkoopbeslissingen en poortcontroles worden afgehandeld met Excel, WhatsApp en papieren bonnen.
+lede: Een bouwproject faalt zelden op constructieberekeningen. Het faalt omdat tot 70% van de projectkosten in materiaal zit, terwijl inkoopbeslissingen en poortcontroles worden afgehandeld met Excel, WhatsApp en papieren bonnen.
 sections:
 - eyebrow: Historische lessen
   heading: Wanneer de keten breekt.
