@@ -283,7 +283,7 @@ other = "Vertragsgedächtnis"
 other = "fließt in die nächste Ausschreibung"
 
 [fig_cycle_cap]
-other = "Der Entwurf in fünf Schritten. Nur Schritt 03 gibt es heute, als Prototyp auf dem Labortisch."
+other = "Der Entwurf in fünf Schritten. Noch keiner ist gebaut; die erste Edge-Hardware für Schritt 03 läuft auf dem Labortisch."
 
 [fig_sov_net]
 other = "Ihr Netzwerk"

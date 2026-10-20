@@ -3,22 +3,22 @@ aliases: ["/en/how-it-works/"]
 title: How it works
 description: From material specification to smart gate inspection and Wkb handover dossier. Designed for local deployment, mathematically grounded, with a full audit trail.
 slug: how-it-works
-lede: Dundir is being designed to connect mathematical procurement optimization with physical verification at the gate and an accumulated contract memory. The professional evaluates and decides. The system computes, verifies, and archives.
+lede: Dundir is being designed to connect mathematical procurement optimization with physical verification at the gate and an accumulated contract memory. The professional evaluates and decides. The system is designed to compute, verify, and archive.
 sections:
 - eyebrow: The lifecycle
   heading: The design in five steps, from specification to handover.
   figure: cycle
   steps:
   - h: Structuring the specification
-    p: 'The AI language layer reads your specification or tender document in plain language. The system extracts hard constraints, delivery schedules, budget ceilings, and CPR 2024 certification criteria. This is the sole stage where a language model operates.'
+    p: 'In the design, an AI language layer reads your specification or tender document in plain language and extracts hard constraints, delivery schedules, budget ceilings, and CPR 2024 certification criteria. This is meant to be the only stage where a language model operates.'
   - h: Deterministic solver calculates the optimum
-    p: 'The optimization engine evaluates unit price, delivery schedules, freight miles, and carbon intensity. Pure mathematics: identical inputs yield identical outputs every single time, accompanied by an audit-ready reasoning trail.'
+    p: 'The optimization engine is to weigh unit price, delivery schedules, freight miles, and carbon intensity. Pure mathematics by design: identical inputs must yield identical outputs every time, with an audit-ready reasoning trail. The solver is in research and design.'
   - h: Smart gate verification and 3-way matching
-    p: 'Upon arrival at the site gate, mobile or fixed edge OCR scans delivery tickets and truck license plates. The system performs instantaneous 3-way matching across purchase orders, physical delivery receipts, and vendor invoices. This step exists today as a lab prototype on the bench.'
+    p: 'The goal: at the site gate, mobile or fixed edge OCR reads delivery tickets and truck license plates, and the system matches purchase order, delivery receipt, and vendor invoice. Today the first edge hardware runs on the bench, without a camera yet. OCR and matching come next.'
   - h: Real-time Wkb handover dossier compilation
-    p: 'Inspection records, delivery receipts, and quality stamps are to be linked automatically into the statutory Dossier Bevoegd Gezag under the Dutch Wkb regulation. No missing documentation during final municipal commissioning.'
+    p: 'Inspection records, delivery receipts, and quality stamps are to be linked automatically into the statutory Dossier Bevoegd Gezag under the Dutch Wkb regulation, so that no documentation goes missing at final municipal commissioning.'
   - h: Feedback to accumulated contract memory
-    p: 'Actual supplier delivery punctuality, defect frequencies, and unit price variances are logged automatically. This data recalibrates scoring parameters for the next tender bid.'
+    p: 'Actual supplier delivery punctuality, defect frequencies, and unit price variances are to be logged automatically and to recalibrate the scoring parameters for the next tender.'
 - tone: chalk
   figure: sovereignty
   eyebrow: Data sovereignty
@@ -48,17 +48,17 @@ sections:
     The same rigor applies at the gate: every delivery ticket scan and 3-way match decision is to be logged with timestamps, reference IDs, and variance percentages.
 
 
-    For municipalities, this supports the reasoning required under Public Procurement Act Article 2.130. For contractors, it provides a documented file during subcontractor disputes or claims.'
+    For municipalities, this is meant to support the reasoning required under Public Procurement Act Article 2.130. For contractors, it is to provide a documented file during subcontractor disputes or claims.'
 - tone: chalk-2
   eyebrow: Boundaries
   heading: What the system does not do.
   body: 'Dundir does not make autonomous business decisions and does not replace human experts. The estimator, buyer, and site superintendent maintain full control.
 
 
-    The platform eliminates clerical data entry and manual matching so professionals can focus on negotiations, quality inspections, and strategic vendor management. Formal sign-off and legal accountability remain with your organization.
+    The platform is meant to take over clerical data entry and manual matching so professionals can focus on negotiations, quality inspections, and strategic vendor management. Formal sign-off and legal accountability remain with your organization.
 
 
-    The system calibrates against your proprietary transaction history. When experienced staff departs, accumulated vendor intelligence stays preserved within your firm.'
+    The system is to calibrate against your own transaction history, so that accumulated vendor intelligence stays within your firm when experienced staff leave.'
   caveat:
     lab: Honest about the stage
     text: None of the three modules is a product yet. The procurement solver is in research and design, the smart gate is a lab prototype on the bench, the contract memory is a design. Partners who join now help decide what gets built first.
