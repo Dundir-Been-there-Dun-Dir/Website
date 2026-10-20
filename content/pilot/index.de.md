@@ -9,7 +9,7 @@ sections:
   body: 'Die eigentliche Stärke dieser Plattform ist kein abstrakter Algorithmus. Es ist die Kalibrierung an der Praxis: zu wissen, welche Zertifizierungen für Sie nicht verhandelbar sind, welcher Lieferant trotz höherem Einheitspreis zuverlässig liefert und welche Abweichung von der Spezifikation in der Praxis akzeptabel ist. Dieses Wissen steht in keinem Lehrbuch; es steckt in Ihrer Beschaffungshistorie und Ihren Torprotokollen.
 
 
-    In diesem Stadium arbeiten wir mit einer ausgewählten Gruppe von Designpartnern statt mit Käufern vom Massenmarkt. Wer jetzt einsteigt, steigt ein, solange die Architektur noch direkt auf Ihre betrieblichen Abläufe zugeschnitten werden kann.'
+    In diesem Stadium suchen wir eine kleine Gruppe von Designpartnern statt Käufern vom Massenmarkt. Wer jetzt einsteigt, steigt ein, solange die Architektur noch direkt auf Ihre betrieblichen Abläufe zugeschnitten werden kann.'
 - tone: chalk
   eyebrow: Das 10-Wochen-Protokoll
   heading: Vier Phasen und ein erstes Ergebnis innerhalb von 7 Tagen.

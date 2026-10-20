@@ -1,6 +1,6 @@
 ---
 title: Dundir
-description: KI-gestützte Beschaffungsentscheidungen und Baustellensysteme für die Bauwirtschaft, ausgelegt für den lokalen Betrieb und eine prüfbare Dokumentation. In Entwicklung mit Designpartnern.
+description: KI-gestützte Beschaffungsentscheidungen und Baustellensysteme für die Bauwirtschaft, ausgelegt für den lokalen Betrieb und eine prüfbare Dokumentation. In Forschung und Entwurf, auf der Suche nach Designpartnern.
 headline: Bis zu siebzig Prozent Ihres Projekts sind <span class="cut">Beschaffung.</span>
 sub: Der Einheitspreis ist optimiert. Das ist selten das größte Problem. Wo ist das Material, wann kommt es an, und ist es zertifiziert? Dundir entwickelt einen mathematischen Beschaffungs-Solver und einen digitalen Zwilling der Baustelle.
 stack:

@@ -1,4 +1,4 @@
 ---
 title: "Leveranciersevaluatie"
-description: "Bouw een gekwalificeerde leveranciersdatabase op basis van prijs, betrouwbaarheid, certificering en duurzaamheid. Kennis die blijft als medewerkers vertrekken."
+description: "Ontworpen om een gekwalificeerd leveranciersbestand op te bouwen op basis van prijs, betrouwbaarheid, certificering en duurzaamheid, zodat kennis blijft als medewerkers vertrekken. In ontwerp."
 ---

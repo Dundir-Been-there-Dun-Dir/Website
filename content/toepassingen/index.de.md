@@ -1,5 +1,5 @@
 ---
 title: "Anwendungen"
 slug: "anwendungen"
-description: "Vier forschungsgestützte Beschaffungsphasen, in denen Dundir direkten Mehrwert bietet: Angebotsvergleich, Lieferantenbewertung, Bildung von Beschaffungspaketen und Vertragsüberwachung."
+description: "Vier Beschaffungsphasen, für die Dundir auf Basis der Forschung entwirft: Angebotsvergleich, Lieferantenbewertung, Bildung von Beschaffungspaketen und Vertragsüberwachung. Auf der Suche nach Designpartnern."
 ---

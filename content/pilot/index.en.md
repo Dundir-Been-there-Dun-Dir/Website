@@ -10,7 +10,7 @@ sections:
   body: 'The true operational strength of this platform is not an abstract algorithm. It is the real-world calibration: knowing which certifications are non-negotiable for you, which supplier delivers reliably despite a higher unit price, and which deviation from the specification is acceptable in practice. That knowledge exists in no general textbook; it resides in your procurement history and gate logs.
 
 
-    At this stage we work with a select group of design partners rather than mass-market buyers. Whoever joins now joins while the architecture can still be tailored directly to your operational workflows.'
+    At this stage we are looking for a small group of design partners rather than mass-market buyers. Whoever joins now joins while the architecture can still be tailored directly to your operational workflows.'
 - tone: chalk
   eyebrow: The 10-week protocol
   heading: Four phases and a first result within 7 days.
