@@ -3,7 +3,7 @@ aliases: ["/en/how-it-works/"]
 title: How it works
 description: From material specification to smart gate inspection and Wkb handover dossier. Designed for local deployment, mathematically grounded, with a full audit trail.
 slug: how-it-works
-lede: Dundir is being designed to connect mathematical procurement optimization with physical verification at the gate and an accumulated contract memory. The professional evaluates and decides. The system computes, verifies, and archives.
+lede: Dundir is being designed to connect mathematical procurement optimization with physical verification at the gate and an accumulated contract memory. The professional evaluates and decides. The system is designed to compute, verify, and archive.
 sections:
 - eyebrow: The lifecycle
   heading: The design in five steps, from specification to handover.

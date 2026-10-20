@@ -2,7 +2,7 @@
 title: So funktioniert es
 description: Von der Materialspezifikation über die Prüfung am Smart Gate bis zum Wkb-Übergabedossier. Ausgelegt für den lokalen Betrieb, mathematisch fundiert, mit vollständigem Prüfpfad.
 slug: so-funktioniert-es
-lede: Dundir wird entwickelt, um mathematische Beschaffungsoptimierung mit der physischen Prüfung am Tor und einem wachsenden Vertragsgedächtnis zu verbinden. Die Fachkraft bewertet und entscheidet. Das System rechnet, prüft und archiviert.
+lede: Dundir wird entwickelt, um mathematische Beschaffungsoptimierung mit der physischen Prüfung am Tor und einem wachsenden Vertragsgedächtnis zu verbinden. Die Fachkraft bewertet und entscheidet. Das System soll rechnen, prüfen und archivieren.
 sections:
 - eyebrow: Der Ablauf
   heading: Der Entwurf in fünf Schritten, von der Spezifikation bis zur Übergabe.

@@ -1,7 +1,7 @@
 ---
 title: Hoe het werkt
 description: Van materiaalspecificatie tot poortcontrole en Wkb-opleverdossier. Ontworpen voor lokale installatie, wiskundig onderbouwd, met volledig redeneerproces.
-lede: Dundir wordt ontworpen om wiskundige inkoopoptimalisatie te koppelen aan fysieke controle aan de poort en een lerend contractgeheugen. De professional oordeelt en beslist. Het systeem berekent, controleert en archiveert.
+lede: Dundir wordt ontworpen om wiskundige inkoopoptimalisatie te koppelen aan fysieke controle aan de poort en een lerend contractgeheugen. De professional oordeelt en beslist. Het systeem moet berekenen, controleren en archiveren.
 sections:
 - eyebrow: De keten
   heading: Het ontwerp in vijf stappen, van bestek tot oplevering.
