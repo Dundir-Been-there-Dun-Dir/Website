@@ -1,5 +1,5 @@
 ---
 title: "Angebotsvergleich"
 slug: "angebotsvergleich"
-description: "Vergleichen Sie Lieferantenangebote in Minuten statt Stunden: deterministisch, reproduzierbar und prüfungsbereit, ohne die Schwankungen generativer KI."
+description: "Entworfen, um Lieferantenangebote in Minuten statt Stunden zu vergleichen: deterministisch, reproduzierbar und prüfungsbereit, ohne die Schwankungen generativer KI. In Forschung und Entwurf."
 ---

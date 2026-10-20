@@ -1,6 +1,6 @@
 ---
 title: Dundir
-description: AI-gedreven inkoopbeslissingen en bouwplaatssystemen, ontworpen voor lokale installatie en een controleerbaar auditspoor. In ontwikkeling met ontwerppartners.
+description: AI-gedreven inkoopbeslissingen en bouwplaatssystemen, ontworpen voor lokale installatie en een controleerbaar auditspoor. In onderzoek en ontwerp, op zoek naar ontwerppartners.
 headline: Tot zeventig procent van uw project is <span class="cut">inkoop.</span>
 sub: De prijs is geoptimaliseerd. Dat is zelden het grootste probleem. Waar is het materiaal, wanneer komt het aan, en is het gecertificeerd? Dundir bouwt aan een wiskundige inkoop-solver en een digitale tweeling van uw bouwplaats.
 stack:
