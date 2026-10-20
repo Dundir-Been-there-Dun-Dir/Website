@@ -22,12 +22,12 @@ sections:
 - tone: chalk
   figure: sovereignty
   eyebrow: Data sovereignty
-  heading: Why it runs locally on your own infrastructure.
+  heading: Why it is designed to run on your own infrastructure.
   body: 'Construction data, cost estimates, and commercial terms are strategically sensitive. Dundir is designed to run fully on-premises, on your enterprise servers or local jobsite edge hardware:'
   after: 'Local deployment is an operational necessity rather than a preference. Research at Cedervall showed that public cloud models were unusable due to high subscription costs, third-party API dependencies, and mandatory internal data isolation. Dutch public bodies work within the Government Information Security Baseline (BIO). A local system fits inside that framework without a cloud exception.'
   claims:
   - fig: Sovereignty
-    body: Your procurement data and pricing history stay on your internal network. The design has no data egress to commercial cloud providers, and proprietary records never train external models.
+    body: Designed to keep your procurement data and pricing history on your internal network. The design has no data egress to commercial cloud providers and trains no external models on your records.
     word: true
   - fig: Continuity
     body: Designed to work at the jobsite gate without an internet connection, so network outages and third-party price or policy changes do not stop the work.

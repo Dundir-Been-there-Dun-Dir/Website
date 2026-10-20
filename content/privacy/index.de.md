@@ -4,7 +4,7 @@ slug: "datenschutz"
 description: "Welche Daten diese Website berührt, wohin sie gehen und was Sie löschen lassen können."
 ---
 
-Wir verkaufen ein System, dessen ganzer Sinn darin besteht, dass Daten den eigenen Server des Kunden nie verlassen. Diese Seite sollte daher kurz und überprüfbar sein.
+Dundir entwirft ein System, das auf den eigenen Servern des Kunden laufen soll, damit die Daten dort bleiben. Eine Website, die ihre Besucher verfolgt, würde das untergraben. Deshalb ist diese Seite kurz und überprüfbar.
 
 ## Was wir nicht tun
 
@@ -42,4 +42,4 @@ Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten. Senden
 
 Dundir, per E-Mail erreichbar unter <a href="mailto:info@dundir.com">info@dundir.com</a>.
 
-Zuletzt aktualisiert am 21. August 2026.
+Zuletzt aktualisiert am 20. Oktober 2026.

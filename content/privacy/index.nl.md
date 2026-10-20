@@ -3,7 +3,7 @@ title: "Privacybeleid"
 description: "Welke gegevens deze website raakt, waar ze heen gaan en wat u kunt laten verwijderen."
 ---
 
-Wij verkopen een systeem waarvan het hele punt is dat data de server van de klant niet verlaat. Dan hoort deze pagina kort en controleerbaar te zijn.
+Dundir ontwerpt een systeem dat op de eigen servers van de klant moet draaien, zodat de data daar blijft. Een website die bezoekers volgt, zou dat ondergraven. Daarom is deze pagina kort en controleerbaar.
 
 ## Wat wij niet doen
 
@@ -41,4 +41,4 @@ U heeft recht op inzage, correctie en verwijdering van uw gegevens. Een verzoek 
 
 Dundir, per e-mail bereikbaar op <a href="mailto:info@dundir.com">info@dundir.com</a>.
 
-Laatst bijgewerkt op 21 augustus 2026.
+Laatst bijgewerkt op 20 oktober 2026.

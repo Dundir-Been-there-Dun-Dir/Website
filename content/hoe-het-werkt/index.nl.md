@@ -20,12 +20,12 @@ sections:
 - tone: chalk
   figure: sovereignty
   eyebrow: Data-soevereiniteit
-  heading: Waarom het lokaal op uw eigen server draait.
+  heading: Waarom het ontworpen is om op uw eigen server te draaien.
   body: 'Bouwdata, calculaties en contractafspraken zijn commercieel vertrouwelijk en strategisch gevoelig. Dundir wordt ontworpen om volledig on-premise te draaien, op uw eigen infrastructuur of lokale edge-hardware:'
   after: 'Lokale implementatie is geen voorkeur, maar een harde operationele eis. In onderzoek bij Cedervall bleken publieke cloudmodellen onbruikbaar door hoge abonnementskosten, afhankelijkheid van externe API''s en strikte interne databescherming. Nederlandse overheden werken binnen de Baseline Informatiebeveiliging Overheid (BIO). Een lokaal systeem past binnen die kaders zonder uitzondering voor een clouddienst.'
   claims:
   - fig: Soevereiniteit
-    body: Uw inkoopdata en leveranciersprijzen blijven in uw interne netwerk. Het ontwerp kent geen doorgifte naar externe cloudproviders, en uw bedrijfsdata traint nooit andermans modellen.
+    body: Ontworpen om uw inkoopdata en leveranciersprijzen in uw interne netwerk te houden. Het ontwerp kent geen doorgifte naar externe cloudproviders en traint geen modellen van anderen met uw bedrijfsdata.
     word: true
   - fig: Continuïteit
     body: Ontworpen om aan de bouwplaatspoort zonder internetverbinding te werken, zodat netwerkstoringen en prijs- of beleidswijzigingen van derden het werk niet stilleggen.

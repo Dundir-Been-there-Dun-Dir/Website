@@ -44,7 +44,7 @@ sections:
     <strong>3. Forecasting & Institutioneel Geheugen (ontwerp):</strong> Werkelijke leverbetrouwbaarheid, levertijden en afwijkingen moeten terugvloeien naar de scoringsparameters voor volgende aanbestedingen, zodat operationele kennis blijft wanneer personeel vertrekt.
 
 
-    <strong>Uw data blijft in uw netwerk.</strong> Het systeem wordt ontworpen om on-premise te draaien, zodat een overheid binnen haar eigen kaders (zoals de BIO) kan blijven. Uw data traint nooit modellen van anderen.'
+    <strong>Ontworpen om uw data in uw netwerk te houden.</strong> Het systeem wordt ontworpen om on-premise te draaien, zodat een overheid binnen haar eigen kaders (zoals de BIO) kan blijven. Het ontwerp traint geen modellen van anderen met uw data.'
 - tone: chalk-2
   eyebrow: Waar wij staan
   heading: Nog niet af, en dat zeggen wij liever zelf.

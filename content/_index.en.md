@@ -45,7 +45,7 @@ sections:
     <strong>3. Forecasting & Institutional Memory (design):</strong> Actual delivery punctuality, defect rates, and schedule variances are meant to feed the scoring parameters for future tenders, so operational knowledge stays when staff leave.
 
 
-    <strong>Your data stays in your network.</strong> The system is designed to run on-premise, so a public body can stay inside its own security frameworks (such as the Dutch BIO). Your data never trains anyone else''s models.'
+    <strong>Designed to keep your data in your network.</strong> The system is designed to run on-premise, so a public body can stay inside its own security frameworks (such as the Dutch BIO). The design trains no one else''s models on your data.'
 - tone: chalk-2
   eyebrow: Where we stand
   heading: Not finished, and we would rather say so ourselves.
