@@ -242,16 +242,19 @@ other = "Schematic of the design, no data"
 other = "solver: research and design"
 
 [hero_field_what]
-other = "Evolutionary search for the best bid inside four limits. Random instance, no data."
+other = "Evolutionary searchers chase the best bid while four limits shift. Random limits, no data."
 
-[hero_field_run]
-other = "instance"
+[hero_field_pop]
+other = "searchers"
 
 [hero_field_gen]
 other = "gen"
 
-[hero_field_bids]
-other = "bids inside limits"
+[hero_field_in]
+other = "inside limits"
+
+[hero_field_hint]
+other = "the cursor sets the weighting"
 
 [fig_stage_design]
 other = "design"

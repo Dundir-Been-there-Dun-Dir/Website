@@ -1,8 +1,8 @@
-/* Home hero ground: a (1+lambda) evolution strategy searching a random
-   two-criterion instance for the best bid inside four limits, in the
-   visitor's browser. The limits, the bids and the cost weights change every
-   instance; the exact optimum (a corner of the feasible region) is computed
-   alongside, so the search visibly lands where the mathematics says it must.
+/* Home hero ground: a population of (1+1) evolution strategies searching for the
+   best bid inside four limits, in the visitor's browser. The limits drift, so
+   the feasible region and its best corner keep moving and the swarm keeps
+   chasing it. The exact corner is computed every frame and ringed. A mouse
+   sets the weighting (the corner facing the cursor wins); idle, it drifts.
    Colours and type come from the role layer, labels from data attributes. */
 (function () {
   var canvas = document.querySelector('[data-field]');
@@ -10,44 +10,50 @@
   var ctx = canvas.getContext('2d');
   if (!ctx) return;
 
+  var host = canvas.parentNode;
   var readout = document.querySelector('[data-field-readout]');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var css = getComputedStyle(canvas);
   function role(name) { return css.getPropertyValue(name).trim(); }
   var C = {
-    rule: role('--rule'), fg2: role('--fg-2'), fg3: role('--fg-3'),
-    accent: role('--accent-fill'), surface: role('--surface'), font: role('--data')
+    fg2: role('--fg-2'), fg3: role('--fg-3'),
+    accent: role('--accent-fill'), font: role('--data')
   };
   var labels = (canvas.dataset.limits || '').split('|');
 
   var TAU = Math.PI * 2;
-  var BIDS = 16, LAMBDA = 10, GEN_MS = 150, HOLD_MS = 2600, FADE_MS = 700, MAX_GEN = 110;
-  var BASE = [Math.PI, Math.PI / 2, 0, -Math.PI / 2];   /* outward normals: left, top, right, bottom */
+  var small = window.innerWidth < 820;
+  var N = small ? 50 : 90;
+  var BASE = [Math.PI, Math.PI / 2, 0, -Math.PI / 2];
 
-  var lims = [], bx = new Float32Array(BIDS), by = new Float32Array(BIDS), bin = new Uint8Array(BIDS);
-  var wx = 0, wy = 0, region = [], ox = 0, oy = 0;
-  var p = [0, 0], fp = 0, sigma = 0, gen = 0, run = 0, inside = 0;
-  var kids = new Float32Array(LAMBDA * 2), trail = [];
-  var state = 'search', clock = 0;
-
-  function rand(a, b) { return a + Math.random() * (b - a); }
-  function gauss() {
-    var u = 0, v = 0;
-    while (!u) u = Math.random();
-    while (!v) v = Math.random();
-    return Math.sqrt(-2 * Math.log(u)) * Math.cos(TAU * v);
+  /* ---- the instance: four drifting limits, a drifting weighting ---- */
+  var lims = [], drift = [];
+  for (var k = 0; k < 4; k++) {
+    lims.push({ a: 0, b: 0, c: 0, label: labels[k] || '' });
+    drift.push({ w1: 0.05 + Math.random() * 0.07, w2: 0.04 + Math.random() * 0.06, p1: Math.random() * TAU, p2: Math.random() * TAU });
   }
+  var phi = Math.PI * 0.7, aim = null, dx = 0, dy = 0;
+  var region = [], ox = 0.5, oy = 0.5;
 
-  function cost(x, y) { return wx * x - wy * y; }
-  function fitness(x, y) {
-    var pen = 0;
+  function shape(t) {
     for (var k = 0; k < 4; k++) {
-      var d = lims[k].a * x + lims[k].b * y - lims[k].c;
-      if (d > 0) pen += d;
+      var d = drift[k], th = BASE[k] + 0.42 * Math.sin(t * d.w1 + d.p1);
+      var a = Math.cos(th), b = Math.sin(th);
+      lims[k].a = a; lims[k].b = b;
+      lims[k].c = a * 0.5 + b * 0.5 + 0.34 + 0.08 * Math.sin(t * d.w2 + d.p2);
     }
-    if (x < 0) pen -= x; if (x > 1) pen += x - 1;
-    if (y < 0) pen -= y; if (y > 1) pen += y - 1;
-    return cost(x, y) + 12 * pen;
+    var target = aim === null ? Math.PI * 0.72 + 0.5 * Math.sin(t * 0.07) : aim;
+    var diff = Math.atan2(Math.sin(target - phi), Math.cos(target - phi));
+    phi += diff * (aim === null ? 0.02 : 0.08);
+    dx = Math.cos(phi); dy = Math.sin(phi);
+
+    region = [[-2, -2], [3, -2], [3, 3], [-2, 3]];
+    for (k = 0; k < 4; k++) region = clip(region, lims[k]);
+    var best = -Infinity;
+    for (var r = 0; r < region.length; r++) {
+      var s = dx * region[r][0] + dy * region[r][1];
+      if (s > best) { best = s; ox = region[r][0]; oy = region[r][1]; }
+    }
   }
 
   function clip(poly, h) {
@@ -64,118 +70,124 @@
     return out;
   }
 
-  function instance() {
-    run++;
-    lims = [];
+  function fitness(u, v) {
+    var pen = 0;
     for (var k = 0; k < 4; k++) {
-      var th = BASE[k] + rand(-0.35, 0.35), a = Math.cos(th), b = Math.sin(th);
-      lims.push({ a: a, b: b, c: a * 0.5 + b * 0.5 + rand(0.2, 0.33), label: labels[k] || '' });
+      var d = lims[k].a * u + lims[k].b * v - lims[k].c;
+      if (d > 0) pen += d;
     }
-    var th2 = rand(0.25, 1.2);
-    wx = Math.cos(th2); wy = Math.sin(th2);
-
-    region = [[0, 0], [1, 0], [1, 1], [0, 1]];
-    for (k = 0; k < 4; k++) region = clip(region, lims[k]);
-    var best = Infinity;
-    for (var r = 0; r < region.length; r++) {
-      var f = cost(region[r][0], region[r][1]);
-      if (f < best) { best = f; ox = region[r][0]; oy = region[r][1]; }
-    }
-
-    inside = 0;
-    for (var i = 0; i < BIDS; i++) {
-      bx[i] = rand(0.04, 0.96); by[i] = rand(0.04, 0.96);
-      bin[i] = 1;
-      for (k = 0; k < 4; k++) if (lims[k].a * bx[i] + lims[k].b * by[i] > lims[k].c) bin[i] = 0;
-      inside += bin[i];
-    }
-
-    var s = Math.floor(Math.random() * BIDS);
-    p = [bx[s], by[s]]; fp = fitness(p[0], p[1]);
-    sigma = 0.14; gen = 0; trail = [p.slice()];
-    for (i = 0; i < kids.length; i++) kids[i] = -1;
-    state = 'search'; clock = 0;
-    out();
+    return -(dx * u + dy * v) + 6 * pen;
+  }
+  function inside(u, v) {
+    for (var k = 0; k < 4; k++) if (lims[k].a * u + lims[k].b * v > lims[k].c) return false;
+    return true;
   }
 
-  function generation() {
-    gen++;
-    var bi = -1, bf = fp;
-    for (var j = 0; j < LAMBDA; j++) {
-      var x = p[0] + sigma * gauss(), y = p[1] + sigma * gauss();
-      kids[j * 2] = x; kids[j * 2 + 1] = y;
-      var f = fitness(x, y);
-      if (f < bf) { bf = f; bi = j; }
-    }
-    if (bi >= 0) {
-      p = [kids[bi * 2], kids[bi * 2 + 1]]; fp = bf; sigma *= 1.12;
-      trail.push(p.slice());
-    } else {
-      sigma *= 0.84;
-    }
-    if (sigma < 0.0015 || gen >= MAX_GEN) { state = 'hold'; clock = 0; }
-    out();
-  }
+  /* ---- geometry: an isotropic unit square placed in the hero ---- */
+  var W = 0, H = 0, S = 1, CX = 0, CY = 0, dpr = 1;
+  var U0 = 0, U1 = 1, V0 = 0, V1 = 1;
 
-  function pad(n, w) { n = String(n); while (n.length < w) n = '0' + n; return n; }
-  function out() {
-    if (!readout) return;
-    var set = function (k, v) { var el = readout.querySelector('[data-out="' + k + '"]'); if (el) el.textContent = v; };
-    set('run', pad(run, 2)); set('gen', pad(gen, 3)); set('bids', inside + '/' + BIDS);
-  }
-
-  /* ---- geometry ---- */
-  var W = 0, H = 0, R = { x: 0, y: 0, w: 0, h: 0 }, dpr = 1;
   function resize() {
     var b = canvas.getBoundingClientRect();
-    if (!b.width || !b.height) return;
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    if (!b.width || !b.height) return false;
+    dpr = Math.min(window.devicePixelRatio || 1, small ? 1.5 : 2);
     W = b.width; H = b.height;
-    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    canvas.width = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var wide = W > 820;
-    R.x = wide ? W * 0.52 : 16;
-    R.w = (wide ? W - 40 : W - 32) - R.x;
-    R.y = wide ? 36 : 16;
-    R.h = H - R.y - (wide ? 72 : 28);
+    small = W < 820;
+    if (small) {
+      /* under 820px the field lives in the gap between the copy and the readout */
+      var copy = host.querySelector('.hero__in'), top = copy ? copy.getBoundingClientRect().bottom - b.top : H * 0.5;
+      var end = readout ? readout.getBoundingClientRect().top - b.top : H * 0.9;
+      if (end - top < 120) { top = H * 0.5; end = H * 0.9; }
+      CX = W * 0.5; CY = (top + end) / 2; S = Math.min(W * 0.62, (end - top) * 0.62);
+    }
+    else { CX = W * 0.7; CY = H * 0.44; S = Math.min(H * 0.54, W * 0.36); }
+    U0 = 0.5 - CX / S; U1 = 0.5 + (W - CX) / S;
+    V0 = 0.5 - (H - CY) / S; V1 = 0.5 + CY / S;
+    return true;
   }
-  function X(u) { return R.x + u * R.w; }
-  function Y(v) { return R.y + (1 - v) * R.h; }
+  function X(u) { return CX + (u - 0.5) * S; }
+  function Y(v) { return CY - (v - 0.5) * S; }
 
-  /* the part of the line a*x + b*y = c that lies inside the unit square */
+  /* ---- the swarm ---- */
+  var pu = new Float32Array(N), pv = new Float32Array(N), sg = new Float32Array(N);
+  var qu = new Float32Array(N), qv = new Float32Array(N), age = new Float32Array(N);
+  function spawn(i) {
+    pu[i] = qu[i] = U0 + Math.random() * (U1 - U0);
+    pv[i] = qv[i] = V0 + Math.random() * (V1 - V0);
+    age[i] = 0;
+    sg[i] = 0.03 + Math.random() * 0.04;
+  }
+
+  function gauss() {
+    var u = 0, v = 0;
+    while (!u) u = Math.random();
+    while (!v) v = Math.random();
+    return Math.sqrt(-2 * Math.log(u)) * Math.cos(TAU * v);
+  }
+
+  var gen = 0, feasible = 0;
+  function step() {
+    gen++;
+    feasible = 0;
+    for (var i = 0; i < N; i++) {
+      var f = fitness(pu[i], pv[i]);
+      var cu = pu[i] + sg[i] * gauss(), cv = pv[i] + sg[i] * gauss();
+      if (fitness(cu, cv) < f) { pu[i] = cu; pv[i] = cv; sg[i] = Math.min(0.07, sg[i] * 1.25); }
+      else sg[i] = Math.max(0.0015, sg[i] * 0.94);
+      if (sg[i] < 0.005 && Math.random() < 0.01) spawn(i);
+      if (inside(pu[i], pv[i])) feasible++;
+    }
+  }
+
+  /* the part of the line a*u + b*v = c inside the visible area */
   function segment(a, b, c) {
     var pts = [];
-    if (Math.abs(b) > 1e-6) { [0, 1].forEach(function (x) { var y = (c - a * x) / b; if (y >= 0 && y <= 1) pts.push([x, y]); }); }
-    if (Math.abs(a) > 1e-6) { [0, 1].forEach(function (y) { var x = (c - b * y) / a; if (x >= 0 && x <= 1) pts.push([x, y]); }); }
+    if (Math.abs(b) > 1e-6) [U0, U1].forEach(function (u) { var v = (c - a * u) / b; if (v >= V0 && v <= V1) pts.push([u, v]); });
+    if (Math.abs(a) > 1e-6) [V0, V1].forEach(function (v) { var u = (c - b * v) / a; if (u >= U0 && u <= U1) pts.push([u, v]); });
     return pts.length >= 2 ? [pts[0], pts[pts.length - 1]] : null;
   }
-
   function line(s, dash) {
     ctx.setLineDash(dash || []);
     ctx.beginPath(); ctx.moveTo(X(s[0][0]), Y(s[0][1])); ctx.lineTo(X(s[1][0]), Y(s[1][1])); ctx.stroke();
     ctx.setLineDash([]);
   }
 
-  function draw(alpha) {
+  /* ---- drawing ---- */
+  /* what is drawn glides after the search, so accepted steps read as motion */
+  function colour(i) {
+    if (Math.hypot(pu[i] - ox, pv[i] - oy) < 0.035) return 2;
+    return inside(pu[i], pv[i]) ? 1 : 0;
+  }
+  function heads(glide) {
+    for (var i = 0; i < N; i++) {
+      if (glide) { qu[i] += (pu[i] - qu[i]) * 0.08; qv[i] += (pv[i] - qv[i]) * 0.08; age[i] = Math.min(1, age[i] + 0.02); }
+      var c = colour(i);
+      ctx.fillStyle = c === 2 ? C.accent : (c ? C.fg2 : C.fg3);
+      ctx.globalAlpha = age[i] * (c ? 0.85 : 0.5);
+      ctx.beginPath(); ctx.arc(X(qu[i]), Y(qv[i]), c === 2 ? 3 : 2.4, 0, TAU);
+      if (c) ctx.fill(); else { ctx.strokeStyle = C.fg3; ctx.lineWidth = 1; ctx.stroke(); }
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function scene(t, glide) {
     ctx.clearRect(0, 0, W, H);
-    if (!R.w) return;
-    ctx.globalAlpha = alpha;
+    ctx.font = (small ? '10px ' : '11px ') + C.font;
+
+    /* iso-cost lines, flowing toward the best corner */
+    var best = dx * ox + dy * oy, gap = 0.085, ph = (t * 0.04) % gap;
+    ctx.strokeStyle = C.accent;
     ctx.lineWidth = 1;
-
-    /* graph paper over the whole ground, ruled on the plot's own grid */
-    var step = R.w / 10, x0 = X(0) % step, y0 = Y(1) % step;
-    ctx.strokeStyle = C.rule;
-    ctx.beginPath();
-    for (var gx = x0; gx <= W; gx += step) { ctx.moveTo(Math.round(gx) + 0.5, 0); ctx.lineTo(Math.round(gx) + 0.5, H); }
-    for (var gy = y0; gy <= H; gy += step) { ctx.moveTo(0, Math.round(gy) + 0.5); ctx.lineTo(W, Math.round(gy) + 0.5); }
-    ctx.stroke();
-
-    ctx.font = '11px ' + C.font;
-    ctx.fillStyle = C.fg3;
-    ctx.textAlign = 'right';
-    ctx.fillText((canvas.dataset.x || '') + ' →', X(1) - 4, Y(0) - 8);
-    ctx.textAlign = 'left';
-    ctx.fillText('↑ ' + (canvas.dataset.y || ''), X(0) + 6, Y(1) + 14);
+    for (var j = 0; j < 12; j++) {
+      var s = segment(dx, dy, best - gap * (j + 1) + ph);
+      if (!s) continue;
+      ctx.globalAlpha = Math.max(0, 0.42 - j * 0.035);
+      line(s, [3, 6]);
+    }
+    ctx.globalAlpha = 1;
 
     if (region.length > 2) {
       ctx.beginPath();
@@ -183,95 +195,78 @@
       for (var r = 1; r < region.length; r++) ctx.lineTo(X(region[r][0]), Y(region[r][1]));
       ctx.closePath();
       ctx.fillStyle = C.fg2;
-      ctx.globalAlpha = alpha * 0.07;
+      ctx.globalAlpha = 0.06;
       ctx.fill();
-      ctx.globalAlpha = alpha;
+      ctx.globalAlpha = 1;
     }
 
     ctx.strokeStyle = C.fg2;
+    ctx.fillStyle = C.fg2;
     ctx.lineWidth = 1.25;
     for (var k = 0; k < 4; k++) {
-      var s = segment(lims[k].a, lims[k].b, lims[k].c);
-      if (!s) continue;
-      line(s);
-      var near = function (u) { return Math.hypot(s[0][0] + u * (s[1][0] - s[0][0]) - ox, s[0][1] + u * (s[1][1] - s[0][1]) - oy); };
-      var t = near(0.2) > near(0.8) ? 0.2 : 0.8, lx = X(s[0][0] + t * (s[1][0] - s[0][0])), ly = Y(s[0][1] + t * (s[1][1] - s[0][1]));
-      var ang = Math.atan2(Y(s[1][1]) - Y(s[0][1]), X(s[1][0]) - X(s[0][0]));
+      var g = segment(lims[k].a, lims[k].b, lims[k].c);
+      if (!g) continue;
+      line(g);
+      var near = function (u) { return Math.hypot(g[0][0] + u * (g[1][0] - g[0][0]) - ox, g[0][1] + u * (g[1][1] - g[0][1]) - oy); };
+      var tt = near(0.3) > near(0.7) ? 0.3 : 0.7;
+      var lx = X(g[0][0] + tt * (g[1][0] - g[0][0])), ly = Y(g[0][1] + tt * (g[1][1] - g[0][1]));
+      var ang = Math.atan2(Y(g[1][1]) - Y(g[0][1]), X(g[1][0]) - X(g[0][0]));
       if (ang > Math.PI / 2) ang -= Math.PI; else if (ang < -Math.PI / 2) ang += Math.PI;
       ctx.save();
       ctx.translate(lx, ly); ctx.rotate(ang);
-      ctx.fillStyle = C.fg2;
-      var tw = ctx.measureText(lims[k].label).width + 6, ex = lx + Math.cos(ang) * tw, ey = ly + Math.sin(ang) * tw;
-      var flip = ex > W - 4 || ex < 4 || ey > H - 4 || ey < 4;
-      ctx.textAlign = flip ? 'right' : 'left';
-      ctx.fillText(lims[k].label, flip ? -6 : 6, -6);
-      ctx.textAlign = 'left';
+      ctx.fillText(lims[k].label, 6, -6);
       ctx.restore();
     }
 
-    for (var i = 0; i < BIDS; i++) {
-      ctx.beginPath(); ctx.arc(X(bx[i]), Y(by[i]), 3.5, 0, TAU);
-      if (bin[i]) { ctx.fillStyle = C.fg2; ctx.fill(); }
-      else { ctx.fillStyle = C.surface; ctx.fill(); ctx.strokeStyle = C.fg3; ctx.lineWidth = 1; ctx.stroke(); }
-    }
+    heads(glide);
 
-    ctx.fillStyle = C.fg3;
-    ctx.globalAlpha = alpha * 0.55;
-    for (var j = 0; j < LAMBDA; j++) {
-      if (kids[j * 2] < 0) continue;
-      ctx.beginPath(); ctx.arc(X(kids[j * 2]), Y(kids[j * 2 + 1]), 1.6, 0, TAU); ctx.fill();
-    }
-    ctx.globalAlpha = alpha;
-
-    var iso = segment(wx, -wy, cost(p[0], p[1]));
-    if (iso) { ctx.strokeStyle = C.accent; ctx.lineWidth = 1; line(iso, [4, 4]); }
-
+    var cx = 0, cy = 0;
+    for (var m = 0; m < region.length; m++) { cx += region[m][0]; cy += region[m][1]; }
+    var ex = X(ox), ey = Y(oy), vx = ex - X(cx / region.length), vy = ey - Y(cy / region.length), vl = Math.hypot(vx, vy) || 1;
+    var pulse = (t % 1.8) / 1.8;
     ctx.strokeStyle = C.accent;
-    ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    for (var q = 0; q < trail.length; q++) {
-      if (q) ctx.lineTo(X(trail[q][0]), Y(trail[q][1])); else ctx.moveTo(X(trail[q][0]), Y(trail[q][1]));
-    }
-    ctx.stroke();
-
-    ctx.fillStyle = C.accent;
-    ctx.beginPath(); ctx.arc(X(p[0]), Y(p[1]), state === 'search' ? 4 : 6, 0, TAU); ctx.fill();
-    if (state !== 'search') {
-      ctx.strokeStyle = C.accent;
-      ctx.beginPath(); ctx.arc(X(ox), Y(oy), 11, 0, TAU); ctx.stroke();
-      /* label on the far side of the corner from the region, clear of the limit labels */
-      var cx = 0, cy = 0;
-      for (var m = 0; m < region.length; m++) { cx += region[m][0]; cy += region[m][1]; }
-      var dx = X(ox) - X(cx / region.length), dy = Y(oy) - Y(cy / region.length), dl = Math.hypot(dx, dy) || 1;
-      var tx = X(ox) + dx / dl * 22, ty = Y(oy) + dy / dl * 22 + 4;
-      ctx.textAlign = dx < 0 ? 'right' : 'left';
-      ctx.fillText(canvas.dataset.optimum || '', tx, ty);
-      ctx.textAlign = 'left';
-    }
+    ctx.globalAlpha = 1 - pulse;
+    ctx.beginPath(); ctx.arc(ex, ey, 6 + pulse * 34, 0, TAU); ctx.stroke();
     ctx.globalAlpha = 1;
+    ctx.beginPath(); ctx.arc(ex, ey, 11, 0, TAU); ctx.stroke();
+    ctx.fillStyle = C.accent;
+    ctx.beginPath(); ctx.arc(ex, ey, 4.5, 0, TAU); ctx.fill();
+    ctx.textAlign = vx < 0 ? 'right' : 'left';
+    ctx.fillText(canvas.dataset.optimum || '', ex + vx / vl * 24, ey + vy / vl * 24 + 4);
+    ctx.textAlign = 'left';
   }
 
+  function pad(n, w) { n = String(n); while (n.length < w) n = '0' + n; return n; }
+  function out() {
+    if (!readout) return;
+    var set = function (k, v) { var el = readout.querySelector('[data-out="' + k + '"]'); if (el) el.textContent = v; };
+    set('pop', String(N)); set('gen', pad(gen, 5)); set('in', feasible + '/' + N);
+  }
+
+  /* ---- pointer: the weighting follows the cursor ---- */
+  host.addEventListener('pointermove', function (e) {
+    if (e.pointerType !== 'mouse') return;
+    var b = canvas.getBoundingClientRect();
+    var u = 0.5 + (e.clientX - b.left - CX) / S, v = 0.5 - (e.clientY - b.top - CY) / S;
+    aim = Math.atan2(v - 0.5, u - 0.5);
+  });
+  host.addEventListener('pointerleave', function () { aim = null; });
+
   /* ---- loop ---- */
-  var running = false, raf = 0, last = 0, acc = 0;
+  var running = false, raf = 0, t0 = 0, lastOut = 0, tick = 0;
   function frame(ts) {
     if (!running) return;
-    var dt = last ? Math.min(ts - last, 100) : 0;
-    last = ts;
-    if (state === 'search') {
-      acc += dt;
-      while (acc >= GEN_MS && state === 'search') { acc -= GEN_MS; generation(); }
-      draw(1);
-    } else {
-      clock += dt;
-      if (state === 'hold' && clock > HOLD_MS) { state = 'fade'; clock = 0; }
-      if (state === 'fade' && clock > FADE_MS) { instance(); acc = 0; }
-      draw(state === 'fade' ? 1 - clock / FADE_MS : 1);
-    }
+    if (!t0) t0 = ts;
+    var t = (ts - t0) / 1000;
+    shape(t);
+    if (++tick % 3 === 0) step();
+    scene(t, true);
+    if (ts - lastOut > 100) { out(); lastOut = ts; }
     raf = requestAnimationFrame(frame);
   }
   function start() {
     if (running || reduce) return;
-    running = true; last = 0;
+    running = true;
     raf = requestAnimationFrame(frame);
   }
   function stop() {
@@ -279,20 +274,25 @@
     if (raf) cancelAnimationFrame(raf);
     raf = 0;
   }
-  function settle() {
-    while (state === 'search') generation();
-    draw(1);
+  function still() {
+    shape(0);
+    for (var i = 0; i < 400; i++) step();
+    for (i = 0; i < N; i++) { qu[i] = pu[i]; qv[i] = pv[i]; }
+    for (i = 0; i < N; i++) age[i] = 1;
+    scene(0.9);
+    out();
   }
 
+  if (!resize()) return;
+  for (var i = 0; i < N; i++) spawn(i);
   if (readout) readout.hidden = false;
-  resize();
-  instance();
   if (reduce) {
-    settle();
+    still();
   } else {
-    draw(1);
+    shape(0);
+    scene(0);
     if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (e) { if (e[0].isIntersecting) start(); else stop(); }, { threshold: 0.1 }).observe(canvas);
+      new IntersectionObserver(function (e) { if (e[0].isIntersecting) start(); else stop(); }, { threshold: 0.05 }).observe(canvas);
     } else {
       start();
     }
@@ -302,6 +302,10 @@
   var rt = 0;
   window.addEventListener('resize', function () {
     clearTimeout(rt);
-    rt = setTimeout(function () { resize(); draw(1); }, 150);
+    rt = setTimeout(function () {
+      if (!resize()) return;
+      for (var i = 0; i < N; i++) spawn(i);
+      if (reduce) still();
+    }, 150);
   });
 })();

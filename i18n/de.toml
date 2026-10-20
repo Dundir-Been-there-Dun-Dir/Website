@@ -241,16 +241,19 @@ other = "Skizze des Entwurfs, keine Daten"
 other = "Solver: Forschung und Entwurf"
 
 [hero_field_what]
-other = "Evolutionäre Suche nach dem besten Angebot innerhalb von vier Grenzen. Zufälliges Beispiel, keine Daten."
+other = "Evolutionäre Sucher jagen das beste Angebot, während sich vier Grenzen verschieben. Zufällige Grenzen, keine Daten."
 
-[hero_field_run]
-other = "Beispiel"
+[hero_field_pop]
+other = "Sucher"
 
 [hero_field_gen]
 other = "Gen."
 
-[hero_field_bids]
-other = "Angebote innerhalb der Grenzen"
+[hero_field_in]
+other = "innerhalb der Grenzen"
+
+[hero_field_hint]
+other = "der Cursor bestimmt die Gewichtung"
 
 [fig_stage_design]
 other = "Entwurf"

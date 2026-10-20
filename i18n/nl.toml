@@ -242,16 +242,19 @@ other = "Schets van het ontwerp, geen data"
 other = "solver: onderzoek en ontwerp"
 
 [hero_field_what]
-other = "Evolutionaire zoektocht naar het beste bod binnen vier grenzen. Willekeurig voorbeeld, geen data."
+other = "Evolutionaire zoekers jagen op het beste bod terwijl vier grenzen verschuiven. Willekeurige grenzen, geen data."
 
-[hero_field_run]
-other = "voorbeeld"
+[hero_field_pop]
+other = "zoekers"
 
 [hero_field_gen]
 other = "gen"
 
-[hero_field_bids]
-other = "offertes binnen de grenzen"
+[hero_field_in]
+other = "binnen de grenzen"
+
+[hero_field_hint]
+other = "de cursor bepaalt de weging"
 
 [fig_stage_design]
 other = "ontwerp"
