@@ -15,7 +15,7 @@ pluralizeListTitles = false
 
 [params]
   palette = "css/palettes/drawing.css"
-  email = "christiaan.verhoef@dundir.com,milan.jelisavcic@dundir.com"
+  email = "info@dundir.com"
   linkedIn = "https://www.linkedin.com/company/dundir"
 
   # SUS survey webhook: n8n on CT104
