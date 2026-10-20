@@ -39,7 +39,7 @@ sections:
   heading: Jede Berechnung und jede Prüfung am Tor muss überprüfbar sein.
   proof:
     fig: Deterministisch
-    label: Identische Eingaben liefern identische Ergebnisse. Generische KI für Unternehmen lieferte bei identischen Eingaben Fehler bis zu 8.354 Euro auf einer einzigen Ausschreibungsposition.
+    label: Identische Eingaben liefern identische Ergebnisse. Generische KI für Unternehmen lieferte bei identischen Eingaben bis zu 8.354 Euro Abweichung in der Summe eines Nachunternehmers.
     src: Hamppi 2025, Aalto University · Atil et al. 2025
   body: 'Welche Vorgaben durchgesetzt wurden, wie Transportweg und Materialeinheitskosten gegeneinander abgewogen wurden und warum ein Lieferant ausgewählt wurde: Das System ist darauf ausgelegt, die genaue Formel und die Gewichtung der Parameter festzuhalten.
 

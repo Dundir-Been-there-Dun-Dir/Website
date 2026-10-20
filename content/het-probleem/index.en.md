@@ -23,10 +23,10 @@ sections:
     <strong>1. Pre-construction clerical bottleneck:</strong> Estimators spend 31.7% of working hours on administrative data entry instead of value analysis. Calculating a single formal tender quotation takes a median of 42 labor hours. While contractor margins remain compressed between 1.0% and 2.0%, construction failure costs run between 5% and 11% of turnover.
 
 
-    <strong>2. Jobsite and gate breakdown:</strong> 70% of delivery trucks wait up to 50 minutes at the site gate due to manual checking. 95% of paper delivery tickets contain discrepancies or missing certifications. Delivery failures halt 8% to 25% of scheduled tasks on site.
+    <strong>2. Jobsite and gate breakdown:</strong> 70% of delivery trucks wait up to 50 minutes at the site gate due to manual checking. 95% of delivery tickets failed data quality criteria in an audit of 831,206 records. Delivery failures halt 8% to 25% of scheduled tasks on site.
 
 
-    <strong>3. Institutional amnesia:</strong> 78% of material procurement relies on informal emails and WhatsApp chats. Less than 50% of field purchases comply with negotiated master agreements. At one contractor studied, cleansing more than 1,000 historical projects left 54 usable, while fewer than 5% of personnel remain from tender to completion on large projects.'
+    <strong>3. Institutional amnesia:</strong> 78% of material procurement relies on informal emails and WhatsApp chats. Less than 50% of field purchases comply with negotiated master agreements. At one contractor studied, cleansing more than 1,000 historical projects left 54 usable, while on 500 to 600 million euro projects fewer than 5% of staff stay from tender to completion, one interviewee estimates.'
   source: Donyavi et al. 2024 · Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · Rockx 2023, TU Delft · Steuer et al. 2023
 - eyebrow: Why now
   heading: Regulation demands auditable proof.
@@ -50,7 +50,7 @@ sections:
   heading: Generic AI fails to calculate reliably.
   proof:
     fig: '€8,354'
-    label: error on a single tender line when using a generic enterprise AI tool
+    label: swing on one subcontractor total when a generic enterprise AI tool got the same input in a new session
     src: Hamppi 2025, Aalto University. Case study based on an internal Skanska experiment.
   body: 'In an internal Skanska experiment, a generic enterprise language model returned different numerical outputs for identical procurement inputs, with deviations up to 28%. This is the inherent nature of probabilistic language models (Atil et al. 2025).
 

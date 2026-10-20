@@ -317,7 +317,7 @@ other = "gate"
 other = "paper ticket"
 
 [fig_gate_cap]
-other = "The gate today: 70% of trucks wait up to 50 minutes, 95% of tickets have errors"
+other = "The gate today: 70% of trucks wait up to 50 minutes, 95% of tickets fail data quality checks"
 
 [fig_bids_n]
 other = "5 bids"

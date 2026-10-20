@@ -317,7 +317,7 @@ other = "poort"
 other = "papieren bon"
 
 [fig_gate_cap]
-other = "De poort vandaag: 70% van de vrachtwagens wacht tot 50 minuten, 95% van de bonnen bevat fouten"
+other = "De poort vandaag: 70% van de vrachtwagens wacht tot 50 minuten, 95% van de bonnen faalt op datakwaliteit"
 
 [fig_bids_n]
 other = "5 offertes"
