@@ -185,9 +185,11 @@ document: the mechanism, the honesty about the stage, the team.
 ### Signature: the cost stack
 
 The hero holds no photograph and no gradient. It holds one euro of project cost,
-divided: 70 percent material in menie, 18 percent labour in concrete, 12 percent
-other in zinc, labelled in mono, sourced under the bar. The material block carries
-the line "hier rekent Dundir".
+divided: up to 70 percent material in the accent, the rest (labour and other) in
+the neutral fill, labelled in mono, sourced above the bar. The source (Donyavi et
+al. 2024, in Hamppi 2025) gives only the material share, and as a ceiling, so the
+bar says "up to" and splits no further. The material block carries the line "hier
+rekent Dundir".
 
 It is the argument and the diagram at the same time, it costs no JavaScript, and it
 is the one object on the site that a reader will still remember in a week. It sits

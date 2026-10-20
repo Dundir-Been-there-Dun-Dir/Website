@@ -1,22 +1,19 @@
 ---
 title: Dundir
 description: AI-gedreven inkoopbeslissingen en bouwplaatssystemen, ontworpen voor lokale installatie en een controleerbaar auditspoor. In ontwikkeling met ontwerppartners.
-headline: Zeventig procent van uw project is <span class="cut">inkoop.</span>
+headline: Tot zeventig procent van uw project is <span class="cut">inkoop.</span>
 sub: De prijs is geoptimaliseerd. Dat is zelden het grootste probleem. Waar is het materiaal, wanneer komt het aan, en is het gecertificeerd? Dundir bouwt aan een wiskundige inkoop-solver en een digitale tweeling van uw bouwplaats.
 stack:
   label: Eén euro projectkosten, verdeeld
   source: Donyavi e.a. 2024, in Hamppi 2025
-  alt: 'Verdeling van projectkosten: 70 procent materiaal, 18 procent arbeid, 12 procent overig.'
+  alt: 'Verdeling van projectkosten: tot 70 procent materiaal, de rest arbeid en overige kosten.'
   segments:
   - kind: material
-    pct: 70%
+    pct: tot 70%
     name: Materiaal · hier rekent en toetst Dundir
-  - kind: labour
-    pct: 18%
-    name: Arbeid
-  - kind: other
-    pct: 12%
-    name: Overig
+  - kind: rest
+    pct: de rest
+    name: Arbeid en overig
   footLeft: Inkoop is geen backoffice-functie
   footRight: Het is de kostenstructuur
 sections:

@@ -2,22 +2,19 @@
 aliases: ["/en/"]
 title: Dundir
 description: AI-driven procurement decisions and jobsite systems for construction, designed for local deployment and an auditable trail. In development with design partners.
-headline: Seventy percent of your project is <span class="cut">procurement.</span>
+headline: Up to seventy percent of your project is <span class="cut">procurement.</span>
 sub: The unit price is optimized. That is rarely the biggest issue. Where is the material, when will it arrive, and is it certified? Dundir is building a mathematical procurement solver and a jobsite digital twin.
 stack:
   label: One euro of project cost, divided
   source: Donyavi et al. 2024, in Hamppi 2025
-  alt: 'Project cost split: 70 percent materials, 18 percent labour, 12 percent other.'
+  alt: 'Project cost split: up to 70 percent materials, the rest labour and other costs.'
   segments:
   - kind: material
-    pct: 70%
+    pct: up to 70%
     name: Materials · where Dundir computes and verifies
-  - kind: labour
-    pct: 18%
-    name: Labour
-  - kind: other
-    pct: 12%
-    name: Other
+  - kind: rest
+    pct: the rest
+    name: Labour and other
   footLeft: Procurement is not a back office function
   footRight: It is the cost structure
 sections:

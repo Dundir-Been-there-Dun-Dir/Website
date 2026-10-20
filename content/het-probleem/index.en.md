@@ -3,7 +3,7 @@ aliases: ["/en/the-problem/"]
 title: The problem
 description: Construction projects derail in procurement and at the gate, not on the blueprints. The real cost of manual paperwork, WhatsApp chaos, and missing audit records.
 slug: the-problem
-lede: Construction projects rarely fail because of structural calculations. They fail because 70% of project costs reside in materials, while procurement awards and gate deliveries are handled via spreadsheets, WhatsApp messages, and paper receipts.
+lede: Construction projects rarely fail because of structural calculations. They fail because up to 70% of project costs reside in materials, while procurement awards and gate deliveries are handled via spreadsheets, WhatsApp messages, and paper receipts.
 sections:
 - eyebrow: Historical disasters
   heading: When the supply chain fractures.
