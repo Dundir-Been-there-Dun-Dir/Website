@@ -26,7 +26,7 @@ sections:
   - fig: 31,7 %
     body: der Arbeitszeit von Kalkulatoren gehen für manuelle Datenerfassung statt für Kostenanalyse verloren. Die Kalkulation eines einzigen formalen Angebots dauert im Median 42 Arbeitsstunden.
   - fig: 50 min
-    body: Wartezeit am Baustellentor für 70 % der Materiallieferungen. 95 % der Lieferscheine erfüllten in einer Prüfung von 831.206 Datensätzen die Qualitätskriterien nicht. Fehlende Nachweise verzögern die Übergabe nach dem niederländischen Wkb (Gesetz zur Qualitätssicherung im Bau) um 4 bis 6 Wochen.
+    body: Wartezeit am Baustellentor für 70 % der Materiallieferungen. 95 % der Lieferscheine erfüllten in einer Prüfung von 831.206 Datensätzen die Qualitätskriterien nicht. Nach dem niederländischen Wkb (Gesetz zur Qualitätssicherung im Bau) werden Übergabeverzögerungen von 4 bis 6 Wochen gemeldet.
   - fig: <5 %
     body: des Personals erleben ein niederländisches Infrastrukturprojekt von 500 bis 600 Millionen Euro von Anfang bis Ende, schätzt ein Befragter in einer Studie der TU Delft. Beschaffungswissen geht mit jedem Personalwechsel verloren. Bei einem untersuchten Bauunternehmen blieben nach der Bereinigung von mehr als 1.000 historischen Projekten 54 verwertbare übrig.
   source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · Eerste Kamer 2026 · VNG 2024 · Rockx 2023, TU Delft · Steuer et al. 2023

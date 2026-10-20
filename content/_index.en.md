@@ -27,7 +27,7 @@ sections:
   - fig: 31.7%
     body: of estimator working hours lost to clerical data entry rather than cost analysis. Calculating a single formal quotation takes a median of 42 labor hours.
   - fig: 50 min
-    body: idle wait time at the jobsite gate for 70% of material delivery trucks. 95% of delivery tickets failed data quality criteria in an audit of 831,206 records. Missing proof delays the handover under the Dutch Quality Assurance Act (Wkb) by 4 to 6 weeks.
+    body: idle wait time at the jobsite gate for 70% of material delivery trucks. 95% of delivery tickets failed data quality criteria in an audit of 831,206 records. Handover delays of 4 to 6 weeks under the Dutch Quality Assurance Act (Wkb) are reported.
   - fig: <5%
     body: of staff see a 500 to 600 million euro Dutch infrastructure project through from start to finish, one interviewee in a TU Delft study estimates. Procurement intelligence evaporates with staff turnover. At one contractor studied, cleansing more than 1,000 historical projects left 54 usable.
   source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · Eerste Kamer 2026 · VNG 2024 · Rockx 2023, TU Delft · Steuer et al. 2023
