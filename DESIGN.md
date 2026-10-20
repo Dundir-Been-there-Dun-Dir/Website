@@ -190,14 +190,40 @@ other in zinc, labelled in mono, sourced under the bar. The material block carri
 the line "hier rekent Dundir".
 
 It is the argument and the diagram at the same time, it costs no JavaScript, and it
-is the one object on the site that a reader will still remember in a week.
+is the one object on the site that a reader will still remember in a week. It sits
+under the hero, below the search.
+
+### Ground: the search
+
+Behind the hero claim, a canvas runs a (1+lambda) evolution strategy in the
+visitor's browser (`assets/js/field.js`, home page only). Each instance draws
+four random limits (delivery date, CPR certification, budget ceiling, CO2),
+sixteen random bids and a random weighting of price against reliability. The
+search walks from one bid to the cheapest corner of the feasible region; the
+exact corner is computed alongside and ringed when the search lands, then a new
+instance starts.
+
+It shows the method, not the product. The readout under the hero says so in the
+same line: random instance, no data, and the solver's stage. It never shows a
+figure that could read as a result.
+
+- Colours and type come from the role layer (`--rule`, `--fg-2`, `--fg-3`,
+  `--accent-fill`, `--surface`, `--data`), read once with `getComputedStyle`.
+- The canvas fades in from the left and out at the bottom, so the headline and
+  the sub always sit on clean paper. Under 820px it drops below the copy as its
+  own panel.
+- Labels come from the `fig_*` and `hero_field_*` i18n keys through data
+  attributes.
 
 ### Motion
 
 - Bands rise 10px and fade in on first view, staggered by 60ms.
+- The search on the home hero runs continuously, and pauses when the hero is
+  off screen or the tab is hidden.
 - Nothing else moves. No parallax, no scroll-jacking, no carousel.
-- All of it is disabled under `prefers-reduced-motion`, and the reveal class is
-  added by script, so with JavaScript off nothing is ever hidden.
+- All of it is disabled under `prefers-reduced-motion`: the search is drawn once,
+  already converged. The reveal class is added by script, so with JavaScript off
+  nothing is ever hidden, and the hero reads without the canvas.
 
 ## Components
 
@@ -253,7 +279,8 @@ copy around it promised a report on screen with no email required.
 - Focus rings are `--menie-lt` at 2px with 3px offset, visible on both grounds.
 - Body copy 17px minimum, 1.62 line height.
 - Fonts self-hosted, `font-display: swap`, subset to the three languages.
-- One stylesheet, one 2 kB site script, one 3 kB scan script. No framework.
+- One stylesheet, one 2 kB site script, one 3 kB scan script, one 6 kB search
+  script on the home page. No framework.
 
 ## Known issues
 

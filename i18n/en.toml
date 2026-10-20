@@ -241,6 +241,18 @@ other = "Schematic of the design, no data"
 [fig_stage_solver]
 other = "solver: research and design"
 
+[hero_field_what]
+other = "Evolutionary search for the best bid inside four limits. Random instance, no data."
+
+[hero_field_run]
+other = "instance"
+
+[hero_field_gen]
+other = "gen"
+
+[hero_field_bids]
+other = "bids inside limits"
+
 [fig_stage_design]
 other = "design"
 

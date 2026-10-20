@@ -240,6 +240,18 @@ other = "Skizze des Entwurfs, keine Daten"
 [fig_stage_solver]
 other = "Solver: Forschung und Entwurf"
 
+[hero_field_what]
+other = "Evolutionäre Suche nach dem besten Angebot innerhalb von vier Grenzen. Zufälliges Beispiel, keine Daten."
+
+[hero_field_run]
+other = "Beispiel"
+
+[hero_field_gen]
+other = "Gen."
+
+[hero_field_bids]
+other = "Angebote innerhalb der Grenzen"
+
 [fig_stage_design]
 other = "Entwurf"
 

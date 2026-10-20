@@ -241,6 +241,18 @@ other = "Schets van het ontwerp, geen data"
 [fig_stage_solver]
 other = "solver: onderzoek en ontwerp"
 
+[hero_field_what]
+other = "Evolutionaire zoektocht naar het beste bod binnen vier grenzen. Willekeurig voorbeeld, geen data."
+
+[hero_field_run]
+other = "voorbeeld"
+
+[hero_field_gen]
+other = "gen"
+
+[hero_field_bids]
+other = "offertes binnen de grenzen"
+
 [fig_stage_design]
 other = "ontwerp"
 
