@@ -38,7 +38,7 @@ sections:
   heading: Elke beslissing en controle moet controleerbaar zijn.
   proof:
     fig: Deterministisch
-    label: Dezelfde invoer geeft exact dezelfde uitkomst. Generieke AI gaf bij identieke aanbestedingsinvoer afwijkingen tot 8.354 euro op een enkele regel.
+    label: Dezelfde invoer geeft exact dezelfde uitkomst. Generieke AI gaf bij identieke invoer tot 8.354 euro verschil in het totaal van één onderaannemer.
     src: Hamppi 2025, Aalto Universiteit · Atil e.a. 2025
   body: 'Welke randvoorwaarden zijn gehanteerd, welke afweging is gemaakt tussen transportafstand en materiaalkosten, en waarom een leverancier is geselecteerd: het systeem is zo ontworpen dat het de exacte rekenformule en wegingsfactoren vastlegt.
 

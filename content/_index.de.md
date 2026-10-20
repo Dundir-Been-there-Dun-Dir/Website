@@ -26,10 +26,10 @@ sections:
   - fig: 31,7 %
     body: der Arbeitszeit von Kalkulatoren gehen für manuelle Datenerfassung statt für Kostenanalyse verloren. Die Kalkulation eines einzigen formalen Angebots dauert im Median 42 Arbeitsstunden.
   - fig: 50 min
-    body: Wartezeit am Baustellentor für 70 % der Materiallieferungen. 95 % der Lieferscheine auf Papier enthalten Fehler oder fehlende Zertifikate, was nach dem niederländischen Wkb (Gesetz zur Qualitätssicherung im Bau) zu Übergabeblockaden von 4 bis 6 Wochen führt.
+    body: Wartezeit am Baustellentor für 70 % der Materiallieferungen. 95 % der Lieferscheine erfüllten in einer Prüfung von 831.206 Datensätzen die Qualitätskriterien nicht. Fehlende Nachweise verzögern die Übergabe nach dem niederländischen Wkb (Gesetz zur Qualitätssicherung im Bau) um 4 bis 6 Wochen.
   - fig: <5 %
-    body: des Personals bleibt bei großen Infrastrukturprojekten vom Start bis zum Abschluss dabei. Beschaffungswissen geht mit jedem Personalwechsel verloren. Bei einem untersuchten Bauunternehmen blieben nach der Bereinigung von mehr als 1.000 historischen Projekten 54 verwertbare übrig.
-  source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · VNG 2024 · Rockx 2023, TU Delft · Steuer et al. 2023
+    body: des Personals erleben ein niederländisches Infrastrukturprojekt von 500 bis 600 Millionen Euro von Anfang bis Ende, schätzt ein Befragter in einer Studie der TU Delft. Beschaffungswissen geht mit jedem Personalwechsel verloren. Bei einem untersuchten Bauunternehmen blieben nach der Bereinigung von mehr als 1.000 historischen Projekten 54 verwertbare übrig.
+  source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · Eerste Kamer 2026 · VNG 2024 · Rockx 2023, TU Delft · Steuer et al. 2023
 - tone: chalk
   figure: cycle
   eyebrow: Die Plattform
@@ -38,7 +38,7 @@ sections:
   body: 'Der Entwurf umfasst drei verbundene Module, die lokal auf Ihrer eigenen Infrastruktur laufen sollen. Jedes befindet sich in einem eigenen Stadium:
 
 
-    <strong>1. Deterministische Beschaffungs-Engine (Forschung und Entwurf):</strong> Kombinatorische Optimierung über Einheitspreis, Lieferplan, Transportkilometer und CO₂-Intensität. Deterministisch per Design: Identische Eingaben müssen jedes Mal identische Ergebnisse liefern, ohne die numerische Abweichung generativer KI (bis zu 8.354 Euro Fehler pro Position in Hamppi 2025).
+    <strong>1. Deterministische Beschaffungs-Engine (Forschung und Entwurf):</strong> Kombinatorische Optimierung über Einheitspreis, Lieferplan, Transportkilometer und CO₂-Intensität. Deterministisch per Design: Identische Eingaben müssen jedes Mal identische Ergebnisse liefern, ohne die numerische Abweichung generativer KI (bis zu 8.354 Euro Abweichung in der Summe eines Nachunternehmers in Hamppi 2025).
 
 
     <strong>2. Digitaler Zwilling der Baustelle und Smart Gate (Laborprototyp):</strong> Das Ziel: OCR am Tor liest bei Ankunft Lieferscheine und Kennzeichen, gleicht Bestellungen, Wareneingänge und Rechnungen ab und baut dabei das Dossier Bevoegd Gezag (Übergabedossier für die Baubehörde) nach dem niederländischen Wkb laufend auf. Heute läuft die erste Edge-Hardware auf dem Labortisch: zwei gekoppelte Boards mit einem kleinen Sprachmodell auf dem Chip, ohne Internetverbindung. Kamera und Datenbrille folgen als Nächstes.

@@ -26,10 +26,10 @@ sections:
   - fig: 31,7%
     body: van de tijd van calculators en inkopers gaat verloren aan administratieve data-invoer in plaats van analyse. Een enkele offertecalculatie kost mediaan 42 arbeidsuren.
   - fig: 50 min
-    body: wachttijd bij de bouwplaatspoort voor 70% van de materiaalvrachtwagens. 95% van de papieren leverbonnen bevat fouten of ontbrekende certificaten, met opleververtragingen van 4 tot 6 weken onder de Wkb tot gevolg.
+    body: wachttijd bij de bouwplaatspoort voor 70% van de materiaalvrachtwagens. 95% van de vrachtbrieven voldeed niet aan de kwaliteitscriteria in een audit van 831.206 records. Ontbrekend bewijs vertraagt de oplevering onder de Wkb met 4 tot 6 weken.
   - fig: <5%
-    body: van de staf maakt een groot infraproject van begin tot eind mee. Inkoopkennis verdwijnt bij personeelsverloop. Bij een onderzochte aannemer bleven na opschoning van ruim 1.000 historische projecten er 54 bruikbaar over.
-  source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · VNG 2024 · Rockx 2023, TU Delft · Steuer e.a. 2023
+    body: van de medewerkers maakt een infraproject van 500 tot 600 miljoen euro van begin tot eind mee, schat een geïnterviewde in een studie van de TU Delft. Inkoopkennis verdwijnt bij personeelsverloop. Bij een onderzochte aannemer bleven na opschoning van ruim 1.000 historische projecten er 54 bruikbaar over.
+  source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · Eerste Kamer 2026 · VNG 2024 · Rockx 2023, TU Delft · Steuer e.a. 2023
 - tone: chalk
   figure: cycle
   eyebrow: Het platform
@@ -38,7 +38,7 @@ sections:
   body: 'Het ontwerp bestaat uit drie onderling verbonden modules, bedoeld om lokaal op uw eigen infrastructuur te draaien. Elk staat in een eigen fase:
 
 
-    <strong>1. Deterministic Procurement Engine (onderzoek en ontwerp):</strong> Combinatorische optimalisatie over prijs, levertijd, transportkilometers en CO2. Deterministisch ontworpen: dezelfde invoer moet altijd exact dezelfde uitkomst geven, zonder de numerieke afwijkingen van generatieve AI (tot 8.354 euro fout per regel in Hamppi 2025).
+    <strong>1. Deterministic Procurement Engine (onderzoek en ontwerp):</strong> Combinatorische optimalisatie over prijs, levertijd, transportkilometers en CO2. Deterministisch ontworpen: dezelfde invoer moet altijd exact dezelfde uitkomst geven, zonder de numerieke afwijkingen van generatieve AI (tot 8.354 euro verschil in het totaal van één onderaannemer in Hamppi 2025).
 
 
     <strong>2. Jobsite Digital Twin & Slimme Poort (labprototype):</strong> Het doel: OCR aan de poort leest vrachtbrieven en kentekens bij aankomst, matcht bestelbon, leveringsbon en factuur, en bouwt het Dossier Bevoegd Gezag onder de Wet kwaliteitsborging voor het bouwen (Wkb) mee op. Vandaag draait de eerste edge-hardware op de werkbank: twee gekoppelde bordjes met een klein taalmodel op de chip, zonder internet. Camera en slimme bril volgen.

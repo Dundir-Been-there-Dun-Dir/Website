@@ -27,10 +27,10 @@ sections:
   - fig: 31.7%
     body: of estimator working hours lost to clerical data entry rather than cost analysis. Calculating a single formal quotation takes a median of 42 labor hours.
   - fig: 50 min
-    body: idle wait time at the jobsite gate for 70% of material delivery trucks. 95% of paper delivery tickets contain errors or missing certificates, causing 4 to 6 week handover blockades under the Dutch Quality Assurance Act (Wkb).
+    body: idle wait time at the jobsite gate for 70% of material delivery trucks. 95% of delivery tickets failed data quality criteria in an audit of 831,206 records. Missing proof delays the handover under the Dutch Quality Assurance Act (Wkb) by 4 to 6 weeks.
   - fig: <5%
-    body: of personnel remain on major infrastructure projects from inception to closeout. Procurement intelligence evaporates with staff turnover. At one contractor studied, cleansing more than 1,000 historical projects left 54 usable.
-  source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · VNG 2024 · Rockx 2023, TU Delft · Steuer et al. 2023
+    body: of staff see a 500 to 600 million euro Dutch infrastructure project through from start to finish, one interviewee in a TU Delft study estimates. Procurement intelligence evaporates with staff turnover. At one contractor studied, cleansing more than 1,000 historical projects left 54 usable.
+  source: Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · Eerste Kamer 2026 · VNG 2024 · Rockx 2023, TU Delft · Steuer et al. 2023
 - tone: chalk
   figure: cycle
   eyebrow: The platform
@@ -39,7 +39,7 @@ sections:
   body: 'The design has three interconnected modules, meant to run locally on your own infrastructure. Each is at its own stage:
 
 
-    <strong>1. Deterministic Procurement Engine (research and design):</strong> Combinatorial optimization across unit price, delivery schedule, transit miles, and carbon intensity. Deterministic by design: identical inputs must yield identical outputs every time, without the numerical drift of generative AI (up to 8,354 euro error per line in Hamppi 2025).
+    <strong>1. Deterministic Procurement Engine (research and design):</strong> Combinatorial optimization across unit price, delivery schedule, transit miles, and carbon intensity. Deterministic by design: identical inputs must yield identical outputs every time, without the numerical drift of generative AI (up to 8,354 euro on one subcontractor total in Hamppi 2025).
 
 
     <strong>2. Jobsite Digital Twin & Smart Gate (lab prototype):</strong> The goal: OCR at the gate reads delivery tickets and license plates on arrival, matches purchase orders, delivery receipts, and invoices, and builds the Dossier Bevoegd Gezag under the Dutch Wkb as it goes. Today the first edge hardware runs on the bench: two linked boards with a small language model on the chip, no internet needed. Camera and smart glasses come next.

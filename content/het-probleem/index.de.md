@@ -22,10 +22,10 @@ sections:
     <strong>1. Administrativer Engpass vor Baubeginn:</strong> Kalkulatoren verbringen 31,7 % ihrer Arbeitszeit mit administrativer Datenerfassung statt mit Wertanalyse. Die Kalkulation eines einzigen formalen Angebots dauert im Median 42 Arbeitsstunden. Während die Margen der Bauunternehmen bei 1,0 % bis 2,0 % liegen, betragen die Fehlerkosten im Bau 5 % bis 11 % des Umsatzes.
 
 
-    <strong>2. Ausfall an Baustelle und Tor:</strong> 70 % der Lieferfahrzeuge warten wegen manueller Kontrolle bis zu 50 Minuten am Baustellentor. 95 % der Lieferscheine auf Papier enthalten Abweichungen oder fehlende Zertifikate. Lieferausfälle stoppen 8 % bis 25 % der geplanten Arbeiten auf der Baustelle.
+    <strong>2. Ausfall an Baustelle und Tor:</strong> 70 % der Lieferfahrzeuge warten wegen manueller Kontrolle bis zu 50 Minuten am Baustellentor. 95 % der Lieferscheine erfüllten in einer Prüfung von 831.206 Datensätzen die Qualitätskriterien nicht. Lieferausfälle stoppen 8 % bis 25 % der geplanten Arbeiten auf der Baustelle.
 
 
-    <strong>3. Institutioneller Gedächtnisverlust:</strong> 78 % der Materialbeschaffung beruhen auf informellen E-Mails und WhatsApp-Chats. Weniger als 50 % der Einkäufe auf der Baustelle entsprechen den ausgehandelten Rahmenverträgen. Bei einem untersuchten Bauunternehmen blieben nach der Bereinigung von mehr als 1.000 historischen Projekten 54 verwertbare übrig, während bei großen Projekten weniger als 5 % des Personals von der Ausschreibung bis zur Fertigstellung dabeibleiben.'
+    <strong>3. Institutioneller Gedächtnisverlust:</strong> 78 % der Materialbeschaffung beruhen auf informellen E-Mails und WhatsApp-Chats. Weniger als 50 % der Einkäufe auf der Baustelle entsprechen den ausgehandelten Rahmenverträgen. Bei einem untersuchten Bauunternehmen blieben nach der Bereinigung von mehr als 1.000 historischen Projekten 54 verwertbare übrig, während bei Projekten von 500 bis 600 Millionen Euro weniger als 5 % des Personals von der Ausschreibung bis zur Fertigstellung dabeibleiben, schätzt ein Befragter.'
   source: Donyavi et al. 2024 · Laryea & Hughes 2011 · EIB 2014 · Aldeeb 2024 · Qflow 2025 · Rockx 2023, TU Delft · Steuer et al. 2023
 - eyebrow: Warum jetzt
   heading: Die Regulierung verlangt prüfbare Nachweise.
@@ -49,7 +49,7 @@ sections:
   heading: Generische KI rechnet nicht zuverlässig.
   proof:
     fig: '8.354 €'
-    label: Fehler auf einer einzigen Ausschreibungsposition mit einem generischen KI-Werkzeug für Unternehmen
+    label: Abweichung in der Summe eines Nachunternehmers, als ein generisches KI-Werkzeug für Unternehmen dieselben Daten in einer neuen Sitzung erhielt
     src: Hamppi 2025, Aalto University. Fallstudie auf Basis eines internen Experiments bei Skanska.
   body: 'In einem internen Experiment bei Skanska lieferte ein generisches Sprachmodell für Unternehmen bei identischen Beschaffungsdaten unterschiedliche Zahlen, mit Abweichungen bis zu 28 %. Das liegt in der Natur probabilistischer Sprachmodelle (Atil et al. 2025).
 

@@ -316,7 +316,7 @@ other = "Tor"
 other = "Papierschein"
 
 [fig_gate_cap]
-other = "Das Tor heute: 70% der Lkw warten bis zu 50 Minuten, 95% der Scheine enthalten Fehler"
+other = "Das Tor heute: 70% der Lkw warten bis zu 50 Minuten, 95% der Scheine fallen bei der Datenqualität durch"
 
 [fig_bids_n]
 other = "5 Angebote"

@@ -40,7 +40,7 @@ sections:
   heading: Every calculation and gate inspection must be verifiable.
   proof:
     fig: Deterministic
-    label: Identical inputs yield identical outputs. Generic enterprise AI returned errors up to 8,354 euro on a single tender line for identical inputs.
+    label: Identical inputs yield identical outputs. Given identical inputs, generic enterprise AI moved one subcontractor total by up to 8,354 euro between sessions.
     src: Hamppi 2025, Aalto University · Atil et al. 2025
   body: 'Which constraints were enforced, what trade-offs were balanced between freight transit distance and material unit costs, and why a supplier was selected: the system is designed to record the exact formula and parameter weights.
 
