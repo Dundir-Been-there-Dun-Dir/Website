@@ -284,7 +284,7 @@ other = "Contractgeheugen"
 other = "voedt de volgende aanbesteding"
 
 [fig_cycle_cap]
-other = "Het ontwerp in vijf stappen. Alleen stap 03 bestaat vandaag, als prototype op de werkbank."
+other = "Het ontwerp in vijf stappen. Geen ervan is al gebouwd; de eerste edge-hardware voor stap 03 draait op de werkbank."
 
 [fig_sov_net]
 other = "uw netwerk"

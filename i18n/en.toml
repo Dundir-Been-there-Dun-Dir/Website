@@ -284,7 +284,7 @@ other = "Contract memory"
 other = "feeds the next tender"
 
 [fig_cycle_cap]
-other = "The design in five steps. Only step 03 exists today, as a bench prototype."
+other = "The design in five steps. None is built yet; the first edge hardware for step 03 runs on the bench."
 
 [fig_sov_net]
 other = "your network"
