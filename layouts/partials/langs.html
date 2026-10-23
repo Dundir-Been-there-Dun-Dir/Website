@@ -1,12 +1,13 @@
 {{ $page := . }}
 <nav class="site-nav__langs" aria-label="{{ i18n "lang_aria" }}">
-  {{ range site.Languages }}
-  {{ $t := index (where $page.AllTranslations "Lang" .Lang) 0 }}
-  {{ if not $t }}{{ $t = index (where site.Home.AllTranslations "Lang" .Lang) 0 }}{{ end }}
-  {{ if eq .Lang $page.Lang }}
-  <span class="btn--lang" aria-current="true" lang="{{ .Lang }}" title="{{ .LanguageName }}">{{ .Lang | upper }}</span>
+  {{ range hugo.Sites }}
+  {{ $l := .Language }}
+  {{ $t := index (where $page.AllTranslations "Lang" $l.Lang) 0 }}
+  {{ if not $t }}{{ $t = .Home }}{{ end }}
+  {{ if eq $l.Lang $page.Lang }}
+  <span class="btn--lang" aria-current="true" lang="{{ $l.Lang }}" title="{{ $l.Label }}">{{ $l.Lang | upper }}</span>
   {{ else if $t }}
-  <a href="{{ $t.RelPermalink }}" class="btn--lang" lang="{{ .Lang }}" hreflang="{{ .Lang }}" title="{{ .LanguageName }}">{{ .Lang | upper }}</a>
+  <a href="{{ $t.RelPermalink }}" class="btn--lang" lang="{{ $l.Lang }}" hreflang="{{ $l.Lang }}" title="{{ $l.Label }}">{{ $l.Lang | upper }}</a>
   {{ end }}
   {{ end }}
 </nav>
