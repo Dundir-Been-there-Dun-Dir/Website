@@ -43,7 +43,7 @@ jobs:
       - name: Setup Hugo (extended, for asset pipeline)
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.147.3"
+          hugo-version: "0.168.0"
           extended: true
 
       - name: Configure Pages (sets correct baseURL for this deployment target)
