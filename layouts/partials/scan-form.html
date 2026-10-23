@@ -10,8 +10,8 @@
      Everything runs in the browser; nothing leaves the page unless the visitor
      asks for a copy by email afterwards. */}}
 
-{{ $d := index .Site.Data.scan .Lang }}
-{{ if not $d }}{{ $d = .Site.Data.scan.nl }}{{ end }}
+{{ $d := index hugo.Data.scan .Lang }}
+{{ if not $d }}{{ $d = hugo.Data.scan.nl }}{{ end }}
 
 <div class="scan" id="scan">
   <form class="scan__form" novalidate>

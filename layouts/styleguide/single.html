@@ -298,7 +298,7 @@
       <h2 id="icons">Icons</h2>
       <div>
         <p>Lucide stand-ins for <code>@mui/icons-material</code>. Material icons are filled shapes; a working drawing is lines. Lucide draws on the same 24 grid as Material, line only, in <code>currentColor</code>, so every Material icon has a stand-in that reads like the rest of the sheet. They are set at stroke 2, Lucide&#39;s own weight: one step heavier than the drawn lines, so an icon holds next to text and at 16 pixels.</p>
-        <span class="ref">Lucide {{ site.Data.icons.version }}, ISC licence, assets/icons/lucide/. Outlined, Rounded, Sharp and TwoTone variants map to the same Lucide icon.</span>
+        <span class="ref">Lucide {{ hugo.Data.icons.version }}, ISC licence, assets/icons/lucide/. Outlined, Rounded, Sharp and TwoTone variants map to the same Lucide icon.</span>
       </div>
     </div>
 
@@ -315,7 +315,7 @@ import { Truck } from "lucide-react";
 
     <label class="icon-find"><span>Find a Material name</span><input type="search" id="icon-find" placeholder="LocalShipping, Delete, Warning" autocomplete="off" spellcheck="false"></label>
 
-    {{ range site.Data.icons.groups }}
+    {{ range hugo.Data.icons.groups }}
     <div class="icon-group">
       <h3>{{ .name }}</h3>
       <ul class="icon-grid">

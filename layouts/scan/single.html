@@ -1,11 +1,11 @@
-{{- $d := index .Site.Data.scan .Lang -}}
-{{- if not $d }}{{ $d = .Site.Data.scan.en }}{{ end -}}
+{{- $d := index hugo.Data.scan .Lang -}}
+{{- if not $d }}{{ $d = hugo.Data.scan.en }}{{ end -}}
 {{- $side := dict -}}
 {{- range .Params.sections }}{{ if .sidesteps }}{{ $side = . }}{{ end }}{{ end -}}
 {{- $keys := slice "A" "B" "C" "D" "E" "F" -}}
 {{- $total := len $d.questions -}}
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Locale }}">
   {{ partial "head.html" . }}
   <body class="tf">
     <header class="tf-bar">

@@ -34,24 +34,24 @@ pluralizeListTitles = false
 
 [languages]
   [languages.nl]
-    languageName = "Nederlands"
-    languageCode = "nl"
+    label = "Nederlands"
+    locale = "nl"
     weight = 2
     title = "Dundir"
     [languages.nl.params]
       description = "AI-gedreven inkoopbeslissingen en bouwplaatssystemen, ontworpen voor lokale installatie en een controleerbaar auditspoor."
 
   [languages.en]
-    languageName = "English"
-    languageCode = "en"
+    label = "English"
+    locale = "en"
     weight = 1
     title = "Dundir"
     [languages.en.params]
       description = "AI-driven procurement decisions and jobsite systems for construction, designed for local deployment and an auditable trail."
 
   [languages.de]
-    languageName = "Deutsch"
-    languageCode = "de"
+    label = "Deutsch"
+    locale = "de"
     weight = 3
     title = "Dundir"
     [languages.de.params]
@@ -59,8 +59,8 @@ pluralizeListTitles = false
 
   [languages.sr]
     disabled = true
-    languageName = "Srpski"
-    languageCode = "sr"
+    label = "Srpski"
+    locale = "sr"
     weight = 4
     title = "Dundir"
     [languages.sr.params]
